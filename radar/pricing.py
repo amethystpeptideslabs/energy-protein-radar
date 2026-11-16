@@ -214,11 +214,14 @@ def regular_unit_price(o: dict[str, Any]) -> Decimal | None:
 
 
 UNAVAILABLE_RE = re.compile(r"out of stock|unavailable|discontinued|sold out", re.I)
+# any store in the note that has it ("Brea: 3 In Stock", "Limited stock") means you can still get it
+AVAILABLE_RE = re.compile(r"\b\d+\s+in stock\b|\blimited stock\b", re.I)
 
 
 def is_unavailable(offer: dict[str, Any]) -> bool:
     """A store check said you can't get it now (out of stock locally / discontinued)."""
-    return bool(UNAVAILABLE_RE.search(offer.get("stock_note") or ""))
+    note = offer.get("stock_note") or ""
+    return bool(UNAVAILABLE_RE.search(note)) and not AVAILABLE_RE.search(note)
 
 
 def rank_key(offer: dict[str, Any]) -> tuple:

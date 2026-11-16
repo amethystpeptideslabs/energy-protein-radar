@@ -22,7 +22,7 @@ middays), the `jobs` to research, a `search_budget` per job, known `dead_codes` 
 - Use the job's `task` text as the brief. Stay within its `search_budget` searches (the plan's
   `total_search_budget` is the whole run). Keep your notes short: numbers, URL, verbatim price text
   (a few extra WebFetch reads of result pages are fine when a snippet lacks the price).
-- **Local first.** The owner is in Orange County, CA (South OC first) and prefers local pickup. Prioritize
+- **Local first.** The owner is in Orange County, CA (Anaheim Hills / North OC first) and prefers local pickup. Prioritize
   in-store deals and buy-online-pick-up-in-store at OC stores (Target, Walmart, Vitamin Shoppe, GNC, Costco,
   Sam's Club, Ralphs, Vons, Sprouts, and Grocery Outlet's weekly ad for an OC store). In-store-only or
   store-specific promos count only if valid at an Orange County store; put the store in `local_store`
@@ -62,17 +62,28 @@ week, online and in store. Each run:
 2. Report each tracked product on BOGO as `promo_type: "bogo_50"` with the single 12-pack price.
    List pages go stale: confirm the product page itself shows "BUY ONE, GET ONE 50% OFF" before
    reporting it (a product page that doesn't show it gets `promo_type: "none"`).
-3. **Store check (Orange County only).** If the built-in browser on Reza's PC is reachable (load the
+3. **Store check: Orange first, then Brea (Orange County only).** The owner is in Anaheim Hills;
+   Vitamin Shoppe Orange (1300 N Tustin St) is the best-stocked store for drinks and snacks, Brea
+   (299 S Randolph St) is the backup. If the built-in browser on Reza's PC is reachable (load the
    tools with ToolSearch query `mcp__remote-devices__Claude_Browser__`, max_results 64; skip this step
-   quietly if they're missing or the PC is offline), open up to 8 Vitamin Shoppe deal product pages
-   (the best BOGO/sale items first). The page header must read "You're Shopping: Aliso Viejo, CA". If
-   it shows another store, click it, search 92656, pick Aliso Viejo, press Select Store (decline
-   non-essential cookies if asked). Read the Pick-Up line with
-   `document.body.innerText` (text after "DELIVERY OPTIONS") and set
-   `stock_note` to e.g. "Aliso Viejo pick-up: 8 In Stock (checked Nov 17)" or
-   "Aliso Viejo pick-up: Out of Stock; available in nearby stores". If the page says
-   "Product Discontinued", say so in `stock_note`. Other OC Vitamin Shoppes (Costa Mesa, Orange,
-   Huntington Beach, Brea) are in `config/settings.yaml` if Aliso Viejo is out. Never add to cart or buy.
+   quietly if they're missing or the PC is offline):
+   a. Open any vitaminshoppe.com page. The store button in the header must say "You are shopping in
+      Orange, CA". If not, click it, type 92867 in "Zip, City or State", press the search icon, pick
+      "Orange, CA" (1300 N. Tustin St.) and press Select Store (decline non-essential cookies if asked).
+   b. Read up to 10 Vitamin Shoppe deal product pages (BOGO/sale items and HOT+ deals first). Read the
+      Pick-Up line from `document.body.innerText`: the lines after "DELIVERY OPTIONS" → "Pick-Up"
+      (e.g. "6 In Stock / Orange, CA" or "Out of Stock / Orange, CA"). Wait until it no longer says
+      "Please select store". Open pages one at a time with normal navigation, a few seconds apart
+      (no hidden iframes or parallel loads, never the site's internal APIs: bulk loading trips their
+      bot check). If a "verify you are human" / CAPTCHA page appears, stop the store check for this
+      run and keep the stock notes you already have. Never solve or bypass a CAPTCHA.
+   c. Switch My Store to Brea the same way (search 92821, pick "Brea, CA", Select Store), read the same
+      pages, then switch My Store back to Orange.
+   d. Set `stock_note` to both stores in one line, e.g.
+      "Orange pick-up: 6 In Stock; Brea: 2 In Stock (checked Nov 17)" or
+      "Orange pick-up: Out of Stock; Brea: 3 In Stock (checked Nov 17)". If both are out, write
+      "Orange and Brea pick-up: Out of Stock (checked Nov 17)". If the page says "Product
+      Discontinued", say so. Confirm the BOGO/sale label on the same page. Never add to cart or buy.
 4. Product pages you open from a BOGO list page that came back in WebSearch count as sourced: add
    their URLs to the job's `urls`.
 5. Orange County only: `local_store` and `stock_note` must name an OC city or store. Anything else

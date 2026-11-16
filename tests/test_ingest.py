@@ -40,9 +40,9 @@ def test_plan_lists_jobs_and_case_focus(tmp_path, capsys):
     from radar.pipeline import main_from_cli
     assert main_from_cli(RunOptions(plan=True, out=tmp_path, slot="morning")) == 0
     plan = json.loads(capsys.readouterr().out)
-    assert plan["mode"] == "calibrate" and len(plan["jobs"]) == 55
+    assert plan["mode"] == "calibrate" and len(plan["jobs"]) == 56
     assert all("CASE" in j["task"] for j in plan["jobs"]) and plan["case_min_units"] == 12
-    assert plan["total_search_budget"] == 110
+    assert plan["total_search_budget"] == 112
 
 
 def test_quick_and_deep_plans_are_per_category(cfg, tmp_path):

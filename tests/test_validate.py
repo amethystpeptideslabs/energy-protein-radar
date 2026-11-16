@@ -165,7 +165,7 @@ def test_allow_terms_keep_hydration_named_energy_lines(cfg):
     assert "hydration" in cfg.products["ghost-energy-16"].exclude_terms
     assert "recovery" in cfg.products["kill-cliff-ignite-12"].exclude_terms
     energy = cfg.enabled("energy")
-    assert len(energy) == 28 and all(p.exclude_brands for p in energy)
+    assert len(energy) == 29 and all(p.exclude_brands for p in energy)
     assert not {"monster-16", "red-bull-12"} & {p.id for p in energy}
 
 
@@ -207,3 +207,17 @@ def test_store_specific_deals_must_be_in_orange_county(cfg):
     assert [o["pack_price"] for o in kept] == [29.99, 27.99]
     assert kept[0]["stock_note"].endswith("Aliso Viejo, CA") and kept[1]["stock_note"] == ""
     assert dropped[0]["drop_reason"] == "out_of_area"
+
+
+def test_reign_inferno_is_its_own_product_not_total_body_fuel(cfg):
+    from datetime import date
+    from radar.util import normalize_url
+    from radar.validate import validate_offers
+    u = "https://www.walmart.com/ip/Reign-Inferno-Red-Dragon-16oz-12pk/744338926"
+    urls = {normalize_url(u): u}
+    base = {"retailer": "Walmart", "source_url": u, "pack_count": 12, "pack_price": 29.76, "unit_size_oz": 16,
+            "evidence_text": "Reign Inferno Red Dragon, Thermogenic Fuel, 16 fl oz, 12 Cans $29.76"}
+    kept, dropped = validate_offers([dict(base, product_id="reign-16"), dict(base, product_id="reign-inferno-16")],
+                                    cfg, urls, {}, [], date(2026, 11, 16))
+    assert [o["product_id"] for o in kept] == ["reign-inferno-16"]
+    assert "reign rtd" in cfg.products["reign-16"].aliases

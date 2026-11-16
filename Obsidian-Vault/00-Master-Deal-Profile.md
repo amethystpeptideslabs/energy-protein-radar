@@ -19,7 +19,8 @@ _Updated 2026-11-16 after the quick run._
 | [[alani-nu-12\|Alani Nu Energy 12oz]] | $2.25 | $1.55 | Sam's Club | 2026-11-16 | $1.55 ❌ | Sam's Club | → |
 | [[c4-energy-16\|C4 Energy 16oz]] | $2.33 | $2.38 | Walmart | 2026-11-16 | $2.38 ❌ | Walmart | → |
 | [[c4-energy-12\|C4 Energy 12oz]] | $1.67 | $1.72 | Walmart | 2026-11-16 | $1.72 ❌ | Walmart | → |
-| [[reign-16\|Reign Total Body Fuel 16oz]] | $2.17 |  |  |  | — |  | → |
+| [[reign-16\|Reign Total Body Fuel 16oz]] | $2.17 | $2.53 | Walmart | 2026-11-16 | $2.53 ❌ | Walmart | → |
+| [[reign-inferno-16\|Reign Inferno Thermogenic 16oz]] | $2.50 |  |  |  | — |  | → |
 | [[ryse-fuel-16\|RYSE Fuel 16oz]] | $2.51 | $2.17 | The Vitamin Shoppe | 2026-11-16 | $2.17 ❌ | The Vitamin Shoppe | → |
 | [[bucked-up-16\|Bucked Up Energy 16oz]] | $2.50 |  |  |  | — |  | → |
 | [[on-amino-energy-12\|ON Amino Energy Sparkling 12oz]] | $1.66 | $1.71 | Sam's Club | 2026-11-16 | $1.71 ❌ | Sam's Club | → |

@@ -53,7 +53,7 @@ Rules:
 - Note restrictions: in-store only, membership required (Costco, Sam's Club, GNC Pro Access),
   per-customer limits, minimum quantity, subscribe/auto-delivery requirements, shipping cost
   and free-shipping minimums, start/end dates.
-- Prices are pre-tax, US. Location: Orange County, CA (South OC first). In-store deals must be valid
+- Prices are pre-tax, US. Location: Orange County, CA (Anaheim Hills / North OC first). In-store deals must be valid
   at an Orange County store; note pickup availability.
 
 Write one block per offer, exactly:
@@ -83,7 +83,7 @@ END
 """
 
 
-LOCAL_FOCUS = (" LOCAL FIRST: the buyer is in Orange County, CA (South OC first) and prefers local pickup. Look for "
+LOCAL_FOCUS = (" LOCAL FIRST: the buyer is in Orange County, CA (Anaheim Hills / North OC first) and prefers local pickup. Look for "
                "in-store deals and buy-online-pick-up-in-store at OC stores (Target, Walmart, Vitamin Shoppe, GNC, Costco, "
                "Sam's Club, Grocery Outlet weekly ads, Ralphs, Vons, Sprouts). In-store-only or store-specific promos must be "
                "valid at an Orange County store; name it in local_store when the page does. Ship-to-home deals are still fine.")

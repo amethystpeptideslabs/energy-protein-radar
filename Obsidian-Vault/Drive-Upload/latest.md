@@ -30,17 +30,17 @@ tags: [deal-radar]
 | 🥤 Isopure Zero Carb RTD 16.9oz (32g) | $4.63/bottle | $55.59 for 12 📦 case | GNC | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
 | 🥤 Oikos Pro Shake | $1.83/bottle | $21.99 for 12 📦 case | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/16113764509) |
 | 🍫 Barebells Soft Bar (16g) | $2.33/bar | $27.99 for 12 📦 case | Muscle & Strength | 🚚 Ships to you | ✅ SOLID | [Open deal](https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html) |
-| 🍫 Legendary Protein Sweet Roll | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 🏬 In store (local) ⚠️ Aliso Viejo page: Product Discontinued, clearance while supplies last; call the store (checked Nov 16) | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
-| ⚡ RAW Bum Energy 12oz (Citrus Burst) | $1.30/can | $15.64 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup ⚠️ Aliso Viejo pick-up: Out of Stock; not available to ship (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/bum-energy-citrus-burst-12-drink-s/bum-11570) |
+| 🍫 Legendary Protein Sweet Roll | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 🏬 In store (local) ⚠️ Vitamin Shoppe page: Product Discontinued, clearance while supplies last; call the Orange store (checked Nov 16) | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
+| ⚡ RAW Bum Energy 12oz (Citrus Burst) | $1.30/can | $15.64 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup ⚠️ Orange pick-up: Out of Stock; not available to ship (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/bum-energy-citrus-burst-12-drink-s/bum-11570) |
 
 ## 🎁 BOGO & sales right now
 
 | Deal | Per unit | You pay | Store | Where | Promo | Link |
 |---|---|---|---|---|---|---|
-| ⚡ Alani Nu Energy 12oz (Cherry Slush) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Aliso Viejo pick-up: 8 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/alani-nu-energy-cherry-slush-12-drink-s/ala0047) |
-| ⚡ Alani Nu Energy 12oz (Hawaiian Shaved Ice) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Aliso Viejo pick-up: 5 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/energy-hawaiian-shaved-ice-12-drink-s/ala0015) |
+| ⚡ Bloom Sparkling Energy 12oz (Strawberry Watermelon) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 1 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-watermelon-12-drink-s/bmn-17135) |
+| ⚡ Alani Nu Energy 12oz (Cherry Slush) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 6 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/alani-nu-energy-cherry-slush-12-drink-s/ala0047) |
+| ⚡ Alani Nu Energy 12oz (Hawaiian Shaved Ice) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 4 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/energy-hawaiian-shaved-ice-12-drink-s/ala0015) |
 | ⚡ RAW Bum Energy 12oz | $2.05/can | $24.59 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🏷️ Sale | [Open deal](https://www.vitaminshoppe.com/c/ready-to-drink-bars-snacks/protein-fitness/brand/bum-energy) |
-| ⚡ Bloom Sparkling Energy 12oz (Strawberry Watermelon) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ⚠️ Aliso Viejo pick-up: Temporarily Out of Stock; available in nearby stores (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-watermelon-12-drink-s/bmn-17135) |
 
 ## 📋 All products today
 
@@ -57,7 +57,8 @@ tags: [deal-radar]
 | ⚡ Alani Nu Energy 12oz | $1.55/can | $18.58 for 12 📦 | Sam's Club | ❌ SKIP | $2.25 | $1.55 | [Open deal](https://www.samsclub.com/ip/19590672442) |
 | ⚡ C4 Energy 16oz | $2.38/can | $28.59 for 12 📦 | Walmart | ❌ SKIP | $2.33 | $2.38 | [Open deal](https://www.walmart.com/c/kp/case-c4) |
 | ⚡ C4 Energy 12oz | $1.72/can | $20.58 for 12 📦 | Walmart | ❌ SKIP | $1.67 | $1.72 | [Open deal](https://www.walmart.com/browse/food/c4-energy-drinks/976759_976782_9357528_6944733) |
-| ⚡ Reign Total Body Fuel 16oz | no offer found |  |  |  | $2.17 |  |  |
+| ⚡ Reign Total Body Fuel 16oz | $2.53/can | $30.36 for 12 📦 | Walmart | ❌ SKIP | $2.17 | $2.53 | [Open deal](https://walmart.com/ip/seort/5321085482) |
+| ⚡ Reign Inferno Thermogenic 16oz | no offer found |  |  |  | $2.50 |  |  |
 | ⚡ RYSE Fuel 16oz | $2.17/can | $26.09 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.51 | $2.17 | [Open deal](https://www.vitaminshoppe.com/p/ryse-fuel-frosted-lemonade-12-drink-s/rys-16800) |
 | ⚡ Bucked Up Energy 16oz | no offer found |  |  |  | $2.50 |  |  |
 | ⚡ ON Amino Energy Sparkling 12oz | $1.71/can | $20.48 for 12 📦 | Sam's Club | ❌ SKIP | $1.66 | $1.71 | [Open deal](https://www.samsclub.com/ip/optimum-nutrition-essential-amino-energy-electrolytes-hydration-drink/13567466352) |

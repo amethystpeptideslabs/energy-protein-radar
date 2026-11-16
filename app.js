@@ -231,7 +231,7 @@ function dealCard(p, o) {
       <span class="deal-line">${money(o.effective_pack_total)} for ${esc(units)} at <strong>${esc(r.name)}</strong>${save ? `, ${esc(save)}` : ""}</span>
       ${sec ? `<span class="deal-line">${esc(sec.value)} ${esc(sec.label)} ${esc(sec.badge || "")}</span>` : ""}
       <span class="deal-line">${esc(whereText(o))}</span>
-      ${o.stock_note ? `<span class="deal-stock${GONE_RE.test(o.stock_note) ? " oos" : ""}">${GONE_RE.test(o.stock_note) ? "⚠️" : "✅"} ${esc(o.stock_note)}</span>` : ""}
+      ${o.stock_note ? `<span class="deal-stock${isGone(o.stock_note) ? " oos" : ""}">${isGone(o.stock_note) ? "⚠️" : "✅"} ${esc(o.stock_note)}</span>` : ""}
       ${notes.length ? `<span class="deal-notes">${notes.map((n) => `<span>${esc(n)}</span>`).join("")}</span>` : ""}
       <span class="deal-open">${esc(openLabel(o))}</span>
     </a>
@@ -294,9 +294,12 @@ function isEasy(o) { return !o.in_store_only && !o.membership_required && !(Numb
 function passes(o) { return (state.sort !== "easy" || isEasy(o)) && (!state.casesOnly || o.is_case); }
 
 function isLocal(o) { return o.fulfillment === "in_store" || o.fulfillment === "pickup"; }
-const GONE_RE = /out of stock|unavailable|discontinued|sold out/i;
+// same rule as radar/pricing.is_unavailable: gone only when no store in the note has it
+function isGone(note) {
+  return /out of stock|unavailable|discontinued|sold out/i.test(note || "") && !/\b\d+\s+in stock\b|\blimited stock\b/i.test(note || "");
+}
 function offerRank(cat, o) {
-  const g = GONE_RE.test(o.stock_note || "") ? 1 : 0;  // store check says you can't get it: last
+  const g = isGone(o.stock_note) ? 1 : 0;  // store check says you can't get it: last
   const t = TIER_RANK[o.tier] ?? 4;
   const l = isLocal(o) ? 0 : 1;  // local pickup / in store first within a tier
   return cat === "energy" ? [g, t, l, o.unit_price ?? 9e9, 0] : [g, t, l, o.pct_vs_ref ?? 999, o.price_per_10g_protein ?? 9e9];

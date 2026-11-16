@@ -177,10 +177,23 @@ products:
     line: Reign Total Body Fuel
     display_name: Reign Total Body Fuel 16oz
     unit_size_oz: 16
+    aliases: [reign rtd, reign energy, reign total body fuel]
     search_terms: ["Reign Total Body Fuel 16 oz 12 pack", "Reign energy drink deal"]
-    extra_exclude_terms: [reign storm]
+    extra_exclude_terms: [reign storm, inferno]
     retailers_priority: [walmart, target, costco, sams-club, vons, ralphs, vitamin-shoppe, amazon]
     ref_unit_price: 2.17
+
+  - id: reign-inferno-16
+    category: energy
+    brand: Reign
+    line: Reign Inferno
+    display_name: Reign Inferno Thermogenic 16oz
+    unit_size_oz: 16
+    aliases: [reign inferno]
+    search_terms: ["Reign Inferno thermogenic 16 oz 12 pack", "Reign Inferno Red Dragon deal"]
+    retailers_priority: [walmart, target, vons, ralphs, amazon]
+    ref_unit_price: 2.50
+    needs_verification: true   # seed from scattered 12-pack/single shelf prices; calibration replaces it
 
   - id: ryse-fuel-16
     category: energy

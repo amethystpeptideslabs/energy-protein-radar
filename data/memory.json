@@ -711,8 +711,18 @@
    "ref_source": "seed",
    "protein_verified": null,
    "size_verified": null,
-   "all_time_low": null,
-   "last_best": null,
+   "all_time_low": {
+    "unit_price": 2.53,
+    "retailer": "Walmart",
+    "date": "2026-11-16",
+    "url": "https://walmart.com/ip/seort/5321085482",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.53,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
    "trend_30d": "flat"
   },
   "ryse-fuel-16": {
@@ -1177,6 +1187,16 @@
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
+  },
+  "reign-inferno-16": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
   }
  },
  "dead_codes": [],
@@ -1223,13 +1243,13 @@
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 0
+  "searches": 3
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 3,
-   "searches": 74
+   "runs": 4,
+   "searches": 77
   }
  },
  "budget_warning_month": null

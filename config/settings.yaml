@@ -6,11 +6,11 @@ app_url: https://amethystpeptideslabs.github.io/energy-protein-radar/
 
 # Local-first: in-store and buy-online-pick-up-in-store at stores near you rank above
 # ship-to-home offers in the same tier. Online deals still show.
-home_area: "Orange County, CA (South OC first)"
+home_area: "Orange County, CA (Anaheim Hills / North OC first)"
 prefer_local_pickup: true
 # Store-specific deals (local_store) and stock notes must name one of these; anything else is
 # dropped / cleared. Online and ship-to-home prices are unaffected.
-home_area_cities: [Orange County, Aliso Viejo, Anaheim, Brea, Buena Park, Costa Mesa, Cypress, Dana Point,
+home_area_cities: [Orange County, Aliso Viejo, Anaheim, Anaheim Hills, Brea, Buena Park, Costa Mesa, Cypress, Dana Point,
   Foothill Ranch, Fountain Valley, Fullerton, Garden Grove, Huntington Beach, Huntington Bch, Irvine,
   La Habra, La Palma, Ladera Ranch, Laguna Beach, Laguna Hills, Laguna Niguel, Laguna Woods, Lake Forest,
   Los Alamitos, Mission Viejo, Newport Beach, Orange, Placentia, Rancho Santa Margarita, San Clemente,
@@ -19,7 +19,7 @@ home_area_cities: [Orange County, Aliso Viejo, Anaheim, Brea, Buena Park, Costa 
 # Web search localization (approximate). City as you gave it.
 location:
   type: approximate
-  city: Orange County
+  city: Anaheim
   region: California
   country: US
   timezone: America/Los_Angeles
@@ -151,14 +151,15 @@ retailers:
     name: The Vitamin Shoppe
     domains: [vitaminshoppe.com]
     type: supplement
-    playbook: "BOGO 50% (Buy One, Get One 50% Off) runs constantly on energy-drink cases and protein bars, online + in store; add 2 to cart. In-store $1/can energy weekends (usually start Thu, sometimes Fri; limit ~6). Auto-Delivery 10-15% off online (not with BOGO). Set My Store to Aliso Viejo so product pages show its pickup stock."
-    home_store: Aliso Viejo
+    playbook: "BOGO 50% (Buy One, Get One 50% Off) runs constantly on energy-drink cases and protein bars, online + in store; add 2 to cart. In-store $1/can energy weekends (usually start Thu, sometimes Fri; limit ~6). Auto-Delivery 10-15% off online (not with BOGO). Set My Store to Orange so product pages show its pickup stock; check Brea second."
+    home_store: Orange          # best-stocked for drinks and snacks; owner is in Anaheim Hills
+    check_stores: [Orange, Brea]  # every store check reads pick-up stock at both, Orange first
     local_stores:   # Orange County stores in Vitamin Shoppe's own store locator (checked 2026-11-16)
+      - {name: Orange, address: "1300 N Tustin St, Orange, CA 92867", locator_zip: "92867"}
+      - {name: Brea, address: "299 S Randolph St, Brea, CA 92821", locator_zip: "92821"}
       - {name: Aliso Viejo, id: 133, address: "26831 Aliso Creek Rd, Aliso Viejo, CA 92656", phone: "(949) 349-0690"}
       - {name: Costa Mesa, address: "3929 S Bristol St, Bldg C, Santa Ana, CA 92704"}
-      - {name: Orange, address: "1300 N Tustin St, Orange, CA 92867"}
       - {name: Huntington Beach, address: "7672 Edinger Ave, Huntington Beach, CA 92647"}
-      - {name: Brea, address: "299 S Randolph St, Brea, CA 92821"}
   gnc: {physical: true, pickup: true, stock_search: "https://www.gnc.com/search?q={q}", name: GNC, domains: [gnc.com], type: supplement,
     playbook: "BOGO 50% on RTD/bars is common. Pro Access member pricing is membership-gated (🔒). In-store $1 energy promos mirror Vitamin Shoppe some weekends."}
   campus-protein: {physical: false, name: Campus Protein, domains: [campusprotein.com], type: supplement, playbook: "Site-wide % codes; free shipping thresholds."}

@@ -1,6 +1,6 @@
 /* Deal Radar service worker: app shell = stale-while-revalidate, data = network-first with
    offline fallback to the last cached copy. Bump VERSION when shell files change. */
-const VERSION = "dr-2026-11-16g";
+const VERSION = "dr-2026-11-16h";
 const SHELL = [
   "./", "./index.html", "./styles.css", "./app.js", "./manifest.json",
   "./fonts/archivo-wdth.woff2", "./icons/icon-192.png", "./icons/icon-512.png",
@@ -11,7 +11,9 @@ const CHART = "https://cdn.jsdelivr.net/npm/chart.js@4.6.1/dist/chart.umd.min.js
 self.addEventListener("install", (e) => {
   e.waitUntil((async () => {
     const cache = await caches.open(VERSION);
-    await cache.addAll(SHELL);
+    // cache:"reload" skips the browser HTTP cache (Pages sets max-age=600), so a fresh deploy
+    // never stores a 10-minute-old app.js next to a new index.html
+    await cache.addAll(SHELL.map((u) => new Request(u, { cache: "reload" })));
     try { await cache.add(new Request(CHART, { mode: "cors" })); } catch { /* chart is optional offline */ }
     await self.skipWaiting();
   })());
@@ -53,7 +55,7 @@ async function networkFirst(req) {
 async function staleWhileRevalidate(req, event) {
   const cache = await caches.open(VERSION);
   const hit = await cache.match(req, { ignoreSearch: true });
-  const update = fetch(req).then((res) => {
+  const update = fetch(req, { cache: "no-cache" }).then((res) => {
     if (res.ok) cache.put(req, res.clone());
     return res;
   }).catch(() => null);

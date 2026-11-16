@@ -14,19 +14,19 @@ tags: [deal-radar]
 
 | Deal | Per unit | You pay | Store | Where | Tier | Link |
 |---|---|---|---|---|---|---|
-| ⚡ RAW Bum Energy 12oz | $0.77/can | $13.87 for 18 📦 case | Costco | Stores + online 🔒 | 🚨 STEAL | [Open deal](https://app.warehouserunner.com/costco/2045172-bum-energy-variety-pack-18-ct-12-oz) |
-| 🥤 Quest Protein Shake | $2.22/bottle | $8.89 for 4 | Target | Stores + online | 🚨 STEAL | [Open deal](https://www.target.com/p/-/A-76628735) |
-| 🍫 Legendary Protein Donuts | $1.87/pack | $7.49 for 4 | Target | Stores + online | 🚨 STEAL | [Open deal](https://www.target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-donuts-cinnamon-crumble-20g-protein-8-9oz-4ct/-/A-94712220) |
-| 🍫 Built Puff | $1.54/bar | $19.98 for 13 📦 case | Sam's Club | Stores + online 🔒 | 🚨 STEAL | [Open deal](https://www.samsclub.com/ip/built-sour-puff-bars-variety-pack-13-ct/19583258714) |
-| 🥤 RAW Protein Shake 12oz | $2.66/bottle | $31.87 for 12 📦 case | The Vitamin Shoppe | Stores + online | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-shake-chocolate-milkshake-12-bottle-s/grw-13229) |
-| ⚡ Celsius Original 12oz | $1.13/can | $27.19 for 24 📦 case | Costco | Stores + online 🔒 | 🔥 HOT | [Open deal](https://app.warehouserunner.com/costco/1728905) |
-| ⚡ Celsius Essentials 16oz | $1.36/can | $16.34 for 12 📦 case | Walmart | Stores + online | 🔥 HOT | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
-| 🥤 Premier Protein Shake 30g | $1.78/bottle | $31.99 for 18 📦 case | Costco | Stores + online 🔒 | 🔥 HOT | [Open deal](https://app.warehouserunner.com/costco/2007063-premier-protein-shake-vanilla-11-fl-oz-18-pk) |
-| 🥤 Fairlife Core Power 26g | $2.85/bottle | $28.49 for 10 | Costco | Stores + online 🔒 | ✅ SOLID | [Open deal](https://app.warehouserunner.com/costco/1027877-core-power-26g-protein-shake-14-fl-oz-10-pk) |
-| 🍫 Prime Bites Protein Brownie | $2.83/brownie | $33.99 for 12 📦 case | The Vitamin Shoppe | Stores + online | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/prime-bites-protein-brownie-glazed-cinnamon-roll-12-brownies/aps-10699?store=73) |
-| 🍫 Magic Spoon Protein Pastry | $2.13/pastry | $8.53 for 4 | Walmart | Stores + online | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/19124451285) |
-| 🍫 Quest Protein Chips | $1.76/bag | $24.68 for 14 📦 case | Sam's Club | Stores + online 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/s/quest+chips) |
-| 🥤 Isopure Zero Carb RTD 16.9oz (32g) | $4.63/bottle | $55.59 for 12 📦 case | GNC | Stores + online | ✅ SOLID | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
+| ⚡ RAW Bum Energy 12oz | $0.77/can | $13.87 for 18 📦 case | Costco | 🏬 In store (local) 🔒 | 🚨 STEAL | [Open deal](https://app.warehouserunner.com/costco/2045172-bum-energy-variety-pack-18-ct-12-oz) |
+| 🥤 Quest Protein Shake | $2.22/bottle | $8.89 for 4 | Target | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.target.com/p/-/A-76628735) |
+| 🍫 Legendary Protein Donuts | $1.87/pack | $7.49 for 4 | Target | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-donuts-cinnamon-crumble-20g-protein-8-9oz-4ct/-/A-94712220) |
+| 🍫 Built Puff | $1.54/bar | $19.98 for 13 📦 case | Sam's Club | 📍 Local pickup 🔒 | 🚨 STEAL | [Open deal](https://www.samsclub.com/ip/built-sour-puff-bars-variety-pack-13-ct/19583258714) |
+| 🥤 RAW Protein Shake 12oz | $2.66/bottle | $31.87 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-shake-chocolate-milkshake-12-bottle-s/grw-13229) |
+| ⚡ Celsius Original 12oz | $1.13/can | $27.19 for 24 📦 case | Costco | 🏬 In store (local) 🔒 | 🔥 HOT | [Open deal](https://app.warehouserunner.com/costco/1728905) |
+| ⚡ Celsius Essentials 16oz | $1.36/can | $16.34 for 12 📦 case | Walmart | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
+| 🥤 Premier Protein Shake 30g | $1.78/bottle | $31.99 for 18 📦 case | Costco | 🏬 In store (local) 🔒 | 🔥 HOT | [Open deal](https://app.warehouserunner.com/costco/2007063-premier-protein-shake-vanilla-11-fl-oz-18-pk) |
+| 🥤 Fairlife Core Power 26g | $2.85/bottle | $28.49 for 10 | Costco | 🏬 In store (local) 🔒 | ✅ SOLID | [Open deal](https://app.warehouserunner.com/costco/1027877-core-power-26g-protein-shake-14-fl-oz-10-pk) |
+| 🍫 Prime Bites Protein Brownie | $2.83/brownie | $33.99 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/prime-bites-protein-brownie-glazed-cinnamon-roll-12-brownies/aps-10699?store=73) |
+| 🍫 Magic Spoon Protein Pastry | $2.13/pastry | $8.53 for 4 | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/19124451285) |
+| 🍫 Quest Protein Chips | $1.76/bag | $24.68 for 14 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/s/quest+chips) |
+| 🥤 Isopure Zero Carb RTD 16.9oz (32g) | $4.63/bottle | $55.59 for 12 📦 case | GNC | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
 
 ## 📋 All products today
 
@@ -40,11 +40,11 @@ tags: [deal-radar]
 | ⚡ Celsius Original 12oz | $1.13/can | $27.19 for 24 📦 | Costco | 🔥 HOT | $1.50 | $1.13 | [Open deal](https://app.warehouserunner.com/costco/1728905) |
 | ⚡ Bang Energy 16oz | $4.21/can | $50.49 for 12 📦 | Walmart | ❌ SKIP | $4.58 | $4.21 | [Open deal](https://www.walmart.com/ip/1216905444) |
 | 🍫 Built Puff | $1.54/bar | $19.98 for 13 📦 | Sam's Club | 🚨 STEAL | $2.50 | $1.54 | [Open deal](https://www.samsclub.com/ip/built-sour-puff-bars-variety-pack-13-ct/19583258714) |
-| 🍫 Barebells Protein Bar | $2.32/bar | $27.89 for 12 📦 | Barebells (DTC) | ❌ SKIP | $2.50 | $2.32 | [Open deal](https://shop.barebells.com/product/salty-peanut/) |
+| 🍫 Barebells Protein Bar | $2.50/bar | $29.99 for 12 📦 | Target | ❌ SKIP | $2.50 | $2.32 | [Open deal](https://target.com/p/barebells-nutrition-bars-chocolate-dough-12pk/-/A-83942845) |
 | 🍫 Magic Spoon Protein Pastry | $2.13/pastry | $8.53 for 4 | Walmart | ✅ SOLID | $2.44 | $2.13 | [Open deal](https://www.walmart.com/ip/seort/19124451285) |
 | 🍫 Drumroll Mini Protein Donuts | $3.49/pack | $3.49 for 1 | Target | ❌ SKIP | $3.74 | $3.49 | [Open deal](https://www.target.com/p/drumroll-snacks-strawberry-glazed-mini-donuts-3-pack-2-6oz/-/A-90751656) |
 | 🍫 Prime Bites Protein Brownie | $2.83/brownie | $33.99 for 12 📦 | The Vitamin Shoppe | ✅ SOLID | $3.33 | $2.83 | [Open deal](https://www.vitaminshoppe.com/p/prime-bites-protein-brownie-glazed-cinnamon-roll-12-brownies/aps-10699?store=73) |
-| 🍫 Legendary Protein Pastry | $3.24/pastry | $32.39 for 10 | Legendary Foods (DTC) | ❌ SKIP | $3.48 | $3.24 | [Open deal](https://www.eatlegendary.com/products/strawberry-protein-pastry) |
+| 🍫 Legendary Protein Pastry | $3.30/pastry | $32.99 for 10 | Walmart | ❌ SKIP | $3.48 | $3.24 | [Open deal](https://www.walmart.com/ip/Legendary-Foods-Tasty-Pastry-Cake-Style-Blueberry-10-Pastries/2812426459) |
 | 🍫 Legendary Protein Donuts | $1.87/pack | $7.49 for 4 | Target | 🚨 STEAL | $3.05 | $1.87 | [Open deal](https://www.target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-donuts-cinnamon-crumble-20g-protein-8-9oz-4ct/-/A-94712220) |
 | 🍫 Legendary Popped Protein Chips | $3.57/bag | $24.98 for 7 | Vitacost | ❌ SKIP | $3.71 | $3.57 | [Open deal](https://www.vitacost.com/products/legendary-foods-popped-protein-chips-ranch-7-bags-1-3-oz-36-g-each-159248) |
 | 🍫 Quest Protein Chips | $1.76/bag | $24.68 for 14 📦 | Sam's Club | ✅ SOLID | $2.01 | $1.76 | [Open deal](https://www.samsclub.com/s/quest+chips) |

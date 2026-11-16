@@ -18,21 +18,21 @@ defaults:
     protein_g: 0
     plant_based: false
     enabled: true
-    retailers_priority: [vitamin-shoppe, gnc, amazon, walmart, target, costco, sams-club, ralphs, vons, sprouts]
+    retailers_priority: [vitamin-shoppe, gnc, target, walmart, costco, sams-club, grocery-outlet, ralphs, vons, sprouts, amazon]
     exclude_terms: [powder, tub, stick, sticks, packet, packets, "energy shot", "energy shots", hydration, pre-workout]
   snack:
     unit_label: bar
     crv_applies: false
     plant_based: false
     enabled: true
-    retailers_priority: [amazon, walmart, target, costco, vitamin-shoppe, gnc, ralphs, vons, sprouts]
+    retailers_priority: [target, walmart, costco, vitamin-shoppe, gnc, grocery-outlet, ralphs, vons, sprouts, amazon]
     exclude_terms: [powder, tub, gummies, gummy, vegan, plant-based, plant based]
   rtd:
     unit_label: bottle
     crv_applies: false
     plant_based: false
     enabled: true
-    retailers_priority: [costco, sams-club, amazon, walmart, target, vitamin-shoppe, gnc, ralphs, vons]
+    retailers_priority: [costco, sams-club, target, walmart, vitamin-shoppe, gnc, grocery-outlet, ralphs, vons, amazon]
     exclude_terms: [powder, tub, vegan, plant-based, plant based, "protein water"]
 
 products:

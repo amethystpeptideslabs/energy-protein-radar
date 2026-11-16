@@ -102,7 +102,10 @@ def write_drive_note(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
             p = cfg.products[o["product_id"]]
             unit = p.unit_label.split(" ")[0]
             r = retailers.get(o.get("retailer_key", ""), {})
-            where = "In store only" if o.get("in_store_only") else ("Stores + online" if r.get("physical") else "Online")
+            where = {"in_store": "🏬 In store (local)", "pickup": "📍 Local pickup",
+                     "ship": "🚚 Ships to you"}.get(o.get("fulfillment", ""), "Online")
+            if o.get("local_store"):
+                where += f" at {o['local_store']}"
             if o.get("membership_required"):
                 where += " 🔒"
             if o.get("stock_note"):

@@ -21,11 +21,11 @@ _Updated 2026-11-16 after the calibrate run._
 | Product | Ref $/unit | All-time low | Record at | Record date | Today's best | Best retailer now | 30d |
 |---|---|---|---|---|---|---|---|
 | [[built-puff\|Built Puff]] | $2.50 | $1.54 | Sam's Club | 2026-11-16 | $1.54 🚨 | Sam's Club | → |
-| [[barebells\|Barebells Protein Bar]] | $2.50 | $2.32 | Barebells (DTC) | 2026-11-16 | $2.32 ❌ | Barebells (DTC) | → |
+| [[barebells\|Barebells Protein Bar]] | $2.50 | $2.32 | Barebells (DTC) | 2026-11-16 | $2.50 ❌ | Target | → |
 | [[magic-spoon-pastry\|Magic Spoon Protein Pastry]] | $2.44 | $2.13 | Walmart | 2026-11-16 | $2.13 ✅ | Walmart | → |
 | [[drumroll-donuts\|Drumroll Mini Protein Donuts]] | $3.74 | $3.49 | Target | 2026-11-16 | $3.49 ❌ | Target | → |
 | [[prime-bites\|Prime Bites Protein Brownie]] | $3.33 | $2.83 | The Vitamin Shoppe | 2026-11-16 | $2.83 ✅ | The Vitamin Shoppe | → |
-| [[legendary-pastry\|Legendary Protein Pastry]] | $3.48 | $3.24 | Legendary Foods (DTC) | 2026-11-16 | $3.24 ❌ | Legendary Foods (DTC) | → |
+| [[legendary-pastry\|Legendary Protein Pastry]] | $3.48 | $3.24 | Legendary Foods (DTC) | 2026-11-16 | $3.30 ❌ | Walmart | → |
 | [[legendary-donuts\|Legendary Protein Donuts]] | $3.05 | $1.87 | Target | 2026-11-16 | $1.87 🚨 | Target | → |
 | [[legendary-chips\|Legendary Popped Protein Chips]] | $3.71 | $3.57 | Vitacost | 2026-11-16 | $3.57 ❌ | Vitacost | → |
 | [[quest-chips\|Quest Protein Chips]] | $2.01 | $1.76 | Sam's Club | 2026-11-16 | $1.76 ✅ | Sam's Club | → |

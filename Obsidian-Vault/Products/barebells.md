@@ -21,9 +21,9 @@ Unit: bar · Size: 1.94 oz · Protein: 20g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
+| Barebells Protein Bar | Target | 1× 12 | $29.99 | $2.50 | $1.25 | 100% | ❌ SKIP |  |  | [Open deal](https://target.com/p/barebells-nutrition-bars-chocolate-dough-12pk/-/A-83942845) |
 | Barebells Protein Bar | Barebells (DTC) | 1× 12 | $27.89 | $2.32 | $1.16 | 93% | ❌ SKIP |  |  | [Open deal](https://shop.barebells.com/product/salty-peanut/) |
 | Barebells Protein Bar | Vitacost | 1× 12 | $29.39 | $2.45 | $1.23 | 98% | ❌ SKIP |  |  | [Open deal](https://www.vitacost.com/barebells-protein-bar-salty-peanut-4-bars) |
-| Barebells Protein Bar | Target | 1× 12 | $29.99 | $2.50 | $1.25 | 100% | ❌ SKIP |  |  | [Open deal](https://target.com/p/barebells-nutrition-bars-chocolate-dough-12pk/-/A-83942845) |
 
 ## Price ledger
 

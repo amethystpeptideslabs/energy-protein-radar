@@ -126,6 +126,7 @@ def validate_offers(raw: list[dict[str, Any]], cfg: Config, url_map: dict[str, s
         r = cfg.settings.get("retailers", {}).get(retailer_key, {})
         if r.get("membership"):
             o["membership_required"] = True
+        o["fulfillment"] = fulfillment(o, r, kind)
 
         fp = (o["product_id"], retailer_key, normalize_url(o["source_url"]), code.upper(),
               int(o.get("pack_count") or 1), round(pack_price, 2), o.get("promo_type", "none"))
@@ -134,6 +135,17 @@ def validate_offers(raw: list[dict[str, Any]], cfg: Config, url_map: dict[str, s
         seen.add(fp)
         kept.append(o)
     return kept, dropped
+
+
+def fulfillment(o: dict[str, Any], r: dict[str, Any], kind: str) -> str:
+    """'in_store' (buy at a local store/warehouse), 'pickup' (order online, pick up locally) or 'ship'."""
+    if o.get("in_store_only"):
+        return "in_store"
+    if not r.get("physical"):
+        return "ship"
+    if o.get("pickup_available") or r.get("pickup"):
+        return "pickup"
+    return "in_store"  # store with no pickup program (Costco warehouse, Grocery Outlet)
 
 
 def flag_unverified(priced: list[dict[str, Any]], cfg: Config) -> None:

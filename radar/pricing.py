@@ -216,10 +216,11 @@ def rank_key(offer: dict[str, Any]) -> tuple:
     (biggest discount first), then $/10g protein as tiebreak."""
     from .tiers import TIER_RANK
     tier_rank = TIER_RANK.get(offer.get("tier", UNRATED), 9)
+    not_local = 0 if offer.get("fulfillment") in ("in_store", "pickup") else 1
     if offer.get("category") == "energy":
-        return (tier_rank, offer.get("unit_price") or 999.0, 0.0)
+        return (tier_rank, not_local, offer.get("unit_price") or 999.0, 0.0)
     pct = offer.get("pct_vs_ref")
-    return (tier_rank, pct if pct is not None else 999.0,
+    return (tier_rank, not_local, pct if pct is not None else 999.0,
             offer.get("price_per_10g_protein") or 999.0)
 
 

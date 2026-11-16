@@ -66,6 +66,10 @@
 - Domains: vons.com, albertsons.com
 - for U digital coupons; member prices need a free account.
 
+## Grocery Outlet
+- Domains: groceryoutlet.com
+- Closeout 'bargain market': deals vary by store and disappear fast. Weekly ad resets Wednesday (website/app/Instacart). Stock: Instacart/DoorDash store pages show estimates.
+
 ## Sprouts
 - Domains: sprouts.com
 - Weekly ad; digital coupons.

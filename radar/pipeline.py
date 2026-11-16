@@ -31,7 +31,8 @@ SLIM_KEYS = ("product_id", "category", "retailer_name", "retailer_key", "source_
              "effective_pack_total", "unit_price", "price_per_oz", "price_per_10g_protein", "pct_vs_ref",
              "tier", "protein_value_badge", "is_record", "unverified", "code", "starts", "ends",
              "in_store_only", "membership_required", "limit_per_customer", "min_qty", "promo_type",
-             "subscribe_save_pct", "seen_at", "is_case", "stock_note")
+             "subscribe_save_pct", "seen_at", "is_case", "stock_note", "fulfillment", "local_store",
+             "pickup_available")
 
 
 @dataclass
@@ -168,6 +169,10 @@ def _price_all(offers: list[dict[str, Any]], cfg: Config) -> list[dict[str, Any]
         if not p or not p.enabled:
             continue
         o = {k: v for k, v in o.items() if k not in ("is_record", "previous_record")}
+        if not o.get("fulfillment"):
+            from .validate import fulfillment
+            o["fulfillment"] = fulfillment(o, cfg.settings.get("retailers", {}).get(o.get("retailer_key", ""), {}),
+                                           o.get("source_kind", "other"))
         o.update(price_offer(o, p, p.ref_unit_price, cfg.settings))
         o["category"] = p.category
         priced.append(o)
@@ -215,7 +220,8 @@ def build_latest(cfg: Config, state: State, ranked: list[dict[str, Any]], heroes
         "heroes": {k: _slim(v, True) if v else None for k, v in heroes.items()},
         "products": products,
         "protein_value_board": board,
-        "retailers": {k: {"name": r["name"], "physical": bool(r.get("physical")),
+        "home_area": cfg.settings.get("home_area", ""),
+        "retailers": {k: {"name": r["name"], "physical": bool(r.get("physical")), "pickup": bool(r.get("pickup")),
                           "membership": bool(r.get("membership")), "stock_search": r.get("stock_search", "")}
                       for k, r in cfg.settings.get("retailers", {}).items()},
         "counts": {"offers": len(ranked), "hot_plus": sum(is_hot_plus(o["tier"]) for o in vis),
@@ -396,12 +402,16 @@ def run(opts: RunOptions) -> RunResult:
     current = _price_all(current_offers(state, cfg, d), cfg)  # re-price with today's refs
     flag_unverified(current, cfg)
     ranked = sorted(current, key=rank_key)
-    best_by_product: dict[str, dict[str, Any]] = {}
+    best_by_product: dict[str, dict[str, Any]] = {}   # recommended (tier, then local-first)
+    cheapest_by_product: dict[str, dict[str, Any]] = {}  # lowest price: records + history
     for o in ranked:
         if not o.get("unverified"):
             best_by_product.setdefault(o["product_id"], o)
-    records = detect_records(state, best_by_product, d)
-    update_history(state, best_by_product, d)
+            c = cheapest_by_product.get(o["product_id"])
+            if c is None or o["unit_price"] < c["unit_price"]:
+                cheapest_by_product[o["product_id"]] = o
+    records = detect_records(state, cheapest_by_product, d)
+    update_history(state, cheapest_by_product, d)
     record_active_codes(state, [o for o in kept_all], d)
     heroes = {cat: next((o for o in ranked if o["category"] == cat and not o.get("unverified")), None)
               for cat in ("energy", "snack", "rtd")}

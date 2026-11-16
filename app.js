@@ -19,7 +19,8 @@ const store = {
 
 const state = {
   latest: null, history: {}, cat: store.get("dr.cat", "all"), sort: store.get("dr.sort", "tier"),
-  starredOnly: false, casesOnly: store.get("dr.cases", false), filter: store.get("dr.filter", "all"), starred: new Set(store.get("dr.starred", [])), open: new Set(),
+  starredOnly: false, casesOnly: store.get("dr.cases", false), localOnly: store.get("dr.local", false),
+  filter: store.get("dr.filter", "all"), starred: new Set(store.get("dr.starred", [])), open: new Set(),
   histProduct: null, histRange: store.get("dr.range", "30"), chart: null,
 };
 
@@ -120,7 +121,7 @@ function render() {
   } else {
     $("#banner").hidden = true;
   }
-  renderHeroes(state.casesOnly ? caseHeroes(products) : (L?.heroes || {}), products);
+  renderHeroes(state.casesOnly || state.localOnly ? caseHeroes(products) : (L?.heroes || {}), products);
   renderDeals(products);
   renderTabs();
   renderRows(products);
@@ -140,7 +141,7 @@ function emptyTag(title, text) {
 function renderHeroes(heroes, products) {
   const html = ["energy", "snack", "rtd"].map((cat) => {
     const o = heroes[cat];
-    if (!o) return emptyTag(`${CAT_NAME[cat]}: nothing yet`, state.casesOnly ? "No case deal in the last scan. Turn off Cases only to see single-unit deals." : "No sourced offer passed validation in the last scan.");
+    if (!o) return emptyTag(`${CAT_NAME[cat]}: nothing yet`, state.casesOnly || state.localOnly ? "Nothing matches your filters in the last scan. Turn a filter off to see more." : "No sourced offer passed validation in the last scan.");
     const p = productById(o.product_id) || { unit_label: "unit", category: cat, display_name: o.product_id };
     const sec = secondary(p, o);
     const ch = chips(o);
@@ -186,16 +187,23 @@ function stockUrl(p, o) {
 }
 function whereText(o) {
   const r = retailerOf(o);
-  if (o.in_store_only) return `🏬 In store only at ${r.name}`;
-  if (r.physical) return r.key === "costco" || r.name === "Costco"
-    ? "🏬 Costco warehouses + costco.com (warehouse stock isn't listed online)"
-    : `🏬 ${r.name} stores + online`;
-  return "📦 Online only (ships to you)";
+  const at = o.local_store ? ` (${o.local_store})` : " near you";
+  if (o.fulfillment === "pickup") return `📍 Order online, pick up at ${r.name}${at}`;
+  if (o.fulfillment === "in_store") {
+    if (r.name === "Costco") return `🏬 In store at Costco${at} (warehouse stock isn't listed online)`;
+    return `🏬 In store at ${r.name}${at}`;
+  }
+  return "🚚 Ships to you (online only)";
 }
-function cmpRank(cat, a, b) { const x = offerRank(cat, a), y = offerRank(cat, b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; }
+function fulfillBadge(o) {
+  return o.fulfillment === "pickup" ? '<span class="badge local">📍 Local pickup</span>'
+    : o.fulfillment === "in_store" ? '<span class="badge local">🏬 In store</span>'
+    : '<span class="badge">🚚 Ships</span>';
+}
+function cmpRank(cat, a, b) { return cmpArr(offerRank(cat, a), offerRank(cat, b)); }
 function bestDealFor(p) {
-  const pool = (p.offers || []).filter((o) => !o.unverified && (!state.casesOnly || o.is_case));
-  pool.sort((a, b) => cmpRank(p.category, a, b));
+  const pool = (p.offers || []).filter(passesView);
+  pool.sort((a, b) => cmpArr(offerRank(p.category, a), offerRank(p.category, b)));
   return pool[0] || null;
 }
 
@@ -214,7 +222,7 @@ function dealCard(p, o) {
   const units = `${o.units_in_cart} ${unit}${o.units_in_cart > 1 ? "s" : ""}`;
   return `<li class="deal t-${esc(o.tier)}">
     <a class="deal-main" href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener noreferrer">
-      <span class="deal-tags"><span class="tier t-${esc(o.tier)}">${esc(TIER_EMOJI[o.tier] || "")} ${esc(o.tier)}</span>${o.is_case ? `<span class="badge">📦 Case of ${esc(o.pack_count)}</span>` : ""}${o.is_record ? '<span class="badge">🏆 Record low</span>' : ""}${ends ? `<span class="badge ends">${esc(ends)}</span>` : ""}</span>
+      <span class="deal-tags"><span class="tier t-${esc(o.tier)}">${esc(TIER_EMOJI[o.tier] || "")} ${esc(o.tier)}</span>${fulfillBadge(o)}${o.is_case ? `<span class="badge">📦 Case of ${esc(o.pack_count)}</span>` : ""}${o.is_record ? '<span class="badge">🏆 Record low</span>' : ""}${ends ? `<span class="badge ends">${esc(ends)}</span>` : ""}</span>
       <span class="deal-name">${esc(p.display_name)}</span>
       <span class="deal-price"><b>${money(o.unit_price)}</b><span class="per">/${esc(unit)}</span></span>
       <span class="deal-line">${money(o.effective_pack_total)} for ${esc(units)} at <strong>${esc(r.name)}</strong>${save ? `, ${esc(save)}` : ""}</span>
@@ -247,12 +255,13 @@ function renderDeals(products) {
   document.querySelectorAll(".filters [data-filter]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === state.filter)));
   const list = products.filter((p) => state.filter === "all" || p.category === state.filter).map((p) => ({ p, o: bestDealFor(p) }));
   const deals = list.filter((x) => x.o && ["STEAL", "HOT", "SOLID"].includes(x.o.tier));
-  deals.sort((a, b) => (TIER_RANK[a.o.tier] - TIER_RANK[b.o.tier]) || ((a.o.pct_vs_ref ?? 999) - (b.o.pct_vs_ref ?? 999)) || (a.o.unit_price - b.o.unit_price));
+  deals.sort((a, b) => (TIER_RANK[a.o.tier] - TIER_RANK[b.o.tier]) || ((isLocal(a.o) ? 0 : 1) - (isLocal(b.o) ? 0 : 1))
+    || ((a.o.pct_vs_ref ?? 999) - (b.o.pct_vs_ref ?? 999)) || (a.o.unit_price - b.o.unit_price));
   const rest = list.filter((x) => !deals.includes(x));
-  const word = state.casesOnly ? "case deal" : "deal";
+  const word = `${state.localOnly ? "local " : ""}${state.casesOnly ? "case " : ""}deal`;
   $("#deal-count").textContent = products.length ? `${deals.length} ${word}${deals.length === 1 ? "" : "s"}` : "";
   $("#deal-list").innerHTML = deals.length ? deals.map(({ p, o }) => dealCard(p, o)).join("")
-    : `<li class="empty-row">${products.length ? `No ${word}s here in the last scan.${state.casesOnly ? " Turn off Cases only to see single-unit deals." : ""}` : "Deals appear after the first scan."}</li>`;
+    : `<li class="empty-row">${products.length ? `No ${word}s here in the last scan.${state.casesOnly || state.localOnly ? " Turn a filter off to see more." : ""}` : "Deals appear after the first scan."}</li>`;
   $("#regular-summary").textContent = `No deal today: ${rest.length} product${rest.length === 1 ? "" : "s"} at regular price`;
   $("#regular").hidden = rest.length === 0;
   $("#regular-list").innerHTML = rest.map(({ p, o }) => regularCard(p, o)).join("");
@@ -268,22 +277,26 @@ function renderTabs() {
   $("#sort").value = state.sort;
   $("#starred").setAttribute("aria-pressed", String(state.starredOnly));
   $("#cases").setAttribute("aria-pressed", String(state.casesOnly));
+  $("#local").setAttribute("aria-pressed", String(state.localOnly));
 }
 
 function isEasy(o) { return !o.in_store_only && !o.membership_required && !(Number(o.min_qty) > 1); }
 function passes(o) { return (state.sort !== "easy" || isEasy(o)) && (!state.casesOnly || o.is_case); }
 
+function isLocal(o) { return o.fulfillment === "in_store" || o.fulfillment === "pickup"; }
 function offerRank(cat, o) {
   const t = TIER_RANK[o.tier] ?? 4;
-  return cat === "energy" ? [t, o.unit_price ?? 9e9, 0] : [t, o.pct_vs_ref ?? 999, o.price_per_10g_protein ?? 9e9];
+  const l = isLocal(o) ? 0 : 1;  // local pickup / in store first within a tier
+  return cat === "energy" ? [t, l, o.unit_price ?? 9e9, 0] : [t, l, o.pct_vs_ref ?? 999, o.price_per_10g_protein ?? 9e9];
 }
+function cmpArr(x, y) { for (let i = 0; i < x.length; i++) { if (x[i] !== y[i]) return x[i] - y[i]; } return 0; }
+function passesView(o) { return !o.unverified && (!state.casesOnly || o.is_case) && (!state.localOnly || isLocal(o)); }
 
 function caseHeroes(products) {
   const out = {};
   for (const cat of ["energy", "snack", "rtd"]) {
-    const pool = products.filter((p) => p.category === cat)
-      .flatMap((p) => (p.offers || []).filter((o) => o.is_case && !o.unverified));
-    pool.sort((a, b) => { const x = offerRank(cat, a), y = offerRank(cat, b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; });
+    const pool = products.filter((p) => p.category === cat).flatMap((p) => (p.offers || []).filter(passesView));
+    pool.sort((a, b) => cmpArr(offerRank(cat, a), offerRank(cat, b)));
     out[cat] = pool[0] || null;
   }
   return out;
@@ -530,6 +543,10 @@ function bind() {
   $("#sort").addEventListener("change", (e) => {
     state.sort = e.target.value; store.set("dr.sort", state.sort);
     renderRows(state.latest?.products || []);
+  });
+  $("#local").addEventListener("click", () => {
+    state.localOnly = !state.localOnly; store.set("dr.local", state.localOnly);
+    render();
   });
   $("#cases").addEventListener("click", () => {
     state.casesOnly = !state.casesOnly; store.set("dr.cases", state.casesOnly);

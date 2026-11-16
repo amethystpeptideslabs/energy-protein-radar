@@ -41,6 +41,8 @@ OFFER_FIELDS: dict[str, dict[str, Any]] = {
     "in_store_only": {"type": "boolean"},
     "limit_per_customer": {"type": "integer", "description": "Max units per customer, 0 if none."},
     "membership_required": {"type": "boolean"},
+    "pickup_available": {"type": "boolean", "description": "True if the page offers in-store/curbside pickup or same-day pickup."},
+    "local_store": {"type": "string", "description": "Specific Orange County store the deal/stock applies to, if the page names one, else ''."},
     "stock_note": {"type": "string", "description": "Store-level stock ONLY if the page states it, e.g. 'In stock at Target Mission Viejo (pickup today)'; else ''."},
     "starts": {"type": "string", "description": "YYYY-MM-DD or ''."},
     "ends": {"type": "string", "description": "YYYY-MM-DD or ''."},

@@ -37,7 +37,8 @@ def _pack(o: dict[str, Any], cfg: Config) -> str:
         return ""
     unit = cfg.products[o["product_id"]].unit_label.split(" ")[0]
     n = int(o.get("units_in_cart") or 1)
-    return f"${o['effective_pack_total']:.2f} for {n} {unit}{'s' if n > 1 else ''}" + (" (case)" if o.get("is_case") else "")
+    how = {"in_store": ", in store", "pickup": ", local pickup", "ship": ", ships"}.get(o.get("fulfillment", ""), "")
+    return f"${o['effective_pack_total']:.2f} for {n} {unit}{'s' if n > 1 else ''}" + (" (case)" if o.get("is_case") else "") + how
 
 
 def _restrictions(o: dict[str, Any]) -> str:

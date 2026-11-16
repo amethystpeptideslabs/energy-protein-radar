@@ -22,6 +22,12 @@ middays), the `jobs` to research, a `search_budget` per job, known `dead_codes` 
 - Use the job's `task` text as the brief. Stay within its `search_budget` searches (the plan's
   `total_search_budget` is the whole run). Keep your notes short: numbers, URL, verbatim price text
   (a few extra WebFetch reads of result pages are fine when a snippet lacks the price).
+- **Local first.** The owner is in Orange County, CA (South OC first) and prefers local pickup. Prioritize
+  in-store deals and buy-online-pick-up-in-store at OC stores (Target, Walmart, Vitamin Shoppe, GNC, Costco,
+  Sam's Club, Ralphs, Vons, Sprouts, and Grocery Outlet's weekly ad for an OC store). In-store-only or
+  store-specific promos count only if valid at an Orange County store; put the store in `local_store`
+  (e.g. "Grocery Outlet Lake Forest") when the page names one. Set `pickup_available: true` when the page
+  offers pickup. Ship-to-home deals are still welcome.
 - **Store stock.** For the best in-store/club deals, if a retailer or deal page shows availability at
   specific Orange County stores, record it in `stock_note`. Don't spend extra searches hunting for it.
 - **Cases first.** The owner buys by the case: look for 12-, 15-, 18-, 24-pack / box prices.
@@ -83,6 +89,8 @@ far, so a long session never loses work. Format:
           "in_store_only": false,
           "limit_per_customer": 0,
           "membership_required": false,
+          "pickup_available": false,
+          "local_store": "",
           "stock_note": "",
           "starts": "",
           "ends": ""

@@ -44,12 +44,13 @@
         <h2 id="h-deals">Today's deals</h2>
         <p class="deal-count" id="deal-count"></p>
       </div>
-      <p class="sub">Tap a deal to open it at the store.</p>
+      <p class="sub">Tap a deal to open it at the store. Local pickup and in-store deals come first.</p>
       <div class="filters" role="group" aria-label="Show deals for">
         <button class="pill" type="button" data-filter="all" aria-pressed="true">All</button>
         <button class="pill" type="button" data-filter="energy" aria-pressed="false">Energy</button>
         <button class="pill" type="button" data-filter="snack" aria-pressed="false">Snacks</button>
         <button class="pill" type="button" data-filter="rtd" aria-pressed="false">Shakes</button>
+        <button class="pill" type="button" id="local" aria-pressed="false">📍 Local only</button>
         <button class="pill case" type="button" id="cases" aria-pressed="false">📦 Cases only</button>
       </div>
       <ul class="deal-list" id="deal-list"></ul>

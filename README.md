@@ -1,10 +1,11 @@
 # Energy + Protein Deal Radar
 
-Daily deal hunter for **RTD energy drinks, protein snacks and RTD protein shakes** (25 products).
-A GitHub Actions job searches the web with Claude every morning, Python does all the price math,
-and results land in:
+Daily deal hunter for **RTD energy drinks, protein snacks and RTD protein shakes** (25 products),
+**cases first** (12/15/18/24-packs, boxes) with single-can promos included. No API credits: a
+scheduled Claude session on the owner's existing Claude plan does the web research
+(`docs/RESEARCH_PROTOCOL.md`), and Python in this repo does every check and every price.
 
-- **App:** https://amethystpeptideslabs.github.io/energy-protein-radar/ (installable PWA)
+- **App:** https://amethystpeptideslabs.github.io/energy-protein-radar/ (installable PWA, "Cases only" filter)
   - iPhone: Safari → Share → **Add to Home Screen**
   - Android/Chrome: menu → **Install app**
 - **Phone alerts:** ntfy (subscribe to your private topic in the ntfy app, server `ntfy.sh`)
@@ -14,20 +15,21 @@ and results land in:
 
 | When | What |
 |---|---|
-| Daily 7:17 AM | auto: **deep** on Mon + Thu (one search per product), **quick** other days; first ever run = **calibrate** |
+| Daily 5:43 AM | Claude session: **calibrate** on the first run, **deep** Mon + Thu, **quick** other days |
 | Thu + Fri 12:17 PM | quick, focused on Vitamin Shoppe / GNC weekend promos + Stack3d / Slickdeals |
-| Daily 6:17 PM | no-op (zero API calls) unless inside a `deal_season` window in `config/settings.yaml` |
 | Daily 8:05 AM (your PC) | `DealRadarSync` pulls the repo and copies notes into your vault |
 
-Manual run: Actions → **Daily deal scan** → Run workflow → pick a mode
-(or `gh workflow run daily_scan.yml -f mode=deep`). `check` mode = tiny API + web search + ntfy test.
+The sessions are Claude scheduled tasks on your account (edit or pause them in Claude). Each one runs
+`deal_hunter.py --plan`, researches with web search, writes a research JSON, then runs
+`deal_hunter.py --ingest` and pushes; the push redeploys the app.
+
+Optional paid engine: Actions → **API scan (optional, manual)** with an `ANTHROPIC_API_KEY` secret.
 
 ## How it works
 
-1. **Research** (`radar/research.py`): Claude + `web_search_20260209` (dynamic filtering) writes an evidence
-   dossier. Every URL returned in `web_search_tool_result` blocks is recorded.
-2. **Extraction** (`radar/extract.py`): a cheap model converts the dossier to strict JSON via
-   `output_config.format`. Raw numbers only.
+1. **Research**: a Claude session searches the web and records every result URL plus raw offer numbers
+   (`docs/RESEARCH_PROTOCOL.md`). The optional API engine does the same via `radar/research.py` + `radar/extract.py`.
+2. **Ingest** (`deal_hunter.py --ingest`): fills defaults and hands the offers to validation.
 3. **Validation** (`radar/validate.py`): drops offers whose URL wasn't in that run's search results,
    stale posts (>21 days unless the promo is still running), wrong sizes/excluded products, dead codes.
    Too-good prices without a second source are flagged ⚠️ UNVERIFIED (shown, never pushed).
@@ -43,11 +45,10 @@ Tiers — energy ($/can incl. CRV, 16 oz): 🚨 STEAL < $1.25 · 🔥 HOT ≤ $1
 
 Edit `config/products.yaml` (set `enabled: false` to drop one, e.g. Drumroll) or `config/settings.yaml`, then push.
 
-## Secrets (GitHub → Settings → Secrets and variables → Actions)
+## Secrets
 
-- `ANTHROPIC_API_KEY` — required for scans
-- `NTFY_TOPIC` — your private ntfy topic (topics are public by name: keep it long and random)
-- `MONTHLY_BUDGET_USD` — optional, default 40 (above 80% deep runs become quick; at 100% research pauses)
+- ntfy topic: lives in the scheduled task prompt and the `NTFY_TOPIC` Actions secret, never in files.
+- `ANTHROPIC_API_KEY`: only for the optional paid engine. Not needed.
 
 Never commit them. `.githooks/pre-commit` blocks staged API keys, ntfy topics and `.env`.
 

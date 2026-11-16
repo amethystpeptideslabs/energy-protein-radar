@@ -31,7 +31,7 @@ SLIM_KEYS = ("product_id", "category", "retailer_name", "retailer_key", "source_
              "effective_pack_total", "unit_price", "price_per_oz", "price_per_10g_protein", "pct_vs_ref",
              "tier", "protein_value_badge", "is_record", "unverified", "code", "starts", "ends",
              "in_store_only", "membership_required", "limit_per_customer", "min_qty", "promo_type",
-             "subscribe_save_pct", "seen_at")
+             "subscribe_save_pct", "seen_at", "is_case")
 
 
 @dataclass
@@ -44,6 +44,8 @@ class RunOptions:
     root: Path = ROOT
     out: Path | None = None
     slot: str | None = None
+    ingest: Path | None = None   # research JSON written by a Claude session (no API key needed)
+    plan: bool = False           # print today's research plan as JSON and exit
 
 
 @dataclass
@@ -100,17 +102,53 @@ def _anthropic_client(cfg: Config):
     return anthropic.Anthropic(api_key=cfg.api_key, max_retries=5, timeout=600)
 
 
+def _job_from_dict(fx: dict[str, Any]) -> tuple[ResearchResult, dict[str, Any]]:
+    from .extract import OFFER_FIELDS
+    from .util import normalize_url
+    r = ResearchResult(label=str(fx.get("label", "job")), product_ids=list(fx.get("product_ids", [])),
+                       dossier=fx.get("dossier", ""), searches=int(fx.get("searches", 0) or 0))
+    r.urls = {normalize_url(u): u for u in fx.get("urls", []) if isinstance(u, str) and u}
+    r.page_ages = {normalize_url(k): v for k, v in (fx.get("page_ages") or {}).items()}
+    extraction = fx.get("extraction") or {"offers": fx.get("offers", []), "dead_codes": fx.get("dead_codes", [])}
+    defaults = {k: ("" if v["type"] == "string" else 0 if v["type"] in ("number", "integer") else False)
+                for k, v in OFFER_FIELDS.items()}
+    defaults.update(promo_type="none", min_qty=1, pack_count=1)
+    offers = [{**defaults, **{k: v for k, v in o.items() if v is not None}}
+              for o in extraction.get("offers", []) if isinstance(o, dict)]
+    return r, {"offers": offers, "dead_codes": extraction.get("dead_codes", []) or []}
+
+
 def _fixture_jobs(root: Path) -> list[tuple[ResearchResult, dict[str, Any]]]:
-    out = []
-    for f in sorted((root / "tests" / "fixtures" / "dryrun").glob("*.json")):
-        fx = json.loads(f.read_text(encoding="utf-8"))
-        from .util import normalize_url
-        r = ResearchResult(label=fx["label"], product_ids=fx["product_ids"],
-                           dossier=fx.get("dossier", ""), searches=fx.get("searches", 0))
-        r.urls = {normalize_url(u): u for u in fx["urls"]}
-        r.page_ages = {normalize_url(k): v for k, v in fx.get("page_ages", {}).items()}
-        out.append((r, fx["extraction"]))
-    return out
+    return [_job_from_dict(json.loads(f.read_text(encoding="utf-8")))
+            for f in sorted((root / "tests" / "fixtures" / "dryrun").glob("*.json"))]
+
+
+def load_research_file(path: Path) -> tuple[str | None, list[tuple[ResearchResult, dict[str, Any]]]]:
+    """Research JSON from a Claude session: {"mode": ..., "jobs": [{label, product_ids, urls,
+    page_ages, searches, offers, dead_codes}]} (see docs/RESEARCH_PROTOCOL.md)."""
+    data = json.loads(Path(path).read_text(encoding="utf-8"))
+    if isinstance(data, list):
+        data = {"jobs": data}
+    return data.get("mode"), [_job_from_dict(j) for j in data.get("jobs", [])]
+
+
+def research_plan(cfg: Config, state: State, mode: str, slot: str, note: str, only: str | None,
+                  d: date) -> dict[str, Any]:
+    budgets = {"quick": 10, "deep": 4, "calibrate": 5}
+    jobs = [] if mode in ("skip", "check", "init") else [
+        {"label": label, "product_ids": pids, "search_budget": budgets.get(mode, 8) if len(pids) == 1 else
+         (6 if slot == "midday" else budgets["quick"]), "task": prompt}
+        for label, pids, prompt, _ in build_jobs(cfg, mode, slot, only, d)]
+    return {
+        "date": d.isoformat(), "slot": slot, "mode": mode, "note": note,
+        "case_min_units": int(cfg.settings["research"].get("case_min_units", 12)),
+        "jobs": jobs,
+        "dead_codes": state.memory.get("dead_codes", []),
+        "records": {pid: pm.get("all_time_low") for pid, pm in state.memory["products"].items()
+                    if pid in cfg.products and cfg.products[pid].enabled},
+        "rules": "Follow docs/RESEARCH_PROTOCOL.md exactly. Write the JSON to a file and run "
+                 "`python deal_hunter.py --ingest <file>`.",
+    }
 
 
 def _price_all(offers: list[dict[str, Any]], cfg: Config) -> list[dict[str, Any]]:
@@ -203,6 +241,14 @@ def run(opts: RunOptions) -> RunResult:
     mode, note = resolve_mode(cfg, state, opts.mode, slot, d)
     if opts.only and mode == "quick":
         mode = "deep"  # --only implies a single-product research call
+    ingest_jobs: list[tuple[ResearchResult, dict[str, Any]]] | None = None
+    if opts.ingest:
+        file_mode, ingest_jobs = load_research_file(opts.ingest)
+        if opts.mode == "auto" and file_mode:
+            mode = file_mode
+    if opts.plan:
+        print(json.dumps(research_plan(cfg, state, mode, slot, note, opts.only, d), ensure_ascii=False, indent=1))
+        return RunResult(mode=mode, slot=slot, status="plan", reason=note)
     tracker = CostTracker(prices=cfg.settings["prices"], max_run_usd=float(cfg.settings["budget"]["max_run_usd"]))
     res = RunResult(mode=mode, slot=slot, status="ok", reason=note)
     app_url = cfg.settings["app_url"]
@@ -218,7 +264,7 @@ def run(opts: RunOptions) -> RunResult:
         if state.latest and status == "failed":
             state.latest["stale"] = True
             state.latest["stale_reason"] = reason
-        if tracker.calls:
+        if tracker.calls or opts.ingest:
             record_run(state.memory, d, tracker)
         state.memory["latest_run"] = {"date": d.isoformat(), "mode": mode, "status": status,
                                       "cost_usd": round(tracker.usd, 4), "searches": tracker.searches}
@@ -246,7 +292,7 @@ def run(opts: RunOptions) -> RunResult:
     # budget
     cap = cfg.monthly_budget
     bstate = budget_state(state.memory, d, cap, float(cfg.settings["budget"]["downgrade_at_pct"]))
-    if bstate == "exhausted" and not opts.dry_run:
+    if bstate == "exhausted" and not opts.dry_run and not opts.ingest:
         warn = state.memory.get("budget_warning_month") != month_key(d)
         state.memory["budget_warning_month"] = month_key(d)
         return finish("skipped", f"monthly budget ${cap:.2f} reached (${month_spend(state.memory, d):.2f} spent); "
@@ -255,14 +301,19 @@ def run(opts: RunOptions) -> RunResult:
         mode = res.mode = "quick"
         note = (note + "; " if note else "") + "budget above 80%: deep downgraded to quick"
 
-    if not opts.dry_run and not cfg.api_key:
+    if not opts.dry_run and not opts.ingest and not cfg.api_key:
         return finish("failed", "ANTHROPIC_API_KEY is not set (add it under repo Settings → Secrets → Actions)",
                       push_failure=True)
 
     # ---------------- research + extraction
     jobs_out: list[tuple[ResearchResult, dict[str, Any]]] = []
     errors: list[str] = []
-    if opts.dry_run:
+    if ingest_jobs is not None:
+        jobs_out = ingest_jobs
+        tracker.searches = sum(r.searches for r, _ in jobs_out)
+        if not jobs_out:
+            return finish("failed", f"research file {opts.ingest} has no jobs", push_failure=True)
+    elif opts.dry_run:
         jobs_out = _fixture_jobs(opts.root)
         if opts.only:
             jobs_out = [(r, x) for r, x in jobs_out if opts.only in r.product_ids]
@@ -356,8 +407,11 @@ def run(opts: RunOptions) -> RunResult:
 
 
 def main_from_cli(opts: RunOptions) -> int:
-    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s", stream=sys.stdout)
+    logging.basicConfig(level=logging.WARNING if opts.plan else logging.INFO,
+                        format="%(levelname)s %(name)s: %(message)s", stream=sys.stderr if opts.plan else sys.stdout)
     r = run(opts)
+    if opts.plan:
+        return 0
     print(f"radar: mode={r.mode} slot={r.slot} status={r.status} cost=${r.cost_usd:.4f} "
           f"searches={r.searches} products_with_offers={r.products_with_offers}")
     if r.reason:

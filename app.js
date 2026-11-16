@@ -18,7 +18,7 @@ const store = {
 
 const state = {
   latest: null, history: {}, cat: store.get("dr.cat", "all"), sort: store.get("dr.sort", "tier"),
-  starredOnly: false, starred: new Set(store.get("dr.starred", [])), open: new Set(),
+  starredOnly: false, casesOnly: store.get("dr.cases", false), starred: new Set(store.get("dr.starred", [])), open: new Set(),
   histProduct: null, histRange: store.get("dr.range", "30"), chart: null,
 };
 
@@ -52,6 +52,7 @@ function endsText(ends) {
 }
 function chips(o) {
   const c = [];
+  if (o.is_case) c.push(`📦 case of ${o.pack_count}`);
   if (o.in_store_only) c.push("🏬 in-store only");
   if (o.membership_required) c.push("🔒 membership");
   if (Number(o.limit_per_customer)) c.push(`limit ${o.limit_per_customer}`);
@@ -118,7 +119,7 @@ function render() {
   } else {
     $("#banner").hidden = true;
   }
-  renderHeroes(L?.heroes || {}, products);
+  renderHeroes(state.casesOnly ? caseHeroes(products) : (L?.heroes || {}), products);
   renderTabs();
   renderRows(products);
   renderBoard(L?.protein_value_board || []);
@@ -137,7 +138,7 @@ function emptyTag(title, text) {
 function renderHeroes(heroes, products) {
   const html = ["energy", "snack", "rtd"].map((cat) => {
     const o = heroes[cat];
-    if (!o) return emptyTag(`${CAT_NAME[cat]}: nothing yet`, "No sourced offer passed validation in the last scan.");
+    if (!o) return emptyTag(`${CAT_NAME[cat]}: nothing yet`, state.casesOnly ? "No case deal in the last scan. Turn off Cases only to see single-unit deals." : "No sourced offer passed validation in the last scan.");
     const p = productById(o.product_id) || { unit_label: "unit", category: cat, display_name: o.product_id };
     const sec = secondary(p, o);
     const ch = chips(o);
@@ -173,12 +174,30 @@ function renderTabs() {
   });
   $("#sort").value = state.sort;
   $("#starred").setAttribute("aria-pressed", String(state.starredOnly));
+  $("#cases").setAttribute("aria-pressed", String(state.casesOnly));
 }
 
 function isEasy(o) { return !o.in_store_only && !o.membership_required && !(Number(o.min_qty) > 1); }
+function passes(o) { return (state.sort !== "easy" || isEasy(o)) && (!state.casesOnly || o.is_case); }
+
+function offerRank(cat, o) {
+  const t = TIER_RANK[o.tier] ?? 4;
+  return cat === "energy" ? [t, o.unit_price ?? 9e9, 0] : [t, o.pct_vs_ref ?? 999, o.price_per_10g_protein ?? 9e9];
+}
+
+function caseHeroes(products) {
+  const out = {};
+  for (const cat of ["energy", "snack", "rtd"]) {
+    const pool = products.filter((p) => p.category === cat)
+      .flatMap((p) => (p.offers || []).filter((o) => o.is_case && !o.unverified));
+    pool.sort((a, b) => { const x = offerRank(cat, a), y = offerRank(cat, b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; });
+    out[cat] = pool[0] || null;
+  }
+  return out;
+}
 
 function bestFor(p) {
-  const offers = (p.offers || []).filter((o) => state.sort !== "easy" || isEasy(o));
+  const offers = (p.offers || []).filter(passes);
   const verified = offers.filter((o) => !o.unverified);
   return verified[0] || offers[0] || null;
 }
@@ -228,7 +247,9 @@ function rowHtml(p, best) {
     meta = `<span class="row-meta">${esc(best.retailer_name)}${sec ? `, ${sec.value} ${esc(sec.label)} ${esc(sec.badge || "")}` : ""}${best.is_record ? " 🏆" : ""}</span>`;
     tier = `<span class="tier t-${esc(tierOf(best))}">${esc(tierText(best))}</span>`;
   }
-  const easyNote = state.sort === "easy" && !best && (p.offers || []).length ? " (only in-store, membership or multi-buy offers today)" : "";
+  const easyNote = !best && (p.offers || []).length
+    ? (state.casesOnly ? " (no case offer today; single-unit offers only)" : state.sort === "easy" ? " (only in-store, membership or multi-buy offers today)" : "")
+    : "";
   return `<li class="row">
     <button class="row-main" type="button" aria-expanded="${open}" aria-controls="${id}" data-toggle="${esc(p.id)}">
       <span class="row-name">${esc(p.display_name)}</span>${price}
@@ -409,6 +430,10 @@ function bind() {
   $("#sort").addEventListener("change", (e) => {
     state.sort = e.target.value; store.set("dr.sort", state.sort);
     renderRows(state.latest?.products || []);
+  });
+  $("#cases").addEventListener("click", () => {
+    state.casesOnly = !state.casesOnly; store.set("dr.cases", state.casesOnly);
+    render();
   });
   $("#starred").addEventListener("click", () => {
     state.starredOnly = !state.starredOnly;

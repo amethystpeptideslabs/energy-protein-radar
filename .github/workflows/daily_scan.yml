@@ -1,13 +1,8 @@
-name: Daily deal scan
+name: API scan (optional, manual)
 
+# Optional paid engine (needs ANTHROPIC_API_KEY). Daily scans run as a scheduled Claude
+# session instead (docs/RESEARCH_PROTOCOL.md), so this workflow is manual-only.
 on:
-  schedule:
-    - cron: '17 7 * * *'      # daily morning run (auto mode picks quick/deep/calibrate)
-      timezone: 'America/Los_Angeles'
-    - cron: '17 12 * * 4,5'   # Thu+Fri midday weekend-promo check
-      timezone: 'America/Los_Angeles'
-    - cron: '17 18 * * *'     # evening run, no-op (zero API calls) outside deal_season
-      timezone: 'America/Los_Angeles'
   workflow_dispatch:
     inputs:
       mode:
@@ -49,7 +44,6 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           MONTHLY_BUDGET_USD: ${{ secrets.MONTHLY_BUDGET_USD }}
-          DEAL_RADAR_SCHEDULE: ${{ github.event.schedule }}
           RUN_MODE: ${{ inputs.mode || 'auto' }}
         run: python deal_hunter.py --mode "$RUN_MODE"
       - name: Commit results (every run writes status.json heartbeat)

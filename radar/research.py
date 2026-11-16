@@ -80,6 +80,10 @@ END
 """
 
 
+CASE_FOCUS = (" Priority: CASE / multi-pack prices (12-, 15-, 18-, 24-packs, boxes of bars) — the buyer "
+              "buys by the case. Single-can/bottle promos (e.g. $1/can weekends) still count; report both.")
+
+
 def catalog_text(products: list[Product]) -> str:
     lines = []
     for p in products:
@@ -140,7 +144,7 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
                          "size in `label` (nutrition facts / spec sheet).")
             jobs.append((p.id, [p.id],
                          f"Today is {day}. Research current offers for ONE product:\n{_plan_line(p, cfg)}\n"
-                         f"Cover the retailers above plus the brand's own site and deal-intel sources. "
+                         f"Cover the retailers above plus the brand's own site and deal-intel sources.{CASE_FOCUS} "
                          f"Report every concrete sourced offer as OFFER blocks.{extra}",
                          int(r["calibrate_max_uses" if mode == "calibrate" else "deep_max_uses"])))
         return jobs
@@ -152,10 +156,11 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
             continue
         focus = ("Focus: deal-intel posts (Stack3d, Slickdeals, PricePlow, Hip2Save) and the top "
                  "retailers (Vitamin Shoppe, GNC, Amazon, Walmart, Target, Costco).")
+        focus += CASE_FOCUS
         if slot == "midday":
             focus = ("Focus: THIS WEEKEND's Vitamin Shoppe / GNC promos (in-store $1/can energy "
                      "events usually start Thursday, sometimes Friday; BOGO 50%) and fresh Stack3d / "
-                     "Slickdeals posts.")
+                     "Slickdeals posts." + CASE_FOCUS)
         lines = "\n".join(f"- {_plan_line(p, cfg)}" for p in ps)
         jobs.append((cat, [p.id for p in ps],
                      f"Today is {day}. Find the best CURRENT deals for these {CATEGORY_LABEL[cat]} "

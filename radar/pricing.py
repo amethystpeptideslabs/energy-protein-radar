@@ -191,6 +191,7 @@ def price_offer(o: dict[str, Any], product: Product, ref: float | None,
         "shipping_included": float(cents(cart.shipping)),
         "used_code": cart.used_code,
         "used_promo": cart.used_promo,
+        "is_case": max(1, _int(o, "pack_count", 1)) >= int(settings.get("research", {}).get("case_min_units", 12)),
         "playbook": cart.steps,
     }
 

@@ -32,6 +32,14 @@ def _price_line(o: dict[str, Any], cfg: Config) -> str:
     return s
 
 
+def _pack(o: dict[str, Any], cfg: Config) -> str:
+    if o.get("effective_pack_total") is None:
+        return ""
+    unit = cfg.products[o["product_id"]].unit_label.split(" ")[0]
+    n = int(o.get("units_in_cart") or 1)
+    return f"${o['effective_pack_total']:.2f} for {n} {unit}{'s' if n > 1 else ''}" + (" (case)" if o.get("is_case") else "")
+
+
 def _restrictions(o: dict[str, Any]) -> str:
     bits = []
     if o.get("in_store_only"):
@@ -64,7 +72,7 @@ def plan_pushes(state: State, cfg: Config, *, records: list[dict[str, Any]],
             continue
         prev = o.get("previous_record") or {}
         msg = (f"**{cfg.products[o['product_id']].display_name}** at {o.get('retailer_name')}\n"
-               f"{_price_line(o, cfg)} (was record ${float(prev.get('unit_price', 0)):.2f})\n"
+               f"{_price_line(o, cfg)} (was record ${float(prev.get('unit_price', 0)):.2f})\n{_pack(o, cfg)}\n"
                f"{_restrictions(o)}")
         singles.append((5, o, {
             "title": f"{RECORD_BADGE} New all-time low: {cfg.products[o['product_id']].display_name}",
@@ -79,7 +87,7 @@ def plan_pushes(state: State, cfg: Config, *, records: list[dict[str, Any]],
             continue
         singles.append((4, o, {
             "title": f"{TIER_EMOJI[STEAL]} STEAL: {cfg.products[o['product_id']].display_name}",
-            "message": (f"{o.get('retailer_name')}: {_price_line(o, cfg)}\n{_restrictions(o)}").strip(),
+            "message": (f"{o.get('retailer_name')}: {_price_line(o, cfg)}\n{_pack(o, cfg)}\n{_restrictions(o)}").strip(),
             "priority": 4, "tags": ["rotating_light"], "click": o["source_url"],
             "actions": [{"action": "view", "label": "Open deal", "url": o["source_url"]},
                         {"action": "view", "label": "Open app", "url": app_url}]}))
@@ -97,7 +105,7 @@ def plan_pushes(state: State, cfg: Config, *, records: list[dict[str, Any]],
             h = heroes.get(cat)
             if h:
                 lines.append(f"{label}: **{cfg.products[h['product_id']].display_name}** "
-                             f"{_price_line(h, cfg)} @ {h.get('retailer_name')} "
+                             f"{_price_line(h, cfg)} @ {h.get('retailer_name')} ({_pack(h, cfg)}) "
                              f"{TIER_EMOJI.get(h['tier'], '')}")
             else:
                 lines.append(f"{label}: no sourced offers today")

@@ -7,6 +7,8 @@
   python deal_hunter.py --mode check        # tiny API + web search + ntfy connectivity check
   python deal_hunter.py --only barebells    # single product (implies deep)
   python deal_hunter.py --dry-run           # fixtures, no API calls, writes to .dryrun/
+  python deal_hunter.py --plan              # today's research plan for a Claude session (JSON)
+  python deal_hunter.py --ingest r.json     # validate/price/publish a session's research (no API key)
 """
 from __future__ import annotations
 
@@ -30,9 +32,12 @@ def parse(argv: list[str] | None = None) -> RunOptions:
     ap.add_argument("--no-commit", action="store_true", help="tell the workflow not to commit outputs")
     ap.add_argument("--slot", choices=["morning", "midday", "evening", "manual"], help="override schedule slot")
     ap.add_argument("--out", type=Path, help="write data/ and Obsidian-Vault/ under this directory")
+    ap.add_argument("--plan", action="store_true", help="print today's research plan (JSON) and exit")
+    ap.add_argument("--ingest", type=Path, metavar="FILE",
+                    help="process a research JSON written by a Claude session (no API key needed)")
     a = ap.parse_args(argv)
     return RunOptions(mode=a.mode, only=a.only, dry_run=a.dry_run, no_push=a.no_push,
-                      no_commit=a.no_commit, out=a.out, slot=a.slot)
+                      no_commit=a.no_commit, out=a.out, slot=a.slot, ingest=a.ingest, plan=a.plan)
 
 
 if __name__ == "__main__":

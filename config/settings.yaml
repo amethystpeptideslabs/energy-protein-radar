@@ -58,6 +58,11 @@ schedule:
     - {start: 2026-11-20, end: 2026-12-02, label: "Black Friday / Cyber Monday"}
 
 research:
+  # engine: claude-session = a scheduled Claude session on your existing plan does the web
+  # research (docs/RESEARCH_PROTOCOL.md) and runs `deal_hunter.py --ingest`; no API credits.
+  # engine: api = GitHub Actions + ANTHROPIC_API_KEY (paid, optional; workflow is manual-only).
+  engine: claude-session
+  case_min_units: 12           # a pack of 12+ units counts as a case (cases are the priority)
   quick_max_uses: 8
   midday_max_uses: 6
   deep_max_uses: 4

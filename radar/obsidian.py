@@ -7,12 +7,15 @@ from typing import Any
 
 from .config import CATEGORY_LABEL, Config
 from .memory import State
+from .pricing import is_unavailable, rank_key
 from .tiers import RECORD_BADGE, TIER_EMOJI, UNVERIFIED_BADGE, tier_label
 from .util import write_text
 
 BANNER = "> [!info] Auto-generated — personal notes go outside Deal-Radar/\n"
 CAT_ICON = {"energy": "⚡", "snack": "🍫", "rtd": "🥤"}
 TREND = {"down": "↘️", "flat": "→", "up": "↗️"}
+PROMO_LABEL = {"bogo_50": "🎁 BOGO 50% (add 2)", "bogo_free": "🎁 BOGO free (add 2)", "pct_off": "🏷️ Sale",
+               "fixed_unit_price": "🏷️ Promo price", "multi_buy": "🏷️ Multi-buy"}
 
 
 def _cell(v: Any) -> str:
@@ -83,7 +86,6 @@ def write_drive_note(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
     Append-only: each run uploads this as '<date> <HHMM> <mode>.md' (Drive can't overwrite)."""
     d: date = run["date"]
     ranked = [o for o in run["ranked"] if not o.get("unverified")]
-    retailers = cfg.settings.get("retailers", {})
     deals = [o for o in ranked if o["tier"] in ("STEAL", "HOT", "SOLID")]
     seen: set[str] = set()
     best_deals = []
@@ -99,25 +101,17 @@ def write_drive_note(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
     if best_deals:
         lines += ["| Deal | Per unit | You pay | Store | Where | Tier | Link |", "|---|---|---|---|---|---|---|"]
         for o in best_deals:
-            p = cfg.products[o["product_id"]]
-            unit = p.unit_label.split(" ")[0]
-            r = retailers.get(o.get("retailer_key", ""), {})
-            where = {"in_store": "🏬 In store (local)", "pickup": "📍 Local pickup",
-                     "ship": "🚚 Ships to you"}.get(o.get("fulfillment", ""), "Online")
-            if o.get("local_store"):
-                where += f" at {o['local_store']}"
-            if o.get("membership_required"):
-                where += " 🔒"
-            if o.get("stock_note"):
-                where += f" ✅ {o['stock_note']}"
-            pay = f"{_money(o['effective_pack_total'])} for {o['units_in_cart']}" + (" 📦 case" if o.get("is_case") else "")
-            lines.append("| " + " | ".join(_cell(x) for x in (
-                f"{CAT_ICON[o['category']]} {p.display_name}" + (f" ({o['flavor']})" if o.get("flavor") else ""), f"{_money(o['unit_price'])}/{unit}", pay,
-                o.get("retailer_name", ""), where, tier_label(o["tier"]) + (f" {RECORD_BADGE}" if o.get("is_record") else ""),
-                f"[Open deal]({o['source_url']})")) + " |")
+            lines.append(_deal_row(cfg, o, tier_label(o["tier"]) + (f" {RECORD_BADGE}" if o.get("is_record") else "")))
     else:
         lines.append("No HOT/STEAL/SOLID deals this run.")
     lines.append("")
+    shown = {id(o) for o in best_deals}
+    promos = sorted((o for o in ranked if o.get("promo_type") in PROMO_LABEL and id(o) not in shown), key=rank_key)
+    if promos:  # every live BOGO / sale, same as the app's section; in stock near you first
+        lines += ["## 🎁 BOGO & sales right now", "",
+                  "| Deal | Per unit | You pay | Store | Where | Promo | Link |", "|---|---|---|---|---|---|---|"]
+        lines += [_deal_row(cfg, o, PROMO_LABEL[o["promo_type"]]) for o in promos]
+        lines.append("")
     lines += all_products_table(cfg, run)
     lines += ["## 🧾 How to get the top price", ""]
     for cat in ("energy", "snack", "rtd"):
@@ -313,3 +307,21 @@ def write_playbooks(vault: Path, cfg: Config) -> Path:
     path = vault / "Reference" / "Retailer-Playbooks.md"
     write_text(path, "\n".join(lines) + "\n")
     return path
+
+
+def _deal_row(cfg: Config, o: dict[str, Any], label: str) -> str:
+    p = cfg.products[o["product_id"]]
+    unit = p.unit_label.split(" ")[0]
+    where = {"in_store": "🏬 In store (local)", "pickup": "📍 Local pickup",
+             "ship": "🚚 Ships to you"}.get(o.get("fulfillment", ""), "Online")
+    if o.get("local_store"):
+        where += f" at {o['local_store']}"
+    if o.get("membership_required"):
+        where += " 🔒"
+    if o.get("stock_note"):
+        where += f" {'⚠️' if is_unavailable(o) else '✅'} {o['stock_note']}"
+    pay = f"{_money(o['effective_pack_total'])} for {o['units_in_cart']}" + (" 📦 case" if o.get("is_case") else "")
+    name = f"{CAT_ICON[o['category']]} {p.display_name}" + (f" ({o['flavor']})" if o.get("flavor") else "")
+    return "| " + " | ".join(_cell(x) for x in (
+        name, f"{_money(o['unit_price'])}/{unit}", pay, o.get("retailer_name", ""), where, label,
+        f"[Open deal]({o['source_url']})")) + " |"

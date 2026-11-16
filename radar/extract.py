@@ -39,6 +39,7 @@ OFFER_FIELDS: dict[str, dict[str, Any]] = {
     "shipping_cost": {"type": "number", "description": "Shipping $ at this cart size, 0 if free/unknown/in-store."},
     "free_shipping_min": {"type": "number", "description": "Order $ for free shipping, else 0."},
     "in_store_only": {"type": "boolean"},
+    "store_location": {"type": "string", "description": "City of the store for an in-store/warehouse price (e.g. 'Costco Tustin, CA'); '' for online or chain-wide."},
     "limit_per_customer": {"type": "integer", "description": "Max units per customer, 0 if none."},
     "membership_required": {"type": "boolean"},
     "starts": {"type": "string", "description": "YYYY-MM-DD or ''."},
@@ -84,6 +85,8 @@ Convert the evidence dossier into JSON offers. Rules:
   multi_buy, min_qty=3, promo_value=10; "15% off" (auto, no code) -> pct_off.
 - Subscribe & Save / Auto-Delivery percent goes in subscribe_save_pct (not promo).
 - Membership stores (Costco, Sam's Club, GNC Pro Access) -> membership_required=true.
+- Warehouse/shelf prices that only apply in a store -> in_store_only=true and store_location =
+  the store's city as the dossier gives it. Online/shipped offers -> store_location "".
 - Use 0 / "" / false for anything unknown. Dates as YYYY-MM-DD.
 - Use the product_id the dossier assigns; if the item is not one of the catalog products
   (wrong size, powder, excluded line), omit it.

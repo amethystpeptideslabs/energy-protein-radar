@@ -43,7 +43,7 @@ def _pack(o: dict[str, Any], cfg: Config) -> str:
 def _restrictions(o: dict[str, Any]) -> str:
     bits = []
     if o.get("in_store_only"):
-        bits.append("🏬 in-store")
+        bits.append(f"🏬 in-store{' · ' + o['store_location'] if o.get('store_location') else ''}")
     if o.get("membership_required"):
         bits.append("🔒 membership")
     if int(o.get("limit_per_customer") or 0):

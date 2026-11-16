@@ -98,3 +98,63 @@ def test_membership_retailer_forces_lock_flag(cfg):
     kept, _ = validate_offers([make_offer(source_url="https://www.costco.com/x.html")], cfg,
                               urls("https://www.costco.com/x.html"), {}, [], TODAY)
     assert kept[0]["membership_required"] and kept[0]["retailer_key"] == "costco"
+
+
+# ---------------------------------------------------------------- shopping area (Orange County)
+AREA_URLS = ("https://www.amazon.com/dp/X", "https://www.heb.com/product-detail/x/1",
+             "https://www.costco.com/p/-/x/1", "https://app.warehouserunner.com/costco/1-x",
+             "https://www.iherb.com/pr/x/1", "https://www.kroger.com/p/x/1",
+             "https://www.vitaminshoppe.com/p/x/1")
+
+
+def run_area(cfg, offers):
+    return validate_offers(offers, cfg, urls(*AREA_URLS), {}, [], TODAY)
+
+
+def test_out_of_area_store_site_dropped(cfg):
+    _, dropped = run_area(cfg, [make_offer(retailer="H-E-B", source_url=AREA_URLS[1])])
+    assert dropped[0]["drop_reason"] == "outside_area"
+
+
+def test_online_deal_from_any_retailer_kept(cfg):
+    kept, _ = run_area(cfg, [make_offer(retailer="iHerb", source_url=AREA_URLS[4]),
+                             make_offer(retailer="Amazon", source_url=AREA_URLS[0], store_location="online")])
+    assert len(kept) == 2 and kept[0]["retailer_key"] == "iherb"
+
+
+def test_in_store_price_needs_an_area_chain(cfg):
+    _, dropped = run_area(cfg, [make_offer(retailer="Meijer", source_url=AREA_URLS[0], in_store_only=True)])
+    assert dropped[0]["drop_reason"] == "outside_area"
+    # chain-wide in-store promo at a chain with OC stores is fine without a city
+    kept, _ = run_area(cfg, [make_offer(retailer="The Vitamin Shoppe", source_url=AREA_URLS[6],
+                                        in_store_only=True, promo_type="fixed_unit_price", promo_value=1)])
+    assert kept
+
+
+def test_warehouse_price_needs_an_orange_county_store(cfg):
+    base = dict(retailer="Costco", source_url=AREA_URLS[2], in_store_only=True, pack_count=24)
+    _, dropped = run_area(cfg, [make_offer(**base)])
+    assert dropped[0]["drop_reason"] == "outside_area"
+    _, dropped = run_area(cfg, [make_offer(**base, store_location="Costco Liberty Hill, TX")])
+    assert dropped[0]["drop_reason"] == "outside_area"
+    for loc in ("Costco Fountain Valley, CA", "Tustin", "Costco #1234, 92708", "Costco La Habra"):
+        kept, _ = run_area(cfg, [make_offer(**base, store_location=loc)])
+        assert kept and kept[0]["store_location"] == loc, loc
+
+
+def test_warehouse_tracker_counts_as_in_store(cfg):
+    o = make_offer(retailer="Costco", source_url=AREA_URLS[3], pack_count=18)
+    _, dropped = run_area(cfg, [o])
+    assert dropped[0]["drop_reason"] == "outside_area"
+    kept, _ = run_area(cfg, [make_offer(retailer="Costco", source_url=AREA_URLS[3], pack_count=18,
+                                        store_location="Costco Irvine, CA")])
+    assert kept and kept[0]["in_store_only"] is True
+
+
+def test_store_outside_area_dropped_even_if_not_flagged_in_store(cfg):
+    _, dropped = run_area(cfg, [make_offer(retailer="Ralphs", source_url=AREA_URLS[5],
+                                           store_location="King Soopers Denver, CO")])
+    assert dropped[0]["drop_reason"] == "outside_area"
+    kept, _ = run_area(cfg, [make_offer(retailer="Ralphs", source_url=AREA_URLS[5],
+                                        store_location="Ralphs Huntington Beach")])
+    assert kept

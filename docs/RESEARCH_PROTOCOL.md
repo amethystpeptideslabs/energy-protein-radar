@@ -22,6 +22,15 @@ middays), the `jobs` to research, a `search_budget` per job, known `dead_codes` 
 - Use the job's `task` text as the brief. Stay within its `search_budget` searches (the plan's
   `total_search_budget` is the whole run). Keep your notes short: numbers, URL, verbatim price text
   (a few extra WebFetch reads of result pages are fine when a snippet lacks the price).
+- **Where: Orange County stores + online.** In-store / warehouse shelf prices count ONLY at stores
+  in Orange County, CA (`area` in `config/settings.yaml`): set `in_store_only: true` and put the
+  store's city in `store_location` (e.g. `"Costco Tustin, CA"`). Chain-wide in-store promos at
+  chains with OC stores (Vitamin Shoppe / GNC $1-can weekends) are fine without a city. Costco /
+  Sam's prices vary by warehouse, so they need an OC location: on a Warehouse Runner page use an
+  OC warehouse row, or skip it. Skip shelf prices from stores outside OC (H-E-B, Kroger-family
+  stores in other states, out-of-state warehouses). **Online deals that ship to OC count from any
+  retailer** — every run, also check Amazon, Walmart.com, Target.com, iHerb, Vitacost,
+  Bodybuilding.com, supplement web shops and the brand's own site; leave `store_location` empty.
 - **Cases first.** The owner buys by the case: look for 12-, 15-, 18-, 24-pack / box prices.
   Single-can or single-bottle promos (Vitamin Shoppe / GNC $1-can weekends) still count.
 - Every offer needs a page URL that came back in a WebSearch result in THIS session (or a page
@@ -79,6 +88,7 @@ far, so a long session never loses work. Format:
           "shipping_cost": 0,
           "free_shipping_min": 0,
           "in_store_only": false,
+          "store_location": "",
           "limit_per_customer": 0,
           "membership_required": false,
           "starts": "",
@@ -99,6 +109,9 @@ Field rules (same as the API extractor in `radar/extract.py`):
   an automatic "15% off" → `pct_off`, `promo_value: 15`.
 - Subscribe & Save / Auto-Delivery % → `subscribe_save_pct` (not a promo).
 - Costco, Sam's Club, GNC Pro Access → `membership_required: true`.
+- In-store / warehouse-only price → `in_store_only: true` + `store_location` (OC city). Online or
+  shipped → `in_store_only: false`, `store_location: ""`. Offers outside OC are dropped as
+  `outside_area` at ingest.
 - Unknown numbers are `0`, unknown text is `""`, unknown flags are `false`.
 
 ## 4. Process, publish, alert
@@ -108,7 +121,7 @@ NTFY_TOPIC="<topic from your task prompt>" python deal_hunter.py --ingest /tmp/r
 ```
 
 This validates (drops offers whose URL isn't in that job's `urls`, stale posts, wrong sizes,
-excluded products, dead codes), prices every cart, ranks, detects records, writes `data/` and
+excluded products, dead codes, in-store prices outside Orange County), prices every cart, ranks, detects records, writes `data/` and
 `Obsidian-Vault/`, and sends the ntfy alerts/digest. Never write the topic to any file.
 
 ## 5. Commit and push

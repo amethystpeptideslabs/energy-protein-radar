@@ -53,7 +53,7 @@ function endsText(ends) {
 function chips(o) {
   const c = [];
   if (o.is_case) c.push(`📦 case of ${o.pack_count}`);
-  if (o.in_store_only) c.push("🏬 in-store only");
+  if (o.in_store_only) c.push(o.store_location ? `🏬 in-store · ${o.store_location}` : "🏬 in-store only");
   if (o.membership_required) c.push("🔒 membership");
   if (Number(o.limit_per_customer)) c.push(`limit ${o.limit_per_customer}`);
   if (Number(o.min_qty) > 1) c.push(`min ${o.min_qty}`);

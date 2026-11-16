@@ -1,6 +1,6 @@
 /* Deal Radar service worker: app shell = stale-while-revalidate, data = network-first with
    offline fallback to the last cached copy. Bump VERSION when shell files change. */
-const VERSION = "dr-2026-11-16a";
+const VERSION = "dr-2026-11-16b";
 const SHELL = [
   "./", "./index.html", "./styles.css", "./app.js", "./manifest.json",
   "./fonts/archivo-wdth.woff2", "./icons/icon-192.png", "./icons/icon-512.png",

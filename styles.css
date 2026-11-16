@@ -88,6 +88,7 @@ button, select { font: inherit; color: inherit; }
 }
 .tags::-webkit-scrollbar { display: none; }
 .tags .shelf-tag { min-height: 21.5rem; }
+.tags .shelf-tag.empty:not(.loading) { min-height: 9rem; }
 @media (min-width: 46rem) { .tags .shelf-tag { min-height: 0; } }
 @media (min-width: 46rem) { .tags { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: auto; overflow: visible; } }
 

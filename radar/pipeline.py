@@ -7,7 +7,7 @@ import logging
 import os
 import sys
 from dataclasses import dataclass, field
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -18,7 +18,7 @@ from .memory import (State, add_dead_codes, calibrate, current_offers, detect_re
                      prune_codes, record_active_codes, update_history)
 from .notify import plan_pushes, send
 from .obsidian import write_vault
-from .pricing import is_unavailable, price_offer, rank_key
+from .pricing import DEAL_TIERS, is_live_deal, is_sale, is_unavailable, price_offer, rank_key
 from .research import ResearchResult, Researcher, WebSearchDisabled, build_jobs, build_system
 from .tiers import STEAL, is_hot_plus
 from .util import iso_now, now_local, parse_date, read_json, today as today_fn, write_json
@@ -168,6 +168,9 @@ def research_plan(cfg: Config, state: State, mode: str, slot: str, note: str, on
                 for _, pids, prompt, _ in build_jobs(cfg, "calibrate", slot, p.id, d):
                     jobs.append({"label": f"cal:{p.id}", "product_ids": pids, "task": prompt,
                                  "search_budget": int(b.get("calibrate_new", 2))})
+        v = verify_job(cfg, state, d, now_local())
+        if v:
+            jobs.append(v)
     return {
         "date": d.isoformat(), "slot": slot, "mode": mode, "note": note,
         "case_min_units": int(cfg.settings["research"].get("case_min_units", 12)),
@@ -179,6 +182,60 @@ def research_plan(cfg: Config, state: State, mode: str, slot: str, note: str, on
         "rules": "Follow docs/RESEARCH_PROTOCOL.md exactly. Save each finished job into the research "
                  "file before starting the next, then run `python deal_hunter.py --ingest <file>`.",
     }
+
+
+def _age_hours(o: dict[str, Any], now: datetime) -> float:
+    try:
+        seen = datetime.fromisoformat(o.get("seen_at") or "")
+    except ValueError:
+        return float("inf")
+    return (now - seen).total_seconds() / 3600
+
+
+def fresh_deals_only(offers: list[dict[str, Any]], cfg: Config,
+                     now: datetime) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """No expired sales: a sale or deal-tier offer stays only if a scan confirmed it within
+    research.sale_fresh_hours. Regular prices keep the normal carry-over. -> (kept, expired)"""
+    limit = float(cfg.settings["research"].get("sale_fresh_hours", 20))
+    kept, expired = [], []
+    for o in offers:
+        (expired if is_live_deal(o) and _age_hours(o, now) > limit else kept).append(o)
+    return kept, expired
+
+
+def verify_job(cfg: Config, state: State, d: date, now: datetime) -> dict[str, Any] | None:
+    """Re-check every live sale/deal this scan (1 search each, best first), so nothing shown is
+    more than one scan old. Anything not re-confirmed drops off within sale_fresh_hours."""
+    r = cfg.settings["research"]
+    live, _ = fresh_deals_only(_price_all(current_offers(state, cfg, d), cfg), cfg, now)
+    flag_unverified(live, cfg)
+    live = [o for o in live if is_live_deal(o) and not o.get("unverified")]
+    if not live:
+        return None
+    # deals first, then BOGO/promos, then other sale prices; best/local first within each
+    live.sort(key=lambda o: (0 if o.get("tier") in DEAL_TIERS else 1 if (o.get("promo_type") or "none") != "none"
+                             else 2, rank_key(o)))
+    live = live[:int(r.get("verify_max", 12))]
+    lines = []
+    for o in live:
+        p = cfg.products[o["product_id"]]
+        promo = o.get("promo_type") if (o.get("promo_type") or "none") != "none" else "price"
+        extra = "".join(f", {k} {o[k]}" for k in ("code", "ends") if o.get(k))
+        flavor = f" ({o['flavor']})" if o.get("flavor") else ""
+        lines.append(f"- {o['product_id']}: {p.display_name}{flavor} at {o.get('retailer_name') or o.get('retailer_key')}, "
+                     f"{promo}, pack ${o.get('pack_price')} x{o.get('pack_count')}{extra}, last confirmed "
+                     f"{(o.get('seen_at') or '')[:16]} -> {o['source_url']}")
+    task = (f"Today is {d.strftime('%A %Y-%m-%d')}. RE-CHECK these live sales/deals so the app never shows an "
+            f"expired one. Do this job LAST and skip any offer an earlier job in this run already re-reported "
+            f"(same URL). For each remaining offer: run ONE WebSearch for it (retailer + product + flavor; one "
+            f"search that brings back several of these pages, e.g. a store's BOGO list, covers all of them) so "
+            f"its page comes back in this run's results, open the page (WebFetch; Vitamin Shoppe pages in the "
+            f"built-in browser per step 2b), and report it again with TODAY's values: if the sale is gone, "
+            f"report the current regular price with promo none; if the page shows an end date, set ends; if "
+            f"it's out of stock or gone, say so in stock_note. Never report a sale you can't see live today. "
+            f"Offers you can't re-confirm drop off the app automatically.\n" + "\n".join(lines))
+    return {"label": "verify", "product_ids": sorted({o["product_id"] for o in live}), "task": task,
+            "search_budget": len(live)}
 
 
 def _price_all(offers: list[dict[str, Any]], cfg: Config) -> list[dict[str, Any]]:
@@ -201,6 +258,7 @@ def _price_all(offers: list[dict[str, Any]], cfg: Config) -> list[dict[str, Any]
 def _slim(o: dict[str, Any], with_playbook: bool) -> dict[str, Any]:
     s = {k: o.get(k) for k in SLIM_KEYS}
     s["flavor"] = (o.get("flavor") or "").strip()[:60]
+    s["is_sale"] = is_sale(o)
     s["evidence_text"] = (o.get("evidence_text") or "")[:140]
     if with_playbook:
         s["playbook"] = o.get("playbook", [])
@@ -476,6 +534,10 @@ def run(opts: RunOptions) -> RunResult:
 
     merge_offers(state, _price_all(kept_all, cfg), cfg, d)
     current = _price_all(current_offers(state, cfg, d), cfg)  # re-price with today's refs
+    current, expired_deals = fresh_deals_only(current, cfg, now_local())  # no expired sales
+    if expired_deals:
+        log.info("dropped %d sales/deals not re-confirmed in the last %s h", len(expired_deals),
+                 cfg.settings["research"].get("sale_fresh_hours", 20))
     flag_unverified(current, cfg)
     ranked = sorted(current, key=rank_key)
     best_by_product: dict[str, dict[str, Any]] = {}   # recommended (tier, then local-first)

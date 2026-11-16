@@ -50,6 +50,9 @@ Rules:
 - Codes: say who reported the code and when ("reported by Slickdeals on 2026-11-14").
   Never claim a code was tested. If a source says a code is expired/invalid, list it under
   DEAD CODES.
+- Sales must be LIVE TODAY on the page you cite. Copy start/end dates when shown. Never report a
+  sale whose end date has passed or that hasn't started yet. Deal posts (Slickdeals, Stack3d,
+  Hip2Save...) older than 7 days don't count unless the retailer's page still shows the sale.
 - Note restrictions: in-store only, membership required (Costco, Sam's Club, GNC Pro Access),
   per-customer limits, minimum quantity, subscribe/auto-delivery requirements, shipping cost
   and free-shipping minimums, start/end dates.
@@ -171,13 +174,16 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
         ps = [p for p in products if p.category == cat]
         if not ps:
             continue
-        focus = ("Focus: deal-intel posts (Stack3d, Slickdeals, PricePlow, Hip2Save) and the top "
-                 "retailers (Vitamin Shoppe, GNC, Amazon, Walmart, Target, Costco).")
+        focus = ("Focus: deal-intel posts from the last few days (Stack3d, Slickdeals, PricePlow, Hip2Save) and "
+                 "the top retailers (Vitamin Shoppe, GNC, Amazon, Walmart, Target, Costco), including sales that "
+                 "started TODAY (Target weekly deals start Sunday; Vons/Albertsons and Ralphs weekly ads start "
+                 "Wednesday; Walmart rollbacks change any day).")
         focus += CASE_FOCUS
         if slot == "midday" and mode == "quick":
-            focus = ("Focus: THIS WEEKEND's Vitamin Shoppe / GNC promos (in-store $1/can energy "
-                     "events usually start Thursday, sometimes Friday; BOGO 50%) and fresh Stack3d / "
-                     "Slickdeals posts." + CASE_FOCUS)
+            focus = ("Focus: NEW sales that went live TODAY or since this morning's scan: Vitamin Shoppe / GNC "
+                     "BOGO 50% and sale pages, THIS WEEKEND's in-store $1/can energy events (usually start "
+                     "Thursday, sometimes Friday), Target weekly deals, Vons/Albertsons and Ralphs weekly ads, "
+                     "Walmart rollbacks/clearance, and Stack3d / Slickdeals posts from the last 24 hours." + CASE_FOCUS)
         brands = sorted({b for p in ps for b in p.exclude_brands})
         if brands:
             focus += BRAND_RULE[cat].format(", ".join(b.title() for b in brands))

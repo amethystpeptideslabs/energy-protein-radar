@@ -81,4 +81,9 @@ python -m http.server               # then open http://localhost:8000
   on, one page at a time; a bot check stops the store check for that run (never solved). Store-specific
   deals and stock notes must be in Orange County; a deal ranks last and never alerts only when no
   checked store has it.
+- No expired sales: every scan re-checks each live sale and deal on its store page (`verify` job).
+  A sale or deal no scan re-confirmed in 20 hours drops off, as do sales past their end date or not
+  started yet; sale evidence older than 7 days is rejected. The app hides anything not confirmed in
+  36 hours even if a scan fails, and each card shows when its price was last checked. Scans run at
+  5:43 AM and 12:17 PM daily, so new sales show up the day they go live.
 - New products get a one-time calibration job (2 searches each, up to 6 per run) until each is done.

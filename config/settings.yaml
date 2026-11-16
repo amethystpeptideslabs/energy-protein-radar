@@ -94,7 +94,9 @@ research:
   midday_max_uses: 6
   deep_max_uses: 4
   calibrate_max_uses: 5
-  offer_carryover_days: 2      # offers seen in the last N days stay "current" unless expired
+  offer_carryover_days: 2      # regular prices seen in the last N days stay "current" unless expired
+  sale_fresh_hours: 20         # sales and deals must be re-confirmed by a scan within N hours or they drop off
+  verify_max: 20               # live sales/deals re-checked per scan (1 search each, deals then promos first)
   offers_per_product_in_app: 6
 
 # ---------------------------------------------------------------- tiers
@@ -122,6 +124,7 @@ crv:
 
 validation:
   stale_days: 21
+  sale_evidence_max_days: 7   # sale/deal-post evidence older than this is rejected (unless an end date is still ahead)
   unverified_energy_below: 0.75
   unverified_protein_below_pct: 50
   size_tolerance_oz: 0.6

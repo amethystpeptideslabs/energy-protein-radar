@@ -119,6 +119,9 @@ def current_offers(state: State, cfg: Config, today: date) -> list[dict[str, Any
         ends = parse_date(o.get("ends"))
         if ends and ends < today:
             continue
+        starts = parse_date(o.get("starts"))
+        if starts and starts > today:   # not live yet
+            continue
         fp = (o["product_id"], o.get("retailer_key"), o.get("source_url"), (o.get("code") or "").upper(),
               o.get("pack_count"))
         if fp not in latest or o.get("seen_at", "") >= latest[fp].get("seen_at", ""):

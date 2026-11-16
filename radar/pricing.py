@@ -218,6 +218,31 @@ UNAVAILABLE_RE = re.compile(r"out of stock|unavailable|discontinued|sold out", r
 AVAILABLE_RE = re.compile(r"\b\d+\s+in stock\b|\blimited stock\b", re.I)
 
 
+DEAL_TIERS = ("STEAL", "HOT", "SOLID")
+
+
+def _f(v: Any) -> float:
+    try:
+        return float(v or 0)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def is_sale(offer: dict[str, Any]) -> bool:
+    """Any temporary price: a promo, sale/rollback price, code, clip coupon or a shown was-price."""
+    if (offer.get("promo_type") or "none") != "none" or offer.get("is_sale_price") or offer.get("code"):
+        return True
+    if _f(offer.get("coupon_clip_value")) > 0:
+        return True
+    reg, pack = _f(offer.get("regular_pack_price")), _f(offer.get("pack_price"))
+    return reg > pack > 0
+
+
+def is_live_deal(offer: dict[str, Any]) -> bool:
+    """Shown as a sale or a deal tier: must be re-confirmed every scan (no expired sales)."""
+    return is_sale(offer) or offer.get("tier") in DEAL_TIERS
+
+
 def is_unavailable(offer: dict[str, Any]) -> bool:
     """A store check said you can't get it now (out of stock locally / discontinued)."""
     note = offer.get("stock_note") or ""

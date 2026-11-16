@@ -309,3 +309,6 @@ a.deal-main:active { background: #222c36; }
 /* flavor/variant the listing names, so two cards for the same drink are told apart */
 .deal-flavor { display: block; font-size: .9rem; opacity: .85; margin-top: -.15rem; }
 .tag-flavor { font-size: .95rem; opacity: .85; margin-top: -.2rem; }
+
+/* when a scan last confirmed this price on the store page */
+.deal-checked { display: block; font-size: .8rem; opacity: .7; margin-top: .15rem; }

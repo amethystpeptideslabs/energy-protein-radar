@@ -121,7 +121,9 @@ function render() {
   } else {
     $("#banner").hidden = true;
   }
-  renderHeroes(state.casesOnly || state.localOnly ? caseHeroes(products) : (L?.heroes || {}), products);
+  const srvHeroes = L?.heroes || {};
+  const heroesOk = Object.values(srvHeroes).every((h) => !h || passesView(h));
+  renderHeroes(state.casesOnly || state.localOnly || !heroesOk ? caseHeroes(products) : srvHeroes, products);
   renderDeals(products);
   renderTabs();
   renderRows(products);
@@ -233,6 +235,7 @@ function dealCard(p, o) {
       <span class="deal-line">${esc(whereText(o))}</span>
       ${o.stock_note ? `<span class="deal-stock${isGone(o.stock_note) ? " oos" : ""}">${isGone(o.stock_note) ? "⚠️" : "✅"} ${esc(o.stock_note)}</span>` : ""}
       ${notes.length ? `<span class="deal-notes">${notes.map((n) => `<span>${esc(n)}</span>`).join("")}</span>` : ""}
+      ${o.seen_at ? `<span class="deal-checked">🕒 Price checked ${esc(relTime(o.seen_at))}</span>` : ""}
       <span class="deal-open">${esc(openLabel(o))}</span>
     </a>
     ${(r.physical || stock || o.code) ? `<div class="deal-actions">
@@ -305,7 +308,16 @@ function offerRank(cat, o) {
   return cat === "energy" ? [g, t, l, o.unit_price ?? 9e9, 0] : [g, t, l, o.pct_vs_ref ?? 999, o.price_per_10g_protein ?? 9e9];
 }
 function cmpArr(x, y) { for (let i = 0; i < x.length; i++) { if (x[i] !== y[i]) return x[i] - y[i]; } return 0; }
-function passesView(o) { return !o.unverified && (!state.casesOnly || o.is_case) && (!state.localOnly || isLocal(o)); }
+// No expired sales, even if a scan fails: hide sales past their end date, not started yet, or not
+// re-confirmed by a scan in the last 36 hours (the engine already drops them after 20 hours).
+function isExpired(o, now) {
+  const day = now.toLocaleDateString("en-CA", { timeZone: "America/Los_Angeles" });
+  if (o.ends && o.ends < day) return true;
+  if (o.starts && o.starts > day) return true;
+  const live = o.is_sale || ["STEAL", "HOT", "SOLID"].includes(o.tier);
+  return !!(live && o.seen_at && (now - new Date(o.seen_at)) / 36e5 > 36);
+}
+function passesView(o) { return !o.unverified && !isExpired(o, new Date()) && (!state.casesOnly || o.is_case) && (!state.localOnly || isLocal(o)); }
 
 function caseHeroes(products) {
   const out = {};

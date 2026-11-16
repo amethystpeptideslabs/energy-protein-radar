@@ -89,6 +89,22 @@ week, online and in store. Each run:
 5. Orange County only: `local_store` and `stock_note` must name an OC city or store. Anything else
    is dropped (`out_of_area`) or cleared by `deal_hunter.py`.
 
+## 2c. No expired sales: re-check job (every run)
+
+The plan's last job is `verify`: every sale and deal the app is showing right now (BOGO, % off,
+codes, sale/rollback prices, and every STEAL/HOT/SOLID price), best first. Do it LAST:
+
+1. Skip any listed offer an earlier job already re-reported this run (same URL).
+2. For each remaining one, run ONE WebSearch (retailer + product + flavor) so its page comes back in
+   this run's results (one search that returns a store's BOGO list can cover several), then open
+   the page (WebFetch; Vitamin Shoppe pages in the built-in browser per 2b).
+3. Report it again with TODAY's values: if the sale is gone, report the regular price with
+   `promo_type: "none"`; copy any end date into `ends`; out of stock / gone → `stock_note`.
+4. Never report a sale you can't see live today. `deal_hunter.py` drops any sale or deal that no
+   scan re-confirmed in the last 20 hours (`research.sale_fresh_hours`), anything past its end date,
+   and anything that hasn't started yet; sale evidence older than 7 days is rejected. The app also
+   hides sales a scan hasn't confirmed in 36 hours, so a failed scan never shows an expired sale.
+
 ## 3. Write the research file
 
 Save progressively: after finishing each job, rewrite `/tmp/research.json` with every job done so

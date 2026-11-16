@@ -7,6 +7,7 @@ from datetime import date, timedelta
 from typing import Any
 
 from .config import Config
+from .pricing import is_sale
 from .util import normalize_url, parse_date, url_host
 
 SIZE_RE = re.compile(r"(\d{1,2}(?:\.\d)?)\s*-?\s*(?:fl\.?\s*)?oz\b", re.I)
@@ -140,6 +141,10 @@ def validate_offers(raw: list[dict[str, Any]], cfg: Config, url_map: dict[str, s
         ev = parse_date(o.get("evidence_date")) or parse_date(page_ages.get(normalize_url(url), ""))
         if ev and ev < stale_cutoff and not (ends and ends >= today):
             drop(o, "stale", f"evidence from {ev}")
+            continue
+        sale_cutoff = today - timedelta(days=int(vcfg.get("sale_evidence_max_days", 7)))
+        if is_sale(o) and ev and ev < sale_cutoff and not (ends and ends >= today):
+            drop(o, "stale", f"sale evidence from {ev} (sales must be from this week)")
             continue
         o["evidence_date"] = ev.isoformat() if ev else ""
 

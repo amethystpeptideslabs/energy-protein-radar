@@ -63,6 +63,12 @@ research:
   # engine: api = GitHub Actions + ANTHROPIC_API_KEY (paid, optional; workflow is manual-only).
   engine: claude-session
   case_min_units: 12           # a pack of 12+ units counts as a case (cases are the priority)
+  session_budgets:             # web searches per job for the Claude-session engine
+    quick: 6                   # x3 categories
+    midday: 5                  # x3 categories (Thu/Fri weekend-promo check)
+    deep: 12                   # x3 categories (Mon/Thu)
+    calibrate: 2               # x25 products (first run only)
+    deep_single: 3             # --only <product>
   quick_max_uses: 8
   midday_max_uses: 6
   deep_max_uses: 4

@@ -42,3 +42,17 @@ def test_plan_lists_jobs_and_case_focus(tmp_path, capsys):
     plan = json.loads(capsys.readouterr().out)
     assert plan["mode"] == "calibrate" and len(plan["jobs"]) == 25
     assert all("CASE" in j["task"] for j in plan["jobs"]) and plan["case_min_units"] == 12
+    assert plan["total_search_budget"] == 50
+
+
+def test_quick_and_deep_plans_are_per_category(cfg, tmp_path):
+    from datetime import date
+    from radar.memory import State
+    from radar.pipeline import research_plan
+    s = State.load(tmp_path, cfg)
+    q = research_plan(cfg, s, "quick", "morning", "", None, date(2026, 11, 17))
+    assert [j["label"] for j in q["jobs"]] == ["energy", "snack", "rtd"] and q["total_search_budget"] == 18
+    dp = research_plan(cfg, s, "deep", "morning", "", None, date(2026, 11, 19))
+    assert dp["total_search_budget"] == 36 and "DEEP RUN" in dp["jobs"][0]["task"]
+    m = research_plan(cfg, s, "quick", "midday", "", None, date(2026, 11, 19))
+    assert m["total_search_budget"] == 15 and "WEEKEND" in m["jobs"][0]["task"]

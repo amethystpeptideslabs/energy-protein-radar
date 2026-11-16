@@ -134,20 +134,30 @@ def load_research_file(path: Path) -> tuple[str | None, list[tuple[ResearchResul
 
 def research_plan(cfg: Config, state: State, mode: str, slot: str, note: str, only: str | None,
                   d: date) -> dict[str, Any]:
-    budgets = {"quick": 10, "deep": 4, "calibrate": 5}
-    jobs = [] if mode in ("skip", "check", "init") else [
-        {"label": label, "product_ids": pids, "search_budget": budgets.get(mode, 8) if len(pids) == 1 else
-         (6 if slot == "midday" else budgets["quick"]), "task": prompt}
-        for label, pids, prompt, _ in build_jobs(cfg, mode, slot, only, d)]
+    """Plan for a Claude session. Budgets are total web searches per job, sized to fit one
+    session on a normal Claude plan: calibrate ~2/product once; deep ~12/category; quick ~6."""
+    b = cfg.settings["research"].get("session_budgets", {})
+    jobs: list[dict[str, Any]] = []
+    if mode == "calibrate" or (only and mode in ("deep", "quick")):
+        for label, pids, prompt, _ in build_jobs(cfg, "calibrate" if mode == "calibrate" else "deep", slot, only, d):
+            jobs.append({"label": label, "product_ids": pids, "task": prompt,
+                         "search_budget": int(b.get("calibrate" if mode == "calibrate" else "deep_single", 3))})
+    elif mode in ("quick", "deep"):
+        for label, pids, prompt, _ in build_jobs(cfg, "quick", slot, only, d):
+            extra = (" DEEP RUN: cover every product in the list at least once, including the brand's own "
+                     "site and club stores." if mode == "deep" else "")
+            budget = b.get("deep") if mode == "deep" else (b.get("midday") if slot == "midday" else b.get("quick"))
+            jobs.append({"label": label, "product_ids": pids, "task": prompt + extra, "search_budget": int(budget or 6)})
     return {
         "date": d.isoformat(), "slot": slot, "mode": mode, "note": note,
         "case_min_units": int(cfg.settings["research"].get("case_min_units", 12)),
+        "total_search_budget": sum(j["search_budget"] for j in jobs),
         "jobs": jobs,
         "dead_codes": state.memory.get("dead_codes", []),
         "records": {pid: pm.get("all_time_low") for pid, pm in state.memory["products"].items()
                     if pid in cfg.products and cfg.products[pid].enabled},
-        "rules": "Follow docs/RESEARCH_PROTOCOL.md exactly. Write the JSON to a file and run "
-                 "`python deal_hunter.py --ingest <file>`.",
+        "rules": "Follow docs/RESEARCH_PROTOCOL.md exactly. Save each finished job into the research "
+                 "file before starting the next, then run `python deal_hunter.py --ingest <file>`.",
     }
 
 

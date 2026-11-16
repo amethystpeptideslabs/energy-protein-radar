@@ -19,7 +19,8 @@ middays), the `jobs` to research, a `search_budget` per job, known `dead_codes` 
 
 ## 2. Research each job (WebSearch, then WebFetch only for URLs WebSearch returned)
 
-- Use the job's `task` text as the brief. Stay within its `search_budget` searches
+- Use the job's `task` text as the brief. Stay within its `search_budget` searches (the plan's
+  `total_search_budget` is the whole run). Keep your notes short: numbers, URL, verbatim price text
   (a few extra WebFetch reads of result pages are fine when a snippet lacks the price).
 - **Cases first.** The owner buys by the case: look for 12-, 15-, 18-, 24-pack / box prices.
   Single-can or single-bottle promos (Vitamin Shoppe / GNC $1-can weekends) still count.
@@ -40,7 +41,8 @@ middays), the `jobs` to research, a `search_budget` per job, known `dead_codes` 
 
 ## 3. Write the research file
 
-Write `/tmp/research.json`:
+Save progressively: after finishing each job, rewrite `/tmp/research.json` with every job done so
+far, so a long session never loses work. Format:
 
 ```json
 {

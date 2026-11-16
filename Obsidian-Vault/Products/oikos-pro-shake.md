@@ -21,9 +21,9 @@ Unit: bottle · Size: 12 oz · Protein: 30g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Oikos Pro Shake | Costco | 1× 18 | $29.99 | $1.67 | $0.56 | 91% | ❌ SKIP |  |  | [link](https://app.warehouserunner.com/costco/1945057-oikos-protein-shake-vanilla-12-fl-oz-18-pk) |
-| Oikos Pro Shake | Walmart | 1× 12 | $21.99 | $1.83 | $0.61 | 100% | ❌ SKIP |  |  | [link](https://www.walmart.com/ip/seort/16113764509) |
-| Oikos Pro Shake | Target | 1× 12 | $27.99 | $2.33 | $0.78 | 127% | ❌ SKIP |  |  | [link](https://www.target.com/p/-/A-94853005) |
+| Oikos Pro Shake | Costco | 1× 18 | $29.99 | $1.67 | $0.56 | 91% | ❌ SKIP |  |  | [Open deal](https://app.warehouserunner.com/costco/1945057-oikos-protein-shake-vanilla-12-fl-oz-18-pk) |
+| Oikos Pro Shake | Walmart | 1× 12 | $21.99 | $1.83 | $0.61 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/16113764509) |
+| Oikos Pro Shake | Target | 1× 12 | $27.99 | $2.33 | $0.78 | 127% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/-/A-94853005) |
 
 ## Price ledger
 

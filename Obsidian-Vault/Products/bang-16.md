@@ -21,8 +21,8 @@ Unit: can · Size: 16 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Bang Energy 16oz | Walmart | 1× 12 | $50.49 | $4.21 | $0.26 | 91% | ❌ SKIP |  |  | [link](https://www.walmart.com/ip/1216905444) |
-| Bang Energy 16oz | Target | 1× 12 | $57.59 | $4.80 | $0.30 | 104% | ❌ SKIP |  |  | [link](https://www.target.com/p/-/A-1001715172) |
+| Bang Energy 16oz | Walmart | 1× 12 | $50.49 | $4.21 | $0.26 | 91% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/1216905444) |
+| Bang Energy 16oz | Target | 1× 12 | $57.59 | $4.80 | $0.30 | 104% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/-/A-1001715172) |
 
 ## Price ledger
 

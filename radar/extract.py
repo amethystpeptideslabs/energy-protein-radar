@@ -41,6 +41,7 @@ OFFER_FIELDS: dict[str, dict[str, Any]] = {
     "in_store_only": {"type": "boolean"},
     "limit_per_customer": {"type": "integer", "description": "Max units per customer, 0 if none."},
     "membership_required": {"type": "boolean"},
+    "stock_note": {"type": "string", "description": "Store-level stock ONLY if the page states it, e.g. 'In stock at Target Mission Viejo (pickup today)'; else ''."},
     "starts": {"type": "string", "description": "YYYY-MM-DD or ''."},
     "ends": {"type": "string", "description": "YYYY-MM-DD or ''."},
 }

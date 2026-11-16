@@ -62,20 +62,70 @@ def _table(rows: list[dict[str, Any]], cfg: Config, cat: str) -> str:
         out.append("| " + " | ".join(_cell(x) for x in (
             cfg.products[o["product_id"]].display_name, o.get("retailer_name", ""), pack,
             _money(o["effective_pack_total"]), _money(o["unit_price"]), _money(m), vs, _badges(o),
-            o.get("code") or "", o.get("ends") or "", f"[link]({o['source_url']})")) + " |")
+            o.get("code") or "", o.get("ends") or "", f"[Open deal]({o['source_url']})")) + " |")
     return head + "\n".join(out) + "\n"
 
 
 def write_vault(root: Path, cfg: Config, state: State, run: dict[str, Any]) -> list[Path]:
     """run keys: date, mode, status, cost_usd, ranked, heroes, records, dropped, corrections."""
     vault = root / "Obsidian-Vault"
-    written = [write_log(vault, cfg, run), write_master(vault, cfg, state, run)]
+    written = [write_log(vault, cfg, run), write_master(vault, cfg, state, run), write_drive_note(vault, cfg, run)]
     for pid in cfg.products:
         if cfg.products[pid].enabled:
             written.append(write_product(vault, cfg, state, pid, run))
     written.append(write_dead_codes(vault, state))
     written.append(write_playbooks(vault, cfg))
     return written
+
+
+def write_drive_note(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
+    """Compact, self-contained note for the separate 'Deal Radar' vault in Google Drive.
+    Append-only: each run uploads this as '<date> <HHMM> <mode>.md' (Drive can't overwrite)."""
+    d: date = run["date"]
+    ranked = [o for o in run["ranked"] if not o.get("unverified")]
+    retailers = cfg.settings.get("retailers", {})
+    deals = [o for o in ranked if o["tier"] in ("STEAL", "HOT", "SOLID")]
+    seen: set[str] = set()
+    best_deals = []
+    for o in deals:  # best deal per product
+        if o["product_id"] not in seen:
+            seen.add(o["product_id"])
+            best_deals.append(o)
+    lines = ["---", f"date: {d.isoformat()}", f"run_mode: {run['mode']}", f"status: {run['status']}",
+             f"deals: {len(best_deals)}", "tags: [deal-radar]", "---", "",
+             f"# Deals {d.strftime('%a %b %d, %Y')}", "",
+             f"📱 [Open the Deal Radar app]({cfg.settings['app_url']})", ""]
+    lines += ["## 🔥 Deals today (tap Open deal)", ""]
+    if best_deals:
+        lines += ["| Deal | Per unit | You pay | Store | Where | Tier | Link |", "|---|---|---|---|---|---|---|"]
+        for o in best_deals:
+            p = cfg.products[o["product_id"]]
+            unit = p.unit_label.split(" ")[0]
+            r = retailers.get(o.get("retailer_key", ""), {})
+            where = "In store only" if o.get("in_store_only") else ("Stores + online" if r.get("physical") else "Online")
+            if o.get("membership_required"):
+                where += " 🔒"
+            if o.get("stock_note"):
+                where += f" ✅ {o['stock_note']}"
+            pay = f"{_money(o['effective_pack_total'])} for {o['units_in_cart']}" + (" 📦 case" if o.get("is_case") else "")
+            lines.append("| " + " | ".join(_cell(x) for x in (
+                f"{CAT_ICON[o['category']]} {p.display_name}", f"{_money(o['unit_price'])}/{unit}", pay,
+                o.get("retailer_name", ""), where, tier_label(o["tier"]) + (f" {RECORD_BADGE}" if o.get("is_record") else ""),
+                f"[Open deal]({o['source_url']})")) + " |")
+    else:
+        lines.append("No HOT/STEAL/SOLID deals this run.")
+    lines.append("")
+    lines += all_products_table(cfg, run)
+    lines += ["## 🧾 How to get the top price", ""]
+    for cat in ("energy", "snack", "rtd"):
+        h = run["heroes"].get(cat)
+        if h:
+            lines.append(f"**{CAT_ICON[cat]} {cfg.products[h['product_id']].display_name} @ {h.get('retailer_name')}**")
+            lines += [f"{i}. {s}" for i, s in enumerate(h.get("playbook", []), 1)]
+            lines += [f"[Open deal]({h['source_url']})", ""]
+    path = vault / "Drive-Upload" / "latest.md"
+    write_text(path, "\n".join(lines) + "\n")
+    return path
 
 
 def write_log(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
@@ -96,7 +146,8 @@ def write_log(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
           f"best_rtd: {_yaml_str(_offer_summary(rtd, cfg))}",
           f"best_protein_per_10g: {best_p10 if best_p10 is not None else 'null'}",
           f"new_records: {len(records)}", f"cost_usd: {run['cost_usd']:.4f}", "---", ""]
-    body = [BANNER, f"# Deal Run — {d.strftime('%A %Y-%m-%d')} ({run['mode']}, {run['status']})", ""]
+    body = [BANNER, f"# Deal Run — {d.strftime('%A %Y-%m-%d')} ({run['mode']}, {run['status']})", "",
+            f"📱 [Open the Deal Radar app]({cfg.settings['app_url']})", ""]
     if run.get("note"):
         body += [f"> [!note] {run['note']}", ""]
     if records:
@@ -134,6 +185,7 @@ def write_log(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
     for cat in ("energy", "snack", "rtd"):
         rows = [o for o in ranked if o["category"] == cat]
         body += [f"## {CAT_ICON[cat]} {CATEGORY_LABEL[cat]}", "", _table(rows, cfg, cat)]
+    body += all_products_table(cfg, run)
     body += ["## 🧾 Cart Stacking Playbook", ""]
     for cat in ("energy", "snack", "rtd"):
         h = heroes.get(cat)
@@ -158,6 +210,30 @@ def write_log(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
     path = vault / "Logs" / f"{d.isoformat()}-Deal-Run.md"
     write_text(path, "\n".join(fm + body) + "\n")
     return path
+
+
+def all_products_table(cfg: Config, run: dict[str, Any]) -> list[str]:
+    """Every tracked product in one table so each dated log stands alone (append-only vaults)."""
+    best = run.get("best_by_product", {})
+    state = run.get("state")
+    lines = ["## 📋 All products today", "",
+             "| Product | Best now | Pack | Store | Tier | Usual | All-time low | Link |",
+             "|---|---|---|---|---|---|---|---|"]
+    for cat in ("energy", "snack", "rtd"):
+        for p in cfg.enabled(cat):
+            b = best.get(p.id)
+            atl = ((state.memory["products"].get(p.id, {}) if state else {}).get("all_time_low") or {})
+            unit = p.unit_label.split(" ")[0]
+            if b:
+                pack = f"{_money(b['effective_pack_total'])} for {b['units_in_cart']}" + (" 📦" if b.get("is_case") else "")
+                row = (f"{CAT_ICON[cat]} {p.display_name}", f"{_money(b['unit_price'])}/{unit}", pack,
+                       b.get("retailer_name", ""), tier_label(b["tier"]), _money(p.ref_unit_price),
+                       _money(atl.get("unit_price")), f"[Open deal]({b['source_url']})")
+            else:
+                row = (f"{CAT_ICON[cat]} {p.display_name}", "no offer found", "", "", "", _money(p.ref_unit_price),
+                       _money(atl.get("unit_price")), "")
+            lines.append("| " + " | ".join(_cell(x) for x in row) + " |")
+    return lines + [""]
 
 
 def write_master(vault: Path, cfg: Config, state: State, run: dict[str, Any]) -> Path:

@@ -21,8 +21,8 @@ Unit: bottle · Size: 11 oz · Protein: 30g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Quest Protein Shake | Target | 1× 4 | $8.89 | $2.22 | $0.74 | 60% | 🚨 STEAL |  |  | [link](https://www.target.com/p/-/A-76628735) |
-| Quest Protein Shake | Walmart | 1× 4 | $20.53 | $5.13 | $1.71 | 139% | ❌ SKIP |  |  | [link](https://www.walmart.com/ip/seort/445356188) |
+| Quest Protein Shake | Target | 1× 4 | $8.89 | $2.22 | $0.74 | 60% | 🚨 STEAL |  |  | [Open deal](https://www.target.com/p/-/A-76628735) |
+| Quest Protein Shake | Walmart | 1× 4 | $20.53 | $5.13 | $1.71 | 139% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/445356188) |
 
 ## Price ledger
 

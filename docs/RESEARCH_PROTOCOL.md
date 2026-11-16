@@ -22,6 +22,8 @@ middays), the `jobs` to research, a `search_budget` per job, known `dead_codes` 
 - Use the job's `task` text as the brief. Stay within its `search_budget` searches (the plan's
   `total_search_budget` is the whole run). Keep your notes short: numbers, URL, verbatim price text
   (a few extra WebFetch reads of result pages are fine when a snippet lacks the price).
+- **Store stock.** For the best in-store/club deals, if a retailer or deal page shows availability at
+  specific Orange County stores, record it in `stock_note`. Don't spend extra searches hunting for it.
 - **Cases first.** The owner buys by the case: look for 12-, 15-, 18-, 24-pack / box prices.
   Single-can or single-bottle promos (Vitamin Shoppe / GNC $1-can weekends) still count.
 - Every offer needs a page URL that came back in a WebSearch result in THIS session (or a page
@@ -81,6 +83,7 @@ far, so a long session never loses work. Format:
           "in_store_only": false,
           "limit_per_customer": 0,
           "membership_required": false,
+          "stock_note": "",
           "starts": "",
           "ends": ""
         }
@@ -99,6 +102,9 @@ Field rules (same as the API extractor in `radar/extract.py`):
   an automatic "15% off" → `pct_off`, `promo_value: 15`.
 - Subscribe & Save / Auto-Delivery % → `subscribe_save_pct` (not a promo).
 - Costco, Sam's Club, GNC Pro Access → `membership_required: true`.
+- `stock_note`: only when a page explicitly shows store-level availability near Orange County, CA
+  (e.g. "In stock at Target Mission Viejo, pickup today", "Limited stock at Costco Laguna Niguel").
+  Copy what the page says. Never infer stock; leave `""` when the page doesn't say.
 - Unknown numbers are `0`, unknown text is `""`, unknown flags are `false`.
 
 ## 4. Process, publish, alert

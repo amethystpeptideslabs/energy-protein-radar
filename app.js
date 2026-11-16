@@ -6,6 +6,7 @@ const CHART_SRC = "https://cdn.jsdelivr.net/npm/chart.js@4.6.1/dist/chart.umd.mi
 const CHART_SRI = "sha384-Emf5ZVIUiarAdhkgtqK+5/Z5qIvM6QoVrS+qAVtfyZVuD5lIHrac0me485+Antp0";
 const CAT_NAME = { energy: "Energy", snack: "Protein snack", rtd: "RTD shake" };
 const TIER_RANK = { STEAL: 0, HOT: 1, SOLID: 2, SKIP: 3, UNRATED: 4 };
+const TIER_EMOJI = { STEAL: "🚨", HOT: "🔥", SOLID: "✅", SKIP: "❌", UNRATED: "❔" };
 const $ = (sel) => document.querySelector(sel);
 
 const store = {
@@ -18,7 +19,7 @@ const store = {
 
 const state = {
   latest: null, history: {}, cat: store.get("dr.cat", "all"), sort: store.get("dr.sort", "tier"),
-  starredOnly: false, casesOnly: store.get("dr.cases", false), starred: new Set(store.get("dr.starred", [])), open: new Set(),
+  starredOnly: false, casesOnly: store.get("dr.cases", false), filter: store.get("dr.filter", "all"), starred: new Set(store.get("dr.starred", [])), open: new Set(),
   histProduct: null, histRange: store.get("dr.range", "30"), chart: null,
 };
 
@@ -120,6 +121,7 @@ function render() {
     $("#banner").hidden = true;
   }
   renderHeroes(state.casesOnly ? caseHeroes(products) : (L?.heroes || {}), products);
+  renderDeals(products);
   renderTabs();
   renderRows(products);
   renderBoard(L?.protein_value_board || []);
@@ -156,13 +158,104 @@ function renderHeroes(heroes, products) {
       ${ch.length ? `<ul class="chips">${ch.map((c) => `<li class="chip">${esc(c)}</li>`).join("")}</ul>` : ""}
       ${ends ? `<div class="tag-ends">${esc(ends)}</div>` : ""}
       <div class="tag-actions">
-        <a class="btn" href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener noreferrer">Buy</a>
+        <a class="btn" href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener noreferrer">${esc(openLabel(o))}</a>
+        ${retailerOf(o).physical ? `<a class="btn ghost" href="${esc(mapsUrl(retailerOf(o).name))}" target="_blank" rel="noopener noreferrer">📍 Nearest</a>` : ""}
         ${o.code ? `<button class="btn ghost" type="button" data-code="${esc(o.code)}">Copy code ${esc(o.code)}</button>` : ""}
       </div>
     </article>`;
   });
   $("#heroes").innerHTML = html.join("");
   $("#hero-dots").innerHTML = "<span class=\"on\"></span><span></span><span></span>";
+}
+
+// ------------------------------------------------------------------ deal feed (the easy view)
+function retailerOf(o) {
+  const r = state.latest?.retailers?.[o.retailer_key];
+  return r || { name: o.retailer_name || "Store", physical: false, membership: !!o.membership_required, stock_search: "" };
+}
+function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return "source"; } }
+function openLabel(o) {
+  return o.source_kind === "retailer" ? `Open at ${retailerOf(o).name}` : "Open deal post";
+}
+function mapsUrl(name) { return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + " near me")}`; }
+function stockUrl(p, o) {
+  const r = retailerOf(o);
+  if (!r.physical || !r.stock_search) return null;
+  if (o.source_kind === "retailer" && o.source_url) return o.source_url;  // product page: pick your store to see stock
+  return r.stock_search.replace("{q}", encodeURIComponent(p.display_name));
+}
+function whereText(o) {
+  const r = retailerOf(o);
+  if (o.in_store_only) return `🏬 In store only at ${r.name}`;
+  if (r.physical) return r.key === "costco" || r.name === "Costco"
+    ? "🏬 Costco warehouses + costco.com (warehouse stock isn't listed online)"
+    : `🏬 ${r.name} stores + online`;
+  return "📦 Online only (ships to you)";
+}
+function cmpRank(cat, a, b) { const x = offerRank(cat, a), y = offerRank(cat, b); return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; }
+function bestDealFor(p) {
+  const pool = (p.offers || []).filter((o) => !o.unverified && (!state.casesOnly || o.is_case));
+  pool.sort((a, b) => cmpRank(p.category, a, b));
+  return pool[0] || null;
+}
+
+function dealCard(p, o) {
+  const r = retailerOf(o);
+  const unit = unitWord(p);
+  const ends = endsText(o.ends);
+  const sec = secondary(p, o);
+  const save = o.pct_vs_ref != null && o.pct_vs_ref < 100 ? `${Math.round(100 - o.pct_vs_ref)}% under usual` : "";
+  const notes = [];
+  if (o.membership_required) notes.push(`🔒 ${r.name} membership`);
+  if (Number(o.limit_per_customer)) notes.push(`Limit ${o.limit_per_customer}`);
+  if (Number(o.min_qty) > 1) notes.push(`Buy ${o.min_qty} to get this price`);
+  if (Number(o.subscribe_save_pct)) notes.push(`Price includes Subscribe/Auto-Delivery ${o.subscribe_save_pct}%`);
+  const stock = stockUrl(p, o);
+  const units = `${o.units_in_cart} ${unit}${o.units_in_cart > 1 ? "s" : ""}`;
+  return `<li class="deal t-${esc(o.tier)}">
+    <a class="deal-main" href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener noreferrer">
+      <span class="deal-tags"><span class="tier t-${esc(o.tier)}">${esc(TIER_EMOJI[o.tier] || "")} ${esc(o.tier)}</span>${o.is_case ? `<span class="badge">📦 Case of ${esc(o.pack_count)}</span>` : ""}${o.is_record ? '<span class="badge">🏆 Record low</span>' : ""}${ends ? `<span class="badge ends">${esc(ends)}</span>` : ""}</span>
+      <span class="deal-name">${esc(p.display_name)}</span>
+      <span class="deal-price"><b>${money(o.unit_price)}</b><span class="per">/${esc(unit)}</span></span>
+      <span class="deal-line">${money(o.effective_pack_total)} for ${esc(units)} at <strong>${esc(r.name)}</strong>${save ? `, ${esc(save)}` : ""}</span>
+      ${sec ? `<span class="deal-line">${esc(sec.value)} ${esc(sec.label)} ${esc(sec.badge || "")}</span>` : ""}
+      <span class="deal-line">${esc(whereText(o))}</span>
+      ${o.stock_note ? `<span class="deal-stock">✅ ${esc(o.stock_note)}</span>` : ""}
+      ${notes.length ? `<span class="deal-notes">${notes.map((n) => `<span>${esc(n)}</span>`).join("")}</span>` : ""}
+      <span class="deal-open">${esc(openLabel(o))}</span>
+    </a>
+    ${(r.physical || stock || o.code) ? `<div class="deal-actions">
+      ${r.physical ? `<a class="act" href="${esc(mapsUrl(r.name))}" target="_blank" rel="noopener noreferrer">📍 Nearest ${esc(r.name)}</a>` : ""}
+      ${stock ? `<a class="act" href="${esc(safeUrl(stock))}" target="_blank" rel="noopener noreferrer">Check stock at my store</a>` : ""}
+      ${o.code ? `<button class="act" type="button" data-code="${esc(o.code)}">Copy code ${esc(o.code)}</button>` : ""}
+    </div>` : ""}
+  </li>`;
+}
+
+function regularCard(p, o) {
+  const unit = unitWord(p);
+  const usual = p.ref_unit_price != null ? `usual ${money(p.ref_unit_price)}/${esc(unit)}` : "";
+  if (!o) return `<li class="deal quiet"><div class="deal-main"><span class="deal-name">${esc(p.display_name)}</span><span class="deal-line">No sourced offer in the last scan${usual ? `, ${usual}` : ""}.</span></div></li>`;
+  return `<li class="deal quiet"><a class="deal-main" href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener noreferrer">
+      <span class="deal-name">${esc(p.display_name)}</span>
+      <span class="deal-price"><b>${money(o.unit_price)}</b><span class="per">/${esc(unit)}</span></span>
+      <span class="deal-line">Best today at ${esc(retailerOf(o).name)}${usual ? `, ${usual}` : ""}. Not a deal yet.</span>
+    </a></li>`;
+}
+
+function renderDeals(products) {
+  document.querySelectorAll(".filters [data-filter]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === state.filter)));
+  const list = products.filter((p) => state.filter === "all" || p.category === state.filter).map((p) => ({ p, o: bestDealFor(p) }));
+  const deals = list.filter((x) => x.o && ["STEAL", "HOT", "SOLID"].includes(x.o.tier));
+  deals.sort((a, b) => (TIER_RANK[a.o.tier] - TIER_RANK[b.o.tier]) || ((a.o.pct_vs_ref ?? 999) - (b.o.pct_vs_ref ?? 999)) || (a.o.unit_price - b.o.unit_price));
+  const rest = list.filter((x) => !deals.includes(x));
+  const word = state.casesOnly ? "case deal" : "deal";
+  $("#deal-count").textContent = products.length ? `${deals.length} ${word}${deals.length === 1 ? "" : "s"}` : "";
+  $("#deal-list").innerHTML = deals.length ? deals.map(({ p, o }) => dealCard(p, o)).join("")
+    : `<li class="empty-row">${products.length ? `No ${word}s here in the last scan.${state.casesOnly ? " Turn off Cases only to see single-unit deals." : ""}` : "Deals appear after the first scan."}</li>`;
+  $("#regular-summary").textContent = `No deal today: ${rest.length} product${rest.length === 1 ? "" : "s"} at regular price`;
+  $("#regular").hidden = rest.length === 0;
+  $("#regular-list").innerHTML = rest.map(({ p, o }) => regularCard(p, o)).join("");
 }
 
 function renderTabs() {
@@ -385,11 +478,18 @@ if ("IntersectionObserver" in window) {
   io.observe(document.getElementById("history"));
 } else { loadChartLib(); }
 
+document.getElementById("more")?.addEventListener("toggle", (e) => { if (e.target.open) loadChartLib(); });
+
 // ------------------------------------------------------------------ events
 function bind() {
   document.addEventListener("click", (e) => {
-    const t = e.target.closest("[data-code],[data-toggle],[data-star],[data-cat],[data-range]");
+    const t = e.target.closest("[data-code],[data-toggle],[data-star],[data-cat],[data-range],[data-filter]");
     if (!t) return;
+    if (t.dataset.filter) {
+      state.filter = t.dataset.filter; store.set("dr.filter", state.filter);
+      renderDeals(state.latest?.products || []);
+      return;
+    }
     if (t.dataset.code) { copyCode(t.dataset.code); return; }
     if (t.dataset.star) {
       const id = t.dataset.star;

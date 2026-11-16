@@ -30,7 +30,7 @@
 
   <main>
     <section class="best" aria-labelledby="h-best">
-      <h2 id="h-best">Best right now</h2>
+      <h2 id="h-best">Top pick in each category</h2>
       <div class="tags" id="heroes" tabindex="0" aria-label="Top deal in each category. Scroll sideways for more.">
         <article class="shelf-tag empty loading"><div class="tag-name">Loading deals…</div></article>
         <article class="shelf-tag empty loading"><div class="tag-name">Loading deals…</div></article>
@@ -39,8 +39,30 @@
       <div class="dots" id="hero-dots" aria-hidden="true"></div>
     </section>
 
+    <section id="deals" aria-labelledby="h-deals">
+      <div class="deals-head">
+        <h2 id="h-deals">Today's deals</h2>
+        <p class="deal-count" id="deal-count"></p>
+      </div>
+      <p class="sub">Tap a deal to open it at the store.</p>
+      <div class="filters" role="group" aria-label="Show deals for">
+        <button class="pill" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="pill" type="button" data-filter="energy" aria-pressed="false">Energy</button>
+        <button class="pill" type="button" data-filter="snack" aria-pressed="false">Snacks</button>
+        <button class="pill" type="button" data-filter="rtd" aria-pressed="false">Shakes</button>
+        <button class="pill case" type="button" id="cases" aria-pressed="false">📦 Cases only</button>
+      </div>
+      <ul class="deal-list" id="deal-list"></ul>
+      <details class="fold" id="regular">
+        <summary id="regular-summary">No deal today</summary>
+        <ul class="deal-list quiet" id="regular-list"></ul>
+      </details>
+    </section>
+
+    <details class="fold more" id="more">
+      <summary>More: every offer, protein per dollar, price history</summary>
     <section id="products" aria-labelledby="h-products">
-      <h2 id="h-products">All products</h2>
+      <h2 id="h-products">Every product and offer</h2>
       <div class="tabs" role="tablist" aria-label="Category">
         <button role="tab" id="tab-all" aria-selected="true" data-cat="all">All</button>
         <button role="tab" id="tab-energy" aria-selected="false" data-cat="energy">Energy</button>
@@ -58,7 +80,6 @@
             <option value="easy">No hassle (online, no membership, no minimum)</option>
           </select>
         </label>
-        <button class="toggle" id="cases" type="button" aria-pressed="false">Cases only</button>
         <button class="toggle" id="starred" type="button" aria-pressed="false">Starred only</button>
       </div>
       <div role="tabpanel" id="rows-panel" aria-labelledby="tab-all"><ul class="rows" id="rows"></ul></div>
@@ -86,6 +107,7 @@
       <div class="chart-wrap"><canvas id="chart" role="img" aria-label="Daily best price"></canvas></div>
       <p class="sub" id="hist-note"></p>
     </section>
+    </details>
   </main>
 
   <footer>

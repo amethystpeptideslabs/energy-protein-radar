@@ -31,7 +31,7 @@ SLIM_KEYS = ("product_id", "category", "retailer_name", "retailer_key", "source_
              "effective_pack_total", "unit_price", "price_per_oz", "price_per_10g_protein", "pct_vs_ref",
              "tier", "protein_value_badge", "is_record", "unverified", "code", "starts", "ends",
              "in_store_only", "membership_required", "limit_per_customer", "min_qty", "promo_type",
-             "subscribe_save_pct", "seen_at", "is_case")
+             "subscribe_save_pct", "seen_at", "is_case", "stock_note")
 
 
 @dataclass
@@ -215,6 +215,9 @@ def build_latest(cfg: Config, state: State, ranked: list[dict[str, Any]], heroes
         "heroes": {k: _slim(v, True) if v else None for k, v in heroes.items()},
         "products": products,
         "protein_value_board": board,
+        "retailers": {k: {"name": r["name"], "physical": bool(r.get("physical")),
+                          "membership": bool(r.get("membership")), "stock_search": r.get("stock_search", "")}
+                      for k, r in cfg.settings.get("retailers", {}).items()},
         "counts": {"offers": len(ranked), "hot_plus": sum(is_hot_plus(o["tier"]) for o in vis),
                    "steals": sum(o["tier"] == STEAL for o in vis),
                    "records": sum(bool(o.get("is_record")) for o in vis),
@@ -265,6 +268,8 @@ def run(opts: RunOptions) -> RunResult:
     base_status = {"version": __version__, "last_run_at": iso_now(), "date": d.isoformat(),
                    "slot": slot, "dry_run": opts.dry_run}
 
+    rendering = False
+
     def finish(status: str, reason: str, *, push_failure: bool) -> RunResult:
         res.status, res.reason = status, reason
         if push_failure:
@@ -274,7 +279,7 @@ def run(opts: RunOptions) -> RunResult:
         if state.latest and status == "failed":
             state.latest["stale"] = True
             state.latest["stale_reason"] = reason
-        if tracker.calls or opts.ingest:
+        if (tracker.calls or opts.ingest) and not rendering:
             record_run(state.memory, d, tracker)
         state.memory["latest_run"] = {"date": d.isoformat(), "mode": mode, "status": status,
                                       "cost_usd": round(tracker.usd, 4), "searches": tracker.searches}
@@ -290,6 +295,11 @@ def run(opts: RunOptions) -> RunResult:
 
     if mode == "skip":
         return finish("skipped", note, push_failure=False)
+    rendering = mode == "render"
+    if rendering:  # rebuild latest.json + notes from stored offers (after UI/format changes); no research
+        prev = state.memory.get("latest_run", {})
+        mode = res.mode = prev.get("mode") or "quick"
+        opts.no_push = True
     if mode == "init":  # empty-state outputs for a fresh deploy; no API calls
         state.latest = build_latest(cfg, state, [], {"energy": None, "snack": None, "rtd": None},
                                     {"date": d.isoformat(), "run_mode": "init", "slot": slot, "status": "awaiting first scan"})
@@ -311,14 +321,16 @@ def run(opts: RunOptions) -> RunResult:
         mode = res.mode = "quick"
         note = (note + "; " if note else "") + "budget above 80%: deep downgraded to quick"
 
-    if not opts.dry_run and not opts.ingest and not cfg.api_key:
+    if not opts.dry_run and not opts.ingest and not rendering and not cfg.api_key:
         return finish("failed", "ANTHROPIC_API_KEY is not set (add it under repo Settings → Secrets → Actions)",
                       push_failure=True)
 
     # ---------------- research + extraction
     jobs_out: list[tuple[ResearchResult, dict[str, Any]]] = []
     errors: list[str] = []
-    if ingest_jobs is not None:
+    if rendering:
+        jobs_out = []
+    elif ingest_jobs is not None:
         jobs_out = ingest_jobs
         tracker.searches = sum(r.searches for r, _ in jobs_out)
         if not jobs_out:
@@ -375,7 +387,7 @@ def run(opts: RunOptions) -> RunResult:
     prune_codes(state, d)
 
     corrections: list[dict[str, Any]] = []
-    if mode == "calibrate":
+    if mode == "calibrate" and not rendering:
         corrections = calibrate(state, cfg, kept_all, d)
         state.apply_overrides(cfg)
     res.corrections = corrections
@@ -395,7 +407,8 @@ def run(opts: RunOptions) -> RunResult:
               for cat in ("energy", "snack", "rtd")}
 
     # failed = every research job errored; partial = some did; ok = none did
-    status = "failed" if not jobs_out else ("partial" if errors else "ok")
+    status = (state.memory.get("latest_run", {}).get("status") or "ok") if rendering else \
+        ("failed" if not jobs_out else ("partial" if errors else "ok"))
     reason = "; ".join(filter(None, [note, *errors]))[:600]
 
     run_meta = {"date": d.isoformat(), "run_mode": mode, "slot": slot, "status": status}
@@ -406,7 +419,7 @@ def run(opts: RunOptions) -> RunResult:
     write_vault(out_root, cfg, state, {
         "date": d, "mode": mode, "status": status, "cost_usd": tracker.usd, "ranked": ranked,
         "heroes": heroes, "records": records, "dropped": dropped_all, "corrections": corrections,
-        "best_by_product": best_by_product, "note": reason})
+        "best_by_product": best_by_product, "note": reason, "state": state})
 
     send_digest = slot in ("morning", "manual") or mode == "calibrate"
     payloads = plan_pushes(state, cfg, records=records, ranked=ranked, heroes=heroes,

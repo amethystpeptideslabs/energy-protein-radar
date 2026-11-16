@@ -21,7 +21,7 @@ Unit: can · Size: 16 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 3D Energy 16oz | The Vitamin Shoppe | 1× 12 | $26.59 | $2.22 | $0.14 | 87% | ❌ SKIP |  |  | [link](https://www.vitaminshoppe.com/p/3d-energy-raspberry-sorbet-12-drink-s/3de-17306) |
+| 3D Energy 16oz | The Vitamin Shoppe | 1× 12 | $26.59 | $2.22 | $0.14 | 87% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/3d-energy-raspberry-sorbet-12-drink-s/3de-17306) |
 
 ## Price ledger
 

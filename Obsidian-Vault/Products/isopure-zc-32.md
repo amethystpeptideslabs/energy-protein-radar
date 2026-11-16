@@ -21,8 +21,8 @@ Unit: bottle · Size: 16.9 oz · Protein: 32g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Isopure Zero Carb RTD 16.9oz (32g) | GNC | 1× 12 | $55.59 | $4.63 | $1.45 | 88% | ✅ SOLID |  |  | [link](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
-| Isopure Zero Carb RTD 16.9oz (32g) | The Vitamin Shoppe | 1× 12 | $67.08 | $5.59 | $1.75 | 106% | ❌ SKIP |  |  | [link](https://www.vitaminshoppe.com/p/-/np-1149) |
+| Isopure Zero Carb RTD 16.9oz (32g) | GNC | 1× 12 | $55.59 | $4.63 | $1.45 | 88% | ✅ SOLID |  |  | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
+| Isopure Zero Carb RTD 16.9oz (32g) | The Vitamin Shoppe | 1× 12 | $67.08 | $5.59 | $1.75 | 106% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/-/np-1149) |
 
 ## Price ledger
 

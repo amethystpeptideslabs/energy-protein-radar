@@ -25,7 +25,7 @@ from radar.pipeline import RunOptions, main_from_cli  # noqa: E402
 
 def parse(argv: list[str] | None = None) -> RunOptions:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--mode", default="auto", choices=["auto", "quick", "deep", "calibrate", "check", "init"])
+    ap.add_argument("--mode", default="auto", choices=["auto", "quick", "deep", "calibrate", "check", "init", "render"])
     ap.add_argument("--only", metavar="PRODUCT_ID", help="research a single product")
     ap.add_argument("--dry-run", action="store_true", help="use fixtures; no API calls; no pushes")
     ap.add_argument("--no-push", action="store_true", help="print ntfy payloads instead of sending")

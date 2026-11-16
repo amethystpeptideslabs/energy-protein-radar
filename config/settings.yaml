@@ -116,27 +116,29 @@ history:
   raw_offer_retention_days: 90
 
 # ---------------------------------------------------------------- retailers
+# physical: has stores you can walk into (app shows Nearest store + Check stock)
+# stock_search: retailer search page where you can set your store and see availability
 retailers:
-  vitamin-shoppe: {name: The Vitamin Shoppe, domains: [vitaminshoppe.com], type: supplement,
+  vitamin-shoppe: {physical: true, stock_search: "https://www.vitaminshoppe.com/search?search={q}", name: The Vitamin Shoppe, domains: [vitaminshoppe.com], type: supplement,
     playbook: "In-store $1/can energy weekends (usually start Thu, sometimes Fri; limit ~6). BOGO 50% across brands online + in store. Auto-Delivery 10-15% off online. Healthy Awards points stack."}
-  gnc: {name: GNC, domains: [gnc.com], type: supplement,
+  gnc: {physical: true, stock_search: "https://www.gnc.com/search?q={q}", name: GNC, domains: [gnc.com], type: supplement,
     playbook: "BOGO 50% on RTD/bars is common. Pro Access member pricing is membership-gated (🔒). In-store $1 energy promos mirror Vitamin Shoppe some weekends."}
-  campus-protein: {name: Campus Protein, domains: [campusprotein.com], type: supplement, playbook: "Site-wide % codes; free shipping thresholds."}
-  suppz: {name: Suppz, domains: [suppz.com], type: supplement, playbook: "Frequent sitewide codes; check shipping minimum."}
-  muscle-strength: {name: Muscle & Strength, domains: [muscleandstrength.com], type: supplement, playbook: "Store codes stack with some brand promos; free shipping over threshold."}
-  xn-supps: {name: XN Supps, domains: [xnsupps.com], type: supplement, playbook: "Case pricing on energy drinks; codes common."}
-  bodybuilding-com: {name: Bodybuilding.com Shop, domains: [shop.bodybuilding.com, bodybuilding.com], type: supplement, playbook: "Sitewide codes; verify current storefront."}
-  iherb: {name: iHerb, domains: [iherb.com], type: supplement, playbook: "New-customer and sitewide codes; free shipping thresholds."}
-  vitacost: {name: Vitacost, domains: [vitacost.com], type: supplement, playbook: "Sitewide % codes; Autoship 5%."}
-  amazon: {name: Amazon, domains: [amazon.com], type: big-box,
+  campus-protein: {physical: false, name: Campus Protein, domains: [campusprotein.com], type: supplement, playbook: "Site-wide % codes; free shipping thresholds."}
+  suppz: {physical: false, name: Suppz, domains: [suppz.com], type: supplement, playbook: "Frequent sitewide codes; check shipping minimum."}
+  muscle-strength: {physical: false, name: Muscle & Strength, domains: [muscleandstrength.com], type: supplement, playbook: "Store codes stack with some brand promos; free shipping over threshold."}
+  xn-supps: {physical: false, name: XN Supps, domains: [xnsupps.com], type: supplement, playbook: "Case pricing on energy drinks; codes common."}
+  bodybuilding-com: {physical: false, name: Bodybuilding.com Shop, domains: [shop.bodybuilding.com, bodybuilding.com], type: supplement, playbook: "Sitewide codes; verify current storefront."}
+  iherb: {physical: false, name: iHerb, domains: [iherb.com], type: supplement, playbook: "New-customer and sitewide codes; free shipping thresholds."}
+  vitacost: {physical: false, name: Vitacost, domains: [vitacost.com], type: supplement, playbook: "Sitewide % codes; Autoship 5%."}
+  amazon: {physical: false, stock_search: "https://www.amazon.com/s?k={q}", name: Amazon, domains: [amazon.com], type: big-box,
     playbook: "Clip coupon + Subscribe & Save (5%, or 15% with 5+ subscriptions in one delivery). Prime free shipping."}
-  walmart: {name: Walmart, domains: [walmart.com], type: big-box, playbook: "Rollbacks; free shipping $35+ or Walmart+ (🔒)."}
-  target: {name: Target, domains: [target.com], type: big-box, playbook: "Target Circle offers (free to join) stack with sales; Circle Card 5% off."}
-  costco: {name: Costco, domains: [costco.com], type: club, membership: true, playbook: "Membership required (🔒). Monthly instant savings coupons; online prices higher than warehouse."}
-  sams-club: {name: Sam's Club, domains: [samsclub.com], type: club, membership: true, playbook: "Membership required (🔒). Instant savings; Plus members get free shipping."}
-  ralphs: {name: Ralphs, domains: [ralphs.com, kroger.com], type: grocery, playbook: "Kroger digital coupons + Mega Events (buy 5 save $5). Carries Drumroll."}
-  vons: {name: Vons / Albertsons, domains: [vons.com, albertsons.com], type: grocery, playbook: "for U digital coupons; member prices need a free account."}
-  sprouts: {name: Sprouts, domains: [sprouts.com], type: grocery, playbook: "Weekly ad; digital coupons."}
+  walmart: {physical: true, stock_search: "https://www.walmart.com/search?q={q}", name: Walmart, domains: [walmart.com], type: big-box, playbook: "Rollbacks; free shipping $35+ or Walmart+ (🔒)."}
+  target: {physical: true, stock_search: "https://www.target.com/s?searchTerm={q}", name: Target, domains: [target.com], type: big-box, playbook: "Target Circle offers (free to join) stack with sales; Circle Card 5% off."}
+  costco: {physical: true, name: Costco, domains: [costco.com], type: club, membership: true, playbook: "Membership required (🔒). Monthly instant savings coupons; online prices higher than warehouse."}
+  sams-club: {physical: true, stock_search: "https://www.samsclub.com/s/{q}", name: Sam's Club, domains: [samsclub.com], type: club, membership: true, playbook: "Membership required (🔒). Instant savings; Plus members get free shipping."}
+  ralphs: {physical: true, stock_search: "https://www.ralphs.com/search?query={q}", name: Ralphs, domains: [ralphs.com, kroger.com], type: grocery, playbook: "Kroger digital coupons + Mega Events (buy 5 save $5). Carries Drumroll."}
+  vons: {physical: true, stock_search: "https://www.vons.com/shop/search-results.html?q={q}", name: Vons / Albertsons, domains: [vons.com, albertsons.com], type: grocery, playbook: "for U digital coupons; member prices need a free account."}
+  sprouts: {physical: true, stock_search: "https://shop.sprouts.com/search?search_term={q}", name: Sprouts, domains: [sprouts.com], type: grocery, playbook: "Weekly ad; digital coupons."}
   ghost-dtc: {name: Ghost (DTC), domains: [ghostlifestyle.com], type: brand, playbook: "Bundle pricing; occasional sitewide codes."}
   gorilla-mind-dtc: {name: Gorilla Mind (DTC), domains: [gorillamind.com], type: brand, playbook: "Subscribe discount; sitewide codes."}
   raw-dtc: {name: RAW Nutrition (DTC), domains: [getrawnutrition.com], type: brand, playbook: "Bundles; subscribe discount."}

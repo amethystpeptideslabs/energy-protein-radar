@@ -640,7 +640,7 @@
   "mode": "calibrate",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 50
+  "searches": 0
  },
  "cost_ledger": {
   "2026-11": {

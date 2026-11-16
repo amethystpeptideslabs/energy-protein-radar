@@ -21,8 +21,8 @@ Unit: pack (3 donuts) · Size: 2.6 oz · Protein: 10g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Drumroll Mini Protein Donuts | Target | 1× 1 | $3.49 | $3.49 | $3.49 | 93% | ❌ SKIP |  |  | [link](https://www.target.com/p/drumroll-snacks-strawberry-glazed-mini-donuts-3-pack-2-6oz/-/A-90751656) |
-| Drumroll Mini Protein Donuts | Ralphs | 1× 1 | $3.99 | $3.99 | $3.99 | 107% | ❌ SKIP |  |  | [link](https://www.ralphs.com/p/drumroll-vanilla-glazed-mini-protein-donuts/0085001760408) |
+| Drumroll Mini Protein Donuts | Target | 1× 1 | $3.49 | $3.49 | $3.49 | 93% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/drumroll-snacks-strawberry-glazed-mini-donuts-3-pack-2-6oz/-/A-90751656) |
+| Drumroll Mini Protein Donuts | Ralphs | 1× 1 | $3.99 | $3.99 | $3.99 | 107% | ❌ SKIP |  |  | [Open deal](https://www.ralphs.com/p/drumroll-vanilla-glazed-mini-protein-donuts/0085001760408) |
 
 ## Price ledger
 

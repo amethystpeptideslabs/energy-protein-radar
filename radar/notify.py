@@ -77,7 +77,7 @@ def plan_pushes(state: State, cfg: Config, *, records: list[dict[str, Any]],
         singles.append((5, o, {
             "title": f"{RECORD_BADGE} New all-time low: {cfg.products[o['product_id']].display_name}",
             "message": msg.strip(), "priority": 5, "tags": ["trophy"], "click": o["source_url"],
-            "actions": [{"action": "view", "label": "Open deal", "url": o["source_url"]},
+            "actions": [{"action": "view", "label": f"Open at {o.get('retailer_name') or 'store'}", "url": o["source_url"]},
                         {"action": "view", "label": "Open app", "url": app_url}]}))
     record_ids = {id(o) for o in records}
     for o in ranked:
@@ -104,7 +104,7 @@ def plan_pushes(state: State, cfg: Config, *, records: list[dict[str, Any]],
         for cat, label in (("energy", "⚡ Energy"), ("snack", "🍫 Snack"), ("rtd", "🥤 RTD")):
             h = heroes.get(cat)
             if h:
-                lines.append(f"{label}: **{cfg.products[h['product_id']].display_name}** "
+                lines.append(f"{label}: [{cfg.products[h['product_id']].display_name}]({h['source_url']}) "
                              f"{_price_line(h, cfg)} @ {h.get('retailer_name')} ({_pack(h, cfg)}) "
                              f"{TIER_EMOJI.get(h['tier'], '')}")
             else:
@@ -116,9 +116,12 @@ def plan_pushes(state: State, cfg: Config, *, records: list[dict[str, Any]],
                 f"{cfg.products[o['product_id']].display_name} ${o['unit_price']:.2f}" for o in leftovers[:5]))
             for o in leftovers:
                 remember_alert(state, fingerprint(o), 3)
+        deal_buttons = [{"action": "view", "label": f"{icon} {word} deal", "url": heroes[cat]["source_url"]}
+                        for cat, icon, word in (("energy", "⚡", "Energy"), ("snack", "🍫", "Snack"), ("rtd", "🥤", "Shake"))
+                        if heroes.get(cat)]
         payloads.append({"title": "📡 Deal Radar digest", "message": "\n".join(lines), "priority": 3,
                          "tags": ["satellite"], "click": app_url,
-                         "actions": [{"action": "view", "label": "Open app", "url": app_url}]})
+                         "actions": (deal_buttons or [{"action": "view", "label": "Open app", "url": app_url}])[:3]})
     return payloads[:cap]
 
 

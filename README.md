@@ -9,7 +9,8 @@ scheduled Claude session on the owner's existing Claude plan does the web resear
   - iPhone: Safari → Share → **Add to Home Screen**
   - Android/Chrome: menu → **Install app**
 - **Phone alerts:** ntfy (subscribe to your private topic in the ntfy app, server `ntfy.sh`)
-- **Obsidian:** `Obsidian-Vault/` here, mirrored to `<your vault>/Deal-Radar/` by a Windows scheduled task
+- **Obsidian:** a separate "Deal Radar" vault in Google Drive (My Drive › Deal Radar, synced to `G:\My Drive\Deal Radar`).
+  Every scan adds a dated note to `Deal-Radar/Logs` (append-only). No PowerShell needed.
 
 ## Schedule (Pacific time)
 
@@ -17,7 +18,6 @@ scheduled Claude session on the owner's existing Claude plan does the web resear
 |---|---|
 | Daily 5:43 AM | Claude session: **calibrate** on the first run, **deep** Mon + Thu, **quick** other days |
 | Thu + Fri 12:17 PM | quick, focused on Vitamin Shoppe / GNC weekend promos + Stack3d / Slickdeals |
-| Daily 8:05 AM (your PC) | `DealRadarSync` pulls the repo and copies notes into your vault |
 
 The sessions are Claude scheduled tasks on your account (edit or pause them in Claude). Each one runs
 `deal_hunter.py --plan`, researches with web search, writes a research JSON, then runs
@@ -52,7 +52,7 @@ Edit `config/products.yaml` (set `enabled: false` to drop one, e.g. Drumroll) or
 
 Never commit them. `.githooks/pre-commit` blocks staged API keys, ntfy topics and `.env`.
 
-## Windows setup (Obsidian sync)
+## Optional: Windows git mirror (not needed; the Drive vault replaces it)
 
 ```powershell
 irm https://raw.githubusercontent.com/amethystpeptideslabs/energy-protein-radar/main/scripts/setup_windows.ps1 | iex

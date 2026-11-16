@@ -21,8 +21,8 @@ Unit: bottle · Size: 11.5 oz · Protein: 30g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Premier Protein Shake 30g | Costco | 1× 18 | $31.99 | $1.78 | $0.59 | 72% | 🔥 HOT |  |  | [link](https://app.warehouserunner.com/costco/2007063-premier-protein-shake-vanilla-11-fl-oz-18-pk) |
-| Premier Protein Shake 30g | Walmart | 1× 18 | $56.99 | $3.17 | $1.06 | 128% | ❌ SKIP |  |  | [link](https://www.walmart.com/ip/Premier-Protein-Shakes-Strawberries-Cream-11-Fluid-Ounce-Pack-of-18/889861937) |
+| Premier Protein Shake 30g | Costco | 1× 18 | $31.99 | $1.78 | $0.59 | 72% | 🔥 HOT |  |  | [Open deal](https://app.warehouserunner.com/costco/2007063-premier-protein-shake-vanilla-11-fl-oz-18-pk) |
+| Premier Protein Shake 30g | Walmart | 1× 18 | $56.99 | $3.17 | $1.06 | 128% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/Premier-Protein-Shakes-Strawberries-Cream-11-Fluid-Ounce-Pack-of-18/889861937) |
 
 ## Price ledger
 

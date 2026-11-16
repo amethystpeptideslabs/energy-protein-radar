@@ -21,7 +21,7 @@ Unit: bottle · Size: 14 oz · Protein: 42g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Fairlife Core Power Elite 42g | Walmart | 1× 12 | $70.00 | $5.83 | $1.39 | 125% | ❌ SKIP |  |  | [link](https://www.walmart.com/ip/931341772) |
+| Fairlife Core Power Elite 42g | Walmart | 1× 12 | $70.00 | $5.83 | $1.39 | 125% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/931341772) |
 
 ## Price ledger
 

@@ -248,3 +248,54 @@ footer p { max-width: 60ch; }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
+
+/* ---------------------------------------------------------- easy deal feed */
+.deals-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.deal-count { margin: 0; color: var(--muted); font-weight: 650; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1rem; }
+.pill {
+  min-height: 44px; padding: 0 1rem; border-radius: 999px; cursor: pointer; font-weight: 700;
+  background: transparent; border: 1.5px solid var(--rail);
+}
+.pill[aria-pressed="true"] { background: var(--text); color: var(--ink); border-color: var(--text); }
+.deal-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+.deal { background: var(--shelf); border-radius: 8px; border-left: 6px solid var(--rail); overflow: hidden; }
+.deal.t-STEAL { border-left-color: var(--steal); }
+.deal.t-HOT { border-left-color: var(--hot); }
+.deal.t-SOLID { border-left-color: var(--solid); }
+.deal-main {
+  display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 0.75rem; align-items: baseline;
+  padding: 0.9rem 1rem 0.8rem; color: inherit; text-decoration: none;
+}
+a.deal-main:active { background: #222c36; }
+.deal-tags { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.15rem; }
+.badge { font-size: 0.75rem; font-weight: 750; padding: 0.1rem 0.45rem; border-radius: 3px; border: 1px solid var(--rail); color: var(--text); }
+.badge.ends { border-color: var(--hot); color: var(--hot); }
+.deal-name { font-weight: 760; font-size: 1.1rem; line-height: 1.25; }
+.deal-price { justify-self: end; white-space: nowrap; }
+.deal-price b { font-size: 1.9rem; font-weight: 900; font-stretch: 64%; line-height: 1; }
+.deal-price .per { color: var(--muted); font-size: 0.85rem; }
+.deal-line, .deal-stock, .deal-notes { grid-column: 1 / -1; font-size: 0.92rem; color: var(--muted); }
+.deal-line strong { color: var(--text); font-weight: 700; }
+.deal-stock { color: var(--solid); font-weight: 700; }
+.deal-notes { display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; }
+.deal-open {
+  grid-column: 1 / -1; justify-self: start; margin-top: 0.55rem; min-height: 44px; padding: 0 1.1rem;
+  display: inline-flex; align-items: center; border-radius: 4px; background: var(--text); color: var(--ink); font-weight: 800;
+}
+.deal-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0 1rem 0.9rem; }
+.act {
+  min-height: 44px; padding: 0 0.9rem; border-radius: 4px; display: inline-flex; align-items: center;
+  border: 1.5px solid var(--rail); background: transparent; color: var(--text); font-weight: 650; text-decoration: none; cursor: pointer;
+}
+.deal.quiet { border-left-color: var(--rail); }
+.deal.quiet .deal-name { font-weight: 650; font-size: 1rem; }
+.deal.quiet .deal-price b { font-size: 1.3rem; }
+.fold { margin-top: 1rem; }
+.fold > summary {
+  min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 700;
+  border-top: 1px solid var(--rail); padding: 0.5rem 0;
+}
+.fold .deal-list { margin-top: 0.5rem; }
+.more > summary { font-size: var(--step-1); font-weight: 780; font-stretch: 82%; margin-top: 1.5rem; }
+.more section:first-of-type { margin-top: 1rem; }

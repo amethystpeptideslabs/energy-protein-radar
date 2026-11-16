@@ -35,6 +35,48 @@ def resolve_retailer(name: str, url: str, settings: dict[str, Any]) -> tuple[str
     return (n or host or "unknown"), kind
 
 
+ONLINE_WORDS = re.compile(r"online|ships?\b|shipping|nationwide|all stores|website", re.I)
+ZIP_RE = re.compile(r"(?<!\d)(\d{5})(?!\d)")
+
+
+def _host_in(host: str, domains: list[str]) -> bool:
+    return any(host == d or host.endswith("." + d) for d in domains)
+
+
+def in_area(place: str, area: dict[str, Any]) -> bool:
+    """True if a store location string names a city or ZIP inside the shopping area."""
+    text = place.lower()
+    for city in area.get("cities", []):
+        if re.search(r"(?<![a-z])" + re.escape(city.lower()) + r"(?![a-z])", text):
+            return True
+    prefixes = [str(z) for z in area.get("zip_prefixes", [])]
+    return any(z.startswith(p) for z in ZIP_RE.findall(place) for p in prefixes)
+
+
+def area_check(o: dict[str, Any], retailer_key: str, settings: dict[str, Any]) -> str:
+    """Shopping-area rule. In-store prices must be at a store in the area; online deals that
+    ship to the area count from anywhere. Returns a drop detail, or '' to keep. May set
+    o['in_store_only'] for warehouse-price trackers."""
+    area = settings.get("area") or {}
+    if not area:
+        return ""
+    name = area.get("name", "the shopping area")
+    host = url_host(o.get("source_url", ""))
+    if _host_in(host, area.get("out_of_area_domains", [])):
+        return f"{host} has no stores in {name} and doesn't ship there"
+    if _host_in(host, area.get("warehouse_trackers", [])):
+        o["in_store_only"] = True
+    loc = str(o.get("store_location") or "").strip()
+    if loc and not ONLINE_WORDS.search(loc) and not in_area(loc, area):
+        return f"store '{loc}' is outside {name}"
+    if o.get("in_store_only"):
+        if retailer_key not in area.get("in_store_retailers", []):
+            return f"in-store price at a chain with no stores in {name}"
+        if retailer_key in area.get("store_price_varies", []) and (not loc or ONLINE_WORDS.search(loc)):
+            return f"warehouse price not confirmed at a store in {name}"
+    return ""
+
+
 def _term_hit(text: str, terms: list[str]) -> str | None:
     for t in terms:
         if re.search(r"(?<![a-z0-9])" + re.escape(t) + r"(?![a-z0-9])", text):
@@ -119,6 +161,11 @@ def validate_offers(raw: list[dict[str, Any]], cfg: Config, url_map: dict[str, s
         o["retailer_key"], o["source_kind"] = retailer_key, kind
         o["retailer_name"] = cfg.retailer_name(retailer_key) if retailer_key in \
             cfg.settings.get("retailers", {}) else (o.get("retailer") or retailer_key)
+        outside = area_check(o, retailer_key, cfg.settings)
+        if outside:
+            drop(o, "outside_area", outside)
+            continue
+        o["store_location"] = str(o.get("store_location") or "").strip()
         code = (o.get("code") or "").strip()
         if code and ((code.upper(), retailer_key) in dead or (code.upper(), "") in dead):
             drop(o, "dead_code", f"code {code} is on the dead list")

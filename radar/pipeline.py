@@ -30,7 +30,7 @@ SLIM_KEYS = ("product_id", "category", "retailer_name", "retailer_key", "source_
              "evidence_date", "pack_count", "pack_price", "packs_in_cart", "units_in_cart",
              "effective_pack_total", "unit_price", "price_per_oz", "price_per_10g_protein", "pct_vs_ref",
              "tier", "protein_value_badge", "is_record", "unverified", "code", "starts", "ends",
-             "in_store_only", "membership_required", "limit_per_customer", "min_qty", "promo_type",
+             "in_store_only", "store_location", "membership_required", "limit_per_customer", "min_qty", "promo_type",
              "subscribe_save_pct", "seen_at", "is_case")
 
 

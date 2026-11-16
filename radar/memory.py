@@ -12,6 +12,7 @@ from typing import Any
 from .config import Config
 from .pricing import regular_unit_price
 from .util import cents, iso_now, now_local, parse_date, read_json, write_json, write_text
+from .validate import area_check
 
 SCHEMA_VERSION = 2
 
@@ -116,6 +117,8 @@ def current_offers(state: State, cfg: Config, today: date) -> list[dict[str, Any
             continue
         if o["product_id"] not in cfg.products or not cfg.products[o["product_id"]].enabled:
             continue
+        if area_check(o, o.get("retailer_key", ""), cfg.settings):
+            continue  # e.g. a warehouse price not confirmed at a store in the shopping area
         ends = parse_date(o.get("ends"))
         if ends and ends < today:
             continue

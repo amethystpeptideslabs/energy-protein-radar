@@ -12,6 +12,40 @@ location:
   country: US
   timezone: America/Los_Angeles
 
+# ---------------------------------------------------------------- shopping area
+# Two ways a deal counts:
+#   1. In-store / warehouse prices: only at stores IN this area (a store's city or ZIP must be
+#      in the lists below when the price varies by location, e.g. Costco / Sam's warehouses).
+#   2. Online deals you can just order (ships to you, or pickup/delivery from a local store):
+#      any retailer counts — Amazon, Walmart.com, Target.com, iHerb, brand sites, etc.
+area:
+  name: Orange County, CA
+  # Chains with stores in Orange County. In-store-only prices from any other chain are dropped.
+  in_store_retailers: [vitamin-shoppe, gnc, costco, sams-club, walmart, target, ralphs, vons, sprouts]
+  # Prices vary by warehouse: an in-store price here must name an Orange County location.
+  store_price_varies: [costco, sams-club]
+  # Pages that report warehouse shelf prices (not online prices): offers from these sources
+  # are treated as in-store and need an Orange County store.
+  warehouse_trackers: [warehouserunner.com, costco97.com, costcofdb.com]
+  # Store sites for chains with no Orange County stores that don't ship here: always dropped.
+  out_of_area_domains: [heb.com, qfc.com, fredmeyer.com, kingsoopers.com, smithsfoodanddrug.com,
+    frysfood.com, dillons.com, marianos.com, harristeeter.com, stopandshop.com, giantfood.com,
+    giantfoodstores.com, martinsfoods.com, foodlion.com, shoprite.com, brookshires.com,
+    publix.com, meijer.com, wegmans.com, hy-vee.com, winndixie.com, safeway.com, jewelosco.com,
+    acmemarkets.com, shaws.com, starmarket.com, tomthumb.com, randalls.com]
+  # Online stores to check every run (they ship to Orange County).
+  online_retailers: [amazon, walmart, target, iherb, vitacost, bodybuilding-com, campus-protein,
+    suppz, xn-supps, muscle-strength]
+  cities: [Aliso Viejo, Anaheim, Brea, Buena Park, Costa Mesa, Coto de Caza, Cypress, Dana Point,
+    Foothill Ranch, Fountain Valley, Fullerton, Garden Grove, Huntington Beach, Irvine, La Habra,
+    La Palma, Ladera Ranch, Laguna Beach, Laguna Hills, Laguna Niguel, Laguna Woods, Lake Forest,
+    Los Alamitos, Midway City, Mission Viejo, Newport Beach, Orange, Placentia,
+    Rancho Santa Margarita, Rossmoor, San Clemente, San Juan Capistrano, Santa Ana, Seal Beach,
+    Stanton, Sunset Beach, Trabuco Canyon, Tustin, Villa Park, Westminster, Yorba Linda,
+    Orange County]
+  zip_prefixes: ["926", "927", "928", "90620", "90621", "90622", "90623", "90624", "90630",
+    "90631", "90632", "90633", "90680", "90720", "90740", "90742", "90743"]
+
 # ---------------------------------------------------------------- models & cost
 models:
   # Cheapest-that-works defaults. Calibrate uses Sonnet once for label/ref accuracy.

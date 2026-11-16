@@ -51,7 +51,9 @@ Rules:
 - Note restrictions: in-store only, membership required (Costco, Sam's Club, GNC Pro Access),
   per-customer limits, minimum quantity, subscribe/auto-delivery requirements, shipping cost
   and free-shipping minimums, start/end dates.
-- Prices are pre-tax, US. Location: Southern California (Orange County).
+- Prices are pre-tax, US. WHERE (see SHOPPING AREA below): in-store / warehouse prices count
+  only at stores in the shopping area — name the store's city in `store`. Online deals that
+  ship there (or local pickup/delivery) count from ANY retailer.
 
 Write one block per offer, exactly:
 
@@ -67,6 +69,7 @@ code: <code + who reported it and when, or none>
 subscribe_save: <% if offered, else none>
 coupon: <clip coupon value, else none>
 shipping: <cost and free-shipping minimum, or in-store>
+store: <city of the store whose shelf/warehouse price this is, e.g. "Costco Tustin, CA"; online if it ships>
 restrictions: <in-store only / membership / limit / min qty / none>
 dates: <posted date; promo start/end if known>
 label: <protein g per unit and size from label/specs if seen, else none>
@@ -78,6 +81,20 @@ DEAD CODES
 - <code> | <retailer> | <url> | <expired|invalid|reported-dead>
 END
 """
+
+
+def area_brief(cfg: Config) -> str:
+    """One paragraph on where deals count: in-area stores for in-store prices, online anywhere."""
+    area = cfg.settings.get("area") or {}
+    if not area:
+        return ""
+    name = area.get("name", "the shopping area")
+    stores = ", ".join(cfg.retailer_name(k) for k in area.get("in_store_retailers", []))
+    online = ", ".join(cfg.retailer_name(k) for k in area.get("online_retailers", []))
+    return (f" WHERE: in-store / warehouse prices count ONLY at {name} stores ({stores}) — give the "
+            f"store's city (chain-wide in-store promos at those chains are fine); skip shelf prices from stores elsewhere (out-of-state warehouses, H-E-B, "
+            f"Kroger-family stores outside California). ALSO find online deals that ship to {name} "
+            f"from any retailer — always check {online} and the brand's own site.")
 
 
 CASE_FOCUS = (" Priority: CASE / multi-pack prices (12-, 15-, 18-, 24-packs, boxes of bars) — the buyer "
@@ -113,6 +130,7 @@ def build_system(cfg: Config, memory: dict[str, Any]) -> str:
                      for d in memory.get("dead_codes", [])) or "- none"
     return (DOSSIER_RULES
             + "\n\nPRODUCT CATALOG\n" + catalog_text(products)
+            + "\n\nSHOPPING AREA\n" + area_brief(cfg).strip()
             + "\n\nRETAILERS\n" + retail_lines
             + "\n\nDEAL-INTEL SOURCES\n" + intel
             + "\n\nCURRENT REFERENCE PRICES AND RECORDS (context only)\n" + "\n".join(refs)
@@ -144,7 +162,8 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
                          "size in `label` (nutrition facts / spec sheet).")
             jobs.append((p.id, [p.id],
                          f"Today is {day}. Research current offers for ONE product:\n{_plan_line(p, cfg)}\n"
-                         f"Cover the retailers above plus the brand's own site and deal-intel sources.{CASE_FOCUS} "
+                         f"Cover the retailers above plus the brand's own site and deal-intel sources.{CASE_FOCUS}"
+                         f"{area_brief(cfg)} "
                          f"Report every concrete sourced offer as OFFER blocks.{extra}",
                          int(r["calibrate_max_uses" if mode == "calibrate" else "deep_max_uses"])))
         return jobs
@@ -161,6 +180,7 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
             focus = ("Focus: THIS WEEKEND's Vitamin Shoppe / GNC promos (in-store $1/can energy "
                      "events usually start Thursday, sometimes Friday; BOGO 50%) and fresh Stack3d / "
                      "Slickdeals posts." + CASE_FOCUS)
+        focus += area_brief(cfg)
         lines = "\n".join(f"- {_plan_line(p, cfg)}" for p in ps)
         jobs.append((cat, [p.id for p in ps],
                      f"Today is {day}. Find the best CURRENT deals for these {CATEGORY_LABEL[cat]} "

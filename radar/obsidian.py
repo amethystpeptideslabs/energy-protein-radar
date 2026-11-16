@@ -122,7 +122,7 @@ def write_log(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
         for o in restricted[:15]:
             bits = []
             if o.get("in_store_only"):
-                bits.append("🏬 in-store only")
+                bits.append("🏬 in-store only" + (f" · {o['store_location']}" if o.get("store_location") else ""))
             if o.get("membership_required"):
                 bits.append("🔒 membership")
             if int(o.get("limit_per_customer") or 0):

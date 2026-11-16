@@ -80,3 +80,16 @@ def test_calibrate_records_protein_corrections(cfg, tmp_path):
         c for c in corr if c["field"] == "protein_g").items()
     s.apply_overrides(cfg)
     assert cfg.products["built-puff"].protein_g == 16
+
+
+def test_carried_over_offers_follow_the_shopping_area(cfg, tmp_path):
+    from radar.memory import current_offers
+    s = state(cfg, tmp_path)
+    base = dict(product_id="bum-energy-12", retailer_key="costco", pack_count=18, seen_date="2026-11-16",
+                seen_at="2026-11-16T09:00:00-08:00", code="", ends="")
+    s.offers = [dict(base, source_url="https://app.warehouserunner.com/costco/1-x"),
+                dict(base, source_url="https://app.warehouserunner.com/costco/2-x", store_location="Costco Tustin, CA"),
+                dict(base, retailer_key="amazon", source_url="https://www.amazon.com/dp/X")]
+    kept = current_offers(s, cfg, TODAY)
+    assert sorted(o["source_url"] for o in kept) == ["https://app.warehouserunner.com/costco/2-x",
+                                                     "https://www.amazon.com/dp/X"]

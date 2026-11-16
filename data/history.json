@@ -1,3 +1,26 @@
 {
-
+  "3d-energy-16": [["2026-11-16",2.22,"SKIP","The Vitamin Shoppe"]],
+  "bang-16": [["2026-11-16",4.21,"SKIP","Walmart"]],
+  "barebells": [["2026-11-16",2.32,"SKIP","Barebells (DTC)"]],
+  "built-puff": [["2026-11-16",1.54,"STEAL","Sam's Club"]],
+  "bum-energy-12": [["2026-11-16",0.77,"STEAL","Costco"]],
+  "celsius-essentials-16": [["2026-11-16",1.36,"HOT","Walmart"]],
+  "celsius-original-12": [["2026-11-16",1.13,"HOT","Costco"]],
+  "core-power-26": [["2026-11-16",2.85,"SOLID","Costco"]],
+  "core-power-elite-42": [["2026-11-16",5.83,"SKIP","Walmart"]],
+  "drumroll-donuts": [["2026-11-16",3.49,"SKIP","Target"]],
+  "ghost-energy-16": [["2026-11-16",2.17,"SKIP","The Vitamin Shoppe"]],
+  "gorilla-mind-energy-16": [["2026-11-16",2.53,"SKIP","The Vitamin Shoppe"]],
+  "isopure-zc-32": [["2026-11-16",4.63,"SOLID","GNC"]],
+  "legendary-chips": [["2026-11-16",3.57,"SKIP","Vitacost"]],
+  "legendary-donuts": [["2026-11-16",1.87,"STEAL","Target"]],
+  "legendary-pastry": [["2026-11-16",3.24,"SKIP","Legendary Foods (DTC)"]],
+  "magic-spoon-pastry": [["2026-11-16",2.13,"SOLID","Walmart"]],
+  "muscle-milk-pro": [["2026-11-16",2.25,"SKIP","Walmart"]],
+  "oikos-pro-shake": [["2026-11-16",1.67,"SKIP","Costco"]],
+  "premier-protein-30": [["2026-11-16",1.78,"HOT","Costco"]],
+  "prime-bites": [["2026-11-16",2.83,"SOLID","The Vitamin Shoppe"]],
+  "quest-chips": [["2026-11-16",1.76,"SOLID","Sam's Club"]],
+  "quest-shake": [["2026-11-16",2.22,"STEAL","Target"]],
+  "raw-protein-rtd": [["2026-11-16",2.66,"STEAL","The Vitamin Shoppe"]]
 }

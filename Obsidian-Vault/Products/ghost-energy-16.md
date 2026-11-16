@@ -2,10 +2,10 @@
 product_id: ghost-energy-16
 category: energy
 display_name: "Ghost Energy 16oz"
-ref_unit_price: 2.5
-ref_source: "seed"
-all_time_low: null
-all_time_low_retailer: ""
+ref_unit_price: 2.68
+ref_source: "calibrated (3 retailers)"
+all_time_low: 2.17
+all_time_low_retailer: "The Vitamin Shoppe"
 protein_g: 0
 unit_size_oz: 16
 tags: [deal-radar, product]
@@ -17,7 +17,16 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 16 oz
 
+## Current offers
+
+| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $26.09 | $2.17 | $0.14 | 79% | ❌ SKIP |  |  | [link](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/brand/ghost-energy) |
+| Ghost Energy 16oz | Walmart | 1× 1 | $2.73 | $2.73 | $0.17 | 100% | ❌ SKIP |  |  | [link](https://www.walmart.com/ip/17042262854) |
+| Ghost Energy 16oz | Target | 1× 12 | $57.59 | $4.80 | $0.30 | 177% | ❌ SKIP |  |  | [link](https://target.com/p/ghost-energy-performance-energy-drink-faze-clan-faze-up-16-fl-oz-pack-of-12/-/A-1001269564) |
+
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-16 | $2.17 | ❌ SKIP | The Vitamin Shoppe |

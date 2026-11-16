@@ -2,12 +2,12 @@
 product_id: muscle-milk-pro
 category: rtd
 display_name: "Muscle Milk Pro Series"
-ref_unit_price: null
-ref_source: "seed"
-all_time_low: null
-all_time_low_retailer: ""
-protein_g: 40
-unit_size_oz: 14
+ref_unit_price: 2.25
+ref_source: "calibrated (1 retailers)"
+all_time_low: 2.25
+all_time_low_retailer: "Walmart"
+protein_g: 33
+unit_size_oz: 11
 tags: [deal-radar, product]
 ---
 
@@ -15,9 +15,16 @@ tags: [deal-radar, product]
 
 # Muscle Milk Pro Series
 
-Unit: bottle · Size: 14 oz · Protein: 40g
+Unit: bottle · Size: 11 oz · Protein: 33g
+
+## Current offers
+
+| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Muscle Milk Pro Series | Walmart | 1× 12 | $26.98 | $2.25 | $0.68 | 100% | ❌ SKIP |  |  | [link](https://www.walmart.com/ip/19298256108) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-16 | $2.25 | ❌ SKIP | Walmart |

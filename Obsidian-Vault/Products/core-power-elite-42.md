@@ -4,8 +4,8 @@ category: rtd
 display_name: "Fairlife Core Power Elite 42g"
 ref_unit_price: 4.67
 ref_source: "seed"
-all_time_low: null
-all_time_low_retailer: ""
+all_time_low: 5.83
+all_time_low_retailer: "Walmart"
 protein_g: 42
 unit_size_oz: 14
 tags: [deal-radar, product]
@@ -17,7 +17,14 @@ tags: [deal-radar, product]
 
 Unit: bottle · Size: 14 oz · Protein: 42g
 
+## Current offers
+
+| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Fairlife Core Power Elite 42g | Walmart | 1× 12 | $70.00 | $5.83 | $1.39 | 125% | ❌ SKIP |  |  | [link](https://www.walmart.com/ip/931341772) |
+
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-16 | $5.83 | ❌ SKIP | Walmart |

@@ -2,10 +2,10 @@
 product_id: bang-16
 category: energy
 display_name: "Bang Energy 16oz"
-ref_unit_price: 2.0
-ref_source: "seed"
-all_time_low: null
-all_time_low_retailer: ""
+ref_unit_price: 4.58
+ref_source: "calibrated (2 retailers)"
+all_time_low: 4.21
+all_time_low_retailer: "Walmart"
 protein_g: 0
 unit_size_oz: 16
 tags: [deal-radar, product]
@@ -17,7 +17,15 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 16 oz
 
+## Current offers
+
+| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Bang Energy 16oz | Walmart | 1× 12 | $50.49 | $4.21 | $0.26 | 91% | ❌ SKIP |  |  | [link](https://www.walmart.com/ip/1216905444) |
+| Bang Energy 16oz | Target | 1× 12 | $57.59 | $4.80 | $0.30 | 104% | ❌ SKIP |  |  | [link](https://www.target.com/p/-/A-1001715172) |
+
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-16 | $4.21 | ❌ SKIP | Walmart |

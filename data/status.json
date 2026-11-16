@@ -1,15 +1,15 @@
 {
  "version": "2.0.0",
- "last_run_at": "2026-11-16T02:36:46-08:00",
+ "last_run_at": "2026-11-16T09:25:29-08:00",
  "date": "2026-11-16",
- "slot": "manual",
+ "slot": "morning",
  "dry_run": false,
- "mode": "check",
- "status": "failed",
- "reason": "ANTHROPIC_API_KEY is not set (add it under repo Settings → Secrets → Actions)",
+ "mode": "calibrate",
+ "status": "ok",
+ "reason": "first run: calibrating refs and labels",
  "cost_usd": 0.0,
- "searches": 0,
+ "searches": 50,
  "month_usd": 0.0,
  "budget_cap_usd": 40.0,
- "heartbeat": "2026-11-16T02:36:47-08:00"
+ "heartbeat": "2026-11-16T09:25:32-08:00"
 }

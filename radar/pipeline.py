@@ -22,7 +22,7 @@ from .pricing import price_offer, rank_key
 from .research import ResearchResult, Researcher, WebSearchDisabled, build_jobs, build_system
 from .tiers import STEAL, is_hot_plus
 from .util import iso_now, now_local, parse_date, read_json, today as today_fn, write_json
-from .validate import dead_codes_from_reports, flag_unverified, validate_offers
+from .validate import dead_codes_from_reports, flag_unverified, source_block_reason, validate_offers
 
 log = logging.getLogger("radar")
 
@@ -133,22 +133,41 @@ def load_research_file(path: Path) -> tuple[str | None, list[tuple[ResearchResul
     return data.get("mode"), [_job_from_dict(j) for j in data.get("jobs", [])]
 
 
+def needs_calibration(pm: dict[str, Any]) -> bool:
+    """A product added after the first full calibrate (seed ref, never had a calibration job)."""
+    return not pm.get("cal_attempted") and not str(pm.get("ref_source") or "seed").startswith("calibrated")
+
+
 def research_plan(cfg: Config, state: State, mode: str, slot: str, note: str, only: str | None,
                   d: date) -> dict[str, Any]:
     """Plan for a Claude session. Budgets are total web searches per job, sized to fit one
-    session on a normal Claude plan: calibrate ~2/product once; deep ~12/category; quick ~6."""
-    b = cfg.settings["research"].get("session_budgets", {})
+    session on a normal Claude plan: calibrate ~2/product once; deep ~10-12 per job; quick ~6-8."""
+    r = cfg.settings["research"]
+    b = r.get("session_budgets", {})
+
+    def budget(kind: str, label: str) -> int:
+        cat = label.split("-")[0]
+        return int(b.get(f"{kind}_{cat}", b.get(kind)) or 6)
+
     jobs: list[dict[str, Any]] = []
     if mode == "calibrate" or (only and mode in ("deep", "quick")):
         for label, pids, prompt, _ in build_jobs(cfg, "calibrate" if mode == "calibrate" else "deep", slot, only, d):
             jobs.append({"label": label, "product_ids": pids, "task": prompt,
                          "search_budget": int(b.get("calibrate" if mode == "calibrate" else "deep_single", 3))})
     elif mode in ("quick", "deep"):
-        for label, pids, prompt, _ in build_jobs(cfg, "quick", slot, only, d):
+        kind = "deep" if mode == "deep" else ("midday" if slot == "midday" else "quick")
+        for label, pids, prompt, _ in build_jobs(cfg, "deep_cat" if mode == "deep" else "quick", slot, only, d):
             extra = (" DEEP RUN: cover every product in the list at least once, including the brand's own "
                      "site and club stores." if mode == "deep" else "")
-            budget = b.get("deep") if mode == "deep" else (b.get("midday") if slot == "midday" else b.get("quick"))
-            jobs.append({"label": label, "product_ids": pids, "task": prompt + extra, "search_budget": int(budget or 6)})
+            jobs.append({"label": label, "product_ids": pids, "task": prompt + extra,
+                         "search_budget": budget(kind, label)})
+        # newly added products get a one-time calibration job (regular price + label), a few per run
+        if state.memory.get("calibrated_at"):
+            fresh = [p for p in cfg.enabled() if needs_calibration(state.memory["products"].get(p.id, {}))]
+            for p in fresh[:int(r.get("calibrate_new_per_run", 6))]:
+                for _, pids, prompt, _ in build_jobs(cfg, "calibrate", slot, p.id, d):
+                    jobs.append({"label": f"cal:{p.id}", "product_ids": pids, "task": prompt,
+                                 "search_budget": int(b.get("calibrate_new", 2))})
     return {
         "date": d.isoformat(), "slot": slot, "mode": mode, "note": note,
         "case_min_units": int(cfg.settings["research"].get("case_min_units", 12)),
@@ -245,6 +264,42 @@ def _gh_output(**kv: Any) -> None:
             fh.write(f"{k}={v}\n")
 
 
+# ------------------------------------------------------------------ source hygiene
+def purge_blocked_sources(state: State, cfg: Config, d: date) -> list[dict[str, Any]]:
+    """Removes stored offers whose source is now blocked (e.g. third-party Costco trackers) and
+    everything derived from them: all-time lows, history rows, label sources and refs."""
+    def blocked(o: dict[str, Any]) -> bool:
+        return bool(source_block_reason(o.get("source_url", ""), o.get("retailer_key", ""),
+                                        o.get("source_kind", "other"), cfg.settings))
+    removed = [o for o in state.offers if blocked(o)]
+    if not removed:
+        return []
+    state.offers = [o for o in state.offers if not blocked(o)]
+    bad_urls = {o.get("source_url") for o in removed}
+    affected = sorted({o["product_id"] for o in removed if o.get("product_id") in state.memory["products"]})
+    for pid in affected:
+        pm = state.memory["products"][pid]
+        atl = pm.get("all_time_low") or {}
+        if atl and (atl.get("url") in bad_urls or source_block_reason(atl.get("url", ""), "", "other", cfg.settings)):
+            pm["all_time_low"] = None   # next run sets a fresh baseline from trusted sources
+        gone = {(o.get("seen_date"), round(float(o.get("unit_price") or 0), 2), o.get("retailer_name", ""))
+                for o in removed if o["product_id"] == pid}
+        rows = state.history.get(pid, [])
+        state.history[pid] = [r for r in rows if (r[0], round(float(r[1]), 2), r[3] if len(r) > 3 else "") not in gone]
+        lb = pm.get("last_best") or {}
+        if lb and (lb.get("date"), round(float(lb.get("unit_price") or 0), 2)) in {(g[0], g[1]) for g in gone}:
+            pm["last_best"] = None
+        pv = pm.get("protein_verified") or {}
+        if pv.get("source_url") in bad_urls:
+            pv["source_url"] = ""
+    # refs: re-derive from the remaining trusted observations (same median-of-retailers rule)
+    keep_cal = state.memory.get("calibrated_at")
+    calibrate(state, cfg, [o for o in state.offers if o["product_id"] in affected], d)
+    state.memory["calibrated_at"] = keep_cal
+    state.apply_overrides(cfg)
+    return removed
+
+
 # ------------------------------------------------------------------ main run
 def run(opts: RunOptions) -> RunResult:
     if opts.dry_run and not os.environ.get("DEAL_RADAR_NOW"):
@@ -256,6 +311,10 @@ def run(opts: RunOptions) -> RunResult:
     state = State.load(data_dir, cfg)
     state.apply_overrides(cfg)
     d = today_fn()
+    purged = purge_blocked_sources(state, cfg, d)
+    if purged:
+        log.info("purged %d stored offers from blocked/unofficial sources: %s", len(purged),
+                 ", ".join(sorted({o["product_id"] for o in purged})))
     slot = detect_slot(cfg, opts.slot)
     mode, note = resolve_mode(cfg, state, opts.mode, slot, d)
     if opts.only and mode == "quick":
@@ -383,9 +442,14 @@ def run(opts: RunOptions) -> RunResult:
 
     # ---------------- validation + pricing
     kept_all, dropped_all, dead_reports = [], [], []
+    cal_new_offers: list[dict[str, Any]] = []
+    cal_new_pids: list[str] = []
     for r, data in jobs_out:
         kept, dropped = validate_offers(data.get("offers", []), cfg, r.urls, r.page_ages,
                                         state.memory["dead_codes"], d)
+        if r.label.startswith("cal:"):
+            cal_new_offers += kept
+            cal_new_pids += [pid for pid in r.product_ids if pid in state.memory["products"]]
         kept_all += kept
         dropped_all += dropped
         dead_reports += dead_codes_from_reports(data.get("dead_codes", []), r.urls, cfg, d)
@@ -395,6 +459,17 @@ def run(opts: RunOptions) -> RunResult:
     corrections: list[dict[str, Any]] = []
     if mode == "calibrate" and not rendering:
         corrections = calibrate(state, cfg, kept_all, d)
+        state.apply_overrides(cfg)
+        for r, _ in jobs_out:
+            for pid in r.product_ids:
+                if pid in state.memory["products"]:
+                    state.memory["products"][pid]["cal_attempted"] = d.isoformat()
+    elif cal_new_pids and not rendering:  # one-time calibration of newly added products
+        keep_cal = state.memory.get("calibrated_at")
+        corrections = calibrate(state, cfg, cal_new_offers, d)
+        state.memory["calibrated_at"] = keep_cal
+        for pid in cal_new_pids:
+            state.memory["products"][pid]["cal_attempted"] = d.isoformat()
         state.apply_overrides(cfg)
     res.corrections = corrections
 

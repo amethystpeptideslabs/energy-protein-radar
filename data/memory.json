@@ -65,19 +65,19 @@
   "bum-energy-12": {
    "ref_unit_price": 2.5,
    "ref_updated": "2026-11-16",
-   "ref_source": "calibrated (3 retailers)",
+   "ref_source": "calibrated (2 retailers)",
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 0.77,
-    "retailer": "Costco",
+    "unit_price": 2.05,
+    "retailer": "The Vitamin Shoppe",
     "date": "2026-11-16",
-    "url": "https://app.warehouserunner.com/costco/2045172-bum-energy-variety-pack-18-ct-12-oz",
+    "url": "https://www.vitaminshoppe.com/c/ready-to-drink-bars-snacks/protein-fitness/brand/bum-energy",
     "code": null
    },
    "last_best": {
-    "unit_price": 0.77,
-    "tier": "STEAL",
+    "unit_price": 2.05,
+    "tier": "SKIP",
     "date": "2026-11-16"
    },
    "trend_30d": "flat"
@@ -103,21 +103,21 @@
    "trend_30d": "flat"
   },
   "celsius-original-12": {
-   "ref_unit_price": 1.5,
+   "ref_unit_price": 1.67,
    "ref_updated": "2026-11-16",
-   "ref_source": "calibrated (4 retailers)",
+   "ref_source": "calibrated (3 retailers)",
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 1.13,
-    "retailer": "Costco",
+    "unit_price": 1.38,
+    "retailer": "Sam's Club",
     "date": "2026-11-16",
-    "url": "https://app.warehouserunner.com/costco/1728905",
+    "url": "https://www.samsclub.com/p/celsius-live-fit-sparkling-vibe-variety-pack-12-fl-oz-18-pk/P990402185",
     "code": null
    },
    "last_best": {
-    "unit_price": 1.13,
-    "tier": "HOT",
+    "unit_price": 1.38,
+    "tier": "SOLID",
     "date": "2026-11-16"
    },
    "trend_30d": "flat"
@@ -430,7 +430,7 @@
   "core-power-26": {
    "ref_unit_price": 3.49,
    "ref_updated": "2026-11-16",
-   "ref_source": "calibrated (4 retailers)",
+   "ref_source": "calibrated (3 retailers)",
    "protein_verified": {
     "value": 26.0,
     "source_url": "https://www.walmart.com/ip/seort/538426607",
@@ -439,15 +439,15 @@
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 2.85,
-    "retailer": "Costco",
+    "unit_price": 3.17,
+    "retailer": "Target",
     "date": "2026-11-16",
-    "url": "https://app.warehouserunner.com/costco/1027877-core-power-26g-protein-shake-14-fl-oz-10-pk",
+    "url": "https://www.target.com/p/-/A-1001044412",
     "code": null
    },
    "last_best": {
-    "unit_price": 2.85,
-    "tier": "SOLID",
+    "unit_price": 3.17,
+    "tier": "SKIP",
     "date": "2026-11-16"
    },
    "trend_30d": "flat"
@@ -483,21 +483,21 @@
    "ref_source": "calibrated (2 retailers)",
    "protein_verified": {
     "value": 30.0,
-    "source_url": "https://app.warehouserunner.com/costco/2007063-premier-protein-shake-vanilla-11-fl-oz-18-pk",
+    "source_url": "https://www.walmart.com/ip/Premier-Protein-Shakes-Strawberries-Cream-11-Fluid-Ounce-Pack-of-18/889861937",
     "date": "2026-11-16",
-    "n": 2
+    "n": 1
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 1.78,
-    "retailer": "Costco",
+    "unit_price": 3.17,
+    "retailer": "Walmart",
     "date": "2026-11-16",
-    "url": "https://app.warehouserunner.com/costco/2007063-premier-protein-shake-vanilla-11-fl-oz-18-pk",
+    "url": "https://www.walmart.com/ip/Premier-Protein-Shakes-Strawberries-Cream-11-Fluid-Ounce-Pack-of-18/889861937",
     "code": null
    },
    "last_best": {
-    "unit_price": 1.78,
-    "tier": "HOT",
+    "unit_price": 3.17,
+    "tier": "SKIP",
     "date": "2026-11-16"
    },
    "trend_30d": "flat"
@@ -561,26 +561,26 @@
    "trend_30d": "flat"
   },
   "oikos-pro-shake": {
-   "ref_unit_price": 1.83,
+   "ref_unit_price": 2.08,
    "ref_updated": "2026-11-16",
-   "ref_source": "calibrated (3 retailers)",
+   "ref_source": "calibrated (2 retailers)",
    "protein_verified": {
     "value": 30.0,
-    "source_url": "https://app.warehouserunner.com/costco/1945057-oikos-protein-shake-vanilla-12-fl-oz-18-pk",
+    "source_url": "https://www.walmart.com/ip/seort/16113764509",
     "date": "2026-11-16",
-    "n": 3
+    "n": 2
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 1.67,
-    "retailer": "Costco",
+    "unit_price": 1.83,
+    "retailer": "Walmart",
     "date": "2026-11-16",
-    "url": "https://app.warehouserunner.com/costco/1945057-oikos-protein-shake-vanilla-12-fl-oz-18-pk",
+    "url": "https://www.walmart.com/ip/seort/16113764509",
     "code": null
    },
    "last_best": {
-    "unit_price": 1.67,
-    "tier": "SKIP",
+    "unit_price": 1.83,
+    "tier": "SOLID",
     "date": "2026-11-16"
    },
    "trend_30d": "flat"
@@ -604,6 +604,360 @@
    "all_time_low": null,
    "last_best": null,
    "trend_30d": "flat"
+  },
+  "phorm-energy-16": {
+   "ref_unit_price": 2.75,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (2 retailers)",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.39,
+    "retailer": "The Vitamin Shoppe",
+    "date": "2026-11-16",
+    "url": "https://www.vitaminshoppe.com/p/blue-raspberry-rtd-blue-raspberry-12-drink-s/1ph0017",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.39,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "alani-nu-12": {
+   "ref_unit_price": 2.25,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (3 retailers)",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 1.55,
+    "retailer": "Sam's Club",
+    "date": "2026-11-16",
+    "url": "https://www.samsclub.com/ip/19590672442",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 1.55,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "c4-energy-16": {
+   "ref_unit_price": 2.33,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (3 retailers)",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.38,
+    "retailer": "Walmart",
+    "date": "2026-11-16",
+    "url": "https://www.walmart.com/c/kp/case-c4",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.38,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "c4-energy-12": {
+   "ref_unit_price": 1.67,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 1.72,
+    "retailer": "Walmart",
+    "date": "2026-11-16",
+    "url": "https://www.walmart.com/browse/food/c4-energy-drinks/976759_976782_9357528_6944733",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 1.72,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "reign-16": {
+   "ref_unit_price": 2.17,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "ryse-fuel-16": {
+   "ref_unit_price": 2.51,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (2 retailers)",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.17,
+    "retailer": "The Vitamin Shoppe",
+    "date": "2026-11-16",
+    "url": "https://www.vitaminshoppe.com/p/ryse-fuel-frosted-lemonade-12-drink-s/rys-16800",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.17,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "bucked-up-16": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "on-amino-energy-12": {
+   "ref_unit_price": 1.66,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 1.71,
+    "retailer": "Sam's Club",
+    "date": "2026-11-16",
+    "url": "https://www.samsclub.com/ip/optimum-nutrition-essential-amino-energy-electrolytes-hydration-drink/13567466352",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 1.71,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "zoa-16": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.55,
+    "retailer": "Walmart",
+    "date": "2026-11-16",
+    "url": "https://www.walmart.com/ip/seort/909589999",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.55,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "zoa-12": {
+   "ref_unit_price": 2.08,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.13,
+    "retailer": "Walmart",
+    "date": "2026-11-16",
+    "url": "https://www.walmart.com/ip/ZOA-Zero-Sugar-Energy-Drink-Wild-Orange-12-Pack-12oz/723858447",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.13,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "jocko-go-12": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 3.05,
+    "retailer": "Jocko Fuel (DTC)",
+    "date": "2026-11-16",
+    "url": "https://www.jockofuel.com/products/jocko-go-energy-drink",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 3.05,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "oxyshred-energy-12": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "bloom-energy-12": {
+   "ref_unit_price": 1.67,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 1.72,
+    "retailer": "Walmart",
+    "date": "2026-11-16",
+    "url": "https://www.walmart.com/ip/seort/11395510309",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 1.72,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "goat-fuel-12": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "accelerator-12": {
+   "ref_unit_price": 2.08,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.24,
+    "retailer": "Target",
+    "date": "2026-11-16",
+    "url": "https://www.target.com/p/-/A-88067955",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.24,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "riot-energy-16": {
+   "ref_unit_price": 2.99,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "lucky-energy-16": {
+   "ref_unit_price": 2.33,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (2 retailers)",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.21,
+    "retailer": "Walmart",
+    "date": "2026-11-16",
+    "url": "https://www.walmart.com/ip/15790258050",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.21,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "lifeaid-12": {
+   "ref_unit_price": 2.49,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.38,
+    "retailer": "Walmart",
+    "date": "2026-11-16",
+    "url": "https://www.walmart.com/ip/seort/1453919712",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.38,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "nocco-12": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "kill-cliff-ignite-12": {
+   "ref_unit_price": 2.92,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (3 retailers)",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.72,
+    "retailer": "Rogue Fitness",
+    "date": "2026-11-16",
+    "url": "https://www.roguefitness.com/apo/kill-cliff-ignite-cherry-limeade-12-pack",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.72,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
   }
  },
  "dead_codes": [],
@@ -637,16 +991,16 @@
  ],
  "latest_run": {
   "date": "2026-11-16",
-  "mode": "calibrate",
+  "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 0
+  "searches": 14
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 1,
-   "searches": 50
+   "runs": 2,
+   "searches": 64
   }
  },
  "budget_warning_month": null

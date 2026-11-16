@@ -35,6 +35,23 @@ def resolve_retailer(name: str, url: str, settings: dict[str, Any]) -> tuple[str
     return (n or host or "unknown"), kind
 
 
+def _host_in(host: str, domains: list[str]) -> bool:
+    return any(host == d or host.endswith("." + d) for d in domains)
+
+
+def source_block_reason(url: str, retailer_key: str, kind: str, settings: dict[str, Any]) -> str | None:
+    """Sources the owner doesn't trust: third-party price trackers (e.g. Costco trackers that sit
+    behind a paywall), and any offer for an official-source-only retailer (Costco) that isn't on
+    that retailer's own site."""
+    host = url_host(url)
+    if _host_in(host, settings.get("validation", {}).get("blocked_source_domains", [])):
+        return f"third-party tracker {host}"
+    r = settings.get("retailers", {}).get(retailer_key, {})
+    if r.get("official_source_only") and not _host_in(host, r.get("domains", [])):
+        return f"{r.get('name', retailer_key)} prices only from {', '.join(r.get('domains', []))} (got {host})"
+    return None
+
+
 def _term_hit(text: str, terms: list[str]) -> str | None:
     for t in terms:
         if re.search(r"(?<![a-z0-9])" + re.escape(t) + r"(?![a-z0-9])", text):
@@ -93,6 +110,10 @@ def validate_offers(raw: list[dict[str, Any]], cfg: Config, url_map: dict[str, s
         if hit:
             drop(o, "wrong_product", f"excluded term '{hit}'")
             continue
+        brand = _term_hit(text, product.exclude_brands)
+        if brand and not any(a in text for a in product.aliases):
+            drop(o, "wrong_product", f"mainstream brand '{brand}' (not tracked)")
+            continue
         tol = float(vcfg["size_tolerance_oz"])
         stated = float(o.get("unit_size_oz") or 0)
         if product.is_drink:
@@ -117,6 +138,10 @@ def validate_offers(raw: list[dict[str, Any]], cfg: Config, url_map: dict[str, s
 
         retailer_key, kind = resolve_retailer(o.get("retailer", ""), o["source_url"], cfg.settings)
         o["retailer_key"], o["source_kind"] = retailer_key, kind
+        why = source_block_reason(o["source_url"], retailer_key, kind, cfg.settings)
+        if why:
+            drop(o, "unofficial_source", why)
+            continue
         o["retailer_name"] = cfg.retailer_name(retailer_key) if retailer_key in \
             cfg.settings.get("retailers", {}) else (o.get("retailer") or retailer_key)
         code = (o.get("code") or "").strip()

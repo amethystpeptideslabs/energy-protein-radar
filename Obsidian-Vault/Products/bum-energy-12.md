@@ -3,9 +3,9 @@ product_id: bum-energy-12
 category: energy
 display_name: "RAW Bum Energy 12oz"
 ref_unit_price: 2.5
-ref_source: "calibrated (3 retailers)"
-all_time_low: 0.77
-all_time_low_retailer: "Costco"
+ref_source: "calibrated (2 retailers)"
+all_time_low: 2.05
+all_time_low_retailer: "The Vitamin Shoppe"
 protein_g: 0
 unit_size_oz: 12
 tags: [deal-radar, product]
@@ -21,7 +21,6 @@ Unit: can · Size: 12 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| RAW Bum Energy 12oz | Costco | 1× 18 | $13.87 | $0.77 | $0.06 | 29% | 🚨 STEAL |  |  | [Open deal](https://app.warehouserunner.com/costco/2045172-bum-energy-variety-pack-18-ct-12-oz) |
 | RAW Bum Energy 12oz | The Vitamin Shoppe | 1× 12 | $24.59 | $2.05 | $0.17 | 80% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/ready-to-drink-bars-snacks/protein-fitness/brand/bum-energy) |
 | RAW Bum Energy 12oz | GNC | 1× 12 | $27.59 | $2.30 | $0.19 | 90% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks-r/bum-energy-drink.html) |
 
@@ -29,4 +28,4 @@ Unit: can · Size: 12 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
-| 2026-11-16 | $0.77 | 🚨 STEAL | Costco |
+| 2026-11-16 | $2.05 | ❌ SKIP | The Vitamin Shoppe |

@@ -118,3 +118,31 @@
 - Domains: isopure.com
 - Codes and subscribe discount.
 
+## 1st Phorm (DTC)
+- Domains: 1stphorm.com
+- Case of 12 at list price; subscribe discount.
+
+## Cellucor (DTC)
+- Domains: cellucor.com
+- Frequent sitewide % off (e.g. 20%).
+
+## Jocko Fuel (DTC)
+- Domains: jockofuel.com
+- List price is high; Amazon Subscribe & Save usually cheaper.
+
+## Lucky Energy (DTC)
+- Domains: luckybevco.com
+- Price drops on 12-packs; variety packs.
+
+## Kill Cliff (DTC)
+- Domains: killcliff.com
+- 12 / 24 packs; 24 is cheaper per can.
+
+## NOCCO (DTC)
+- Domains: nocco.com
+- 12-pack slim cans; often out of stock.
+
+## Rogue Fitness
+- Domains: roguefitness.com, rogueapo.com
+- Ships; '3 ships free' items.
+

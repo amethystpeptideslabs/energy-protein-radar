@@ -21,12 +21,12 @@ def test_dry_run_end_to_end(tmp_path, monkeypatch, capsys):
     vault = tmp_path / "Obsidian-Vault"
     assert (vault / "Logs" / "2026-11-16-Deal-Run.md").exists()
     assert (vault / "00-Master-Deal-Profile.md").exists()
-    assert len(list((vault / "Products").glob("*.md"))) == 25
+    assert len(list((vault / "Products").glob("*.md"))) == 45
     assert (vault / "Reference" / "Dead-Codes.md").exists()
 
     latest = json.loads((data / "latest.json").read_text(encoding="utf-8"))
     assert (data / "latest.json").stat().st_size < 150_000
-    assert len(latest["products"]) == 25
+    assert len(latest["products"]) == 45
     assert latest["heroes"]["energy"]["product_id"] == "ghost-energy-16"
     assert latest["counts"]["unverified"] == 1
 

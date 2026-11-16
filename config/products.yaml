@@ -20,6 +20,9 @@ defaults:
     enabled: true
     retailers_priority: [vitamin-shoppe, gnc, target, walmart, costco, sams-club, grocery-outlet, ralphs, vons, sprouts, amazon]
     exclude_terms: [powder, tub, stick, sticks, packet, packets, "energy shot", "energy shots", hydration, pre-workout]
+    # Gym / performance energy only: these mainstream brands are never tracked or reported.
+    exclude_brands: [monster, red bull, rockstar, nos energy, full throttle, 5-hour, 5 hour energy, prime energy,
+                     v8 energy, starbucks, venom energy, mountain dew]
   snack:
     unit_label: bar
     crv_applies: false
@@ -111,6 +114,232 @@ products:
     extra_exclude_terms: [bang shot, bang natural]
     retailers_priority: [amazon, walmart, target, costco, sams-club, vitamin-shoppe, gnc]
     ref_unit_price: 2.00
+
+  # ---- gym / performance brands (added 2026-11-16; sizes checked against retailer listings,
+  #      ref = regular 12-pack price per can from that day's listings; calibration refines it)
+  - id: phorm-energy-16
+    category: energy
+    brand: 1st Phorm
+    line: Phorm Energy
+    display_name: 1st Phorm Energy 16oz
+    unit_size_oz: 16
+    aliases: [phorm]
+    search_terms: ["1st Phorm Energy 16 oz 12 pack", "Phorm Energy drink deal"]
+    retailers_priority: [costco, vitamin-shoppe, walmart, amazon, phorm-dtc]
+    ref_unit_price: 2.75
+
+  - id: alani-nu-12
+    category: energy
+    brand: Alani Nu
+    line: Alani Nu Energy
+    display_name: Alani Nu Energy 12oz
+    unit_size_oz: 12
+    aliases: [alani]
+    search_terms: ["Alani Nu energy drink 12 pack price", "Alani Nu energy deal"]
+    extra_exclude_terms: [mini, alani nu mini]
+    retailers_priority: [target, walmart, sams-club, costco, vitamin-shoppe, gnc, vons, ralphs, amazon]
+    ref_unit_price: 2.25
+
+  - id: c4-energy-16
+    category: energy
+    brand: Cellucor
+    line: C4 Performance Energy
+    display_name: C4 Energy 16oz
+    unit_size_oz: 16
+    aliases: [c4]
+    allow_terms: [pre-workout]
+    search_terms: ["C4 Performance Energy 16 oz 12 pack", "C4 energy drink deal"]
+    extra_exclude_terms: [c4 ultimate, c4 smart energy]
+    retailers_priority: [walmart, target, gnc, vitamin-shoppe, costco, sams-club, amazon, cellucor-dtc]
+    ref_unit_price: 2.33
+
+  - id: c4-energy-12
+    category: energy
+    brand: Cellucor
+    line: C4 Energy 12oz (Performance / Smart)
+    display_name: C4 Energy 12oz
+    unit_size_oz: 12
+    aliases: [c4]
+    allow_terms: [pre-workout]
+    search_terms: ["C4 Energy 12 oz can 12 pack", "C4 Smart Energy 12 oz 12 pack"]
+    extra_exclude_terms: [c4 ultimate]
+    retailers_priority: [walmart, target, gnc, vitamin-shoppe, sams-club, amazon, cellucor-dtc]
+    ref_unit_price: 1.67
+
+  - id: reign-16
+    category: energy
+    brand: Reign
+    line: Reign Total Body Fuel
+    display_name: Reign Total Body Fuel 16oz
+    unit_size_oz: 16
+    search_terms: ["Reign Total Body Fuel 16 oz 12 pack", "Reign energy drink deal"]
+    extra_exclude_terms: [reign storm]
+    retailers_priority: [walmart, target, costco, sams-club, vons, ralphs, vitamin-shoppe, amazon]
+    ref_unit_price: 2.17
+
+  - id: ryse-fuel-16
+    category: energy
+    brand: RYSE
+    line: RYSE Fuel
+    display_name: RYSE Fuel 16oz
+    unit_size_oz: 16
+    search_terms: ["RYSE Fuel energy drink 16 oz 12 pack", "RYSE Fuel deal"]
+    retailers_priority: [vitamin-shoppe, gnc, walmart, amazon]
+    ref_unit_price: 2.50
+
+  - id: bucked-up-16
+    category: energy
+    brand: Bucked Up
+    line: Bucked Up Energy
+    display_name: Bucked Up Energy 16oz
+    unit_size_oz: 16
+    search_terms: ["Bucked Up energy drink 16 oz 12 pack", "Bucked Up energy drink deal"]
+    retailers_priority: [gnc, vitamin-shoppe, costco, walmart, amazon]
+    ref_unit_price: 2.50
+
+  - id: on-amino-energy-12
+    category: energy
+    brand: Optimum Nutrition
+    line: Amino Energy Sparkling
+    display_name: ON Amino Energy Sparkling 12oz
+    unit_size_oz: 12
+    aliases: [amino energy, amin.o. energy]
+    allow_terms: [hydration]      # sold as "Sparkling Hydration Drink"; it's the canned energy line
+    search_terms: ["Optimum Nutrition Amino Energy sparkling 12 oz 12 pack", "Amino Energy sparkling can deal"]
+    retailers_priority: [sams-club, vitamin-shoppe, gnc, target, walmart, amazon]
+    ref_unit_price: 1.66
+
+  - id: zoa-16
+    category: energy
+    brand: ZOA
+    line: ZOA Energy
+    display_name: ZOA Energy 16oz
+    unit_size_oz: 16
+    search_terms: ["ZOA energy drink 16 oz 12 pack", "ZOA zero sugar energy 16 oz deal"]
+    retailers_priority: [costco, walmart, target, sams-club, amazon]
+    ref_unit_price: 2.50
+
+  - id: zoa-12
+    category: energy
+    brand: ZOA
+    line: ZOA Energy
+    display_name: ZOA Energy 12oz
+    unit_size_oz: 12
+    search_terms: ["ZOA energy drink 12 oz 12 pack", "ZOA energy 12 oz deal"]
+    retailers_priority: [walmart, target, costco, amazon]
+    ref_unit_price: 2.08
+
+  - id: jocko-go-12
+    category: energy
+    brand: Jocko Fuel
+    line: Jocko GO Energy
+    display_name: Jocko GO Energy 12oz
+    unit_size_oz: 12
+    aliases: [jocko]
+    search_terms: ["Jocko GO energy drink 12 pack", "Jocko GO energy deal"]
+    extra_exclude_terms: [jocko hydrate, jocko protein, molk]
+    retailers_priority: [amazon, walmart, vitamin-shoppe, gnc, jocko-dtc]
+    ref_unit_price: 2.50
+
+  - id: oxyshred-energy-12
+    category: energy
+    brand: EHPlabs
+    line: OxyShred Ultra Energy
+    display_name: OxyShred Ultra Energy 12oz
+    unit_size_oz: 12
+    aliases: [oxyshred, ehp labs]
+    search_terms: ["EHPlabs OxyShred Ultra Energy 12 pack cans", "OxyShred energy drink RTD price"]
+    retailers_priority: [target, walmart, amazon, vitamin-shoppe, gnc]
+    ref_unit_price: 2.50
+
+  - id: bloom-energy-12
+    category: energy
+    brand: Bloom Nutrition
+    line: Bloom Sparkling Energy
+    display_name: Bloom Sparkling Energy 12oz
+    unit_size_oz: 12
+    aliases: [bloom]
+    search_terms: ["Bloom sparkling energy 12 oz 12 pack", "Bloom energy drink deal"]
+    extra_exclude_terms: [greens, bloom pop, creatine]
+    retailers_priority: [target, walmart, costco, sams-club, vitamin-shoppe, vons, ralphs, amazon]
+    ref_unit_price: 1.67
+
+  - id: goat-fuel-12
+    category: energy
+    brand: G.O.A.T. Fuel
+    line: GOAT Fuel
+    display_name: GOAT Fuel 12oz
+    unit_size_oz: 12
+    aliases: [goat fuel, g.o.a.t.]
+    search_terms: ["GOAT Fuel energy drink 12 pack", "G.O.A.T. Fuel energy 12 oz"]
+    retailers_priority: [amazon, walmart, target, vitamin-shoppe, gnc]
+    ref_unit_price: 2.50
+    needs_verification: true   # seed from single-can shelf price only
+
+  - id: accelerator-12
+    category: energy
+    brand: Accelerator
+    line: Accelerator Active Energy
+    display_name: Accelerator Active Energy 12oz
+    unit_size_oz: 12
+    aliases: [a shoc, a-shoc]
+    search_terms: ["Accelerator Active Energy 12 pack", "Accelerator energy drink 12 oz deal"]
+    retailers_priority: [target, walmart, vons, ralphs, amazon]
+    ref_unit_price: 2.08
+
+  - id: riot-energy-16
+    category: energy
+    brand: RIOT
+    line: RIOT Energy
+    display_name: RIOT Energy 16oz
+    unit_size_oz: 16
+    search_terms: ["Riot Energy organic energy drink 16 oz 12 pack", "Riot energy drink deal"]
+    retailers_priority: [costco, target, walmart, sprouts, ralphs, amazon]
+    ref_unit_price: 2.99
+
+  - id: lucky-energy-16
+    category: energy
+    brand: Lucky Energy
+    line: Lucky Energy
+    display_name: Lucky Energy 16oz
+    unit_size_oz: 16
+    aliases: [lucky]
+    search_terms: ["Lucky Energy drink 16 oz 12 pack", "Lucky energy drink deal"]
+    retailers_priority: [walmart, target, amazon, lucky-dtc]
+    ref_unit_price: 2.49
+
+  - id: lifeaid-12
+    category: energy
+    brand: LIFEAID
+    line: FITAID / FOCUSAID
+    display_name: LIFEAID FITAID / FOCUSAID 12oz
+    unit_size_oz: 12
+    aliases: [fitaid, focusaid, lifeaid]
+    allow_terms: [hydration]
+    search_terms: ["FITAID 12 oz 12 pack price", "FOCUSAID 12 pack price", "FITAID Energy 12 pack"]
+    retailers_priority: [walmart, target, vitamin-shoppe, gnc, sprouts, amazon]
+    ref_unit_price: 2.49
+
+  - id: nocco-12
+    category: energy
+    brand: NOCCO
+    line: NOCCO BCAA Energy
+    display_name: NOCCO BCAA Energy 12oz
+    unit_size_oz: 12
+    search_terms: ["NOCCO BCAA energy drink 12 pack", "NOCCO energy drink deal"]
+    retailers_priority: [amazon, walmart, target, vitamin-shoppe, nocco-dtc]
+    ref_unit_price: 2.50
+
+  - id: kill-cliff-ignite-12
+    category: energy
+    brand: Kill Cliff
+    line: Kill Cliff Ignite / Energy
+    display_name: Kill Cliff Ignite 12oz
+    unit_size_oz: 12
+    search_terms: ["Kill Cliff Ignite energy 12 pack", "Kill Cliff energy drink deal"]
+    extra_exclude_terms: [recovery]   # the low-caffeine Recovery line isn't a performance energy drink
+    retailers_priority: [walmart, target, amazon, killcliff-dtc, rogue-fitness]
+    ref_unit_price: 2.92
 
   # ---------------- B. PROTEIN SNACKS (unit = one serving as sold) ----------------
   - id: built-puff

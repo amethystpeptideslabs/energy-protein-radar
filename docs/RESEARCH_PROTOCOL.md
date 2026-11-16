@@ -32,6 +32,10 @@ middays), the `jobs` to research, a `search_budget` per job, known `dead_codes` 
   specific Orange County stores, record it in `stock_note`. Don't spend extra searches hunting for it.
 - **Cases first.** The owner buys by the case: look for 12-, 15-, 18-, 24-pack / box prices.
   Single-can or single-bottle promos (Vitamin Shoppe / GNC $1-can weekends) still count.
+- **Costco = costco.com only.** Take Costco prices from costco.com product / warehouse-savings pages.
+  Never use third-party Costco trackers or price apps (warehouserunner.com, costco97.com and similar):
+  the owner doesn't trust them, and `deal_hunter.py` drops them (`unofficial_source`). If costco.com
+  says "visit your local warehouse" with no price, skip it.
 - Every offer needs a page URL that came back in a WebSearch result in THIS session (or a page
   you WebFetched from such a result). Never type a URL from memory, never guess a price, code or
   date. If you can't source it, skip it.

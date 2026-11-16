@@ -39,6 +39,8 @@ real offers and write an evidence dossier. Another program does every calculatio
 Rules:
 - Use the web_search tool. Every offer MUST cite a page URL that came back in your search
   results. Never invent or guess URLs, prices, codes or dates. Skip anything you can't source.
+- Costco: use costco.com pages only (product pages, warehouse savings). Never use third-party
+  Costco trackers or price apps (warehouserunner, costco97 and the like); they aren't accepted.
 - Copy price text VERBATIM (e.g. "$29.99", "2 for $5", "BOGO 50%", "Save $3 with coupon").
 - Do NOT compute per-unit prices, totals or discounts. Report raw numbers only.
 - Report pack size exactly as listed (e.g. "12 x 16 fl oz cans", "box of 12 bars").
@@ -140,7 +142,7 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
     if mode == "check":
         return [("check", [], "Use web_search exactly once to look up 'Ghost Energy 12 pack price'. "
                  "Reply with one short line naming one source. No OFFER blocks needed.", 1)]
-    if mode in ("deep", "calibrate"):
+    if mode in ("deep", "calibrate"):  # one job per product (API engine deep, calibrate)
         for p in products:
             extra = ""
             if mode == "calibrate":
@@ -153,7 +155,7 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
                          f"Report every concrete sourced offer as OFFER blocks.{extra}",
                          int(r["calibrate_max_uses" if mode == "calibrate" else "deep_max_uses"])))
         return jobs
-    # quick (morning) / midday: one call per category
+    # quick (morning) / midday / deep_cat: one call per category (energy can split / rotate)
     max_uses = int(r["midday_max_uses"] if slot == "midday" else r["quick_max_uses"])
     for cat in ("energy", "snack", "rtd"):
         ps = [p for p in products if p.category == cat]
@@ -162,16 +164,44 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
         focus = ("Focus: deal-intel posts (Stack3d, Slickdeals, PricePlow, Hip2Save) and the top "
                  "retailers (Vitamin Shoppe, GNC, Amazon, Walmart, Target, Costco).")
         focus += CASE_FOCUS
-        if slot == "midday":
+        if slot == "midday" and mode == "quick":
             focus = ("Focus: THIS WEEKEND's Vitamin Shoppe / GNC promos (in-store $1/can energy "
                      "events usually start Thursday, sometimes Friday; BOGO 50%) and fresh Stack3d / "
                      "Slickdeals posts." + CASE_FOCUS)
-        lines = "\n".join(f"- {_plan_line(p, cfg)}" for p in ps)
-        jobs.append((cat, [p.id for p in ps],
-                     f"Today is {day}. Find the best CURRENT deals for these {CATEGORY_LABEL[cat]} "
-                     f"products:\n{lines}\n{focus}\nPrioritize the biggest discounts. Report every "
-                     f"concrete sourced offer as OFFER blocks.", max_uses))
+        if cat == "energy":
+            brands = sorted({b for p in ps for b in p.exclude_brands})
+            focus += (" Gym/performance brands only: never report " + ", ".join(b.title() for b in brands)
+                      + " or other mainstream soda-aisle energy drinks.") if brands else ""
+        for label, group, others in _category_groups(cat, ps, mode, slot, r, today):
+            lines = "\n".join(f"- {_plan_line(p, cfg)}" for p in group)
+            also = (f"\nAlso report any deal you come across for the other tracked {CATEGORY_LABEL[cat]} "
+                    f"brands: {', '.join(f'{p.id} ({p.display_name})' for p in others)}.") if others else ""
+            jobs.append((label, [p.id for p in group + others],
+                         f"Today is {day}. Find the best CURRENT deals for these {CATEGORY_LABEL[cat]} "
+                         f"products:\n{lines}{also}\n{focus}\nPrioritize the biggest discounts. Report every "
+                         f"concrete sourced offer as OFFER blocks.", max_uses))
     return jobs
+
+
+def _category_groups(cat: str, ps: list[Product], mode: str, slot: str, r: dict[str, Any],
+                     today: date) -> list[tuple[str, list[Product], list[Product]]]:
+    """-> [(label, products to research, other products to report if seen)].
+    Energy has the biggest catalog: quick runs focus on a rotating slice of it (every brand gets
+    a focused look every few days; store-wide promos still get reported for all of them), and
+    deep runs split it into several jobs so each brand gets real search attention."""
+    if cat != "energy":
+        return [(cat, ps, [])]
+    if mode == "deep_cat":
+        n = max(1, int(r.get("energy_deep_jobs", 1)))
+        if n == 1:
+            return [(cat, ps, [])]
+        return [(f"{cat}-{i + 1}", ps[i::n], []) for i in range(n) if ps[i::n]]
+    n = max(1, int(r.get("energy_focus_groups", 1)))
+    if n == 1 or slot == "midday":
+        return [(cat, ps, [])]
+    i = today.toordinal() % n
+    group = ps[i::n]
+    return [(cat, group, [p for p in ps if p not in group])]
 
 
 def _walk(obj: Any):

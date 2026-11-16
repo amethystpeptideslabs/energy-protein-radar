@@ -98,3 +98,72 @@ def test_membership_retailer_forces_lock_flag(cfg):
     kept, _ = validate_offers([make_offer(source_url="https://www.costco.com/x.html")], cfg,
                               urls("https://www.costco.com/x.html"), {}, [], TODAY)
     assert kept[0]["membership_required"] and kept[0]["retailer_key"] == "costco"
+
+
+def test_costco_offers_only_from_costco_com(cfg):
+    from datetime import date
+    from radar.util import normalize_url
+    from radar.validate import validate_offers
+    tracker = "https://app.warehouserunner.com/costco/2045172-bum-energy-variety-pack-18-ct-12-oz"
+    official = "https://www.costco.com/bum-energy-variety-pack.product.4000000001.html"
+    intel = "https://slickdeals.net/f/1-costco-celsius-24pk"
+    urls = {normalize_url(u): u for u in (tracker, official, intel)}
+    base = {"product_id": "bum-energy-12", "retailer": "Costco", "evidence_text": "Bum Energy 18 x 12 oz $17.97",
+            "pack_count": 18, "pack_price": 17.97, "unit_size_oz": 12}
+    raw = [dict(base, source_url=tracker), dict(base, source_url=official), dict(base, source_url=intel)]
+    kept, dropped = validate_offers(raw, cfg, urls, {}, [], date(2026, 11, 16))
+    assert [o["source_url"] for o in kept] == [official]
+    assert {o["drop_reason"] for o in dropped} == {"unofficial_source"}
+
+
+def test_purge_removes_tracker_offers_and_derived_records(cfg, tmp_path):
+    from datetime import date
+    from radar.memory import State
+    from radar.pipeline import purge_blocked_sources
+    s = State.load(tmp_path, cfg)
+    bad = "https://app.warehouserunner.com/costco/2045172-bum-energy-variety-pack-18-ct-12-oz"
+    good = "https://www.walmart.com/ip/bum-energy-12pk/1"
+    s.offers = [
+        {"product_id": "bum-energy-12", "retailer_key": "costco", "source_kind": "other", "source_url": bad,
+         "retailer_name": "Costco", "unit_price": 0.77, "seen_date": "2026-11-16", "pack_price": 17.97, "pack_count": 18},
+        {"product_id": "bum-energy-12", "retailer_key": "walmart", "source_kind": "retailer", "source_url": good,
+         "retailer_name": "Walmart", "unit_price": 2.0, "seen_date": "2026-11-16", "pack_price": 23.98, "pack_count": 12},
+    ]
+    pm = s.memory["products"]["bum-energy-12"]
+    pm["all_time_low"] = {"unit_price": 0.77, "retailer": "Costco", "date": "2026-11-16", "url": bad, "code": None}
+    pm["last_best"] = {"unit_price": 0.77, "tier": "STEAL", "date": "2026-11-16"}
+    s.history["bum-energy-12"] = [["2026-11-15", 2.1, "SKIP", "Walmart"], ["2026-11-16", 0.77, "STEAL", "Costco"]]
+    removed = purge_blocked_sources(s, cfg, date(2026, 11, 16))
+    assert [o["source_url"] for o in removed] == [bad]
+    assert [o["source_url"] for o in s.offers] == [good]
+    assert pm["all_time_low"] is None and pm["last_best"] is None
+    assert s.history["bum-energy-12"] == [["2026-11-15", 2.1, "SKIP", "Walmart"]]
+    assert purge_blocked_sources(s, cfg, date(2026, 11, 16)) == []   # idempotent
+
+
+def test_mainstream_brands_dropped_but_tracked_brand_mentions_kept(cfg):
+    from datetime import date
+    from radar.util import normalize_url
+    from radar.validate import validate_offers
+    u1 = "https://www.walmart.com/ip/monster-ultra-16oz-12pk/1"
+    u2 = "https://www.walmart.com/ip/reign-total-body-fuel-16oz-12pk/2"
+    urls = {normalize_url(u): u for u in (u1, u2)}
+    mislabeled = {"product_id": "bang-16", "retailer": "Walmart", "source_url": u1, "pack_count": 12,
+                  "pack_price": 23.98, "unit_size_oz": 16,
+                  "evidence_text": "Monster Energy Ultra, Sugar Free Energy Drink, 12 Pack - 16 fl oz $23.98"}
+    reign = {"product_id": "reign-16", "retailer": "Walmart", "source_url": u2, "pack_count": 12,
+             "pack_price": 29.76, "unit_size_oz": 16,
+             "evidence_text": "Reign Total Body Fuel, White Haze, 16 fl oz, 12 Cans $29.76 (also viewed: Monster Ultra)"}
+    kept, dropped = validate_offers([mislabeled, reign], cfg, urls, {}, [], date(2026, 11, 16))
+    assert [o["product_id"] for o in kept] == ["reign-16"]
+    assert "mainstream brand" in dropped[0]["drop_detail"]
+
+
+def test_allow_terms_keep_hydration_named_energy_lines(cfg):
+    assert "hydration" not in cfg.products["on-amino-energy-12"].exclude_terms
+    assert "hydration" not in cfg.products["lifeaid-12"].exclude_terms
+    assert "hydration" in cfg.products["ghost-energy-16"].exclude_terms
+    assert "recovery" in cfg.products["kill-cliff-ignite-12"].exclude_terms
+    energy = cfg.enabled("energy")
+    assert len(energy) == 27 and all(p.exclude_brands for p in energy)
+    assert not {"monster-16", "red-bull-12"} & {p.id for p in energy}

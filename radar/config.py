@@ -34,6 +34,8 @@ class Product:
     needs_verification: bool = False
     crv_verify: bool = False
     protein_note: str = ""
+    aliases: list[str] = field(default_factory=list)          # names the brand goes by (lowercase)
+    exclude_brands: list[str] = field(default_factory=list)   # mainstream brands never tracked here
 
     @property
     def is_energy(self) -> bool:
@@ -105,7 +107,10 @@ def load_products(path: Path) -> dict[str, Product]:
             raise ValueError(f"{item['id']}: unknown category {cat}")
         d = dict(defaults.get(cat, {}))
         d.update({k: v for k, v in item.items() if k != "extra_exclude_terms"})
-        excludes = list(d.get("exclude_terms", [])) + list(item.get("extra_exclude_terms", []))
+        allow = {a.lower() for a in item.get("allow_terms", [])}   # e.g. ON Amino Energy is sold as "sparkling hydration"
+        excludes = [e for e in list(d.get("exclude_terms", [])) + list(item.get("extra_exclude_terms", []))
+                    if e.lower() not in allow]
+        aliases = [a.lower() for a in [d["brand"], d["line"], *d.get("aliases", [])] if a]
         sr = d.get("size_range_oz")
         pid = d["id"]
         if pid in out:
@@ -127,6 +132,8 @@ def load_products(path: Path) -> dict[str, Product]:
             needs_verification=bool(d.get("needs_verification", False)),
             crv_verify=bool(d.get("crv_verify", False)),
             protein_note=str(d.get("protein_note", "")),
+            aliases=aliases,
+            exclude_brands=[b.lower() for b in d.get("exclude_brands", [])],
         )
     return out
 

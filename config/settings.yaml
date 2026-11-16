@@ -69,11 +69,18 @@ research:
   engine: claude-session
   case_min_units: 12           # a pack of 12+ units counts as a case (cases are the priority)
   session_budgets:             # web searches per job for the Claude-session engine
-    quick: 6                   # x3 categories
-    midday: 5                  # x3 categories (Thu/Fri weekend-promo check)
-    deep: 12                   # x3 categories (Mon/Thu)
-    calibrate: 2               # x25 products (first run only)
+    quick: 6                   # snack, rtd
+    quick_energy: 8            # energy (27 brands, rotating focus)
+    midday: 5                  # snack, rtd (Thu/Fri weekend-promo check)
+    midday_energy: 6
+    deep: 12                   # snack, rtd (Mon/Thu)
+    deep_energy: 10            # per energy job; deep runs split energy into energy_deep_jobs jobs
+    calibrate: 2               # per product (first full calibrate only)
+    calibrate_new: 2           # per newly added product, once
     deep_single: 3             # --only <product>
+  energy_focus_groups: 3       # quick runs research 1/3 of the energy brands in depth (rotates daily)
+  energy_deep_jobs: 2
+  calibrate_new_per_run: 6     # newly added products calibrated per run until all are done
   quick_max_uses: 8
   midday_max_uses: 6
   deep_max_uses: 4
@@ -111,6 +118,9 @@ validation:
   size_tolerance_oz: 0.6
   dead_code_skip_days: 60
   second_source_tolerance_pct: 5
+  # Third-party price trackers never count as a source (owner rule: they sit behind a paywall and
+  # aren't the store). Costco offers must come from costco.com itself (official_source_only).
+  blocked_source_domains: [warehouserunner.com, costco97.com]
 
 notify:
   server: https://ntfy.sh/
@@ -140,7 +150,7 @@ retailers:
     playbook: "Clip coupon + Subscribe & Save (5%, or 15% with 5+ subscriptions in one delivery). Prime free shipping."}
   walmart: {physical: true, pickup: true, stock_search: "https://www.walmart.com/search?q={q}", name: Walmart, domains: [walmart.com], type: big-box, playbook: "Rollbacks; free shipping $35+ or Walmart+ (🔒)."}
   target: {physical: true, pickup: true, stock_search: "https://www.target.com/s?searchTerm={q}", name: Target, domains: [target.com], type: big-box, playbook: "Target Circle offers (free to join) stack with sales; Circle Card 5% off."}
-  costco: {physical: true, pickup: false, name: Costco, domains: [costco.com], type: club, membership: true, playbook: "Membership required (🔒). Monthly instant savings coupons; online prices higher than warehouse."}
+  costco: {physical: true, pickup: false, official_source_only: true, name: Costco, domains: [costco.com], type: club, membership: true, playbook: "Membership required (🔒). Monthly instant savings coupons; online prices higher than warehouse."}
   sams-club: {physical: true, pickup: true, stock_search: "https://www.samsclub.com/s/{q}", name: Sam's Club, domains: [samsclub.com], type: club, membership: true, playbook: "Membership required (🔒). Instant savings; Plus members get free shipping."}
   ralphs: {physical: true, pickup: true, stock_search: "https://www.ralphs.com/search?query={q}", name: Ralphs, domains: [ralphs.com, kroger.com], type: grocery, playbook: "Kroger digital coupons + Mega Events (buy 5 save $5). Carries Drumroll."}
   vons: {physical: true, pickup: true, stock_search: "https://www.vons.com/shop/search-results.html?q={q}", name: Vons / Albertsons, domains: [vons.com, albertsons.com], type: grocery, playbook: "for U digital coupons; member prices need a free account."}
@@ -158,6 +168,13 @@ retailers:
   prime-bites-dtc: {name: Alpha Prime (DTC), domains: [alphaprimesupps.com, primebites.com], type: brand, playbook: "Bundle deals."}
   celsius-dtc: {name: Celsius (DTC), domains: [celsius.com], type: brand, playbook: "Rarely cheapest; subscription discount."}
   isopure-dtc: {name: Isopure (DTC), domains: [isopure.com], type: brand, playbook: "Codes and subscribe discount."}
+  phorm-dtc: {name: 1st Phorm (DTC), domains: [1stphorm.com], type: brand, playbook: "Case of 12 at list price; subscribe discount."}
+  cellucor-dtc: {name: Cellucor (DTC), domains: [cellucor.com], type: brand, playbook: "Frequent sitewide % off (e.g. 20%)."}
+  jocko-dtc: {name: Jocko Fuel (DTC), domains: [jockofuel.com], type: brand, playbook: "List price is high; Amazon Subscribe & Save usually cheaper."}
+  lucky-dtc: {name: Lucky Energy (DTC), domains: [luckybevco.com], type: brand, playbook: "Price drops on 12-packs; variety packs."}
+  killcliff-dtc: {name: Kill Cliff (DTC), domains: [killcliff.com], type: brand, playbook: "12 / 24 packs; 24 is cheaper per can."}
+  nocco-dtc: {name: NOCCO (DTC), domains: [nocco.com], type: brand, playbook: "12-pack slim cans; often out of stock."}
+  rogue-fitness: {physical: false, name: Rogue Fitness, domains: [roguefitness.com, rogueapo.com], type: supplement, playbook: "Ships; '3 ships free' items."}
 
 deal_intel:
   - {name: Slickdeals, domains: [slickdeals.net]}

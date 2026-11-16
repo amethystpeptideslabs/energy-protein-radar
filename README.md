@@ -1,6 +1,6 @@
 # Energy + Protein Deal Radar
 
-Daily deal hunter for **RTD energy drinks, protein snacks and RTD protein shakes** (25 products),
+Daily deal hunter for **RTD energy drinks, protein snacks and RTD protein shakes** (45 products: 27 gym/performance energy drinks, 9 snacks, 9 shakes),
 **cases first** (12/15/18/24-packs, boxes) with single-can promos included. No API credits: a
 scheduled Claude session on the owner's existing Claude plan does the web research
 (`docs/RESEARCH_PROTOCOL.md`), and Python in this repo does every check and every price.
@@ -67,3 +67,11 @@ pytest -q
 python deal_hunter.py --dry-run     # fixtures, no API calls, writes to .dryrun/
 python -m http.server               # then open http://localhost:8000
 ```
+
+### Source rules
+- Costco prices come only from costco.com. Third-party Costco trackers (warehouserunner, costco97)
+  are blocked (`validation.blocked_source_domains`, `official_source_only` on the Costco retailer), and
+  any stored offer from a blocked source is purged automatically with its records and history.
+- Energy is gym/performance brands only; Monster, Red Bull, Rockstar, NOS, Prime and other mainstream
+  brands are never reported (`exclude_brands` in `config/products.yaml`).
+- New products get a one-time calibration job (2 searches each, up to 6 per run) until each is done.

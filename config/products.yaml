@@ -30,6 +30,11 @@ defaults:
     enabled: true
     retailers_priority: [target, walmart, costco, vitamin-shoppe, gnc, grocery-outlet, ralphs, vons, sprouts, amazon]
     exclude_terms: [powder, tub, gummies, gummy, vegan, plant-based, plant based]
+    # Gym protein bars only (15g+ protein): candy-brand protein bars and grocery-aisle bars are never tracked.
+    exclude_brands: [snickers, mars, hershey, reese's, reeses, kit kat, twix, m&m, milky way, butterfinger,
+                     clif, kind protein, kind bar, nature valley, rxbar, larabar, kellogg, special k, fiber one,
+                     atkins, pure protein, premier protein, think!, thinkthin, powerbar, power bar, luna,
+                     kirkland, gatorade, quaker, one brands]
   rtd:
     unit_label: bottle
     crv_applies: false
@@ -341,6 +346,16 @@ products:
     retailers_priority: [walmart, target, amazon, killcliff-dtc, rogue-fitness]
     ref_unit_price: 2.92
 
+  - id: grizzly-energy-16
+    category: energy
+    brand: Grizzly
+    line: Grizzly Energy
+    display_name: Grizzly Energy 16oz
+    unit_size_oz: 16
+    search_terms: ["Grizzly energy drink 16 oz 12 pack", "Grizzly energy drink deal"]
+    retailers_priority: [vitamin-shoppe, amazon, walmart]
+    ref_unit_price: 2.50
+
   # ---------------- B. PROTEIN SNACKS (unit = one serving as sold) ----------------
   - id: built-puff
     category: snack
@@ -456,6 +471,131 @@ products:
     extra_exclude_terms: [quest bar, cookie, crisps, "pizza"]
     retailers_priority: [costco, amazon, walmart, target, vitamin-shoppe, gnc, quest-dtc]
     ref_unit_price: 2.38
+
+  # ---- gym protein bars (added 2026-11-16; protein per bar from labels / listings,
+  #      ref = regular box price per bar from that day's listings; calibration refines it)
+  - id: quest-bar
+    category: snack
+    brand: Quest
+    line: Quest Protein Bar
+    display_name: Quest Protein Bar
+    unit_label: bar
+    unit_size_oz: 2.12
+    protein_g: 20
+    protein_note: "20-21g by flavor; 20g default, label wins"
+    search_terms: ["Quest protein bar 12 count price", "Quest bar deal"]
+    extra_exclude_terms: [overload, crispy, dipped, hero, chips, protein cookie, candy]
+    retailers_priority: [costco, target, walmart, vitamin-shoppe, gnc, amazon, quest-dtc]
+    ref_unit_price: 2.14
+
+  - id: grenade-bar
+    category: snack
+    brand: Grenade
+    line: Grenade Protein Bar (Carb Killa)
+    display_name: Grenade Carb Killa Bar
+    unit_label: bar
+    unit_size_oz: 2.12
+    protein_g: 20
+    aliases: [carb killa]
+    search_terms: ["Grenade protein bar 12 pack price", "Grenade Carb Killa bar deal"]
+    retailers_priority: [vitamin-shoppe, gnc, amazon, walmart, target]
+    ref_unit_price: 3.33
+    needs_verification: true   # seed from Vitamin Shoppe's per-serving price only
+
+  - id: fitcrunch-bar
+    category: snack
+    brand: FITCRUNCH
+    line: FITCRUNCH Snack Size Bar
+    display_name: FITCRUNCH Bar (16g)
+    unit_label: bar
+    unit_size_oz: 1.62
+    protein_g: 16
+    aliases: [fit crunch, robert irvine]
+    search_terms: ["FITCRUNCH protein bars 18 count price", "FitCrunch snack size bars deal"]
+    extra_exclude_terms: [delights, full size, full-size]
+    retailers_priority: [costco, sams-club, walmart, target, vitamin-shoppe, amazon]
+    ref_unit_price: 1.25
+
+  - id: david-bar
+    category: snack
+    brand: David
+    line: David Protein Bar
+    display_name: David Protein Bar (28g)
+    unit_label: bar
+    unit_size_oz: 2.19
+    protein_g: 28
+    aliases: [davidprotein]
+    search_terms: ["David protein bar 12 pack price", "David protein bar deal"]
+    retailers_priority: [costco, vitamin-shoppe, walmart, target, gnc, amazon, david-dtc]
+    ref_unit_price: 3.25
+
+  - id: phorm-level1-bar
+    category: snack
+    brand: 1st Phorm
+    line: Level-1 Bar
+    display_name: 1st Phorm Level-1 Bar
+    unit_label: bar
+    unit_size_oz: 2.2
+    protein_g: 20
+    aliases: [phorm, level-1]
+    search_terms: ["1st Phorm Level-1 bar 15 count price", "Level-1 protein bar deal"]
+    extra_exclude_terms: [vegan power pro, power pro, meat stick, meat sticks]
+    retailers_priority: [vitamin-shoppe, gnc, phorm-dtc, amazon]
+    ref_unit_price: 3.00
+
+  - id: legendary-sweet-roll
+    category: snack
+    brand: Legendary Foods
+    line: Legendary Protein Sweet Roll
+    display_name: Legendary Protein Sweet Roll
+    unit_label: roll
+    unit_size_oz: 2.3
+    protein_g: 20
+    aliases: [legendary]
+    search_terms: ["Legendary Foods protein sweet roll 8 pack price", "Legendary sweet roll deal"]
+    retailers_priority: [gnc, vitamin-shoppe, walmart, target, amazon, bodybuilding-com, legendary-dtc]
+    ref_unit_price: 3.25
+
+  - id: barebells-soft
+    category: snack
+    brand: Barebells
+    line: Barebells Soft Protein Bar
+    display_name: Barebells Soft Bar (16g)
+    unit_label: bar
+    unit_size_oz: 1.94
+    protein_g: 16
+    search_terms: ["Barebells soft protein bar 12 pack price", "Barebells soft bar deal"]
+    retailers_priority: [vitamin-shoppe, target, walmart, costco, amazon, barebells-dtc]
+    ref_unit_price: 2.58
+
+  - id: met-rx-big100
+    category: snack
+    brand: MET-Rx
+    line: MET-Rx Big 100 Bar
+    display_name: MET-Rx Big 100 Bar (30g)
+    unit_label: bar
+    unit_size_oz: 3.52
+    protein_g: 30
+    protein_note: "30-32g by flavor; 30g default, label wins"
+    aliases: [metrx, big 100]
+    search_terms: ["MET-Rx Big 100 protein bar 9 count price", "MET-Rx Big 100 bar deal"]
+    retailers_priority: [walmart, costco, vitamin-shoppe, gnc, target, amazon]
+    ref_unit_price: 4.20
+
+  - id: raw-protein-bar
+    category: snack
+    brand: RAW Nutrition
+    line: RAW Protein Bar
+    display_name: RAW Protein Bar
+    unit_label: bar
+    unit_size_oz: 0
+    protein_g: 18
+    protein_note: "18-21g by flavor; 18g default, label wins"
+    aliases: [raw nutrition, cbum]
+    search_terms: ["RAW Nutrition protein bar 12 pack", "RAW protein bar Vitamin Shoppe"]
+    extra_exclude_terms: [bum energy]
+    retailers_priority: [vitamin-shoppe, raw-dtc, amazon]
+    ref_unit_price: 2.92
 
   # ---------------- C. RTD PROTEIN SHAKES (unit = bottle) ----------------
   - id: raw-protein-rtd
@@ -587,14 +727,4 @@ products:
     ref_unit_price: null
     enabled: false
 
-  - id: barebells-soft
-    category: snack
-    brand: Barebells
-    line: Barebells Soft Protein Bar
-    display_name: Barebells Soft Bar
-    unit_label: bar
-    unit_size_oz: 1.94
-    protein_g: 16
-    search_terms: ["Barebells soft protein bar price"]
-    ref_unit_price: null
-    enabled: false
+  # (barebells-soft moved up and enabled 2026-11-16)

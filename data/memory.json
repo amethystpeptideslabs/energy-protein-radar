@@ -596,14 +596,30 @@
    "trend_30d": "flat"
   },
   "barebells-soft": {
-   "ref_unit_price": null,
-   "ref_updated": null,
-   "ref_source": "seed",
-   "protein_verified": null,
+   "ref_unit_price": 2.83,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (2 retailers)",
+   "protein_verified": {
+    "value": 16.0,
+    "source_url": "https://shop.barebells.com/product/barebells-caramel-choco",
+    "date": "2026-11-16",
+    "n": 2
+   },
    "size_verified": null,
-   "all_time_low": null,
-   "last_best": null,
-   "trend_30d": "flat"
+   "all_time_low": {
+    "unit_price": 2.33,
+    "retailer": "Muscle & Strength",
+    "date": "2026-11-16",
+    "url": "https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.33,
+    "tier": "SOLID",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
   },
   "phorm-energy-16": {
    "ref_unit_price": 2.75,
@@ -958,6 +974,209 @@
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
+  },
+  "grizzly-energy-16": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.55,
+    "retailer": "The Vitamin Shoppe",
+    "date": "2026-11-16",
+    "url": "https://www.vitaminshoppe.com/p/grizzly-energy-mountain-buzz-12-drink-s/gzl-17459",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.55,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "quest-bar": {
+   "ref_unit_price": 2.42,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (2 retailers)",
+   "protein_verified": {
+    "value": 21.0,
+    "source_url": "https://www.target.com/p/-/A-53111667",
+    "date": "2026-11-16",
+    "n": 1
+   },
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.08,
+    "retailer": "Target",
+    "date": "2026-11-16",
+    "url": "https://www.target.com/p/-/A-53111667",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.08,
+    "tier": "SOLID",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "grenade-bar": {
+   "ref_unit_price": 3.33,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "fitcrunch-bar": {
+   "ref_unit_price": 1.51,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (2 retailers)",
+   "protein_verified": {
+    "value": 16.0,
+    "source_url": "https://www.samsclub.com/ip/Chef-Robert-Irvine-s-FITCRUNCH-High-Protein-Baked-Bars-Variety-Pack-1-62-oz-18-ct/81771902116",
+    "date": "2026-11-16",
+    "n": 1
+   },
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 1.25,
+    "retailer": "Sam's Club",
+    "date": "2026-11-16",
+    "url": "https://www.samsclub.com/ip/Chef-Robert-Irvine-s-FITCRUNCH-High-Protein-Baked-Bars-Variety-Pack-1-62-oz-18-ct/81771902116",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 1.25,
+    "tier": "SOLID",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "david-bar": {
+   "ref_unit_price": 3.25,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (2 retailers)",
+   "protein_verified": {
+    "value": 28.0,
+    "source_url": "https://www.walmart.com/ip/15164761476",
+    "date": "2026-11-16",
+    "n": 2
+   },
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 3.25,
+    "retailer": "Walmart",
+    "date": "2026-11-16",
+    "url": "https://www.walmart.com/ip/15164761476",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 3.25,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "phorm-level1-bar": {
+   "ref_unit_price": 3.0,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": {
+    "value": 20.0,
+    "source_url": "https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364",
+    "date": "2026-11-16",
+    "n": 1
+   },
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.55,
+    "retailer": "The Vitamin Shoppe",
+    "date": "2026-11-16",
+    "url": "https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.55,
+    "tier": "SOLID",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "legendary-sweet-roll": {
+   "ref_unit_price": 3.25,
+   "ref_updated": "2026-11-16",
+   "ref_source": "calibrated (3 retailers)",
+   "protein_verified": {
+    "value": 20.0,
+    "source_url": "https://www.gnc.com/healthy-snacks/588847.html",
+    "date": "2026-11-16",
+    "n": 2
+   },
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 3.25,
+    "retailer": "Legendary Foods (DTC)",
+    "date": "2026-11-16",
+    "url": "https://www.eatlegendary.com/collections/chocolate/products/milk-chocolate-protein-sweet-roll-8-pack",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 3.25,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "met-rx-big100": {
+   "ref_unit_price": 4.2,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 4.2,
+    "retailer": "Vitacost",
+    "date": "2026-11-16",
+    "url": "https://www.vitacost.com/products/met-rx-big-100-meal-replacement-bar-salted-caramel-brownie-crunch-9-bars-3-52-oz-100-g-each-136362",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 4.2,
+    "tier": "SKIP",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
+  },
+  "raw-protein-bar": {
+   "ref_unit_price": 2.92,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.48,
+    "retailer": "The Vitamin Shoppe",
+    "date": "2026-11-16",
+    "url": "https://www.vitaminshoppe.com/e/exclusive/food-drinks/foods",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.48,
+    "tier": "SOLID",
+    "date": "2026-11-16"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-16"
   }
  },
  "dead_codes": [],
@@ -987,6 +1206,16 @@
    "fingerprint": "raw-protein-rtd|vitamin-shoppe|2.66|",
    "sent_at": "2026-11-16T09:25:29-08:00",
    "priority": 3
+  },
+  {
+   "fingerprint": "bum-energy-12|vitamin-shoppe|1.30|",
+   "sent_at": "2026-11-16T13:12:09-08:00",
+   "priority": 5
+  },
+  {
+   "fingerprint": "legendary-sweet-roll|vitamin-shoppe|1.75|",
+   "sent_at": "2026-11-16T13:12:09-08:00",
+   "priority": 4
   }
  ],
  "latest_run": {
@@ -994,13 +1223,13 @@
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 14
+  "searches": 0
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 2,
-   "searches": 64
+   "runs": 3,
+   "searches": 74
   }
  },
  "budget_warning_month": null

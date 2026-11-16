@@ -87,8 +87,18 @@ LOCAL_FOCUS = (" LOCAL FIRST: the buyer is in Orange County, CA (South OC first)
                "in-store deals and buy-online-pick-up-in-store at OC stores (Target, Walmart, Vitamin Shoppe, GNC, Costco, "
                "Sam's Club, Grocery Outlet weekly ads, Ralphs, Vons, Sprouts). In-store-only or store-specific promos must be "
                "valid at an Orange County store; name it in local_store when the page does. Ship-to-home deals are still fine.")
+BRAND_RULE = {
+    "energy": " Gym/performance brands only: never report {} or other mainstream soda-aisle energy drinks.",
+    "snack": (" Real protein bars/snacks only (the tracked gym brands, 15g+ protein): never report {}, other "
+              "candy-brand protein bars or grocery-aisle granola/snack bars."),
+    "rtd": " Never report {}.",
+}
+VS_BOGO_FOCUS = (" Vitamin Shoppe runs Buy One, Get One 50% Off (BOGO) on energy-drink cases and protein bars "
+                 "almost every week: always check its BOGO / sale pages for these products and report each BOGO "
+                 "item as promo_type bogo_50 with the single-pack price (confirm the product page still shows the BOGO label).")
 CASE_FOCUS = (" Priority: CASE / multi-pack prices (12-, 15-, 18-, 24-packs, boxes of bars) — the buyer "
-              "buys by the case. Single-can/bottle promos (e.g. $1/can weekends) still count; report both." + LOCAL_FOCUS)
+              "buys by the case. Single-can/bottle promos (e.g. $1/can weekends) still count; report both." + LOCAL_FOCUS
+              + VS_BOGO_FOCUS)
 
 
 def catalog_text(products: list[Product]) -> str:
@@ -168,10 +178,9 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
             focus = ("Focus: THIS WEEKEND's Vitamin Shoppe / GNC promos (in-store $1/can energy "
                      "events usually start Thursday, sometimes Friday; BOGO 50%) and fresh Stack3d / "
                      "Slickdeals posts." + CASE_FOCUS)
-        if cat == "energy":
-            brands = sorted({b for p in ps for b in p.exclude_brands})
-            focus += (" Gym/performance brands only: never report " + ", ".join(b.title() for b in brands)
-                      + " or other mainstream soda-aisle energy drinks.") if brands else ""
+        brands = sorted({b for p in ps for b in p.exclude_brands})
+        if brands:
+            focus += BRAND_RULE[cat].format(", ".join(b.title() for b in brands))
         for label, group, others in _category_groups(cat, ps, mode, slot, r, today):
             lines = "\n".join(f"- {_plan_line(p, cfg)}" for p in group)
             also = (f"\nAlso report any deal you come across for the other tracked {CATEGORY_LABEL[cat]} "
@@ -186,17 +195,15 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
 def _category_groups(cat: str, ps: list[Product], mode: str, slot: str, r: dict[str, Any],
                      today: date) -> list[tuple[str, list[Product], list[Product]]]:
     """-> [(label, products to research, other products to report if seen)].
-    Energy has the biggest catalog: quick runs focus on a rotating slice of it (every brand gets
-    a focused look every few days; store-wide promos still get reported for all of them), and
-    deep runs split it into several jobs so each brand gets real search attention."""
-    if cat != "energy":
-        return [(cat, ps, [])]
+    Big categories (energy, snacks): quick runs focus on a rotating slice (every product gets a
+    focused look every few days; store-wide promos still get reported for all of them), and deep
+    runs split the category into several jobs so each product gets real search attention."""
     if mode == "deep_cat":
-        n = max(1, int(r.get("energy_deep_jobs", 1)))
+        n = max(1, int(r.get("deep_jobs", {}).get(cat, 1)))
         if n == 1:
             return [(cat, ps, [])]
         return [(f"{cat}-{i + 1}", ps[i::n], []) for i in range(n) if ps[i::n]]
-    n = max(1, int(r.get("energy_focus_groups", 1)))
+    n = max(1, int(r.get("focus_groups", {}).get(cat, 1)))
     if n == 1 or slot == "midday":
         return [(cat, ps, [])]
     i = today.toordinal() % n

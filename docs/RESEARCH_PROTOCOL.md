@@ -51,6 +51,33 @@ middays), the `jobs` to research, a `search_budget` per job, known `dead_codes` 
   `regular_pack_price`, and the label protein per unit / exact size in `label_protein_g` /
   `unit_size_oz` when a nutrition panel or spec sheet shows it.
 
+## 2b. Vitamin Shoppe BOGO sweep + Orange County store check (every run)
+
+Vitamin Shoppe runs Buy One, Get One 50% Off on energy-drink cases and protein bars almost every
+week, online and in store. Each run:
+
+1. Spend 1 search per category on it (e.g. "Vitamin Shoppe buy one get one 50% off energy drinks",
+   "Vitamin Shoppe BOGO protein bars"). Their BOGO list pages look like
+   `vitaminshoppe.com/sv/sale/.../shop-by-deal/buy-one-get-one-50-off`.
+2. Report each tracked product on BOGO as `promo_type: "bogo_50"` with the single 12-pack price.
+   List pages go stale: confirm the product page itself shows "BUY ONE, GET ONE 50% OFF" before
+   reporting it (a product page that doesn't show it gets `promo_type: "none"`).
+3. **Store check (Orange County only).** If the built-in browser on Reza's PC is reachable (load the
+   tools with ToolSearch query `mcp__remote-devices__Claude_Browser__`, max_results 64; skip this step
+   quietly if they're missing or the PC is offline), open up to 8 Vitamin Shoppe deal product pages
+   (the best BOGO/sale items first). The page header must read "You're Shopping: Aliso Viejo, CA". If
+   it shows another store, click it, search 92656, pick Aliso Viejo, press Select Store (decline
+   non-essential cookies if asked). Read the Pick-Up line with
+   `document.body.innerText` (text after "DELIVERY OPTIONS") and set
+   `stock_note` to e.g. "Aliso Viejo pick-up: 8 In Stock (checked Nov 17)" or
+   "Aliso Viejo pick-up: Out of Stock; available in nearby stores". If the page says
+   "Product Discontinued", say so in `stock_note`. Other OC Vitamin Shoppes (Costa Mesa, Orange,
+   Huntington Beach, Brea) are in `config/settings.yaml` if Aliso Viejo is out. Never add to cart or buy.
+4. Product pages you open from a BOGO list page that came back in WebSearch count as sourced: add
+   their URLs to the job's `urls`.
+5. Orange County only: `local_store` and `stock_note` must name an OC city or store. Anything else
+   is dropped (`out_of_area`) or cleared by `deal_hunter.py`.
+
 ## 3. Write the research file
 
 Save progressively: after finishing each job, rewrite `/tmp/research.json` with every job done so

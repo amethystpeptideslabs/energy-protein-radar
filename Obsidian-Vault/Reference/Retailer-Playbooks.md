@@ -4,7 +4,7 @@
 
 ## The Vitamin Shoppe
 - Domains: vitaminshoppe.com
-- In-store $1/can energy weekends (usually start Thu, sometimes Fri; limit ~6). BOGO 50% across brands online + in store. Auto-Delivery 10-15% off online. Healthy Awards points stack.
+- BOGO 50% (Buy One, Get One 50% Off) runs constantly on energy-drink cases and protein bars, online + in store; add 2 to cart. In-store $1/can energy weekends (usually start Thu, sometimes Fri; limit ~6). Auto-Delivery 10-15% off online (not with BOGO). Set My Store to Aliso Viejo so product pages show its pickup stock.
 
 ## GNC
 - Domains: gnc.com
@@ -117,6 +117,10 @@
 ## Isopure (DTC)
 - Domains: isopure.com
 - Codes and subscribe discount.
+
+## David (DTC)
+- Domains: davidprotein.com
+- $39 / 12-bar carton; subscribe price per bar is lower. Flavors sell out.
 
 ## 1st Phorm (DTC)
 - Domains: 1stphorm.com

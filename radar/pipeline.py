@@ -18,7 +18,7 @@ from .memory import (State, add_dead_codes, calibrate, current_offers, detect_re
                      prune_codes, record_active_codes, update_history)
 from .notify import plan_pushes, send
 from .obsidian import write_vault
-from .pricing import price_offer, rank_key
+from .pricing import is_unavailable, price_offer, rank_key
 from .research import ResearchResult, Researcher, WebSearchDisabled, build_jobs, build_system
 from .tiers import STEAL, is_hot_plus
 from .util import iso_now, now_local, parse_date, read_json, today as today_fn, write_json
@@ -482,13 +482,16 @@ def run(opts: RunOptions) -> RunResult:
     for o in ranked:
         if not o.get("unverified"):
             best_by_product.setdefault(o["product_id"], o)
+            if is_unavailable(o):   # records/history only from deals you can actually get
+                continue
             c = cheapest_by_product.get(o["product_id"])
             if c is None or o["unit_price"] < c["unit_price"]:
                 cheapest_by_product[o["product_id"]] = o
     records = detect_records(state, cheapest_by_product, d)
     update_history(state, cheapest_by_product, d)
     record_active_codes(state, [o for o in kept_all], d)
-    heroes = {cat: next((o for o in ranked if o["category"] == cat and not o.get("unverified")), None)
+    heroes = {cat: next((o for o in ranked if o["category"] == cat and not o.get("unverified")
+                         and not is_unavailable(o)), None)
               for cat in ("energy", "snack", "rtd")}
 
     # failed = every research job errored; partial = some did; ok = none did

@@ -52,6 +52,13 @@ def source_block_reason(url: str, retailer_key: str, kind: str, settings: dict[s
     return None
 
 
+def in_home_area(text: str, settings: dict[str, Any]) -> bool:
+    """True when text names a city/area from settings.home_area_cities (Orange County, CA)."""
+    t = (text or "").lower()
+    return any(re.search(r"(?<![a-z])" + re.escape(c.lower()) + r"(?![a-z])", t)
+               for c in settings.get("home_area_cities", []))
+
+
 def _term_hit(text: str, terms: list[str]) -> str | None:
     for t in terms:
         if re.search(r"(?<![a-z0-9])" + re.escape(t) + r"(?![a-z0-9])", text):
@@ -142,6 +149,14 @@ def validate_offers(raw: list[dict[str, Any]], cfg: Config, url_map: dict[str, s
         if why:
             drop(o, "unofficial_source", why)
             continue
+        # store-specific deals and stock must be in Orange County; online prices stay
+        if cfg.settings.get("home_area_cities"):
+            ls = (o.get("local_store") or "").strip()
+            if ls and not in_home_area(ls, cfg.settings):
+                drop(o, "out_of_area", f"store '{ls}' is outside {cfg.settings.get('home_area', 'the home area')}")
+                continue
+            if (o.get("stock_note") or "").strip() and not in_home_area(o["stock_note"], cfg.settings):
+                o["stock_note"] = ""
         o["retailer_name"] = cfg.retailer_name(retailer_key) if retailer_key in \
             cfg.settings.get("retailers", {}) else (o.get("retailer") or retailer_key)
         code = (o.get("code") or "").strip()

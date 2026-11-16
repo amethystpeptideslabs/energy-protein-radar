@@ -195,6 +195,7 @@ function whereText(o) {
   }
   return "🚚 Ships to you (online only)";
 }
+const PROMO_BADGE = { bogo_50: "🎁 BOGO 50% (add 2)", bogo_free: "🎁 BOGO free (add 2)", pct_off: "🏷️ Sale", fixed_unit_price: "🏷️ Promo price", multi_buy: "🏷️ Multi-buy" };
 function fulfillBadge(o) {
   return o.fulfillment === "pickup" ? '<span class="badge local">📍 Local pickup</span>'
     : o.fulfillment === "in_store" ? '<span class="badge local">🏬 In store</span>'
@@ -222,13 +223,13 @@ function dealCard(p, o) {
   const units = `${o.units_in_cart} ${unit}${o.units_in_cart > 1 ? "s" : ""}`;
   return `<li class="deal t-${esc(o.tier)}">
     <a class="deal-main" href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener noreferrer">
-      <span class="deal-tags"><span class="tier t-${esc(o.tier)}">${esc(TIER_EMOJI[o.tier] || "")} ${esc(o.tier)}</span>${fulfillBadge(o)}${o.is_case ? `<span class="badge">📦 Case of ${esc(o.pack_count)}</span>` : ""}${o.is_record ? '<span class="badge">🏆 Record low</span>' : ""}${ends ? `<span class="badge ends">${esc(ends)}</span>` : ""}</span>
+      <span class="deal-tags"><span class="tier t-${esc(o.tier)}">${esc(TIER_EMOJI[o.tier] || "")} ${esc(o.tier)}</span>${fulfillBadge(o)}${o.is_case ? `<span class="badge">📦 Case of ${esc(o.pack_count)}</span>` : ""}${PROMO_BADGE[o.promo_type] ? `<span class="badge promo">${PROMO_BADGE[o.promo_type]}</span>` : ""}${o.is_record ? '<span class="badge">🏆 Record low</span>' : ""}${ends ? `<span class="badge ends">${esc(ends)}</span>` : ""}</span>
       <span class="deal-name">${esc(p.display_name)}</span>
       <span class="deal-price"><b>${money(o.unit_price)}</b><span class="per">/${esc(unit)}</span></span>
       <span class="deal-line">${money(o.effective_pack_total)} for ${esc(units)} at <strong>${esc(r.name)}</strong>${save ? `, ${esc(save)}` : ""}</span>
       ${sec ? `<span class="deal-line">${esc(sec.value)} ${esc(sec.label)} ${esc(sec.badge || "")}</span>` : ""}
       <span class="deal-line">${esc(whereText(o))}</span>
-      ${o.stock_note ? `<span class="deal-stock">✅ ${esc(o.stock_note)}</span>` : ""}
+      ${o.stock_note ? `<span class="deal-stock${GONE_RE.test(o.stock_note) ? " oos" : ""}">${GONE_RE.test(o.stock_note) ? "⚠️" : "✅"} ${esc(o.stock_note)}</span>` : ""}
       ${notes.length ? `<span class="deal-notes">${notes.map((n) => `<span>${esc(n)}</span>`).join("")}</span>` : ""}
       <span class="deal-open">${esc(openLabel(o))}</span>
     </a>
@@ -284,10 +285,12 @@ function isEasy(o) { return !o.in_store_only && !o.membership_required && !(Numb
 function passes(o) { return (state.sort !== "easy" || isEasy(o)) && (!state.casesOnly || o.is_case); }
 
 function isLocal(o) { return o.fulfillment === "in_store" || o.fulfillment === "pickup"; }
+const GONE_RE = /out of stock|unavailable|discontinued|sold out/i;
 function offerRank(cat, o) {
+  const g = GONE_RE.test(o.stock_note || "") ? 1 : 0;  // store check says you can't get it: last
   const t = TIER_RANK[o.tier] ?? 4;
   const l = isLocal(o) ? 0 : 1;  // local pickup / in store first within a tier
-  return cat === "energy" ? [t, l, o.unit_price ?? 9e9, 0] : [t, l, o.pct_vs_ref ?? 999, o.price_per_10g_protein ?? 9e9];
+  return cat === "energy" ? [g, t, l, o.unit_price ?? 9e9, 0] : [g, t, l, o.pct_vs_ref ?? 999, o.price_per_10g_protein ?? 9e9];
 }
 function cmpArr(x, y) { for (let i = 0; i < x.length; i++) { if (x[i] !== y[i]) return x[i] - y[i]; } return 0; }
 function passesView(o) { return !o.unverified && (!state.casesOnly || o.is_case) && (!state.localOnly || isLocal(o)); }

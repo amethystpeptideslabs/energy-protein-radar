@@ -50,3 +50,12 @@ def test_failure_push(cfg, tmp_path):
     s = State.load(tmp_path, cfg)
     p = plan_pushes(s, cfg, records=[], ranked=[], heroes={}, send_digest=True, failure="boom", app_url=APP)
     assert p[0]["priority"] == 3 and "boom" in p[0]["message"]
+
+
+def test_out_of_stock_deals_rank_last_and_never_alert():
+    from radar.pricing import is_unavailable, rank_key
+    ok = {"category": "snack", "tier": "SOLID", "fulfillment": "pickup", "pct_vs_ref": 85, "price_per_10g_protein": 1.0}
+    gone = {"category": "snack", "tier": "STEAL", "fulfillment": "pickup", "pct_vs_ref": 50, "price_per_10g_protein": 0.8,
+            "stock_note": "Aliso Viejo page: Product Discontinued"}
+    assert is_unavailable(gone) and not is_unavailable(ok)
+    assert sorted([gone, ok], key=rank_key)[0] is ok

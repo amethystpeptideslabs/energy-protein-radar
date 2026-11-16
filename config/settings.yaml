@@ -8,6 +8,13 @@ app_url: https://amethystpeptideslabs.github.io/energy-protein-radar/
 # ship-to-home offers in the same tier. Online deals still show.
 home_area: "Orange County, CA (South OC first)"
 prefer_local_pickup: true
+# Store-specific deals (local_store) and stock notes must name one of these; anything else is
+# dropped / cleared. Online and ship-to-home prices are unaffected.
+home_area_cities: [Orange County, Aliso Viejo, Anaheim, Brea, Buena Park, Costa Mesa, Cypress, Dana Point,
+  Foothill Ranch, Fountain Valley, Fullerton, Garden Grove, Huntington Beach, Huntington Bch, Irvine,
+  La Habra, La Palma, Ladera Ranch, Laguna Beach, Laguna Hills, Laguna Niguel, Laguna Woods, Lake Forest,
+  Los Alamitos, Mission Viejo, Newport Beach, Orange, Placentia, Rancho Santa Margarita, San Clemente,
+  San Juan Capistrano, Santa Ana, Seal Beach, Stanton, Tustin, Villa Park, Westminster, Yorba Linda]
 
 # Web search localization (approximate). City as you gave it.
 location:
@@ -69,17 +76,19 @@ research:
   engine: claude-session
   case_min_units: 12           # a pack of 12+ units counts as a case (cases are the priority)
   session_budgets:             # web searches per job for the Claude-session engine
-    quick: 6                   # snack, rtd
+    quick: 6                   # rtd
     quick_energy: 8            # energy (27 brands, rotating focus)
+    quick_snack: 7             # snacks (15 products, rotating focus)
     midday: 5                  # snack, rtd (Thu/Fri weekend-promo check)
     midday_energy: 6
-    deep: 12                   # snack, rtd (Mon/Thu)
-    deep_energy: 10            # per energy job; deep runs split energy into energy_deep_jobs jobs
+    deep: 12                   # rtd (Mon/Thu)
+    deep_energy: 10            # per energy job (deep runs split energy into deep_jobs.energy jobs)
+    deep_snack: 8              # per snack job
     calibrate: 2               # per product (first full calibrate only)
     calibrate_new: 2           # per newly added product, once
     deep_single: 3             # --only <product>
-  energy_focus_groups: 3       # quick runs research 1/3 of the energy brands in depth (rotates daily)
-  energy_deep_jobs: 2
+  focus_groups: {energy: 3, snack: 2}   # quick runs research 1/N of the category in depth (rotates daily)
+  deep_jobs: {energy: 2, snack: 2}      # deep runs split the category into N jobs
   calibrate_new_per_run: 6     # newly added products calibrated per run until all are done
   quick_max_uses: 8
   midday_max_uses: 6
@@ -135,8 +144,21 @@ history:
 # pickup: buy online, pick up in store / curbside is normally offered
 # stock_search: retailer search page where you can set your store and see availability
 retailers:
-  vitamin-shoppe: {physical: true, pickup: true, stock_search: "https://www.vitaminshoppe.com/search?search={q}", name: The Vitamin Shoppe, domains: [vitaminshoppe.com], type: supplement,
-    playbook: "In-store $1/can energy weekends (usually start Thu, sometimes Fri; limit ~6). BOGO 50% across brands online + in store. Auto-Delivery 10-15% off online. Healthy Awards points stack."}
+  vitamin-shoppe:
+    physical: true
+    pickup: true
+    stock_search: "https://www.vitaminshoppe.com/search?search={q}"
+    name: The Vitamin Shoppe
+    domains: [vitaminshoppe.com]
+    type: supplement
+    playbook: "BOGO 50% (Buy One, Get One 50% Off) runs constantly on energy-drink cases and protein bars, online + in store; add 2 to cart. In-store $1/can energy weekends (usually start Thu, sometimes Fri; limit ~6). Auto-Delivery 10-15% off online (not with BOGO). Set My Store to Aliso Viejo so product pages show its pickup stock."
+    home_store: Aliso Viejo
+    local_stores:   # Orange County stores in Vitamin Shoppe's own store locator (checked 2026-11-16)
+      - {name: Aliso Viejo, id: 133, address: "26831 Aliso Creek Rd, Aliso Viejo, CA 92656", phone: "(949) 349-0690"}
+      - {name: Costa Mesa, address: "3929 S Bristol St, Bldg C, Santa Ana, CA 92704"}
+      - {name: Orange, address: "1300 N Tustin St, Orange, CA 92867"}
+      - {name: Huntington Beach, address: "7672 Edinger Ave, Huntington Beach, CA 92647"}
+      - {name: Brea, address: "299 S Randolph St, Brea, CA 92821"}
   gnc: {physical: true, pickup: true, stock_search: "https://www.gnc.com/search?q={q}", name: GNC, domains: [gnc.com], type: supplement,
     playbook: "BOGO 50% on RTD/bars is common. Pro Access member pricing is membership-gated (🔒). In-store $1 energy promos mirror Vitamin Shoppe some weekends."}
   campus-protein: {physical: false, name: Campus Protein, domains: [campusprotein.com], type: supplement, playbook: "Site-wide % codes; free shipping thresholds."}
@@ -168,6 +190,7 @@ retailers:
   prime-bites-dtc: {name: Alpha Prime (DTC), domains: [alphaprimesupps.com, primebites.com], type: brand, playbook: "Bundle deals."}
   celsius-dtc: {name: Celsius (DTC), domains: [celsius.com], type: brand, playbook: "Rarely cheapest; subscription discount."}
   isopure-dtc: {name: Isopure (DTC), domains: [isopure.com], type: brand, playbook: "Codes and subscribe discount."}
+  david-dtc: {name: David (DTC), domains: [davidprotein.com], type: brand, playbook: "$39 / 12-bar carton; subscribe price per bar is lower. Flavors sell out."}
   phorm-dtc: {name: 1st Phorm (DTC), domains: [1stphorm.com], type: brand, playbook: "Case of 12 at list price; subscribe discount."}
   cellucor-dtc: {name: Cellucor (DTC), domains: [cellucor.com], type: brand, playbook: "Frequent sitewide % off (e.g. 20%)."}
   jocko-dtc: {name: Jocko Fuel (DTC), domains: [jockofuel.com], type: brand, playbook: "List price is high; Amazon Subscribe & Save usually cheaper."}

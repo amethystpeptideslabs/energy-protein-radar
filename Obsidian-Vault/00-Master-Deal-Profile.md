@@ -35,6 +35,7 @@ _Updated 2026-11-16 after the quick run._
 | [[lifeaid-12\|LIFEAID FITAID / FOCUSAID 12oz]] | $2.49 | $2.38 | Walmart | 2026-11-16 | $2.38 ❌ | Walmart | → |
 | [[nocco-12\|NOCCO BCAA Energy 12oz]] | $2.50 |  |  |  | — |  | → |
 | [[kill-cliff-ignite-12\|Kill Cliff Ignite 12oz]] | $2.92 | $2.72 | Rogue Fitness | 2026-11-16 | $3.05 ❌ | Walmart | → |
+| [[grizzly-energy-16\|Grizzly Energy 16oz]] | $2.50 | $2.55 | The Vitamin Shoppe | 2026-11-16 | $2.55 ❌ | The Vitamin Shoppe | → |
 
 ## 🍫 Protein Snacks
 
@@ -49,6 +50,15 @@ _Updated 2026-11-16 after the quick run._
 | [[legendary-donuts\|Legendary Protein Donuts]] | $3.05 | $1.87 | Target | 2026-11-16 | $1.87 🚨 | Target | → |
 | [[legendary-chips\|Legendary Popped Protein Chips]] | $3.71 | $3.57 | Vitacost | 2026-11-16 | $3.57 ❌ | Vitacost | → |
 | [[quest-chips\|Quest Protein Chips]] | $2.01 | $1.76 | Sam's Club | 2026-11-16 | $1.76 ✅ | Sam's Club | → |
+| [[quest-bar\|Quest Protein Bar]] | $2.42 | $2.08 | Target | 2026-11-16 | $2.08 ✅ | Target | → |
+| [[grenade-bar\|Grenade Carb Killa Bar]] | $3.33 |  |  |  | — |  | → |
+| [[fitcrunch-bar\|FITCRUNCH Bar (16g)]] | $1.51 | $1.25 | Sam's Club | 2026-11-16 | $1.25 ✅ | Sam's Club | → |
+| [[david-bar\|David Protein Bar (28g)]] | $3.25 | $3.25 | Walmart | 2026-11-16 | $3.25 ❌ | Walmart | → |
+| [[phorm-level1-bar\|1st Phorm Level-1 Bar]] | $3.00 | $2.55 | The Vitamin Shoppe | 2026-11-16 | $2.55 ✅ | The Vitamin Shoppe | → |
+| [[legendary-sweet-roll\|Legendary Protein Sweet Roll]] | $3.25 | $3.25 | Legendary Foods (DTC) | 2026-11-16 | $3.37 ❌ | GNC | → |
+| [[barebells-soft\|Barebells Soft Bar (16g)]] | $2.83 | $2.33 | Muscle & Strength | 2026-11-16 | $2.33 ✅ | Muscle & Strength | → |
+| [[met-rx-big100\|MET-Rx Big 100 Bar (30g)]] | $4.20 | $4.20 | Vitacost | 2026-11-16 | $4.20 ❌ | Vitacost | → |
+| [[raw-protein-bar\|RAW Protein Bar]] | $2.92 | $2.48 | The Vitamin Shoppe | 2026-11-16 | $2.48 ✅ | The Vitamin Shoppe | → |
 
 ## 🥤 RTD Shakes
 

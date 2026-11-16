@@ -1,6 +1,6 @@
 # Energy + Protein Deal Radar
 
-Daily deal hunter for **RTD energy drinks, protein snacks and RTD protein shakes** (45 products: 27 gym/performance energy drinks, 9 snacks, 9 shakes),
+Daily deal hunter for **RTD energy drinks, protein snacks and RTD protein shakes** (55 products: 28 gym/performance energy drinks, 18 protein bars/snacks, 9 shakes),
 **cases first** (12/15/18/24-packs, boxes) with single-can promos included. No API credits: a
 scheduled Claude session on the owner's existing Claude plan does the web research
 (`docs/RESEARCH_PROTOCOL.md`), and Python in this repo does every check and every price.
@@ -74,4 +74,9 @@ python -m http.server               # then open http://localhost:8000
   any stored offer from a blocked source is purged automatically with its records and history.
 - Energy is gym/performance brands only; Monster, Red Bull, Rockstar, NOS, Prime and other mainstream
   brands are never reported (`exclude_brands` in `config/products.yaml`).
+- Snacks are real protein bars (15g+ protein) from gym brands; candy-brand protein bars (Snickers,
+  Reese's, Hershey...) and grocery-aisle bars (Clif, Kind, Pure Protein, ONE, Kirkland...) are never reported.
+- Vitamin Shoppe BOGO 50% is swept every run, and each deal's pick-up stock is checked at the
+  Aliso Viejo store (South OC) in the built-in browser when Reza's PC is on. Store-specific deals and
+  stock notes must be in Orange County; out-of-stock or discontinued deals rank last and never alert.
 - New products get a one-time calibration job (2 searches each, up to 6 per run) until each is done.

@@ -2,7 +2,7 @@
 date: 2026-11-16
 run_mode: quick
 status: ok
-deals: 11
+deals: 18
 tags: [deal-radar]
 ---
 
@@ -20,11 +20,18 @@ tags: [deal-radar]
 | 🥤 RAW Protein Shake 12oz | $2.66/bottle | $31.87 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-shake-chocolate-milkshake-12-bottle-s/grw-13229) |
 | ⚡ Celsius Essentials 16oz | $1.36/can | $16.34 for 12 📦 case | Walmart | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
 | ⚡ Celsius Original 12oz | $1.38/can | $24.88 for 18 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/p/celsius-live-fit-sparkling-vibe-variety-pack-12-fl-oz-18-pk/P990402185) |
+| 🍫 FITCRUNCH Bar (16g) | $1.25/bar | $22.48 for 18 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/ip/Chef-Robert-Irvine-s-FITCRUNCH-High-Protein-Baked-Bars-Variety-Pack-1-62-oz-18-ct/81771902116) |
+| 🍫 RAW Protein Bar | $2.48/bar | $29.74 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/e/exclusive/food-drinks/foods) |
+| 🍫 1st Phorm Level-1 Bar | $2.55/bar | $38.24 for 15 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364) |
 | 🍫 Prime Bites Protein Brownie | $2.83/brownie | $33.99 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/prime-bites-protein-brownie-glazed-cinnamon-roll-12-brownies/aps-10699?store=73) |
+| 🍫 Quest Protein Bar | $2.08/bar | $24.99 for 12 📦 case | Target | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.target.com/p/-/A-53111667) |
 | 🍫 Magic Spoon Protein Pastry | $2.13/pastry | $8.53 for 4 | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/19124451285) |
 | 🍫 Quest Protein Chips | $1.76/bag | $24.68 for 14 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/s/quest+chips) |
 | 🥤 Isopure Zero Carb RTD 16.9oz (32g) | $4.63/bottle | $55.59 for 12 📦 case | GNC | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
 | 🥤 Oikos Pro Shake | $1.83/bottle | $21.99 for 12 📦 case | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/16113764509) |
+| 🍫 Barebells Soft Bar (16g) | $2.33/bar | $27.99 for 12 📦 case | Muscle & Strength | 🚚 Ships to you | ✅ SOLID | [Open deal](https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html) |
+| 🍫 Legendary Protein Sweet Roll | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 🏬 In store (local) ✅ Aliso Viejo page: Product Discontinued, clearance while supplies last; call the store (checked Nov 16) | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
+| ⚡ RAW Bum Energy 12oz | $1.30/can | $15.64 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Aliso Viejo pick-up: Out of Stock; not available to ship (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/bum-energy-citrus-burst-12-drink-s/bum-11570) |
 
 ## 📋 All products today
 
@@ -57,6 +64,7 @@ tags: [deal-radar]
 | ⚡ LIFEAID FITAID / FOCUSAID 12oz | $2.38/can | $28.59 for 12 📦 | Walmart | ❌ SKIP | $2.49 | $2.38 | [Open deal](https://www.walmart.com/ip/seort/1453919712) |
 | ⚡ NOCCO BCAA Energy 12oz | no offer found |  |  |  | $2.50 |  |  |
 | ⚡ Kill Cliff Ignite 12oz | $3.05/can | $36.59 for 12 📦 | Walmart | ❌ SKIP | $2.92 | $2.72 | [Open deal](https://www.walmart.com/ip/1584428946) |
+| ⚡ Grizzly Energy 16oz | $2.55/can | $30.59 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.50 | $2.55 | [Open deal](https://www.vitaminshoppe.com/p/grizzly-energy-mountain-buzz-12-drink-s/gzl-17459) |
 | 🍫 Built Puff | $1.54/bar | $19.98 for 13 📦 | Sam's Club | 🚨 STEAL | $2.50 | $1.54 | [Open deal](https://www.samsclub.com/ip/built-sour-puff-bars-variety-pack-13-ct/19583258714) |
 | 🍫 Barebells Protein Bar | $2.50/bar | $29.99 for 12 📦 | Target | ❌ SKIP | $2.50 | $2.32 | [Open deal](https://target.com/p/barebells-nutrition-bars-chocolate-dough-12pk/-/A-83942845) |
 | 🍫 Magic Spoon Protein Pastry | $2.13/pastry | $8.53 for 4 | Walmart | ✅ SOLID | $2.44 | $2.13 | [Open deal](https://www.walmart.com/ip/seort/19124451285) |
@@ -66,6 +74,15 @@ tags: [deal-radar]
 | 🍫 Legendary Protein Donuts | $1.87/pack | $7.49 for 4 | Target | 🚨 STEAL | $3.05 | $1.87 | [Open deal](https://www.target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-donuts-cinnamon-crumble-20g-protein-8-9oz-4ct/-/A-94712220) |
 | 🍫 Legendary Popped Protein Chips | $3.57/bag | $24.98 for 7 | Vitacost | ❌ SKIP | $3.71 | $3.57 | [Open deal](https://www.vitacost.com/products/legendary-foods-popped-protein-chips-ranch-7-bags-1-3-oz-36-g-each-159248) |
 | 🍫 Quest Protein Chips | $1.76/bag | $24.68 for 14 📦 | Sam's Club | ✅ SOLID | $2.01 | $1.76 | [Open deal](https://www.samsclub.com/s/quest+chips) |
+| 🍫 Quest Protein Bar | $2.08/bar | $24.99 for 12 📦 | Target | ✅ SOLID | $2.42 | $2.08 | [Open deal](https://www.target.com/p/-/A-53111667) |
+| 🍫 Grenade Carb Killa Bar | no offer found |  |  |  | $3.33 |  |  |
+| 🍫 FITCRUNCH Bar (16g) | $1.25/bar | $22.48 for 18 📦 | Sam's Club | ✅ SOLID | $1.51 | $1.25 | [Open deal](https://www.samsclub.com/ip/Chef-Robert-Irvine-s-FITCRUNCH-High-Protein-Baked-Bars-Variety-Pack-1-62-oz-18-ct/81771902116) |
+| 🍫 David Protein Bar (28g) | $3.25/bar | $39.00 for 12 📦 | Walmart | ❌ SKIP | $3.25 | $3.25 | [Open deal](https://www.walmart.com/ip/15164761476) |
+| 🍫 1st Phorm Level-1 Bar | $2.55/bar | $38.24 for 15 📦 | The Vitamin Shoppe | ✅ SOLID | $3.00 | $2.55 | [Open deal](https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364) |
+| 🍫 Legendary Protein Sweet Roll | $3.37/roll | $26.99 for 8 | GNC | ❌ SKIP | $3.25 | $3.25 | [Open deal](https://www.gnc.com/healthy-snacks/588847.html) |
+| 🍫 Barebells Soft Bar (16g) | $2.33/bar | $27.99 for 12 📦 | Muscle & Strength | ✅ SOLID | $2.83 | $2.33 | [Open deal](https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html) |
+| 🍫 MET-Rx Big 100 Bar (30g) | $4.20/bar | $37.83 for 9 | Vitacost | ❌ SKIP | $4.20 | $4.20 | [Open deal](https://www.vitacost.com/products/met-rx-big-100-meal-replacement-bar-salted-caramel-brownie-crunch-9-bars-3-52-oz-100-g-each-136362) |
+| 🍫 RAW Protein Bar | $2.48/bar | $29.74 for 12 📦 | The Vitamin Shoppe | ✅ SOLID | $2.92 | $2.48 | [Open deal](https://www.vitaminshoppe.com/e/exclusive/food-drinks/foods) |
 | 🥤 RAW Protein Shake 12oz | $2.66/bottle | $31.87 for 12 📦 | The Vitamin Shoppe | 🚨 STEAL | $4.17 | $2.66 | [Open deal](https://www.vitaminshoppe.com/p/protein-shake-chocolate-milkshake-12-bottle-s/grw-13229) |
 | 🥤 Isopure Zero Carb RTD 20oz (40g) | no offer found |  |  |  | $5.82 |  |  |
 | 🥤 Isopure Zero Carb RTD 16.9oz (32g) | $4.63/bottle | $55.59 for 12 📦 | GNC | ✅ SOLID | $5.21 | $4.63 | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |

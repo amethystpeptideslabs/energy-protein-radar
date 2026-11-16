@@ -1,6 +1,6 @@
 {
  "version": "2.0.0",
- "last_run_at": "2026-11-16T12:47:46-08:00",
+ "last_run_at": "2026-11-16T13:13:01-08:00",
  "date": "2026-11-16",
  "slot": "midday",
  "dry_run": false,
@@ -8,8 +8,8 @@
  "status": "ok",
  "reason": "",
  "cost_usd": 0.0,
- "searches": 14,
+ "searches": 0,
  "month_usd": 0.0,
  "budget_cap_usd": 40.0,
- "heartbeat": "2026-11-16T12:47:46-08:00"
+ "heartbeat": "2026-11-16T13:13:01-08:00"
 }

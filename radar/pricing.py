@@ -8,6 +8,8 @@ Stacking order (conservative where retailers differ):
 """
 from __future__ import annotations
 
+import re
+
 from dataclasses import asdict, dataclass, field
 from decimal import Decimal
 from typing import Any
@@ -211,16 +213,26 @@ def regular_unit_price(o: dict[str, Any]) -> Decimal | None:
     return None
 
 
+UNAVAILABLE_RE = re.compile(r"out of stock|unavailable|discontinued|sold out", re.I)
+
+
+def is_unavailable(offer: dict[str, Any]) -> bool:
+    """A store check said you can't get it now (out of stock locally / discontinued)."""
+    return bool(UNAVAILABLE_RE.search(offer.get("stock_note") or ""))
+
+
 def rank_key(offer: dict[str, Any]) -> tuple:
-    """Lower is better. Energy: tier, then $/can. Protein: tier, then % of ref
+    """Lower is better. Confirmed-unavailable deals (out of stock at the OC store, discontinued)
+    go last. Then energy: tier, local-first, $/can. Protein: tier, local-first, % of ref
     (biggest discount first), then $/10g protein as tiebreak."""
     from .tiers import TIER_RANK
+    gone = 1 if is_unavailable(offer) else 0
     tier_rank = TIER_RANK.get(offer.get("tier", UNRATED), 9)
     not_local = 0 if offer.get("fulfillment") in ("in_store", "pickup") else 1
     if offer.get("category") == "energy":
-        return (tier_rank, not_local, offer.get("unit_price") or 999.0, 0.0)
+        return (gone, tier_rank, not_local, offer.get("unit_price") or 999.0, 0.0)
     pct = offer.get("pct_vs_ref")
-    return (tier_rank, not_local, pct if pct is not None else 999.0,
+    return (gone, tier_rank, not_local, pct if pct is not None else 999.0,
             offer.get("price_per_10g_protein") or 999.0)
 
 

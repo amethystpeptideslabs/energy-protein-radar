@@ -165,5 +165,45 @@ def test_allow_terms_keep_hydration_named_energy_lines(cfg):
     assert "hydration" in cfg.products["ghost-energy-16"].exclude_terms
     assert "recovery" in cfg.products["kill-cliff-ignite-12"].exclude_terms
     energy = cfg.enabled("energy")
-    assert len(energy) == 27 and all(p.exclude_brands for p in energy)
+    assert len(energy) == 28 and all(p.exclude_brands for p in energy)
     assert not {"monster-16", "red-bull-12"} & {p.id for p in energy}
+
+
+def test_tracked_bars_are_real_protein_bars(cfg):
+    bars = [p for p in cfg.enabled("snack") if p.unit_label == "bar"]
+    assert len(bars) == 10 and all(p.protein_g >= 15 for p in bars)
+    for pid in ("quest-bar", "grenade-bar", "fitcrunch-bar", "david-bar", "phorm-level1-bar", "legendary-sweet-roll"):
+        assert pid in cfg.products and cfg.products[pid].exclude_brands
+
+
+def test_candy_brand_bar_dropped(cfg):
+    from datetime import date
+    from radar.util import normalize_url
+    from radar.validate import validate_offers
+    u1 = "https://www.walmart.com/ip/snickers-hi-protein-12ct/1"
+    u2 = "https://www.target.com/p/quest-cookies-cream-12ct/-/A-53111667"
+    urls = {normalize_url(u): u for u in (u1, u2)}
+    candy = {"product_id": "quest-bar", "retailer": "Walmart", "source_url": u1, "pack_count": 12, "pack_price": 19.98,
+             "evidence_text": "Snickers Hi Protein Bar, 20g protein, 12 count $19.98"}
+    quest = {"product_id": "quest-bar", "retailer": "Target", "source_url": u2, "pack_count": 12, "pack_price": 24.99,
+             "evidence_text": "Quest Nutrition 21g Protein Bar - Cookies & Cream 12ct $24.99 (also: Pure Protein bars)"}
+    kept, dropped = validate_offers([candy, quest], cfg, urls, {}, [], date(2026, 11, 16))
+    assert [o["source_url"] for o in kept] == [u2] and "mainstream brand" in dropped[0]["drop_detail"]
+
+
+def test_store_specific_deals_must_be_in_orange_county(cfg):
+    from datetime import date
+    from radar.util import normalize_url
+    from radar.validate import validate_offers
+    u = "https://www.vitaminshoppe.com/p/alani-nu-energy-cherry-slush-12-drink-s/ala0047"
+    urls = {normalize_url(u): u}
+    base = {"product_id": "alani-nu-12", "retailer": "The Vitamin Shoppe", "source_url": u, "pack_count": 12,
+            "pack_price": 29.99, "unit_size_oz": 12, "promo_type": "bogo_50",
+            "evidence_text": "Energy Drink - Cherry Slush (12 Drinks, 12 Fl. Oz. Each) $29.99 BOGO BUY ONE, GET ONE 50% OFF"}
+    oc = dict(base, local_store="Vitamin Shoppe Aliso Viejo", stock_note="Pick-Up: 8 In Stock at Aliso Viejo, CA")
+    ny = dict(base, local_store="Vitamin Shoppe Brooklyn, NY", pack_price=28.99)
+    web = dict(base, pack_price=27.99, stock_note="Pick-Up: 1 In Stock at Atlantic & 4th Ave, NY")
+    kept, dropped = validate_offers([oc, ny, web], cfg, urls, {}, [], date(2026, 11, 16))
+    assert [o["pack_price"] for o in kept] == [29.99, 27.99]
+    assert kept[0]["stock_note"].endswith("Aliso Viejo, CA") and kept[1]["stock_note"] == ""
+    assert dropped[0]["drop_reason"] == "out_of_area"

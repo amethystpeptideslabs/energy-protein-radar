@@ -12,6 +12,7 @@ import requests
 
 from .config import Config
 from .memory import State, alert_recently_sent, remember_alert
+from .pricing import is_unavailable
 from .tiers import RECORD_BADGE, STEAL, TIER_EMOJI, is_hot_plus
 
 log = logging.getLogger("radar.notify")
@@ -69,7 +70,7 @@ def plan_pushes(state: State, cfg: Config, *, records: list[dict[str, Any]],
 
     singles: list[tuple[int, dict[str, Any], dict[str, Any]]] = []
     for o in records:
-        if o.get("unverified"):
+        if o.get("unverified") or is_unavailable(o):   # never alert on something you can't get
             continue
         prev = o.get("previous_record") or {}
         msg = (f"**{cfg.products[o['product_id']].display_name}** at {o.get('retailer_name')}\n"
@@ -82,7 +83,7 @@ def plan_pushes(state: State, cfg: Config, *, records: list[dict[str, Any]],
                         {"action": "view", "label": "Open app", "url": app_url}]}))
     record_ids = {id(o) for o in records}
     for o in ranked:
-        if o.get("unverified") or o.get("tier") != STEAL or id(o) in record_ids:
+        if o.get("unverified") or is_unavailable(o) or o.get("tier") != STEAL or id(o) in record_ids:
             continue
         if alert_recently_sent(state, fingerprint(o), int(ncfg["steal_dedupe_hours"])):
             continue

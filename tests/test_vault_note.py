@@ -43,3 +43,20 @@ def test_live_bogo_listed_even_below_deal_tier(tmp_path):
 def test_unverified_promos_stay_out(tmp_path):
     txt = _note(tmp_path, [_offer(promo_type="bogo_50", unverified=True)])
     assert "## 🎁 BOGO & sales right now" not in txt
+
+
+def test_amazon_section_lists_live_amazon_deals(tmp_path):
+    amz = _offer(product_id="celsius-original-12", retailer_name="Amazon", retailer_key="amazon",
+                 source_kind="deal_intel", source_url="https://slickdeals.net/f/1", tier="HOT", flavor="Peach Vibe",
+                 unit_price=1.16, effective_pack_total=13.89, units_in_cart=12, fulfillment="ship",
+                 evidence_date="2026-11-14")
+    regular = _offer(product_id="ghost-energy-16", retailer_name="Amazon", retailer_key="amazon", tier="SKIP",
+                     source_url="https://amazon.com/dp/B0BR96LQ8B", fulfillment="ship")
+    txt = _note(tmp_path, [amz, regular])
+    sec = txt.split("## 🛒 Amazon deals", 1)[1].split("\n## ", 1)[0]
+    assert "Celsius Original 12oz (Peach Vibe)" in sec and "posted 2026-11-14" in sec
+    assert "Ghost" not in sec
+
+
+def test_no_amazon_section_without_amazon_deals(tmp_path):
+    assert "## 🛒 Amazon deals" not in _note(tmp_path, [_offer(tier="HOT")])

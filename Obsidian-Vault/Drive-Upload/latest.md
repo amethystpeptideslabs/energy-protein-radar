@@ -18,7 +18,7 @@ tags: [deal-radar]
 | 🍫 Legendary Protein Donuts | $1.87/pack | $7.49 for 4 | Target | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-donuts-cinnamon-crumble-20g-protein-8-9oz-4ct/-/A-94712220) |
 | 🍫 Built Puff | $1.54/bar | $19.98 for 13 📦 case | Sam's Club | 📍 Local pickup 🔒 | 🚨 STEAL | [Open deal](https://www.samsclub.com/ip/built-sour-puff-bars-variety-pack-13-ct/19583258714) |
 | ⚡ Celsius Essentials 16oz | $1.36/can | $16.34 for 12 📦 case | Walmart | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
-| ⚡ Celsius Original 12oz (Peach Vibe) | $1.16/can | $13.89 for 12 📦 case | Amazon | 🚚 Ships to you | 🔥 HOT 🏆 | [Open deal](https://www.freestufffinder.com/celsius-energy-drink-12-pack-for-13-shipped-at-amazon) |
+| ⚡ Celsius Original 12oz (Peach Vibe) | $1.16/can | $13.89 for 12 📦 case | Amazon | 🚚 Ships to you | 🔥 HOT | [Open deal](https://www.freestufffinder.com/celsius-energy-drink-12-pack-for-13-shipped-at-amazon) |
 | 🍫 FITCRUNCH Bar (16g) | $1.25/bar | $22.48 for 18 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/ip/Chef-Robert-Irvine-s-FITCRUNCH-High-Protein-Baked-Bars-Variety-Pack-1-62-oz-18-ct/81771902116) |
 | 🍫 RAW Protein Bar | $2.48/bar | $29.74 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/e/exclusive/food-drinks/foods) |
 | 🍫 1st Phorm Level-1 Bar | $2.55/bar | $38.24 for 15 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 2 In Stock; Brea: 1 In Stock (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364) |
@@ -30,6 +30,12 @@ tags: [deal-radar]
 | 🥤 Oikos Pro Shake | $1.83/bottle | $21.99 for 12 📦 case | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/16113764509) |
 | 🍫 Barebells Soft Bar (16g) | $2.33/bar | $27.99 for 12 📦 case | Muscle & Strength | 🚚 Ships to you | ✅ SOLID | [Open deal](https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html) |
 | 🍫 Legendary Protein Sweet Roll | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 🏬 In store (local) ⚠️ Vitamin Shoppe page: Product Discontinued, clearance while supplies last; no pick-up shown, call Orange or Brea (checked Nov 16) | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
+
+## 🛒 Amazon deals
+
+| Deal | Per unit | You pay | Store | Where | Tier | Link |
+|---|---|---|---|---|---|---|
+| ⚡ Celsius Original 12oz (Peach Vibe) | $1.16/can | $13.89 for 12 📦 case | Amazon | 🚚 Ships to you | 🔥 HOT · posted 2026-11-14 | [Open deal](https://www.freestufffinder.com/celsius-energy-drink-12-pack-for-13-shipped-at-amazon) |
 
 ## 🎁 BOGO & sales right now
 

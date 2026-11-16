@@ -105,6 +105,14 @@ def write_drive_note(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
     else:
         lines.append("No HOT/STEAL/SOLID deals this run.")
     lines.append("")
+    amazon = [o for o in ranked if o.get("retailer_key") == "amazon" and o["tier"] in ("STEAL", "HOT", "SOLID")]
+    if amazon:  # Amazon gets its own list so its deals are easy to find (all flavors, not just the best one)
+        lines += ["## 🛒 Amazon deals", "",
+                  "| Deal | Per unit | You pay | Store | Where | Tier | Link |", "|---|---|---|---|---|---|---|"]
+        for o in amazon:
+            posted = f" · posted {o['evidence_date']}" if o.get("evidence_date") else ""
+            lines.append(_deal_row(cfg, o, tier_label(o["tier"]) + posted))
+        lines.append("")
     shown = {id(o) for o in best_deals}
     promos = sorted((o for o in ranked if o.get("promo_type") in PROMO_LABEL and id(o) not in shown), key=rank_key)
     if promos:  # every live BOGO / sale, same as the app's section; in stock near you first

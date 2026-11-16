@@ -13,7 +13,7 @@ _Updated 2026-11-16 after the quick run._
 | [[gorilla-mind-energy-16\|Gorilla Mind Energy 16oz]] | $2.92 | $2.53 | The Vitamin Shoppe | 2026-11-16 | $2.53 ❌ | The Vitamin Shoppe | → |
 | [[bum-energy-12\|RAW Bum Energy 12oz]] | $2.50 | $2.05 | The Vitamin Shoppe | 2026-11-16 | $2.05 ❌ | The Vitamin Shoppe | → |
 | [[celsius-essentials-16\|Celsius Essentials 16oz]] | $2.50 | $1.36 | Walmart | 2026-11-16 | $1.36 🔥 | Walmart | → |
-| [[celsius-original-12\|Celsius Original 12oz]] | $1.67 | $1.38 | Sam's Club | 2026-11-16 | $1.38 ✅ | Sam's Club | → |
+| [[celsius-original-12\|Celsius Original 12oz]] | $1.67 | $1.16 | Amazon | 2026-11-16 | $1.16 🔥 | Amazon | → |
 | [[bang-16\|Bang Energy 16oz]] | $4.58 | $4.21 | Walmart | 2026-11-16 | $4.21 ❌ | Walmart | → |
 | [[phorm-energy-16\|1st Phorm Energy 16oz]] | $2.75 | $2.39 | The Vitamin Shoppe | 2026-11-16 | $2.39 ❌ | The Vitamin Shoppe | → |
 | [[alani-nu-12\|Alani Nu Energy 12oz]] | $2.25 | $1.55 | Sam's Club | 2026-11-16 | $1.55 ❌ | Sam's Club | → |

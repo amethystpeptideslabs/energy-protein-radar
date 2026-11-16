@@ -74,10 +74,29 @@ def test_every_scan_plans_an_amazon_job(cfg, tmp_path):
     energy = {p.id for p in cfg.enabled("energy")}
     q = research_plan(cfg, s, "quick", "morning", "", None, date(2026, 11, 17))
     a = [j for j in q["jobs"] if j["label"] == "amazon"]
-    assert len(a) == 1 and "Amazon" in a[0]["task"] and "Sold by" in a[0]["task"]
+    assert len(a) == 1 and "Amazon" in a[0]["task"] and "seller" in a[0]["task"] and "7 days" in a[0]["task"]
     assert energy <= set(a[0]["product_ids"])                       # anything seen can be reported
     dp = research_plan(cfg, s, "deep", "morning", "", None, date(2026, 11, 19))
     ad = [j for j in dp["jobs"] if j["label"] == "amazon"][0]
     assert all(p.display_name in ad["task"] for p in cfg.enabled("energy"))   # deep: every energy drink
     m = research_plan(cfg, s, "quick", "midday", "", None, date(2026, 11, 19))
     assert any(j["label"] == "amazon" for j in m["jobs"])
+
+
+def test_amazon_pages_are_never_opened():
+    from radar.research import AMAZON_RULES
+    assert "never open amazon.com" in AMAZON_RULES.lower()
+    assert "built-in browser" not in AMAZON_RULES and "chrome" not in AMAZON_RULES.lower()
+
+
+def test_undated_deal_posts_are_rejected(cfg):
+    from radar.validate import validate_offers
+    u = "https://slickdeals.net/f/1-celsius-peach-vibe-amazon"
+    urls = {normalize_url(u): u}
+    base = {"product_id": "celsius-original-12", "retailer": "Amazon", "source_url": u, "pack_count": 12,
+            "pack_price": 13.99, "subscribe_save_pct": 5, "unit_size_oz": 12, "seller": "Amazon.com",
+            "evidence_text": "Amazon has 12-Pack 12-Oz Celsius Sparkling Energy Drink (Peach Vibe) for $13.99"}
+    kept, dropped = validate_offers([dict(base), dict(base, evidence_date="2026-11-12")], cfg, urls, {}, [],
+                                    date(2026, 11, 16))
+    assert len(kept) == 1 and kept[0]["evidence_date"] == "2026-11-12"
+    assert dropped[0]["drop_reason"] == "stale"

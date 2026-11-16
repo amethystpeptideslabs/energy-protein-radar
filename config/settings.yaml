@@ -211,3 +211,4 @@ deal_intel:
   - {name: Stack3d, domains: [stack3d.com], note: "Reliably posts Vitamin Shoppe/GNC $1 energy drink weekends"}
   - {name: PricePlow, domains: [priceplow.com]}
   - {name: Hip2Save, domains: [hip2save.com]}
+  - {name: Freestufffinder, domains: [freestufffinder.com]}

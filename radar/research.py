@@ -201,17 +201,16 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
 
 
 AMAZON_RULES = (
-    "Amazon has good energy-drink deals but also resellers and fake discounts, so check every listing:\n"
-    "1. Open each Amazon product page that came back in your search results (WebFetch; if Amazon blocks it, "
-    "the built-in browser on Reza's PC, one page at a time; if a CAPTCHA / 'enter the characters' page "
-    "appears, stop and never solve it; never add to cart).\n"
-    "2. pack_price = the one-time price for the exact pack shown (NOT 'Typical price' or 'List price'; put "
-    "that in regular_pack_price); pack_count from 'Pack of N' / 'N Count'; flavor; seller = the "
-    "'Ships from ... Sold by ...' text verbatim; subscribe_save_pct = the Subscribe & Save % shown; "
-    "coupon_clip_value ($) or coupon_clip_pct (%) for a clip coupon; membership_required true for "
-    "Prime-exclusive prices; ends for Lightning / limited-time deals.\n"
-    "3. Only Sold by Amazon.com or the brand's own store counts; skip third-party resellers, reseller "
-    "bundles and anything not exactly the tracked can size. Never report a deal you can't see live today.")
+    "Amazon blocks AI agents from its pages (robots rules and an 'Access restricted' notice), so never open "
+    "amazon.com pages in any browser and never WebFetch them. Get Amazon prices only from sources that quote "
+    "them: deal posts dated within the last 7 days (Slickdeals, Hip2Save, Freestufffinder, Stack3d...) and "
+    "Amazon search-result snippets that show a price.\n"
+    "Report: pack_price = the Amazon price the post gives for the exact pack (not 'Typical price' / 'List "
+    "price'; put that in regular_pack_price); pack_count; flavor; seller as the post states it ('Amazon has "
+    "...' = Amazon.com; skip third-party sellers); subscribe_save_pct = the S&S % the post uses; "
+    "coupon_clip_value ($) or coupon_clip_pct (%) for a clip coupon; membership_required true for Prime-only "
+    "or 'Select Accounts' prices; evidence_date = the post date; ends if the post gives one. Skip posts "
+    "marked expired and anything not exactly the tracked can size.")
 
 
 def _amazon_job(products: list[Product], mode: str, slot: str, r: dict[str, Any], today: date,
@@ -228,13 +227,13 @@ def _amazon_job(products: list[Product], mode: str, slot: str, r: dict[str, Any]
         n = max(1, int(r.get("focus_groups", {}).get("energy", 1)))
         group = energy[(today.toordinal() + 1) % n::n]
     if group:
-        lines = "\n".join(f"- {p.id} ({p.display_name}): search 'Amazon {p.search_terms[0]}'" for p in group)
-        what = (f"Scan Amazon for EVERY one of these energy drinks (one search each, or one search that "
-                f"returns several):\n{lines}\nAlso check Amazon's Today's Deals for energy drinks and "
-                f"Slickdeals posts about Amazon energy-drink deals from the last few days.")
+        lines = "\n".join(f"- {p.id} ({p.display_name})" for p in group)
+        what = (f"Find this week's Amazon prices for EVERY one of these energy drinks (one search each, e.g. "
+                f"'Slickdeals Amazon <brand> 12 pack', or one search that covers several):\n{lines}\nAlso "
+                f"search for this week's Amazon energy-drink deal posts (Slickdeals, Hip2Save).")
     else:
-        what = ("Check Amazon's Today's Deals / Lightning deals for energy drinks, protein bars and protein "
-                "shakes, and Slickdeals posts about Amazon deals on them from the last 24 hours.")
+        what = ("Search for Amazon deal posts from the last 24 hours (Slickdeals, Hip2Save) on energy drinks, "
+                "protein bars and protein shakes.")
     others = ", ".join(f"{p.id} ({p.display_name})" for p in products if p not in group)
     return ("amazon", [p.id for p in products],
             f"Today is {day}. AMAZON SWEEP. {what}\n{AMAZON_RULES}\nIf you come across an Amazon deal on "

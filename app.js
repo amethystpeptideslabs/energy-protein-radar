@@ -235,7 +235,7 @@ function dealCard(p, o) {
       <span class="deal-line">${esc(whereText(o))}</span>
       ${o.stock_note ? `<span class="deal-stock${isGone(o.stock_note) ? " oos" : ""}">${isGone(o.stock_note) ? "⚠️" : "✅"} ${esc(o.stock_note)}</span>` : ""}
       ${notes.length ? `<span class="deal-notes">${notes.map((n) => `<span>${esc(n)}</span>`).join("")}</span>` : ""}
-      ${o.seen_at ? `<span class="deal-checked">🕒 Price checked ${esc(relTime(o.seen_at))}</span>` : ""}
+      ${o.seen_at ? `<span class="deal-checked">🕒 ${o.source_kind !== "retailer" && o.evidence_date ? `Deal posted ${esc(new Date(o.evidence_date + "T12:00:00").toLocaleDateString([], { month: "short", day: "numeric" }))}, checked` : "Price checked"} ${esc(relTime(o.seen_at))}</span>` : ""}
       <span class="deal-open">${esc(openLabel(o))}</span>
     </a>
     ${(r.physical || stock || o.code) ? `<div class="deal-actions">

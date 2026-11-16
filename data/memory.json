@@ -109,15 +109,15 @@
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 1.38,
-    "retailer": "Sam's Club",
+    "unit_price": 1.16,
+    "retailer": "Amazon",
     "date": "2026-11-16",
-    "url": "https://www.samsclub.com/p/celsius-live-fit-sparkling-vibe-variety-pack-12-fl-oz-18-pk/P990402185",
+    "url": "https://www.freestufffinder.com/celsius-energy-drink-12-pack-for-13-shipped-at-amazon",
     "code": null
    },
    "last_best": {
-    "unit_price": 1.38,
-    "tier": "SOLID",
+    "unit_price": 1.16,
+    "tier": "HOT",
     "date": "2026-11-16"
    },
    "trend_30d": "flat"
@@ -1236,6 +1236,11 @@
    "fingerprint": "legendary-sweet-roll|vitamin-shoppe|1.75|",
    "sent_at": "2026-11-16T13:12:09-08:00",
    "priority": 4
+  },
+  {
+   "fingerprint": "celsius-original-12|amazon|1.16|",
+   "sent_at": "2026-11-16T14:27:39-08:00",
+   "priority": 5
   }
  ],
  "latest_run": {
@@ -1243,13 +1248,13 @@
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 0
+  "searches": 9
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 5,
-   "searches": 80
+   "runs": 6,
+   "searches": 89
   }
  },
  "budget_warning_month": null

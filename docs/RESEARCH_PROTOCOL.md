@@ -92,24 +92,22 @@ week, online and in store. Each run:
 ## 2d. Amazon sweep (every run, `amazon` job)
 
 Amazon often has good energy-drink deals (Subscribe & Save, clip coupons, Lightning deals) but also
-resellers and fake "was" prices. The `amazon` job lists which energy drinks to scan this run (deep
-runs: every one; quick runs: a rotating third; midday: Today's Deals / Lightning deals + Slickdeals
-posts from the last 24 hours).
+resellers and fake "was" prices. Amazon blocks AI agents from its pages (robots rules and an "Access
+restricted ... unauthorized AI agent" notice), so **never open amazon.com in any browser (built-in or
+Chrome) and never WebFetch it.** Amazon prices come only from sources that quote them:
 
-1. One WebSearch per product (e.g. "Amazon Celsius Essentials 16 oz 12 pack"), or one search that
-   returns several. Only Amazon product pages (`/dp/<ASIN>`) that came back in results count; any
-   URL with the same ASIN matches.
-2. Open each page: WebFetch, or if Amazon blocks it, the built-in browser on Reza's PC, one page at
-   a time. If a CAPTCHA / "enter the characters you see" page appears, stop; never solve it. Never
-   add to cart or buy.
-3. Report: `pack_price` = the one-time price of the exact pack (never "Typical price" / "List
-   price"; those go in `regular_pack_price`), `pack_count` from "Pack of N" / "N Count", `flavor`,
-   `seller` = the "Ships from ... Sold by ..." text verbatim, `subscribe_save_pct` = the S&S % shown,
-   `coupon_clip_value` ($) or `coupon_clip_pct` (%) for a clip coupon, `membership_required: true`
-   for Prime-exclusive prices, `ends` for Lightning / limited-time deals.
-4. Only "Sold by Amazon.com" or the brand's own store counts. `deal_hunter.py` drops third-party
-   resellers and hides any Amazon offer without a seller. Whether it's a good deal is decided the
-   same way as every store: Python prices the cart (coupon, S&S, CA CRV) and the $/can tiers decide.
+1. Deal posts dated within the last 7 days: Slickdeals, Hip2Save, Freestufffinder, Stack3d. The
+   `amazon` job lists which energy drinks to cover this run (deep: every one; quick: a rotating third;
+   midday: posts from the last 24 hours). One search per product or one that covers several.
+2. Amazon search-result snippets in WebSearch that show a price.
+3. Report: `pack_price` = the Amazon price the post gives for the exact pack (never "Typical/List
+   price"; that goes in `regular_pack_price`), `pack_count`, `flavor`, `seller` as the post states it
+   ("Amazon has ..." = Amazon.com), `subscribe_save_pct`, `coupon_clip_value` ($) or `coupon_clip_pct`
+   (%), `membership_required: true` for Prime-only / "Select Accounts" prices, `evidence_date` = the
+   post date, `ends` if given. Skip posts marked expired.
+4. `deal_hunter.py` drops undated deal posts, posts older than 7 days, third-party sellers, and hides
+   Amazon offers without a seller. Python prices the cart (coupon, S&S, CA CRV) and the same $/can
+   tiers decide whether it's a deal. Each card says when the deal was posted.
 
 ## 2c. No expired sales: re-check job (every run)
 

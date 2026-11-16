@@ -18,7 +18,7 @@ tags: [deal-radar]
 | 🍫 Legendary Protein Donuts | $1.87/pack | $7.49 for 4 | Target | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-donuts-cinnamon-crumble-20g-protein-8-9oz-4ct/-/A-94712220) |
 | 🍫 Built Puff | $1.54/bar | $19.98 for 13 📦 case | Sam's Club | 📍 Local pickup 🔒 | 🚨 STEAL | [Open deal](https://www.samsclub.com/ip/built-sour-puff-bars-variety-pack-13-ct/19583258714) |
 | ⚡ Celsius Essentials 16oz | $1.36/can | $16.34 for 12 📦 case | Walmart | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
-| ⚡ Celsius Original 12oz | $1.38/can | $24.88 for 18 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/p/celsius-live-fit-sparkling-vibe-variety-pack-12-fl-oz-18-pk/P990402185) |
+| ⚡ Celsius Original 12oz (Peach Vibe) | $1.16/can | $13.89 for 12 📦 case | Amazon | 🚚 Ships to you | 🔥 HOT 🏆 | [Open deal](https://www.freestufffinder.com/celsius-energy-drink-12-pack-for-13-shipped-at-amazon) |
 | 🍫 FITCRUNCH Bar (16g) | $1.25/bar | $22.48 for 18 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/ip/Chef-Robert-Irvine-s-FITCRUNCH-High-Protein-Baked-Bars-Variety-Pack-1-62-oz-18-ct/81771902116) |
 | 🍫 RAW Protein Bar | $2.48/bar | $29.74 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/e/exclusive/food-drinks/foods) |
 | 🍫 1st Phorm Level-1 Bar | $2.55/bar | $38.24 for 15 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 2 In Stock; Brea: 1 In Stock (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364) |
@@ -49,7 +49,7 @@ tags: [deal-radar]
 | ⚡ Gorilla Mind Energy 16oz | $2.53/can | $30.34 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.92 | $2.53 | [Open deal](https://www.vitaminshoppe.com/c/ready-to-drink-bars-snacks/protein-fitness/drinks-snacks/energy-drinks/brand/gorilla-mind) |
 | ⚡ RAW Bum Energy 12oz | $2.05/can | $24.59 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.50 | $2.05 | [Open deal](https://www.vitaminshoppe.com/c/ready-to-drink-bars-snacks/protein-fitness/brand/bum-energy) |
 | ⚡ Celsius Essentials 16oz | $1.36/can | $16.34 for 12 📦 | Walmart | 🔥 HOT | $2.50 | $1.36 | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
-| ⚡ Celsius Original 12oz | $1.38/can | $24.88 for 18 📦 | Sam's Club | ✅ SOLID | $1.67 | $1.38 | [Open deal](https://www.samsclub.com/p/celsius-live-fit-sparkling-vibe-variety-pack-12-fl-oz-18-pk/P990402185) |
+| ⚡ Celsius Original 12oz | $1.16/can | $13.89 for 12 📦 | Amazon | 🔥 HOT | $1.67 | $1.16 | [Open deal](https://www.freestufffinder.com/celsius-energy-drink-12-pack-for-13-shipped-at-amazon) |
 | ⚡ Bang Energy 16oz | $4.21/can | $50.49 for 12 📦 | Walmart | ❌ SKIP | $4.58 | $4.21 | [Open deal](https://www.walmart.com/ip/1216905444) |
 | ⚡ 1st Phorm Energy 16oz | $2.39/can | $28.64 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.75 | $2.39 | [Open deal](https://www.vitaminshoppe.com/p/blue-raspberry-rtd-blue-raspberry-12-drink-s/1ph0017) |
 | ⚡ Alani Nu Energy 12oz | $1.55/can | $18.58 for 12 📦 | Sam's Club | ❌ SKIP | $2.25 | $1.55 | [Open deal](https://www.samsclub.com/ip/19590672442) |

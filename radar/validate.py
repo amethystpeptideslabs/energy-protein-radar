@@ -154,6 +154,9 @@ def validate_offers(raw: list[dict[str, Any]], cfg: Config, url_map: dict[str, s
         if why:
             drop(o, "unofficial_source", why)
             continue
+        if kind == "deal_intel" and not o["evidence_date"]:   # no expired sales: a deal post must be dated
+            drop(o, "stale", "deal post has no date")
+            continue
         if retailer_key == "amazon" and amazon_seller_status(o, product) == "third_party":
             drop(o, "third_party_seller", (o.get("seller") or "")[:80])   # resellers: not a real deal
             continue

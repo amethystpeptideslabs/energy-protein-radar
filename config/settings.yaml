@@ -212,3 +212,4 @@ deal_intel:
   - {name: PricePlow, domains: [priceplow.com]}
   - {name: Hip2Save, domains: [hip2save.com]}
   - {name: Freestufffinder, domains: [freestufffinder.com]}
+  - {name: Dealnews, domains: [dealnews.com]}

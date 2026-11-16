@@ -89,6 +89,28 @@ week, online and in store. Each run:
 5. Orange County only: `local_store` and `stock_note` must name an OC city or store. Anything else
    is dropped (`out_of_area`) or cleared by `deal_hunter.py`.
 
+## 2d. Amazon sweep (every run, `amazon` job)
+
+Amazon often has good energy-drink deals (Subscribe & Save, clip coupons, Lightning deals) but also
+resellers and fake "was" prices. The `amazon` job lists which energy drinks to scan this run (deep
+runs: every one; quick runs: a rotating third; midday: Today's Deals / Lightning deals + Slickdeals
+posts from the last 24 hours).
+
+1. One WebSearch per product (e.g. "Amazon Celsius Essentials 16 oz 12 pack"), or one search that
+   returns several. Only Amazon product pages (`/dp/<ASIN>`) that came back in results count; any
+   URL with the same ASIN matches.
+2. Open each page: WebFetch, or if Amazon blocks it, the built-in browser on Reza's PC, one page at
+   a time. If a CAPTCHA / "enter the characters you see" page appears, stop; never solve it. Never
+   add to cart or buy.
+3. Report: `pack_price` = the one-time price of the exact pack (never "Typical price" / "List
+   price"; those go in `regular_pack_price`), `pack_count` from "Pack of N" / "N Count", `flavor`,
+   `seller` = the "Ships from ... Sold by ..." text verbatim, `subscribe_save_pct` = the S&S % shown,
+   `coupon_clip_value` ($) or `coupon_clip_pct` (%) for a clip coupon, `membership_required: true`
+   for Prime-exclusive prices, `ends` for Lightning / limited-time deals.
+4. Only "Sold by Amazon.com" or the brand's own store counts. `deal_hunter.py` drops third-party
+   resellers and hides any Amazon offer without a seller. Whether it's a good deal is decided the
+   same way as every store: Python prices the cart (coupon, S&S, CA CRV) and the $/can tiers decide.
+
 ## 2c. No expired sales: re-check job (every run)
 
 The plan's last job is `verify`: every sale and deal the app is showing right now (BOGO, % off,
@@ -142,6 +164,8 @@ far, so a long session never loses work. Format:
           "code_stackable": false,
           "subscribe_save_pct": 0,
           "coupon_clip_value": 0,
+          "coupon_clip_pct": 0,
+          "seller": "",
           "shipping_cost": 0,
           "free_shipping_min": 0,
           "in_store_only": false,
@@ -168,6 +192,8 @@ Field rules (same as the API extractor in `radar/extract.py`):
   `promo_value: 1`, `pack_count: 1`; "3 for $10" → `multi_buy`, `min_qty: 3`, `promo_value: 10`;
   an automatic "15% off" → `pct_off`, `promo_value: 15`.
 - Subscribe & Save / Auto-Delivery % → `subscribe_save_pct` (not a promo).
+- Clip coupons: dollars → `coupon_clip_value`, percent ("Save 20% with coupon") → `coupon_clip_pct`.
+- Marketplaces (Amazon): `seller` = the "Ships from ... Sold by ..." text verbatim.
 - Costco, Sam's Club, GNC Pro Access → `membership_required: true`.
 - `stock_note`: only when a page explicitly shows store-level availability near Orange County, CA
   (e.g. "In stock at Target Mission Viejo, pickup today", "Limited stock at Costco Laguna Niguel").

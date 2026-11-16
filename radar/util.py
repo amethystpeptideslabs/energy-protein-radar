@@ -7,6 +7,7 @@ import tempfile
 from datetime import date, datetime, timedelta
 from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
+import re
 from typing import Any
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from zoneinfo import ZoneInfo
@@ -14,6 +15,7 @@ from zoneinfo import ZoneInfo
 TZ = ZoneInfo("America/Los_Angeles")
 CENT = Decimal("0.01")
 
+AMAZON_ASIN_RE = re.compile(r"/(?:dp|gp/product|gp/aw/d|product)/([A-Za-z0-9]{10})(?:[/?]|$)")
 TRACKING_PARAMS = {"gclid", "fbclid", "mc_cid", "mc_eid", "ref", "ref_", "tag", "srsltid", "_ga"}
 
 
@@ -72,6 +74,10 @@ def normalize_url(url: str) -> str:
     host = (parts.hostname or "").lower()
     if host.startswith("www."):
         host = host[4:]
+    if host == "amazon.com" or host.endswith(".amazon.com"):   # same product whatever slug/ref/variant query
+        m = AMAZON_ASIN_RE.search(parts.path)
+        if m:
+            return f"https://amazon.com/dp/{m.group(1).upper()}"
     query = [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True)
              if not k.lower().startswith("utm_") and k.lower() not in TRACKING_PARAMS]
     path = parts.path.rstrip("/") or "/"

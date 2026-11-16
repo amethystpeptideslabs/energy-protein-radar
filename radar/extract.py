@@ -36,6 +36,8 @@ OFFER_FIELDS: dict[str, dict[str, Any]] = {
     "code_stackable": {"type": "boolean", "description": "True only if the source says the code stacks with the promo."},
     "subscribe_save_pct": {"type": "number", "description": "Subscribe & Save / Auto-Delivery percent, else 0."},
     "coupon_clip_value": {"type": "number", "description": "Clip coupon dollars, else 0."},
+    "coupon_clip_pct": {"type": "number", "description": "Clip coupon percent (e.g. Amazon 'Save 20% with coupon'), else 0."},
+    "seller": {"type": "string", "description": "Seller text verbatim for marketplaces (Amazon 'Ships from ... Sold by ...'), else ''."},
     "shipping_cost": {"type": "number", "description": "Shipping $ at this cart size, 0 if free/unknown/in-store."},
     "free_shipping_min": {"type": "number", "description": "Order $ for free shipping, else 0."},
     "in_store_only": {"type": "boolean"},

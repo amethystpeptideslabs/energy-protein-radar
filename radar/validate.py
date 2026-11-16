@@ -7,7 +7,7 @@ from datetime import date, timedelta
 from typing import Any
 
 from .config import Config
-from .pricing import is_sale
+from .pricing import amazon_seller_status, is_sale
 from .util import normalize_url, parse_date, url_host
 
 SIZE_RE = re.compile(r"(\d{1,2}(?:\.\d)?)\s*-?\s*(?:fl\.?\s*)?oz\b", re.I)
@@ -154,6 +154,9 @@ def validate_offers(raw: list[dict[str, Any]], cfg: Config, url_map: dict[str, s
         if why:
             drop(o, "unofficial_source", why)
             continue
+        if retailer_key == "amazon" and amazon_seller_status(o, product) == "third_party":
+            drop(o, "third_party_seller", (o.get("seller") or "")[:80])   # resellers: not a real deal
+            continue
         # store-specific deals and stock must be in Orange County; online prices stay
         if cfg.settings.get("home_area_cities"):
             ls = (o.get("local_store") or "").strip()
@@ -212,6 +215,10 @@ def flag_unverified(priced: list[dict[str, Any]], cfg: Config) -> None:
             and abs(p["unit_price"] - o["unit_price"]) <= tol * o["unit_price"]
             for p in priced)
         o["unverified"] = not corroborated
+    for o in priced:   # Amazon: hidden until a page shows it's sold by Amazon.com or the brand
+        if o.get("retailer_key") == "amazon" and \
+                amazon_seller_status(o, cfg.products.get(o["product_id"])) == "unknown":
+            o["unverified"] = True
 
 
 def dead_codes_from_reports(reports: list[dict[str, Any]], url_map: dict[str, str],

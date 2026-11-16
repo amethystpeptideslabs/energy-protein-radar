@@ -71,7 +71,8 @@ pack: <units per pack and size>
 promo: <mechanics, or none>
 code: <code + who reported it and when, or none>
 subscribe_save: <% if offered, else none>
-coupon: <clip coupon value, else none>
+coupon: <clip coupon $ or %, else none>
+seller: <marketplace seller text, e.g. "Ships from Amazon.com, Sold by Amazon.com", else none>
 shipping: <cost and free-shipping minimum, or in-store>
 restrictions: <in-store only / membership / limit / min qty / none>
 dates: <posted date; promo start/end if known>
@@ -195,7 +196,50 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
                          f"Today is {day}. Find the best CURRENT deals for these {CATEGORY_LABEL[cat]} "
                          f"products:\n{lines}{also}\n{focus}\nPrioritize the biggest discounts. Report every "
                          f"concrete sourced offer as OFFER blocks.", max_uses))
+    jobs.append(_amazon_job(products, mode, slot, r, today, day, max_uses))
     return jobs
+
+
+AMAZON_RULES = (
+    "Amazon has good energy-drink deals but also resellers and fake discounts, so check every listing:\n"
+    "1. Open each Amazon product page that came back in your search results (WebFetch; if Amazon blocks it, "
+    "the built-in browser on Reza's PC, one page at a time; if a CAPTCHA / 'enter the characters' page "
+    "appears, stop and never solve it; never add to cart).\n"
+    "2. pack_price = the one-time price for the exact pack shown (NOT 'Typical price' or 'List price'; put "
+    "that in regular_pack_price); pack_count from 'Pack of N' / 'N Count'; flavor; seller = the "
+    "'Ships from ... Sold by ...' text verbatim; subscribe_save_pct = the Subscribe & Save % shown; "
+    "coupon_clip_value ($) or coupon_clip_pct (%) for a clip coupon; membership_required true for "
+    "Prime-exclusive prices; ends for Lightning / limited-time deals.\n"
+    "3. Only Sold by Amazon.com or the brand's own store counts; skip third-party resellers, reseller "
+    "bundles and anything not exactly the tracked can size. Never report a deal you can't see live today.")
+
+
+def _amazon_job(products: list[Product], mode: str, slot: str, r: dict[str, Any], today: date,
+                day: str, max_uses: int) -> tuple[str, list[str], str, int]:
+    """Amazon sweep every scan: deep runs cover every tracked energy drink, quick runs a rotating
+    slice (offset from the main energy job so more brands get looked at), midday runs Amazon's
+    deal pages. Anything tracked that turns up can be reported."""
+    energy = [p for p in products if p.category == "energy"]
+    if mode == "deep_cat":
+        group = energy
+    elif slot == "midday":
+        group = []
+    else:
+        n = max(1, int(r.get("focus_groups", {}).get("energy", 1)))
+        group = energy[(today.toordinal() + 1) % n::n]
+    if group:
+        lines = "\n".join(f"- {p.id} ({p.display_name}): search 'Amazon {p.search_terms[0]}'" for p in group)
+        what = (f"Scan Amazon for EVERY one of these energy drinks (one search each, or one search that "
+                f"returns several):\n{lines}\nAlso check Amazon's Today's Deals for energy drinks and "
+                f"Slickdeals posts about Amazon energy-drink deals from the last few days.")
+    else:
+        what = ("Check Amazon's Today's Deals / Lightning deals for energy drinks, protein bars and protein "
+                "shakes, and Slickdeals posts about Amazon deals on them from the last 24 hours.")
+    others = ", ".join(f"{p.id} ({p.display_name})" for p in products if p not in group)
+    return ("amazon", [p.id for p in products],
+            f"Today is {day}. AMAZON SWEEP. {what}\n{AMAZON_RULES}\nIf you come across an Amazon deal on "
+            f"another tracked product, report it too: {others}.\nReport every concrete sourced offer as "
+            f"OFFER blocks.", max_uses)
 
 
 def _category_groups(cat: str, ps: list[Product], mode: str, slot: str, r: dict[str, Any],

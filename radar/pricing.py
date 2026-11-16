@@ -137,6 +137,11 @@ def build_cart(o: dict[str, Any], product: Product, crv_cfg: dict[str, Any]) -> 
         amt = max(ZERO, amt - clip)
         cart.steps.append(f"Clip ${cents(clip)} coupon → ${cents(amt)}")
 
+    cpct = _num(o, "coupon_clip_pct")
+    if cpct > 0:
+        amt = amt * (1 - cpct / 100)
+        cart.steps.append(f"Clip {cpct.normalize()}% coupon → ${cents(amt)}")
+
     sns = _num(o, "subscribe_save_pct")
     if sns > 0:
         amt = amt * (1 - sns / 100)
@@ -207,7 +212,8 @@ def regular_unit_price(o: dict[str, Any]) -> Decimal | None:
         return cents(reg / count)
     promo = o.get("promo_type") or "none"
     if promo == "none" and not (o.get("code") or "").strip() and _num(o, "coupon_clip_value") == 0 \
-            and _num(o, "subscribe_save_pct") == 0 and not o.get("is_sale_price"):
+            and _num(o, "coupon_clip_pct") == 0 and _num(o, "subscribe_save_pct") == 0 \
+            and not o.get("is_sale_price"):
         p = _num(o, "pack_price")
         return cents(p / count) if p > 0 else None
     return None
@@ -232,10 +238,23 @@ def is_sale(offer: dict[str, Any]) -> bool:
     """Any temporary price: a promo, sale/rollback price, code, clip coupon or a shown was-price."""
     if (offer.get("promo_type") or "none") != "none" or offer.get("is_sale_price") or offer.get("code"):
         return True
-    if _f(offer.get("coupon_clip_value")) > 0:
+    if _f(offer.get("coupon_clip_value")) > 0 or _f(offer.get("coupon_clip_pct")) > 0:
         return True
     reg, pack = _f(offer.get("regular_pack_price")), _f(offer.get("pack_price"))
     return reg > pack > 0
+
+
+def amazon_seller_status(offer: dict[str, Any], product: Any) -> str:
+    """'ok' (Amazon.com or the brand's own store), 'third_party' (reseller) or 'unknown'."""
+    seller = (offer.get("seller") or "").strip().lower()
+    if not seller:
+        return "unknown"
+    m = re.search(r"sold by[:\s]+(.+)", seller)
+    sold = (m.group(1) if m else seller).strip(" .,")
+    names = {"amazon"} | {a.lower() for a in (getattr(product, "aliases", None) or [])}
+    if product is not None:
+        names |= {product.brand.lower()}
+    return "ok" if any(n and n in sold for n in names) else "third_party"
 
 
 def is_live_deal(offer: dict[str, Any]) -> bool:

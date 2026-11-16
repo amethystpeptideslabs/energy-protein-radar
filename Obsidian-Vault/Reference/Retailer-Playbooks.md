@@ -40,7 +40,7 @@
 
 ## Amazon
 - Domains: amazon.com
-- Clip coupon + Subscribe & Save (5%, or 15% with 5+ subscriptions in one delivery). Prime free shipping.
+- Clip coupon + Subscribe & Save (5%, or 15% with 5+ subscriptions in one delivery). Prime free shipping. Only Sold by Amazon.com or the brand's own store counts.
 
 ## Walmart
 - Domains: walmart.com

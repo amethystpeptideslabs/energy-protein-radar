@@ -51,13 +51,13 @@ def test_quick_and_deep_plans_are_per_category(cfg, tmp_path):
     from radar.pipeline import research_plan
     s = State.load(tmp_path, cfg)
     q = research_plan(cfg, s, "quick", "morning", "", None, date(2026, 11, 17))
-    assert [j["label"] for j in q["jobs"]] == ["energy", "snack", "rtd"] and q["total_search_budget"] == 21
+    assert [j["label"] for j in q["jobs"]] == ["energy", "snack", "rtd", "amazon"] and q["total_search_budget"] == 27
     dp = research_plan(cfg, s, "deep", "morning", "", None, date(2026, 11, 19))
-    assert [j["label"] for j in dp["jobs"]] == ["energy-1", "energy-2", "snack-1", "snack-2", "rtd"]
-    assert dp["total_search_budget"] == 48 and "DEEP RUN" in dp["jobs"][0]["task"]
+    assert [j["label"] for j in dp["jobs"]] == ["energy-1", "energy-2", "snack-1", "snack-2", "rtd", "amazon"]
+    assert dp["total_search_budget"] == 60 and "DEEP RUN" in dp["jobs"][0]["task"]
     assert sorted(sum((j["product_ids"] for j in dp["jobs"][:2]), [])) == sorted(p.id for p in cfg.enabled("energy"))
     m = research_plan(cfg, s, "quick", "midday", "", None, date(2026, 11, 19))
-    assert m["total_search_budget"] == 16 and "WEEKEND" in m["jobs"][0]["task"]
+    assert m["total_search_budget"] == 19 and "WEEKEND" in m["jobs"][0]["task"]
 
 
 def test_quick_energy_focus_rotates_through_every_brand(cfg, tmp_path):

@@ -81,6 +81,10 @@ python -m http.server               # then open http://localhost:8000
   on, one page at a time; a bot check stops the store check for that run (never solved). Store-specific
   deals and stock notes must be in Orange County; a deal ranks last and never alerts only when no
   checked store has it.
+- Amazon is swept every scan (`amazon` job): deep runs check every tracked energy drink, quick runs a
+  rotating third, midday Amazon's Today's Deals. Only Sold by Amazon.com or the brand's store counts
+  (resellers dropped, unknown seller hidden); clip coupons ($ or %) and Subscribe & Save are priced in,
+  and the same $/can tiers decide whether it's a deal.
 - No expired sales: every scan re-checks each live sale and deal on its store page (`verify` job).
   A sale or deal no scan re-confirmed in 20 hours drops off, as do sales past their end date or not
   started yet; sale evidence older than 7 days is rejected. The app hides anything not confirmed in

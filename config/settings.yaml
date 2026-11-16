@@ -79,7 +79,7 @@ research:
     quick: 6                   # rtd
     quick_energy: 8            # energy (27 brands, rotating focus)
     quick_snack: 7             # snacks (15 products, rotating focus)
-    midday: 5                  # snack, rtd (Thu/Fri weekend-promo check)
+    midday: 5                  # snack, rtd (daily midday sale check)
     midday_energy: 6
     deep: 12                   # rtd (Mon/Thu)
     deep_energy: 10            # per energy job (deep runs split energy into deep_jobs.energy jobs)
@@ -87,6 +87,9 @@ research:
     calibrate: 2               # per product (first full calibrate only)
     calibrate_new: 2           # per newly added product, once
     deep_single: 3             # --only <product>
+    quick_amazon: 6            # Amazon sweep: rotating third of the energy drinks + deal pages
+    midday_amazon: 3           # Amazon Today's Deals / Lightning deals + fresh Slickdeals posts
+    deep_amazon: 12            # every tracked energy drink on Amazon
   focus_groups: {energy: 3, snack: 2}   # quick runs research 1/N of the category in depth (rotates daily)
   deep_jobs: {energy: 2, snack: 2}      # deep runs split the category into N jobs
   calibrate_new_per_run: 6     # newly added products calibrated per run until all are done
@@ -173,7 +176,7 @@ retailers:
   iherb: {physical: false, name: iHerb, domains: [iherb.com], type: supplement, playbook: "New-customer and sitewide codes; free shipping thresholds."}
   vitacost: {physical: false, name: Vitacost, domains: [vitacost.com], type: supplement, playbook: "Sitewide % codes; Autoship 5%."}
   amazon: {physical: false, stock_search: "https://www.amazon.com/s?k={q}", name: Amazon, domains: [amazon.com], type: big-box,
-    playbook: "Clip coupon + Subscribe & Save (5%, or 15% with 5+ subscriptions in one delivery). Prime free shipping."}
+    playbook: "Clip coupon + Subscribe & Save (5%, or 15% with 5+ subscriptions in one delivery). Prime free shipping. Only Sold by Amazon.com or the brand's own store counts."}
   walmart: {physical: true, pickup: true, stock_search: "https://www.walmart.com/search?q={q}", name: Walmart, domains: [walmart.com], type: big-box, playbook: "Rollbacks; free shipping $35+ or Walmart+ (🔒)."}
   target: {physical: true, pickup: true, stock_search: "https://www.target.com/s?searchTerm={q}", name: Target, domains: [target.com], type: big-box, playbook: "Target Circle offers (free to join) stack with sales; Circle Card 5% off."}
   costco: {physical: true, pickup: false, official_source_only: true, name: Costco, domains: [costco.com], type: club, membership: true, playbook: "Membership required (🔒). Monthly instant savings coupons; online prices higher than warehouse."}

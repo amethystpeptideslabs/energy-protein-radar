@@ -65,7 +65,7 @@ _Updated 2026-11-16 after the quick run._
 
 | Product | Ref $/unit | All-time low | Record at | Record date | Today's best | Best retailer now | 30d |
 |---|---|---|---|---|---|---|---|
-| [[raw-protein-rtd\|RAW Protein Shake 12oz]] | $4.17 | $2.66 | The Vitamin Shoppe | 2026-11-16 | $2.66 🚨 | The Vitamin Shoppe | → |
+| [[raw-protein-rtd\|RAW Protein Shake 12oz]] | $4.17 | $2.66 | The Vitamin Shoppe | 2026-11-16 | $4.17 ❌ | GNC | → |
 | [[isopure-zc-40\|Isopure Zero Carb RTD 20oz (40g)]] | $5.82 |  |  |  | — |  | → |
 | [[isopure-zc-32\|Isopure Zero Carb RTD 16.9oz (32g)]] | $5.21 | $4.63 | GNC | 2026-11-16 | $4.63 ✅ | GNC | → |
 | [[core-power-26\|Fairlife Core Power 26g]] | $3.49 | $3.17 | Target | 2026-11-16 | $3.17 ❌ | Target | → |

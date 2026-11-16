@@ -2,7 +2,7 @@
 date: 2026-11-16
 run_mode: quick
 status: ok
-deals: 18
+deals: 16
 tags: [deal-radar]
 ---
 
@@ -17,29 +17,27 @@ tags: [deal-radar]
 | 🥤 Quest Protein Shake | $2.22/bottle | $8.89 for 4 | Target | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.target.com/p/-/A-76628735) |
 | 🍫 Legendary Protein Donuts | $1.87/pack | $7.49 for 4 | Target | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-donuts-cinnamon-crumble-20g-protein-8-9oz-4ct/-/A-94712220) |
 | 🍫 Built Puff | $1.54/bar | $19.98 for 13 📦 case | Sam's Club | 📍 Local pickup 🔒 | 🚨 STEAL | [Open deal](https://www.samsclub.com/ip/built-sour-puff-bars-variety-pack-13-ct/19583258714) |
-| 🥤 RAW Protein Shake 12oz | $2.66/bottle | $31.87 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-shake-chocolate-milkshake-12-bottle-s/grw-13229) |
 | ⚡ Celsius Essentials 16oz | $1.36/can | $16.34 for 12 📦 case | Walmart | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
 | ⚡ Celsius Original 12oz | $1.38/can | $24.88 for 18 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/p/celsius-live-fit-sparkling-vibe-variety-pack-12-fl-oz-18-pk/P990402185) |
 | 🍫 FITCRUNCH Bar (16g) | $1.25/bar | $22.48 for 18 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/ip/Chef-Robert-Irvine-s-FITCRUNCH-High-Protein-Baked-Bars-Variety-Pack-1-62-oz-18-ct/81771902116) |
 | 🍫 RAW Protein Bar | $2.48/bar | $29.74 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/e/exclusive/food-drinks/foods) |
-| 🍫 1st Phorm Level-1 Bar | $2.55/bar | $38.24 for 15 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364) |
-| 🍫 Prime Bites Protein Brownie | $2.83/brownie | $33.99 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/prime-bites-protein-brownie-glazed-cinnamon-roll-12-brownies/aps-10699?store=73) |
+| 🍫 1st Phorm Level-1 Bar | $2.55/bar | $38.24 for 15 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 2 In Stock; Brea: 1 In Stock (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364) |
+| 🍫 Prime Bites Protein Brownie | $2.83/brownie | $33.99 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 2 In Stock; Brea: 1 In Stock (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/prime-bites-protein-brownie-glazed-cinnamon-roll-12-brownies/aps-10699?store=73) |
 | 🍫 Quest Protein Bar | $2.08/bar | $24.99 for 12 📦 case | Target | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.target.com/p/-/A-53111667) |
 | 🍫 Magic Spoon Protein Pastry | $2.13/pastry | $8.53 for 4 | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/19124451285) |
 | 🍫 Quest Protein Chips | $1.76/bag | $24.68 for 14 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/s/quest+chips) |
 | 🥤 Isopure Zero Carb RTD 16.9oz (32g) | $4.63/bottle | $55.59 for 12 📦 case | GNC | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
 | 🥤 Oikos Pro Shake | $1.83/bottle | $21.99 for 12 📦 case | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/16113764509) |
 | 🍫 Barebells Soft Bar (16g) | $2.33/bar | $27.99 for 12 📦 case | Muscle & Strength | 🚚 Ships to you | ✅ SOLID | [Open deal](https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html) |
-| 🍫 Legendary Protein Sweet Roll | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 🏬 In store (local) ⚠️ Vitamin Shoppe page: Product Discontinued, clearance while supplies last; call the Orange store (checked Nov 16) | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
-| ⚡ RAW Bum Energy 12oz (Citrus Burst) | $1.30/can | $15.64 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup ⚠️ Orange pick-up: Out of Stock; not available to ship (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/bum-energy-citrus-burst-12-drink-s/bum-11570) |
+| 🍫 Legendary Protein Sweet Roll | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 🏬 In store (local) ⚠️ Vitamin Shoppe page: Product Discontinued, clearance while supplies last; no pick-up shown, call Orange or Brea (checked Nov 16) | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
 
 ## 🎁 BOGO & sales right now
 
 | Deal | Per unit | You pay | Store | Where | Promo | Link |
 |---|---|---|---|---|---|---|
-| ⚡ Bloom Sparkling Energy 12oz (Strawberry Watermelon) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 1 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-watermelon-12-drink-s/bmn-17135) |
-| ⚡ Alani Nu Energy 12oz (Cherry Slush) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 6 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/alani-nu-energy-cherry-slush-12-drink-s/ala0047) |
-| ⚡ Alani Nu Energy 12oz (Hawaiian Shaved Ice) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 4 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/energy-hawaiian-shaved-ice-12-drink-s/ala0015) |
+| ⚡ Bloom Sparkling Energy 12oz (Strawberry Watermelon) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 1 In Stock; Brea: 2 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-watermelon-12-drink-s/bmn-17135) |
+| ⚡ Alani Nu Energy 12oz (Cherry Slush) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 6 In Stock; Brea: 7 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/alani-nu-energy-cherry-slush-12-drink-s/ala0047) |
+| ⚡ Alani Nu Energy 12oz (Hawaiian Shaved Ice) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Orange pick-up: 4 In Stock; Brea: 6 In Stock (checked Nov 16) | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/energy-hawaiian-shaved-ice-12-drink-s/ala0015) |
 | ⚡ RAW Bum Energy 12oz | $2.05/can | $24.59 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🏷️ Sale | [Open deal](https://www.vitaminshoppe.com/c/ready-to-drink-bars-snacks/protein-fitness/brand/bum-energy) |
 
 ## 📋 All products today
@@ -93,7 +91,7 @@ tags: [deal-radar]
 | 🍫 Barebells Soft Bar (16g) | $2.33/bar | $27.99 for 12 📦 | Muscle & Strength | ✅ SOLID | $2.83 | $2.33 | [Open deal](https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html) |
 | 🍫 MET-Rx Big 100 Bar (30g) | $4.20/bar | $37.83 for 9 | Vitacost | ❌ SKIP | $4.20 | $4.20 | [Open deal](https://www.vitacost.com/products/met-rx-big-100-meal-replacement-bar-salted-caramel-brownie-crunch-9-bars-3-52-oz-100-g-each-136362) |
 | 🍫 RAW Protein Bar | $2.48/bar | $29.74 for 12 📦 | The Vitamin Shoppe | ✅ SOLID | $2.92 | $2.48 | [Open deal](https://www.vitaminshoppe.com/e/exclusive/food-drinks/foods) |
-| 🥤 RAW Protein Shake 12oz | $2.66/bottle | $31.87 for 12 📦 | The Vitamin Shoppe | 🚨 STEAL | $4.17 | $2.66 | [Open deal](https://www.vitaminshoppe.com/p/protein-shake-chocolate-milkshake-12-bottle-s/grw-13229) |
+| 🥤 RAW Protein Shake 12oz | $4.17/bottle | $49.99 for 12 📦 | GNC | ❌ SKIP | $4.17 | $2.66 | [Open deal](https://www.gnc.com/protein-shakes/raw-nutrition-protein-shake-rtd.html) |
 | 🥤 Isopure Zero Carb RTD 20oz (40g) | no offer found |  |  |  | $5.82 |  |  |
 | 🥤 Isopure Zero Carb RTD 16.9oz (32g) | $4.63/bottle | $55.59 for 12 📦 | GNC | ✅ SOLID | $5.21 | $4.63 | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
 | 🥤 Fairlife Core Power 26g | $3.17/bottle | $37.99 for 12 📦 | Target | ❌ SKIP | $3.49 | $3.17 | [Open deal](https://www.target.com/p/-/A-1001044412) |

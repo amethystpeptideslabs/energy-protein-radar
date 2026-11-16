@@ -386,8 +386,8 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.66,
-    "tier": "STEAL",
+    "unit_price": 4.17,
+    "tier": "SKIP",
     "date": "2026-11-16"
    },
    "trend_30d": "flat"
@@ -1248,8 +1248,8 @@
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 4,
-   "searches": 77
+   "runs": 5,
+   "searches": 80
   }
  },
  "budget_warning_month": null

@@ -44,7 +44,7 @@ prices:
 budget:
   monthly_usd_default: 40      # overridden by MONTHLY_BUDGET_USD env if set
   downgrade_at_pct: 80         # deep -> quick above this share of the cap
-  max_run_usd: 6.00            # hard stop for a single run (safety)
+  max_run_usd: 8.00            # hard stop for a single run (safety; calibrate is the priciest)
 
 # ---------------------------------------------------------------- run modes
 schedule:

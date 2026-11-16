@@ -14,6 +14,15 @@ from radar.config import load_config  # noqa: E402
 _CFG = load_config(ROOT)
 
 
+@pytest.fixture(autouse=True)
+def isolated_env(monkeypatch):
+    """Tests must not depend on the CI event, schedule slot or real secrets."""
+    for k in ("GITHUB_EVENT_NAME", "DEAL_RADAR_SCHEDULE", "GITHUB_OUTPUT", "NTFY_TOPIC",
+              "ANTHROPIC_API_KEY", "MONTHLY_BUDGET_USD"):
+        monkeypatch.delenv(k, raising=False)
+    monkeypatch.setenv("DEAL_RADAR_NOW", "2026-11-16T07:17:00-08:00")
+
+
 @pytest.fixture
 def cfg():
     c = copy.deepcopy(_CFG)

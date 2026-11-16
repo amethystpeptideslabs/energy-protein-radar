@@ -13,7 +13,7 @@ def test_dry_run_end_to_end(tmp_path, monkeypatch, capsys):
     # built at runtime so the pre-commit secret scanner never sees a key-shaped literal
     monkeypatch.setenv("NTFY_TOPIC", "deal-" + "radar-" + "SHOULD_NEVER_BE_WRITTEN_123456")
     monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-" + "ant-" + "api03-" + "SHOULDNEVERBEWRITTEN" + "x" * 12)
-    r = run(RunOptions(dry_run=True, out=tmp_path))
+    r = run(RunOptions(dry_run=True, out=tmp_path, slot="morning"))
     assert r.status == "ok" and r.mode == "calibrate"
     data = tmp_path / "data"
     for f in ("memory.json", "latest.json", "history.json", "status.json", "offers.json"):
@@ -48,5 +48,5 @@ def test_dry_run_end_to_end(tmp_path, monkeypatch, capsys):
     assert "[ntfy mock]" in out and "SHOULD_NEVER_BE_WRITTEN" not in out
 
     # second run the same day: not first run anymore -> deep (Monday), records stay silent at same prices
-    r2 = run(RunOptions(dry_run=True, out=tmp_path))
+    r2 = run(RunOptions(dry_run=True, out=tmp_path, slot="morning"))
     assert r2.mode == "deep" and r2.status == "ok"

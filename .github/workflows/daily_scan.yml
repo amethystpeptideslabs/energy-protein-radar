@@ -21,12 +21,11 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: deal-radar
-  cancel-in-progress: false
-
 jobs:
   scan:
+    concurrency:            # one scan at a time; queued runs wait, never cancel
+      group: deal-radar-scan
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:

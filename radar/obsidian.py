@@ -112,7 +112,7 @@ def write_drive_note(vault: Path, cfg: Config, run: dict[str, Any]) -> Path:
                 where += f" ✅ {o['stock_note']}"
             pay = f"{_money(o['effective_pack_total'])} for {o['units_in_cart']}" + (" 📦 case" if o.get("is_case") else "")
             lines.append("| " + " | ".join(_cell(x) for x in (
-                f"{CAT_ICON[o['category']]} {p.display_name}", f"{_money(o['unit_price'])}/{unit}", pay,
+                f"{CAT_ICON[o['category']]} {p.display_name}" + (f" ({o['flavor']})" if o.get("flavor") else ""), f"{_money(o['unit_price'])}/{unit}", pay,
                 o.get("retailer_name", ""), where, tier_label(o["tier"]) + (f" {RECORD_BADGE}" if o.get("is_record") else ""),
                 f"[Open deal]({o['source_url']})")) + " |")
     else:

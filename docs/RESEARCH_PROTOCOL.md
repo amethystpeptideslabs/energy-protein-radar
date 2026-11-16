@@ -121,6 +121,7 @@ far, so a long session never loses work. Format:
           "limit_per_customer": 0,
           "membership_required": false,
           "pickup_available": false,
+          "flavor": "",
           "local_store": "",
           "stock_note": "",
           "starts": "",
@@ -144,6 +145,8 @@ Field rules (same as the API extractor in `radar/extract.py`):
 - `stock_note`: only when a page explicitly shows store-level availability near Orange County, CA
   (e.g. "In stock at Target Mission Viejo, pickup today", "Limited stock at Costco Laguna Niguel").
   Copy what the page says. Never infer stock; leave `""` when the page doesn't say.
+- `flavor`: the flavor/variant exactly as the listing names it ("Cherry Slush", "Variety Pack").
+  Record it on every product-page offer so two flavors of the same drink show as separate cards.
 - Unknown numbers are `0`, unknown text is `""`, unknown flags are `false`.
 
 ## 4. Process, publish, alert

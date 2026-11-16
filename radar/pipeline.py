@@ -32,7 +32,7 @@ SLIM_KEYS = ("product_id", "category", "retailer_name", "retailer_key", "source_
              "tier", "protein_value_badge", "is_record", "unverified", "code", "starts", "ends",
              "in_store_only", "membership_required", "limit_per_customer", "min_qty", "promo_type",
              "subscribe_save_pct", "seen_at", "is_case", "stock_note", "fulfillment", "local_store",
-             "pickup_available")
+             "pickup_available", "flavor")
 
 
 @dataclass
@@ -200,6 +200,7 @@ def _price_all(offers: list[dict[str, Any]], cfg: Config) -> list[dict[str, Any]
 
 def _slim(o: dict[str, Any], with_playbook: bool) -> dict[str, Any]:
     s = {k: o.get(k) for k in SLIM_KEYS}
+    s["flavor"] = (o.get("flavor") or "").strip()[:60]
     s["evidence_text"] = (o.get("evidence_text") or "")[:140]
     if with_playbook:
         s["playbook"] = o.get("playbook", [])

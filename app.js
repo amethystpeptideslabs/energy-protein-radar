@@ -152,6 +152,7 @@ function renderHeroes(heroes, products) {
     return `<article class="shelf-tag t-${esc(o.tier)}" aria-label="${esc(CAT_NAME[cat])} top deal">
       <div class="tag-top"><span class="tag-tier">${esc(tierText(o))}</span><span class="tag-cat">${esc(CAT_NAME[cat])}</span></div>
       <div class="tag-name">${esc(p.display_name)}</div>
+      ${o.flavor ? `<div class="tag-flavor">${esc(o.flavor)}</div>` : ""}
       <div class="tag-price"><span class="big">${money(o.unit_price)}</span><span class="per">/${esc(unitWord(p))}</span>
         ${sec ? `<span class="unit-box">${esc(sec.label)}<b>${sec.value} ${esc(sec.badge || "")}</b></span>` : ""}</div>
       ${rec}
@@ -225,6 +226,7 @@ function dealCard(p, o) {
     <a class="deal-main" href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener noreferrer">
       <span class="deal-tags">${["SKIP", "UNRATED"].includes(o.tier) ? "" : `<span class="tier t-${esc(o.tier)}">${esc(TIER_EMOJI[o.tier] || "")} ${esc(o.tier)}</span>`}${fulfillBadge(o)}${o.is_case ? `<span class="badge">📦 Case of ${esc(o.pack_count)}</span>` : ""}${PROMO_BADGE[o.promo_type] ? `<span class="badge promo">${PROMO_BADGE[o.promo_type]}</span>` : ""}${o.is_record ? '<span class="badge">🏆 Record low</span>' : ""}${ends ? `<span class="badge ends">${esc(ends)}</span>` : ""}</span>
       <span class="deal-name">${esc(p.display_name)}</span>
+      ${o.flavor ? `<span class="deal-flavor">${esc(o.flavor)}</span>` : ""}
       <span class="deal-price"><b>${money(o.unit_price)}</b><span class="per">/${esc(unit)}</span></span>
       <span class="deal-line">${money(o.effective_pack_total)} for ${esc(units)} at <strong>${esc(r.name)}</strong>${save ? `, ${esc(save)}` : ""}</span>
       ${sec ? `<span class="deal-line">${esc(sec.value)} ${esc(sec.label)} ${esc(sec.badge || "")}</span>` : ""}

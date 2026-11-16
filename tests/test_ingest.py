@@ -128,3 +128,23 @@ def test_ingesting_a_cal_job_sets_ref_and_marks_product(tmp_path):
     mem = json.loads((out / "data" / "memory.json").read_text(encoding="utf-8"))
     pm = mem["products"]["zoa-16"]
     assert pm["cal_attempted"] and pm["ref_source"].startswith("calibrated") and pm["ref_unit_price"] == 2.59   # median of $2.50 and $2.67
+
+
+def test_flavor_is_kept_so_each_card_names_what_is_on_the_shelf(tmp_path):
+    rf = _research_file(tmp_path)
+    data = json.loads(rf.read_text(encoding="utf-8"))
+    o = dict(data["jobs"][0]["offers"][-1])  # the sourced Bang 24-pack
+    o["flavor"] = "Black Cherry Vanilla"
+    data["jobs"][0]["offers"][-1] = o
+    rf.write_text(json.dumps(data), encoding="utf-8")
+    out = tmp_path / "out"
+    run(RunOptions(ingest=rf, out=out, slot="morning", no_push=True))
+    latest = json.loads((out / "data" / "latest.json").read_text(encoding="utf-8"))
+    bang = next(p for p in latest["products"] if p["id"] == "bang-16")
+    assert any(x.get("flavor") == "Black Cherry Vanilla" for x in bang["offers"])
+    assert all("flavor" in x for x in bang["offers"])  # always present ("" when unknown)
+
+
+def test_schema_asks_for_flavor():
+    from radar.extract import OFFER_FIELDS
+    assert OFFER_FIELDS["flavor"]["type"] == "string"

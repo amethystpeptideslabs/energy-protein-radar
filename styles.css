@@ -305,3 +305,7 @@ a.deal-main:active { background: #222c36; }
 .badge.promo{background:#fff1c2;color:#5a4300}
 .promo-head{margin:1.4rem 0 .2rem;font-size:1.05rem}
 .promo-sub{margin:0 0 .6rem;color:var(--muted);font-size:.9rem}
+
+/* flavor/variant the listing names, so two cards for the same drink are told apart */
+.deal-flavor { display: block; font-size: .9rem; opacity: .85; margin-top: -.15rem; }
+.tag-flavor { font-size: .95rem; opacity: .85; margin-top: -.2rem; }

@@ -31,7 +31,7 @@ tags: [deal-radar]
 | 🥤 Oikos Pro Shake | $1.83/bottle | $21.99 for 12 📦 case | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/16113764509) |
 | 🍫 Barebells Soft Bar (16g) | $2.33/bar | $27.99 for 12 📦 case | Muscle & Strength | 🚚 Ships to you | ✅ SOLID | [Open deal](https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html) |
 | 🍫 Legendary Protein Sweet Roll | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 🏬 In store (local) ✅ Aliso Viejo page: Product Discontinued, clearance while supplies last; call the store (checked Nov 16) | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
-| ⚡ RAW Bum Energy 12oz | $1.30/can | $15.64 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Aliso Viejo pick-up: Out of Stock; not available to ship (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/bum-energy-citrus-burst-12-drink-s/bum-11570) |
+| ⚡ RAW Bum Energy 12oz (Citrus Burst) | $1.30/can | $15.64 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup ✅ Aliso Viejo pick-up: Out of Stock; not available to ship (checked Nov 16) | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/bum-energy-citrus-burst-12-drink-s/bum-11570) |
 
 ## 📋 All products today
 

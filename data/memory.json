@@ -278,8 +278,8 @@
  "alerts_sent": [],
  "latest_run": {
   "date": "2026-11-16",
-  "mode": "init",
-  "status": "ok",
+  "mode": "check",
+  "status": "failed",
   "cost_usd": 0.0,
   "searches": 0
  },

@@ -1,0 +1,371 @@
+# Tracked products. Edit and push to add/remove. Seed values come from a Nov 2026 web
+# snapshot; the calibrate run verifies protein-per-unit from labels and replaces
+# ref_unit_price with the median REGULAR (non-promo) price across major retailers.
+# Calibrated values are stored in data/memory.json and override the seeds below.
+#
+# Fields:
+#   category: energy | snack | rtd
+#   unit_size_oz: fluid oz for drinks (strict size match), net wt oz for snacks (informational)
+#   size_range_oz: optional [min, max] accepted sizes (drinks only)
+#   ref_unit_price: seed regular price per unit (null = unknown until calibrated)
+#   crv_applies: add CA CRV ($0.05 per container under 24 oz)
+#   needs_verification: seed values conflict between sources; calibrate must confirm
+
+defaults:
+  energy:
+    unit_label: can
+    crv_applies: true
+    protein_g: 0
+    plant_based: false
+    enabled: true
+    retailers_priority: [vitamin-shoppe, gnc, amazon, walmart, target, costco, sams-club, ralphs, vons, sprouts]
+    exclude_terms: [powder, tub, stick, sticks, packet, packets, "energy shot", "energy shots", hydration, pre-workout]
+  snack:
+    unit_label: bar
+    crv_applies: false
+    plant_based: false
+    enabled: true
+    retailers_priority: [amazon, walmart, target, costco, vitamin-shoppe, gnc, ralphs, vons, sprouts]
+    exclude_terms: [powder, tub, gummies, gummy, vegan, plant-based, plant based]
+  rtd:
+    unit_label: bottle
+    crv_applies: false
+    plant_based: false
+    enabled: true
+    retailers_priority: [costco, sams-club, amazon, walmart, target, vitamin-shoppe, gnc, ralphs, vons]
+    exclude_terms: [powder, tub, vegan, plant-based, plant based, "protein water"]
+
+products:
+  # ---------------- A. ENERGY (unit = can) ----------------
+  - id: ghost-energy-16
+    category: energy
+    brand: Ghost
+    line: Ghost Energy
+    display_name: Ghost Energy 16oz
+    unit_size_oz: 16
+    search_terms: ["Ghost Energy 16 oz can", "Ghost Energy drink 12 pack price"]
+    extra_exclude_terms: [ghost hydration, ghost legend, ghost greens, ghost whey]
+    retailers_priority: [vitamin-shoppe, gnc, amazon, walmart, target, costco, ghost-dtc]
+    ref_unit_price: 2.50
+
+  - id: 3d-energy-16
+    category: energy
+    brand: 3D Energy
+    line: 3D Energy
+    display_name: 3D Energy 16oz
+    unit_size_oz: 16
+    search_terms: ["3D Energy drink 16 oz 12 pack", "3D Energy can price"]
+    retailers_priority: [vitamin-shoppe, gnc, amazon, walmart, target]
+    ref_unit_price: 2.50
+
+  - id: gorilla-mind-energy-16
+    category: energy
+    brand: Gorilla Mind
+    line: Gorilla Mind Energy
+    display_name: Gorilla Mind Energy 16oz
+    unit_size_oz: 16
+    search_terms: ["Gorilla Mind Energy 16 oz 12 pack", "Gorilla Mind energy drink deal"]
+    extra_exclude_terms: [gorilla mode, smooth stim]
+    retailers_priority: [vitamin-shoppe, gnc, amazon, walmart, target, gorilla-mind-dtc]
+    ref_unit_price: 2.50
+
+  - id: bum-energy-12
+    category: energy
+    brand: RAW Nutrition
+    line: Bum Energy
+    display_name: RAW Bum Energy 12oz
+    unit_size_oz: 12
+    search_terms: ["Bum Energy 12 oz can 12 pack", "RAW Bum Energy drink price"]
+    retailers_priority: [vitamin-shoppe, gnc, amazon, walmart, raw-dtc]
+    ref_unit_price: 2.08
+
+  - id: celsius-essentials-16
+    category: energy
+    brand: Celsius
+    line: Celsius Essentials
+    display_name: Celsius Essentials 16oz
+    unit_size_oz: 16
+    search_terms: ["Celsius Essentials 16 oz 12 pack", "Celsius Essentials energy price"]
+    extra_exclude_terms: [celsius hydration, on-the-go, celsius original]
+    retailers_priority: [costco, amazon, walmart, target, vitamin-shoppe, gnc, celsius-dtc]
+    ref_unit_price: 2.50
+
+  - id: celsius-original-12
+    category: energy
+    brand: Celsius
+    line: Celsius Original
+    display_name: Celsius Original 12oz
+    unit_size_oz: 12
+    search_terms: ["Celsius 12 oz can 12 pack price", "Celsius energy drink 24 pack deal"]
+    extra_exclude_terms: [essentials, hydration, on-the-go, powder sticks]
+    retailers_priority: [costco, sams-club, amazon, walmart, target, ralphs, vons]
+    ref_unit_price: 2.00
+
+  - id: bang-16
+    category: energy
+    brand: Bang
+    line: Bang Energy
+    display_name: Bang Energy 16oz
+    unit_size_oz: 16
+    search_terms: ["Bang Energy 16 oz 12 pack price", "Bang energy drink deal"]
+    extra_exclude_terms: [bang shot, bang natural]
+    retailers_priority: [amazon, walmart, target, costco, sams-club, vitamin-shoppe, gnc]
+    ref_unit_price: 2.00
+
+  # ---------------- B. PROTEIN SNACKS (unit = one serving as sold) ----------------
+  - id: built-puff
+    category: snack
+    brand: Built
+    line: Built Puff (incl. Sour Puff)
+    display_name: Built Puff
+    unit_label: bar
+    unit_size_oz: 1.41
+    protein_g: 17
+    protein_note: "some flavors 15-16g; label wins"
+    search_terms: ["Built Puff protein bar box price", "Built Sour Puff 12 count"]
+    retailers_priority: [costco, amazon, walmart, target, vitamin-shoppe, built-dtc]
+    ref_unit_price: 2.38
+
+  - id: barebells
+    category: snack
+    brand: Barebells
+    line: Barebells Protein Bar (original 55g)
+    display_name: Barebells Protein Bar
+    unit_label: bar
+    unit_size_oz: 1.94
+    protein_g: 20
+    search_terms: ["Barebells protein bar 12 pack price", "Barebells bar deal"]
+    extra_exclude_terms: [soft, "soft bar", "barebells soft"]
+    retailers_priority: [costco, amazon, walmart, target, vitamin-shoppe, barebells-dtc]
+    ref_unit_price: 2.46
+
+  - id: magic-spoon-pastry
+    category: snack
+    brand: Magic Spoon
+    line: Magic Spoon Protein Pastries
+    display_name: Magic Spoon Protein Pastry
+    unit_label: pastry
+    unit_size_oz: 1.76
+    protein_g: 11
+    search_terms: ["Magic Spoon protein pastry price", "Magic Spoon pastries box"]
+    extra_exclude_terms: [cereal, granola, treats]
+    retailers_priority: [target, walmart, amazon, magic-spoon-dtc]
+    ref_unit_price: 2.13
+
+  - id: drumroll-donuts
+    category: snack
+    brand: Drumroll
+    line: Drumroll Mini Protein Donuts
+    display_name: Drumroll Mini Protein Donuts
+    unit_label: pack (3 donuts)
+    unit_size_oz: 2.6
+    protein_g: 10
+    plant_based: true   # the ONE plant-based exception (asked for by name). Set enabled: false to drop it.
+    exclude_terms: [powder, tub, gummies]
+    search_terms: ["Drumroll mini protein donuts price", "Drumroll donuts Ralphs"]
+    retailers_priority: [ralphs, target, walmart, amazon, sprouts]
+    ref_unit_price: 3.49
+
+  - id: prime-bites
+    category: snack
+    brand: Alpha Prime
+    line: Prime Bites Protein Brownie
+    display_name: Prime Bites Protein Brownie
+    unit_label: brownie
+    unit_size_oz: 1.76
+    protein_g: 19
+    search_terms: ["Prime Bites protein brownie box price", "Alpha Prime Prime Bites deal"]
+    retailers_priority: [vitamin-shoppe, gnc, amazon, prime-bites-dtc]
+    ref_unit_price: 3.33
+
+  - id: legendary-pastry
+    category: snack
+    brand: Legendary Foods
+    line: Legendary Protein Pastry
+    display_name: Legendary Protein Pastry
+    unit_label: pastry
+    unit_size_oz: 2.15
+    protein_g: 20
+    search_terms: ["Legendary Foods protein pastry price", "Legendary protein pastry 10 pack"]
+    retailers_priority: [amazon, walmart, target, vitamin-shoppe, gnc, legendary-dtc]
+    ref_unit_price: 2.76
+
+  - id: legendary-donuts
+    category: snack
+    brand: Legendary Foods
+    line: Legendary Protein Donuts
+    display_name: Legendary Protein Donuts
+    unit_label: pack (2 donuts)
+    unit_size_oz: 2.4
+    protein_g: 20
+    search_terms: ["Legendary Foods protein donut price", "Legendary protein donuts box"]
+    retailers_priority: [amazon, walmart, target, vitamin-shoppe, legendary-dtc]
+    ref_unit_price: 2.50
+
+  - id: legendary-chips
+    category: snack
+    brand: Legendary Foods
+    line: Legendary Popped Protein Chips
+    display_name: Legendary Popped Protein Chips
+    unit_label: bag
+    unit_size_oz: 1.25
+    protein_g: 20
+    search_terms: ["Legendary popped protein chips price", "Legendary protein chips 7 pack"]
+    retailers_priority: [amazon, walmart, target, vitamin-shoppe, legendary-dtc]
+    ref_unit_price: 2.88
+
+  - id: quest-chips
+    category: snack
+    brand: Quest
+    line: Quest Protein Chips (Original + Tortilla Style)
+    display_name: Quest Protein Chips
+    unit_label: bag
+    unit_size_oz: 1.1
+    protein_g: 19
+    protein_note: "18-20g by flavor; 19g default"
+    search_terms: ["Quest protein chips 12 pack price", "Quest tortilla style protein chips deal"]
+    extra_exclude_terms: [quest bar, cookie, crisps, "pizza"]
+    retailers_priority: [costco, amazon, walmart, target, vitamin-shoppe, gnc, quest-dtc]
+    ref_unit_price: 2.38
+
+  # ---------------- C. RTD PROTEIN SHAKES (unit = bottle) ----------------
+  - id: raw-protein-rtd
+    category: rtd
+    brand: RAW Nutrition
+    line: RAW Protein Shake RTD
+    display_name: RAW Protein Shake 12oz
+    unit_size_oz: 12
+    protein_g: 30
+    search_terms: ["RAW Nutrition protein shake RTD 12 pack price", "Get Raw protein shake ready to drink"]
+    retailers_priority: [vitamin-shoppe, gnc, amazon, raw-dtc]
+    ref_unit_price: 3.98
+
+  - id: isopure-zc-40
+    category: rtd
+    brand: Isopure
+    line: Isopure Zero Carb RTD 20oz
+    display_name: Isopure Zero Carb RTD 20oz (40g)
+    unit_size_oz: 20
+    protein_g: 40
+    crv_applies: true
+    crv_verify: true
+    search_terms: ["Isopure Zero Carb RTD 20 oz 12 pack price", "Isopure 40g protein drink deal"]
+    extra_exclude_terms: [protein water, "16.9", powder]
+    retailers_priority: [vitamin-shoppe, gnc, amazon, walmart, isopure-dtc]
+    ref_unit_price: 5.82
+
+  - id: isopure-zc-32
+    category: rtd
+    brand: Isopure
+    line: Isopure Zero Carb RTD 16.9oz
+    display_name: Isopure Zero Carb RTD 16.9oz (32g)
+    unit_size_oz: 16.9
+    protein_g: 32
+    crv_applies: true
+    crv_verify: true
+    search_terms: ["Isopure Zero Carb RTD 16.9 oz price", "Isopure 32g protein drink 12 pack"]
+    extra_exclude_terms: [protein water, "20 oz", powder]
+    retailers_priority: [vitamin-shoppe, gnc, amazon, walmart, isopure-dtc]
+    ref_unit_price: 4.83
+
+  - id: core-power-26
+    category: rtd
+    brand: Fairlife
+    line: Core Power 26g
+    display_name: Fairlife Core Power 26g
+    unit_size_oz: 14
+    protein_g: 26
+    search_terms: ["Fairlife Core Power 26g 12 pack price", "Core Power protein shake deal"]
+    extra_exclude_terms: [elite, "42g"]
+    retailers_priority: [costco, sams-club, amazon, walmart, target, ralphs, vons]
+    ref_unit_price: 3.49
+
+  - id: core-power-elite-42
+    category: rtd
+    brand: Fairlife
+    line: Core Power Elite 42g
+    display_name: Fairlife Core Power Elite 42g
+    unit_size_oz: 14
+    protein_g: 42
+    search_terms: ["Core Power Elite 42g 12 pack price", "Fairlife Core Power Elite deal"]
+    retailers_priority: [costco, sams-club, amazon, walmart, target, ralphs]
+    ref_unit_price: 4.67
+
+  - id: premier-protein-30
+    category: rtd
+    brand: Premier Protein
+    line: Premier Protein Shake 30g
+    display_name: Premier Protein Shake 30g
+    unit_size_oz: 11.5
+    size_range_oz: [11, 11.5]
+    protein_g: 30
+    search_terms: ["Premier Protein shake 18 pack price", "Premier Protein 30g shake deal"]
+    extra_exclude_terms: [powder, "clear", almondmilk, "160 calorie"]
+    retailers_priority: [costco, sams-club, amazon, walmart, target, ralphs, vons]
+    ref_unit_price: 2.34
+
+  - id: muscle-milk-pro
+    category: rtd
+    brand: Muscle Milk
+    line: Muscle Milk Pro Series
+    display_name: Muscle Milk Pro Series
+    unit_size_oz: 14
+    size_range_oz: [11, 14]
+    protein_g: 40
+    needs_verification: true
+    protein_note: "sources conflict (11oz/32g vs 14oz/40g); calibrate confirms"
+    search_terms: ["Muscle Milk Pro Series protein shake price", "Muscle Milk Pro Series 40g 12 pack"]
+    retailers_priority: [costco, amazon, walmart, target, vitamin-shoppe, gnc]
+    ref_unit_price: null
+
+  - id: quest-shake
+    category: rtd
+    brand: Quest
+    line: Quest Protein Shake
+    display_name: Quest Protein Shake
+    unit_size_oz: 11
+    size_range_oz: [11, 11.5]
+    protein_g: 30
+    needs_verification: true
+    search_terms: ["Quest protein shake 12 pack price", "Quest ready to drink protein shake deal"]
+    retailers_priority: [amazon, walmart, target, vitamin-shoppe, gnc, quest-dtc]
+    ref_unit_price: null
+
+  - id: oikos-pro-shake
+    category: rtd
+    brand: Oikos
+    line: Oikos Pro Shake (shelf-stable)
+    display_name: Oikos Pro Shake
+    unit_size_oz: 12
+    size_range_oz: [10, 12]
+    protein_g: 30
+    search_terms: ["Oikos Pro shake shelf stable 12 pack price", "Oikos Pro protein shake deal"]
+    extra_exclude_terms: [yogurt, "cup", "drink 7"]
+    retailers_priority: [costco, sams-club, amazon, walmart, target, ralphs, vons]
+    ref_unit_price: 2.24
+
+  # ---------------- Disabled by default ----------------
+  - id: isopure-protein-water
+    category: rtd
+    brand: Isopure
+    line: Isopure Protein Water
+    display_name: Isopure Protein Water
+    unit_size_oz: 16.9
+    protein_g: 15
+    crv_applies: true
+    exclude_terms: [powder, tub]
+    search_terms: ["Isopure protein water price"]
+    ref_unit_price: null
+    enabled: false
+
+  - id: barebells-soft
+    category: snack
+    brand: Barebells
+    line: Barebells Soft Protein Bar
+    display_name: Barebells Soft Bar
+    unit_label: bar
+    unit_size_oz: 1.94
+    protein_g: 16
+    search_terms: ["Barebells soft protein bar price"]
+    ref_unit_price: null
+    enabled: false

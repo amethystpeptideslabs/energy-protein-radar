@@ -1,0 +1,15 @@
+#!/bin/sh
+# Deal Radar secret guard (POSIX sh; Git for Windows runs it via its bundled bash).
+# Blocks staged changes that contain an Anthropic API key, an ntfy topic, or a .env file.
+added=$(git diff --cached -U0 --no-color | grep -E '^\+' | grep -vE '^\+\+\+ ')
+
+fail() { echo "pre-commit: BLOCKED - $1" >&2; echo "pre-commit: unstage it, or move the value to .env / GitHub Actions secrets." >&2; exit 1; }
+
+if git diff --cached --name-only | grep -qE '(^|/)\.env$'; then fail ".env must never be committed"; fi
+if printf '%s\n' "$added" | grep -qE 'sk-ant-[A-Za-z0-9_-]{8,}'; then fail "staged changes contain an Anthropic API key (sk-ant-...)"; fi
+if printf '%s\n' "$added" | grep -qE 'deal-radar-[A-Za-z0-9_-]{20,}'; then fail "staged changes contain an ntfy topic"; fi
+
+topic="${NTFY_TOPIC:-}"
+if [ -z "$topic" ] && [ -f .env ]; then topic=$(sed -n 's/^NTFY_TOPIC=//p' .env | tr -d '"\r' | head -n 1); fi
+if [ -n "$topic" ] && printf '%s\n' "$added" | grep -qF -- "$topic"; then fail "staged changes contain your ntfy topic"; fi
+exit 0

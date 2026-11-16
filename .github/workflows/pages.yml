@@ -1,0 +1,40 @@
+name: Deploy app to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['Obsidian-Vault/**', 'tests/**', '**.md']
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    concurrency:
+      group: pages-deploy
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main          # pick up the commit the scan job just pushed
+      - name: Assemble site (app shell + public data only)
+        run: |
+          mkdir -p _site/data
+          cp index.html app.js styles.css sw.js manifest.json .nojekyll _site/
+          cp -r icons fonts _site/
+          cp data/latest.json data/history.json data/status.json _site/data/
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v5

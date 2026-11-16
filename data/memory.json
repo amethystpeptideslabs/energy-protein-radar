@@ -1,0 +1,288 @@
+{
+ "schema_version": 2,
+ "calibrated_at": null,
+ "products": {
+  "ghost-energy-16": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "3d-energy-16": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "gorilla-mind-energy-16": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "bum-energy-12": {
+   "ref_unit_price": 2.08,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "celsius-essentials-16": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "celsius-original-12": {
+   "ref_unit_price": 2.0,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "bang-16": {
+   "ref_unit_price": 2.0,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "built-puff": {
+   "ref_unit_price": 2.38,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "barebells": {
+   "ref_unit_price": 2.46,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "magic-spoon-pastry": {
+   "ref_unit_price": 2.13,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "drumroll-donuts": {
+   "ref_unit_price": 3.49,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "prime-bites": {
+   "ref_unit_price": 3.33,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "legendary-pastry": {
+   "ref_unit_price": 2.76,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "legendary-donuts": {
+   "ref_unit_price": 2.5,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "legendary-chips": {
+   "ref_unit_price": 2.88,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "quest-chips": {
+   "ref_unit_price": 2.38,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "raw-protein-rtd": {
+   "ref_unit_price": 3.98,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "isopure-zc-40": {
+   "ref_unit_price": 5.82,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "isopure-zc-32": {
+   "ref_unit_price": 4.83,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "core-power-26": {
+   "ref_unit_price": 3.49,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "core-power-elite-42": {
+   "ref_unit_price": 4.67,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "premier-protein-30": {
+   "ref_unit_price": 2.34,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "muscle-milk-pro": {
+   "ref_unit_price": null,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "quest-shake": {
+   "ref_unit_price": null,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "oikos-pro-shake": {
+   "ref_unit_price": 2.24,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "isopure-protein-water": {
+   "ref_unit_price": null,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  },
+  "barebells-soft": {
+   "ref_unit_price": null,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": null,
+   "last_best": null,
+   "trend_30d": "flat"
+  }
+ },
+ "dead_codes": [],
+ "active_codes": [],
+ "alerts_sent": [],
+ "latest_run": {
+  "date": "2026-11-16",
+  "mode": "init",
+  "status": "ok",
+  "cost_usd": 0.0,
+  "searches": 0
+ },
+ "cost_ledger": {},
+ "budget_warning_month": null
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://amethystpeptideslabs.github.io/energy-protein-radar/schemas/memory.schema.json",
+  "title": "Deal Radar memory.json",
+  "type": "object",
+  "required": ["schema_version", "products", "dead_codes", "active_codes", "alerts_sent", "latest_run", "cost_ledger"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "calibrated_at": {"type": ["string", "null"]},
+    "budget_warning_month": {"type": ["string", "null"]},
+    "products": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["ref_unit_price", "all_time_low", "last_best", "trend_30d"],
+        "properties": {
+          "ref_unit_price": {"type": ["number", "null"]},
+          "ref_updated": {"type": ["string", "null"]},
+          "ref_source": {"type": "string"},
+          "protein_verified": {"type": ["object", "null"]},
+          "size_verified": {"type": ["object", "null"]},
+          "all_time_low": {
+            "type": ["object", "null"],
+            "properties": {
+              "unit_price": {"type": "number"}, "retailer": {"type": "string"}, "date": {"type": "string"},
+              "url": {"type": "string"}, "code": {"type": ["string", "null"]}
+            },
+            "required": ["unit_price", "retailer", "date", "url", "code"]
+          },
+          "last_best": {
+            "type": ["object", "null"],
+            "properties": {"unit_price": {"type": "number"}, "tier": {"type": "string"}, "date": {"type": "string"}},
+            "required": ["unit_price", "tier", "date"]
+          },
+          "trend_30d": {"enum": ["down", "flat", "up"]}
+        }
+      }
+    },
+    "dead_codes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "retailer", "reason", "first_seen_dead", "skip_until"],
+        "properties": {
+          "code": {"type": "string"}, "retailer": {"type": "string"},
+          "reason": {"enum": ["expired", "invalid", "reported-dead"]},
+          "first_seen_dead": {"type": "string"}, "skip_until": {"type": "string"}
+        }
+      }
+    },
+    "active_codes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "retailer", "source_url", "reported_on", "expires"],
+        "properties": {
+          "code": {"type": "string"}, "retailer": {"type": "string"}, "source_url": {"type": "string"},
+          "reported_on": {"type": "string"}, "expires": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "alerts_sent": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["fingerprint", "sent_at", "priority"],
+        "properties": {"fingerprint": {"type": "string"}, "sent_at": {"type": "string"}, "priority": {"type": "integer"}}
+      }
+    },
+    "latest_run": {
+      "type": "object",
+      "required": ["date", "mode", "status", "cost_usd", "searches"],
+      "properties": {
+        "date": {"type": "string"}, "mode": {"type": "string"},
+        "status": {"enum": ["", "ok", "partial", "failed", "skipped"]},
+        "cost_usd": {"type": "number"}, "searches": {"type": "integer"}
+      }
+    },
+    "cost_ledger": {
+      "type": "object",
+      "patternProperties": {
+        "^\\d{4}-\\d{2}$": {
+          "type": "object", "required": ["usd", "runs", "searches"],
+          "properties": {"usd": {"type": "number"}, "runs": {"type": "integer"}, "searches": {"type": "integer"}}
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

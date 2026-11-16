@@ -1,0 +1,145 @@
+# Deal Radar settings. Non-secret. Secrets (ANTHROPIC_API_KEY, NTFY_TOPIC) live in
+# GitHub Actions secrets / local .env only.
+
+timezone: America/Los_Angeles
+app_url: https://amethystpeptideslabs.github.io/energy-protein-radar/
+
+# Web search localization (approximate). City as you gave it.
+location:
+  type: approximate
+  city: Orange County
+  region: California
+  country: US
+  timezone: America/Los_Angeles
+
+# ---------------------------------------------------------------- models & cost
+models:
+  # Cheapest-that-works defaults. Calibrate uses Sonnet once for label/ref accuracy.
+  research:
+    quick: claude-haiku-5-5
+    deep: claude-haiku-5-5
+    calibrate: claude-sonnet-5-5
+    check: claude-haiku-5-5
+  extract: claude-haiku-5-5
+  web_search_tool: web_search_20260209       # dynamic filtering
+  web_search_fallback: web_search_20250305   # used with allowed_callers: [direct] if needed
+  max_research_tokens: 8000
+  max_extract_tokens: 16000
+  max_pause_continuations: 6
+
+# USD per million tokens + per-search fee. Checked against
+# platform.claude.com/docs/en/about-claude/pricing on 2026-11-16.
+prices:
+  web_search_per_1k: 10.00
+  claude-sonnet-5-5: {input: 2.00, cache_write_5m: 2.50, cache_read: 0.10, output: 10.00}
+  claude-haiku-5-5:
+    input: 0.10
+    cache_write_5m: 0.125
+    cache_read: 0.01
+    output: 0.50
+    long_prompt_threshold: 100000
+    long: {input: 0.50, cache_write_5m: 0.625, cache_read: 0.05, output: 2.50}
+  claude-opus-5-5: {input: 4.00, cache_write_5m: 5.00, cache_read: 0.20, output: 20.00}
+
+budget:
+  monthly_usd_default: 40      # overridden by MONTHLY_BUDGET_USD env if set
+  downgrade_at_pct: 80         # deep -> quick above this share of the cap
+  max_run_usd: 6.00            # hard stop for a single run (safety)
+
+# ---------------------------------------------------------------- run modes
+schedule:
+  # github.event.schedule cron string -> slot (must match daily_scan.yml)
+  crons:
+    "17 7 * * *": morning
+    "17 12 * * 4,5": midday
+    "17 18 * * *": evening
+  deep_weekdays: [0, 3]        # Mon=0 ... Thu=3
+  deal_season:
+    - {start: 2026-11-20, end: 2026-12-02, label: "Black Friday / Cyber Monday"}
+
+research:
+  quick_max_uses: 8
+  midday_max_uses: 6
+  deep_max_uses: 4
+  calibrate_max_uses: 5
+  offer_carryover_days: 2      # offers seen in the last N days stay "current" unless expired
+  offers_per_product_in_app: 6
+
+# ---------------------------------------------------------------- tiers
+tiers:
+  energy:
+    # thresholds on cents-rounded $/can (CRV included). STEAL < steal; HOT <= hot; SOLID <= solid; SKIP above
+    by_size:
+      "16": {steal: 1.25, hot: 1.55, solid: 1.85}
+      "12": {steal: 0.94, hot: 1.16, solid: 1.39}
+    base_size_oz: 16           # other sizes scale linearly from the 16oz row
+  protein:
+    # % of ref_unit_price: STEAL <= 70, HOT <= 80, SOLID <= 90, SKIP above
+    steal_pct: 70
+    hot_pct: 80
+    solid_pct: 90
+  protein_value:               # $ per 10g protein badge
+    - {max: 0.90, badge: "💪"}
+    - {max: 1.20, badge: "👍"}
+    - {max: 1.60, badge: "😐"}
+    - {max: 999, badge: "💸"}
+
+crv:
+  per_container_usd: 0.05
+  under_oz: 24
+
+validation:
+  stale_days: 21
+  unverified_energy_below: 0.75
+  unverified_protein_below_pct: 50
+  size_tolerance_oz: 0.6
+  dead_code_skip_days: 60
+  second_source_tolerance_pct: 5
+
+notify:
+  server: https://ntfy.sh/
+  max_pushes_per_run: 3
+  steal_dedupe_hours: 72
+
+history:
+  raw_offer_retention_days: 90
+
+# ---------------------------------------------------------------- retailers
+retailers:
+  vitamin-shoppe: {name: The Vitamin Shoppe, domains: [vitaminshoppe.com], type: supplement,
+    playbook: "In-store $1/can energy weekends (usually start Thu, sometimes Fri; limit ~6). BOGO 50% across brands online + in store. Auto-Delivery 10-15% off online. Healthy Awards points stack."}
+  gnc: {name: GNC, domains: [gnc.com], type: supplement,
+    playbook: "BOGO 50% on RTD/bars is common. Pro Access member pricing is membership-gated (🔒). In-store $1 energy promos mirror Vitamin Shoppe some weekends."}
+  campus-protein: {name: Campus Protein, domains: [campusprotein.com], type: supplement, playbook: "Site-wide % codes; free shipping thresholds."}
+  suppz: {name: Suppz, domains: [suppz.com], type: supplement, playbook: "Frequent sitewide codes; check shipping minimum."}
+  muscle-strength: {name: Muscle & Strength, domains: [muscleandstrength.com], type: supplement, playbook: "Store codes stack with some brand promos; free shipping over threshold."}
+  xn-supps: {name: XN Supps, domains: [xnsupps.com], type: supplement, playbook: "Case pricing on energy drinks; codes common."}
+  bodybuilding-com: {name: Bodybuilding.com Shop, domains: [shop.bodybuilding.com, bodybuilding.com], type: supplement, playbook: "Sitewide codes; verify current storefront."}
+  iherb: {name: iHerb, domains: [iherb.com], type: supplement, playbook: "New-customer and sitewide codes; free shipping thresholds."}
+  vitacost: {name: Vitacost, domains: [vitacost.com], type: supplement, playbook: "Sitewide % codes; Autoship 5%."}
+  amazon: {name: Amazon, domains: [amazon.com], type: big-box,
+    playbook: "Clip coupon + Subscribe & Save (5%, or 15% with 5+ subscriptions in one delivery). Prime free shipping."}
+  walmart: {name: Walmart, domains: [walmart.com], type: big-box, playbook: "Rollbacks; free shipping $35+ or Walmart+ (🔒)."}
+  target: {name: Target, domains: [target.com], type: big-box, playbook: "Target Circle offers (free to join) stack with sales; Circle Card 5% off."}
+  costco: {name: Costco, domains: [costco.com], type: club, membership: true, playbook: "Membership required (🔒). Monthly instant savings coupons; online prices higher than warehouse."}
+  sams-club: {name: Sam's Club, domains: [samsclub.com], type: club, membership: true, playbook: "Membership required (🔒). Instant savings; Plus members get free shipping."}
+  ralphs: {name: Ralphs, domains: [ralphs.com, kroger.com], type: grocery, playbook: "Kroger digital coupons + Mega Events (buy 5 save $5). Carries Drumroll."}
+  vons: {name: Vons / Albertsons, domains: [vons.com, albertsons.com], type: grocery, playbook: "for U digital coupons; member prices need a free account."}
+  sprouts: {name: Sprouts, domains: [sprouts.com], type: grocery, playbook: "Weekly ad; digital coupons."}
+  ghost-dtc: {name: Ghost (DTC), domains: [ghostlifestyle.com], type: brand, playbook: "Bundle pricing; occasional sitewide codes."}
+  gorilla-mind-dtc: {name: Gorilla Mind (DTC), domains: [gorillamind.com], type: brand, playbook: "Subscribe discount; sitewide codes."}
+  raw-dtc: {name: RAW Nutrition (DTC), domains: [getrawnutrition.com], type: brand, playbook: "Bundles; subscribe discount."}
+  built-dtc: {name: Built (DTC), domains: [built.com, builtbar.com], type: brand, playbook: "Subscribe & save; bundle deals."}
+  barebells-dtc: {name: Barebells (DTC), domains: [shop.barebells.com, barebells.com], type: brand, playbook: "Bundle and subscription pricing."}
+  magic-spoon-dtc: {name: Magic Spoon (DTC), domains: [magicspoon.com], type: brand, playbook: "Build-a-box pricing; codes."}
+  legendary-dtc: {name: Legendary Foods (DTC), domains: [eatlegendary.com], type: brand, playbook: "Subscribe discount; codes."}
+  quest-dtc: {name: Quest (DTC), domains: [questnutrition.com], type: brand, playbook: "Sitewide codes; free shipping threshold."}
+  prime-bites-dtc: {name: Alpha Prime (DTC), domains: [alphaprimesupps.com, primebites.com], type: brand, playbook: "Bundle deals."}
+  celsius-dtc: {name: Celsius (DTC), domains: [celsius.com], type: brand, playbook: "Rarely cheapest; subscription discount."}
+  isopure-dtc: {name: Isopure (DTC), domains: [isopure.com], type: brand, playbook: "Codes and subscribe discount."}
+
+deal_intel:
+  - {name: Slickdeals, domains: [slickdeals.net]}
+  - {name: Stack3d, domains: [stack3d.com], note: "Reliably posts Vitamin Shoppe/GNC $1 energy drink weekends"}
+  - {name: PricePlow, domains: [priceplow.com]}
+  - {name: Hip2Save, domains: [hip2save.com]}

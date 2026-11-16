@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Deal Radar</title>
+  <meta name="description" content="Daily deals on energy drinks, protein snacks and RTD protein shakes, priced per can and per 10 g of protein.">
+  <meta name="theme-color" content="#12181f">
+  <meta name="color-scheme" content="dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Deal Radar">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="preload" href="./fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#products">Skip to all products</a>
+
+  <header class="masthead">
+    <h1><img src="./icons/icon-192.png" alt="" width="26" height="26">Deal Radar</h1>
+    <p class="updated" id="updated">Loading deals…</p>
+  </header>
+
+  <div class="banner" id="banner" role="status" hidden></div>
+
+  <main>
+    <section class="best" aria-labelledby="h-best">
+      <h2 id="h-best">Best right now</h2>
+      <div class="tags" id="heroes" tabindex="0" aria-label="Top deal in each category. Scroll sideways for more.">
+        <article class="shelf-tag empty"><div class="tag-name">Loading deals…</div></article>
+        <article class="shelf-tag empty"><div class="tag-name">Loading deals…</div></article>
+        <article class="shelf-tag empty"><div class="tag-name">Loading deals…</div></article>
+      </div>
+      <div class="dots" id="hero-dots" aria-hidden="true"></div>
+    </section>
+
+    <section id="products" aria-labelledby="h-products">
+      <h2 id="h-products">All products</h2>
+      <div class="tabs" role="tablist" aria-label="Category">
+        <button role="tab" id="tab-all" aria-selected="true" data-cat="all">All</button>
+        <button role="tab" id="tab-energy" aria-selected="false" data-cat="energy">Energy</button>
+        <button role="tab" id="tab-snack" aria-selected="false" data-cat="snack">Snacks</button>
+        <button role="tab" id="tab-rtd" aria-selected="false" data-cat="rtd">RTDs</button>
+      </div>
+      <div class="controls">
+        <label class="select">
+          <span>Sort</span>
+          <select id="sort">
+            <option value="tier">Best tier</option>
+            <option value="unit">Lowest price per unit</option>
+            <option value="protein">Lowest price per 10 g protein</option>
+            <option value="pct">Biggest discount</option>
+            <option value="easy">No hassle (online, no membership, no minimum)</option>
+          </select>
+        </label>
+        <button class="toggle" id="starred" type="button" aria-pressed="false">Starred only</button>
+      </div>
+      <div role="tabpanel" id="rows-panel" aria-labelledby="tab-all"><ul class="rows" id="rows"></ul></div>
+    </section>
+
+    <section aria-labelledby="h-board">
+      <h2 id="h-board">Protein per dollar</h2>
+      <p class="sub">Each snack and shake at its best price today, cheapest protein first.</p>
+      <ol class="board" id="board"></ol>
+    </section>
+
+    <section aria-labelledby="h-history" id="history">
+      <h2 id="h-history">Price history</h2>
+      <div class="controls">
+        <label class="select">
+          <span>Product</span>
+          <select id="hist-product"></select>
+        </label>
+        <div class="seg" role="group" aria-label="Time range">
+          <button type="button" data-range="30" aria-pressed="true">30 days</button>
+          <button type="button" data-range="90" aria-pressed="false">90 days</button>
+          <button type="button" data-range="all" aria-pressed="false">All</button>
+        </div>
+      </div>
+      <div class="chart-wrap"><canvas id="chart" role="img" aria-label="Daily best price"></canvas></div>
+      <p class="sub" id="hist-note"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Prices are pre-tax and include California CRV where it applies. Codes are shown as reported by the linked source and haven't been tested. Prices change fast; check the store before you buy.</p>
+    <p id="foot-meta"></p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

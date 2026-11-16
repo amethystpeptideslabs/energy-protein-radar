@@ -303,3 +303,5 @@ a.deal-main:active { background: #222c36; }
 
 .deal-stock.oos{color:#8a4b00}
 .badge.promo{background:#fff1c2;color:#5a4300}
+.promo-head{margin:1.4rem 0 .2rem;font-size:1.05rem}
+.promo-sub{margin:0 0 .6rem;color:var(--muted);font-size:.9rem}

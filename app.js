@@ -223,7 +223,7 @@ function dealCard(p, o) {
   const units = `${o.units_in_cart} ${unit}${o.units_in_cart > 1 ? "s" : ""}`;
   return `<li class="deal t-${esc(o.tier)}">
     <a class="deal-main" href="${esc(safeUrl(o.source_url))}" target="_blank" rel="noopener noreferrer">
-      <span class="deal-tags"><span class="tier t-${esc(o.tier)}">${esc(TIER_EMOJI[o.tier] || "")} ${esc(o.tier)}</span>${fulfillBadge(o)}${o.is_case ? `<span class="badge">📦 Case of ${esc(o.pack_count)}</span>` : ""}${PROMO_BADGE[o.promo_type] ? `<span class="badge promo">${PROMO_BADGE[o.promo_type]}</span>` : ""}${o.is_record ? '<span class="badge">🏆 Record low</span>' : ""}${ends ? `<span class="badge ends">${esc(ends)}</span>` : ""}</span>
+      <span class="deal-tags">${["SKIP", "UNRATED"].includes(o.tier) ? "" : `<span class="tier t-${esc(o.tier)}">${esc(TIER_EMOJI[o.tier] || "")} ${esc(o.tier)}</span>`}${fulfillBadge(o)}${o.is_case ? `<span class="badge">📦 Case of ${esc(o.pack_count)}</span>` : ""}${PROMO_BADGE[o.promo_type] ? `<span class="badge promo">${PROMO_BADGE[o.promo_type]}</span>` : ""}${o.is_record ? '<span class="badge">🏆 Record low</span>' : ""}${ends ? `<span class="badge ends">${esc(ends)}</span>` : ""}</span>
       <span class="deal-name">${esc(p.display_name)}</span>
       <span class="deal-price"><b>${money(o.unit_price)}</b><span class="per">/${esc(unit)}</span></span>
       <span class="deal-line">${money(o.effective_pack_total)} for ${esc(units)} at <strong>${esc(r.name)}</strong>${save ? `, ${esc(save)}` : ""}</span>
@@ -259,6 +259,13 @@ function renderDeals(products) {
   deals.sort((a, b) => (TIER_RANK[a.o.tier] - TIER_RANK[b.o.tier]) || ((isLocal(a.o) ? 0 : 1) - (isLocal(b.o) ? 0 : 1))
     || ((a.o.pct_vs_ref ?? 999) - (b.o.pct_vs_ref ?? 999)) || (a.o.unit_price - b.o.unit_price));
   const rest = list.filter((x) => !deals.includes(x));
+  // every live promo (BOGO, sale), even when it doesn't reach a tier; in-stock and local first
+  const shown = new Set(deals.map((x) => x.o));
+  const promos = products.filter((p) => state.filter === "all" || p.category === state.filter)
+    .flatMap((p) => (p.offers || []).filter((o) => PROMO_BADGE[o.promo_type] && passesView(o) && !shown.has(o)).map((o) => ({ p, o })));
+  promos.sort((a, b) => cmpArr(offerRank(a.p.category, a.o), offerRank(b.p.category, b.o)));
+  $("#promos").hidden = promos.length === 0;
+  $("#promo-list").innerHTML = promos.map(({ p, o }) => dealCard(p, o)).join("");
   const word = `${state.localOnly ? "local " : ""}${state.casesOnly ? "case " : ""}deal`;
   $("#deal-count").textContent = products.length ? `${deals.length} ${word}${deals.length === 1 ? "" : "s"}` : "";
   $("#deal-list").innerHTML = deals.length ? deals.map(({ p, o }) => dealCard(p, o)).join("")

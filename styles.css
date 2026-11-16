@@ -249,6 +249,24 @@ footer p { max-width: 60ch; }
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
 
+/* ---------------------------------------------------------- search */
+.search { display: flex; gap: 0.5rem; align-items: center; margin: 1rem 0 0; }
+.search-box {
+  flex: 1; min-width: 0; display: flex; align-items: center; gap: 0.6rem;
+  min-height: 48px; padding: 0 1rem; border-radius: 999px; cursor: text;
+  background: var(--shelf); border: 1.5px solid var(--rail); color: var(--muted);
+}
+.search-box:focus-within { border-color: var(--focus); color: var(--text); outline: 3px solid var(--focus); outline-offset: 2px; }
+.search-box svg { flex: none; }
+.search-box input {
+  flex: 1; min-width: 0; height: 44px; padding: 0; border: 0; background: transparent;
+  color: var(--text); font: inherit; font-size: max(16px, var(--step-0)); /* 16px+ stops iPhone zooming in */
+}
+.search-box input:focus-visible { outline: none; }
+.search-box input::placeholder { color: var(--muted); opacity: 1; }
+.search-box input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.search-status { margin: 0.5rem 0 0; color: var(--muted); font-size: var(--step--1); }
+
 /* ---------------------------------------------------------- easy deal feed */
 .deals-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
 .deal-count { margin: 0; color: var(--muted); font-weight: 650; }

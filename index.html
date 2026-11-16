@@ -29,6 +29,15 @@
   <div class="banner" id="banner" role="status" hidden></div>
 
   <main>
+    <form class="search" role="search" id="search-form">
+      <label class="search-box">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <input type="search" id="search" placeholder="Search brand, flavor or store" aria-label="Search deals by brand, product, flavor or store" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+      </label>
+      <button class="pill search-clear" type="button" id="search-clear" hidden>Clear</button>
+    </form>
+    <p class="search-status" id="search-status" role="status" aria-live="polite" hidden></p>
+
     <section class="best" aria-labelledby="h-best">
       <h2 id="h-best">Top pick in each category</h2>
       <div class="tags" id="heroes" tabindex="0" aria-label="Top deal in each category. Scroll sideways for more.">

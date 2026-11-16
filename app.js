@@ -20,7 +20,7 @@ const store = {
 const state = {
   latest: null, history: {}, cat: store.get("dr.cat", "all"), sort: store.get("dr.sort", "tier"),
   starredOnly: false, casesOnly: store.get("dr.cases", false), localOnly: store.get("dr.local", false),
-  filter: store.get("dr.filter", "all"), starred: new Set(store.get("dr.starred", [])), open: new Set(),
+  filter: store.get("dr.filter", "all"), starred: new Set(store.get("dr.starred", [])), open: new Set(), q: "",
   histProduct: null, histRange: store.get("dr.range", "30"), chart: null,
 };
 
@@ -121,9 +121,7 @@ function render() {
   } else {
     $("#banner").hidden = true;
   }
-  const srvHeroes = L?.heroes || {};
-  const heroesOk = Object.values(srvHeroes).every((h) => !h || passesView(h));
-  renderHeroes(state.casesOnly || state.localOnly || !heroesOk ? caseHeroes(products) : srvHeroes, products);
+  renderTopPicks(products);
   renderDeals(products);
   renderTabs();
   renderRows(products);
@@ -136,14 +134,42 @@ function render() {
     : "";
 }
 
+function renderTopPicks(products) {
+  const srvHeroes = state.latest?.heroes || {};
+  const heroesOk = Object.values(srvHeroes).every((h) => !h || passesView(h));
+  renderHeroes(state.casesOnly || state.localOnly || state.q.trim() || !heroesOk ? caseHeroes(products) : srvHeroes, products);
+}
+// Typing in the search box redraws only the lists, not the charts.
+function renderSearch() {
+  const products = state.latest?.products || [];
+  $("#search-clear").hidden = !state.q;
+  renderTopPicks(products);
+  renderDeals(products);
+  renderRows(products);
+}
+function renderSearchStatus(nDeals, nPromos, nRest, narrowed) {
+  const q = state.q.trim();
+  const el = $("#search-status");
+  if (!q) { el.textContent = ""; el.hidden = true; return; }
+  el.hidden = false;
+  const n = nDeals + nPromos + nRest;
+  el.textContent = n
+    ? `“${q}”: ${nDeals} deal${nDeals === 1 ? "" : "s"}, ${nPromos} BOGO & sale${nPromos === 1 ? "" : "s"}, ${nRest} at regular price.${narrowed ? " Filters are on." : ""}`
+    : `Nothing matches “${q}”.${narrowed ? " Filters are on; tap All or turn Local or Cases off." : " Try a brand (Celsius), a flavor (peach) or a store (Amazon, Vitamin Shoppe)."}`;
+}
+
 function emptyTag(title, text) {
   return `<article class="shelf-tag empty"><div class="tag-name">${esc(title)}</div><p>${esc(text)}</p></article>`;
 }
 
 function renderHeroes(heroes, products) {
-  const html = ["energy", "snack", "rtd"].map((cat) => {
+  let cats = ["energy", "snack", "rtd"];
+  const q = state.q.trim();
+  if (q) cats = cats.filter((c) => heroes[c]);
+  const html = !cats.length ? [emptyTag(`No top pick for “${q}”`, "Try a brand (Celsius), a flavor (peach) or a store (Amazon, Vitamin Shoppe).")] : cats.map((cat) => {
     const o = heroes[cat];
-    if (!o) return emptyTag(`${CAT_NAME[cat]}: nothing yet`, state.casesOnly || state.localOnly ? "Nothing matches your filters in the last scan. Turn a filter off to see more." : "No sourced offer passed validation in the last scan.");
+    if (!o) return emptyTag(`${CAT_NAME[cat]}: nothing yet`, state.q.trim() ? `No ${CAT_NAME[cat].toLowerCase()} deal matches “${state.q.trim()}”.`
+      : state.casesOnly || state.localOnly ? "Nothing matches your filters in the last scan. Turn a filter off to see more." : "No sourced offer passed validation in the last scan.");
     const p = productById(o.product_id) || { unit_label: "unit", category: cat, display_name: o.product_id };
     const sec = secondary(p, o);
     const ch = chips(o);
@@ -169,7 +195,8 @@ function renderHeroes(heroes, products) {
     </article>`;
   });
   $("#heroes").innerHTML = html.join("");
-  $("#hero-dots").innerHTML = "<span class=\"on\"></span><span></span><span></span>";
+  $("#hero-dots").innerHTML = cats.length > 1 ? cats.map((_, i) => `<span${i ? "" : ' class="on"'}></span>`).join("") : "";
+  $("#heroes").scrollLeft = 0;
 }
 
 // ------------------------------------------------------------------ deal feed (the easy view)
@@ -259,24 +286,31 @@ function regularCard(p, o) {
 
 function renderDeals(products) {
   document.querySelectorAll(".filters [data-filter]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === state.filter)));
-  const list = products.filter((p) => state.filter === "all" || p.category === state.filter).map((p) => ({ p, o: bestDealFor(p) }));
+  const list = products.filter((p) => (state.filter === "all" || p.category === state.filter) && productMatches(p)).map((p) => ({ p, o: bestDealFor(p) }));
   const deals = list.filter((x) => x.o && ["STEAL", "HOT", "SOLID"].includes(x.o.tier));
   deals.sort((a, b) => (TIER_RANK[a.o.tier] - TIER_RANK[b.o.tier]) || ((isLocal(a.o) ? 0 : 1) - (isLocal(b.o) ? 0 : 1))
     || ((a.o.pct_vs_ref ?? 999) - (b.o.pct_vs_ref ?? 999)) || (a.o.unit_price - b.o.unit_price));
-  const rest = list.filter((x) => !deals.includes(x));
   // every live promo (BOGO, sale), even when it doesn't reach a tier; in-stock and local first
   const shown = new Set(deals.map((x) => x.o));
   const promos = products.filter((p) => state.filter === "all" || p.category === state.filter)
     .flatMap((p) => (p.offers || []).filter((o) => PROMO_BADGE[o.promo_type] && passesView(o) && !shown.has(o)).map((o) => ({ p, o })));
   promos.sort((a, b) => cmpArr(offerRank(a.p.category, a.o), offerRank(b.p.category, b.o)));
+  const onSale = new Set(promos.map((x) => x.p.id));
+  const rest = list.filter((x) => !deals.includes(x) && !onSale.has(x.p.id));  // a live BOGO or sale isn't "regular price"
   $("#promos").hidden = promos.length === 0;
   $("#promo-list").innerHTML = promos.map(({ p, o }) => dealCard(p, o)).join("");
   const word = `${state.localOnly ? "local " : ""}${state.casesOnly ? "case " : ""}deal`;
-  $("#deal-count").textContent = products.length ? `${deals.length} ${word}${deals.length === 1 ? "" : "s"}` : "";
+  const q = state.q.trim();
+  const forQ = q ? ` for “${q}”` : "";
+  const narrowed = state.casesOnly || state.localOnly || state.filter !== "all";
+  $("#deal-count").textContent = products.length ? `${deals.length} ${word}${deals.length === 1 ? "" : "s"}${forQ}` : "";
   $("#deal-list").innerHTML = deals.length ? deals.map(({ p, o }) => dealCard(p, o)).join("")
-    : `<li class="empty-row">${products.length ? `No ${word}s here in the last scan.${state.casesOnly || state.localOnly ? " Turn a filter off to see more." : ""}` : "Deals appear after the first scan."}</li>`;
+    : `<li class="empty-row">${!products.length ? "Deals appear after the first scan."
+      : q ? `No ${word}s match “${esc(q)}” right now.${promos.length ? " BOGO and sale prices that match are below." : ""}${narrowed ? " Some filters are on; tap All or turn Local or Cases off to search everything." : ""}`
+      : `No ${word}s here in the last scan.${state.casesOnly || state.localOnly ? " Turn a filter off to see more." : ""}`}</li>`;
   $("#regular-summary").textContent = `No deal today: ${rest.length} product${rest.length === 1 ? "" : "s"} at regular price`;
   $("#regular").hidden = rest.length === 0;
+  renderSearchStatus(deals.length, promos.length, rest.length, narrowed);
   $("#regular-list").innerHTML = rest.map(({ p, o }) => regularCard(p, o)).join("");
 }
 
@@ -294,7 +328,7 @@ function renderTabs() {
 }
 
 function isEasy(o) { return !o.in_store_only && !o.membership_required && !(Number(o.min_qty) > 1); }
-function passes(o) { return (state.sort !== "easy" || isEasy(o)) && (!state.casesOnly || o.is_case); }
+function passes(o) { return (state.sort !== "easy" || isEasy(o)) && (!state.casesOnly || o.is_case) && offerMatches(o); }
 
 function isLocal(o) { return o.fulfillment === "in_store" || o.fulfillment === "pickup"; }
 // same rule as radar/pricing.is_unavailable: gone only when no store in the note has it
@@ -317,7 +351,44 @@ function isExpired(o, now) {
   const live = o.is_sale || ["STEAL", "HOT", "SOLID"].includes(o.tier);
   return !!(live && o.seen_at && (now - new Date(o.seen_at)) / 36e5 > 36);
 }
-function passesView(o) { return !o.unverified && !isExpired(o, new Date()) && (!state.casesOnly || o.is_case) && (!state.localOnly || isLocal(o)); }
+function passesView(o) { return !o.unverified && !isExpired(o, new Date()) && (!state.casesOnly || o.is_case) && (!state.localOnly || isLocal(o)) && offerMatches(o); }
+
+// ------------------------------------------------------------------ search
+// Lowercase, no accents, no apostrophes ("Joe's" = "joes"), punctuation becomes a space.
+function normText(s) {
+  return String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()
+    .replace(/['’]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+}
+// Every word typed must appear somewhere ("peach amazon"). "gfuel" finds "G Fuel", "bars" finds "bar".
+function matchesText(text, q) {
+  const words = normText(q).split(" ").filter(Boolean);
+  if (!words.length) return true;
+  const hay = normText(text);
+  const flat = hay.replace(/ /g, "");
+  return words.every((w) => {
+    const forms = w.length > 3 && w.endsWith("s") ? [w, w.slice(0, -1)] : [w];
+    return forms.some((f) => hay.includes(f) || (f.length >= 4 && flat.includes(f)));
+  });
+}
+const CAT_WORDS = { energy: "energy drink", snack: "protein snack", rtd: "rtd protein shake" };
+function productText(p) { return [p.display_name, p.brand, CAT_NAME[p.category], CAT_WORDS[p.category]].join(" "); }
+const offerTextCache = new WeakMap();
+function offerText(p, o) {
+  let t = offerTextCache.get(o);
+  if (t == null) {
+    const r = retailerOf(o);
+    t = [productText(p || {}), o.flavor, o.retailer_name, r.name, String(o.retailer_key || "").replace(/[-_]/g, " "), o.local_store,
+      PROMO_BADGE[o.promo_type], /bogo/.test(o.promo_type || "") ? "bogo buy one get one" : "", o.is_sale ? "sale" : "",
+      o.is_case ? "case" : "", isLocal(o) ? "local pickup in store" : "online", o.code ? `code ${o.code}` : "", o.tier].join(" ");
+    offerTextCache.set(o, t);
+  }
+  return t;
+}
+function offerMatches(o) { return !state.q.trim() || matchesText(offerText(productById(o.product_id), o), state.q); }
+// A product shows when its name matches, or when one of its offers that is on screen matches.
+function productMatches(p, shown = passesView) {
+  return !state.q.trim() || matchesText(productText(p), state.q) || (p.offers || []).some(shown);
+}
 
 function caseHeroes(products) {
   const out = {};
@@ -351,7 +422,7 @@ function sortKey(p, best) {
 }
 
 function renderRows(products) {
-  let list = products.filter((p) => state.cat === "all" || p.category === state.cat);
+  let list = products.filter((p) => (state.cat === "all" || p.category === state.cat) && productMatches(p, passes));
   if (state.starredOnly) list = list.filter((p) => state.starred.has(p.id));
   const withBest = list.map((p) => ({ p, best: bestFor(p) }));
   withBest.sort((a, b) => {
@@ -359,7 +430,7 @@ function renderRows(products) {
     return ka[0] - kb[0] || ka[1] - kb[1] || a.p.display_name.localeCompare(b.p.display_name);
   });
   if (!withBest.length) {
-    $("#rows").innerHTML = `<li class="empty-row">${state.starredOnly ? "No starred products in this category. Tap ☆ on a product to star it." : "No products in this category."}</li>`;
+    $("#rows").innerHTML = `<li class="empty-row">${state.q.trim() ? `No products match “${esc(state.q.trim())}” in this category.` : state.starredOnly ? "No starred products in this category. Tap ☆ on a product to star it." : "No products in this category."}</li>`;
     return;
   }
   $("#rows").innerHTML = withBest.map(({ p, best }) => rowHtml(p, best)).join("");
@@ -584,9 +655,27 @@ function bind() {
     renderTabs(); renderRows(state.latest?.products || []);
   });
   $("#hist-product").addEventListener("change", (e) => { state.histProduct = e.target.value; renderChart(); });
+  const search = $("#search");
+  search.value = "";  // the browser can restore old text on reload; searches always start empty
+  const regular = $("#regular");
+  let regularWasOpen = false;
+  const setQuery = (v) => {
+    const was = state.q.trim(), now = v.trim();
+    if (!was && now) { regularWasOpen = regular.open; regular.open = true; }  // show regular-price matches too
+    if (was && !now) regular.open = regularWasOpen;
+    state.q = v;  // never saved: a leftover search would hide deals next time the app opens
+    renderSearch();
+  };
+  search.addEventListener("input", () => setQuery(search.value));
+  search.addEventListener("keydown", (e) => { if (e.key === "Escape" && search.value) { e.preventDefault(); search.value = ""; setQuery(""); } });
+  $("#search-form").addEventListener("submit", (e) => { e.preventDefault(); search.blur(); });  // Enter / Search key closes the phone keyboard
+  $("#search-clear").addEventListener("click", () => { search.value = ""; setQuery(""); search.focus(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "/" && !e.metaKey && !e.ctrlKey && !/^(INPUT|SELECT|TEXTAREA)$/.test(document.activeElement?.tagName || "")) { e.preventDefault(); search.focus(); }
+  });
   const heroes = $("#heroes");
   heroes.addEventListener("scroll", () => {
-    const i = Math.round(heroes.scrollLeft / (heroes.scrollWidth / 3));
+    const i = Math.round(heroes.scrollLeft / (heroes.scrollWidth / (heroes.children.length || 1)));
     [...$("#hero-dots").children].forEach((d, k) => d.classList.toggle("on", k === i));
   }, { passive: true });
   document.addEventListener("visibilitychange", () => {

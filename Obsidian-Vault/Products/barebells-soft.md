@@ -21,7 +21,6 @@ Unit: bar · Size: 1.94 oz · Protein: 16g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Barebells Soft Bar (16g) | Muscle & Strength | 1× 12 | $27.99 | $2.33 | $1.46 | 82% | ✅ SOLID |  |  | [Open deal](https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html) |
 | Barebells Soft Bar (16g) | Barebells (DTC) | 1× 12 | $30.99 | $2.58 | $1.61 | 91% | ❌ SKIP |  |  | [Open deal](https://shop.barebells.com/product/barebells-caramel-choco) |
 | Barebells Soft Bar (16g) | Bodybuilding.com Shop | 1× 12 | $39.99 | $3.33 | $2.08 | 118% | ❌ SKIP |  |  | [Open deal](https://shop.bodybuilding.com/products/barebells-soft-protein-bar-12-pack) |
 

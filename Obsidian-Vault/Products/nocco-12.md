@@ -4,8 +4,8 @@ category: energy
 display_name: "NOCCO BCAA Energy 12oz"
 ref_unit_price: 2.5
 ref_source: "seed"
-all_time_low: null
-all_time_low_retailer: ""
+all_time_low: 2.63
+all_time_low_retailer: "NOCCO (DTC)"
 protein_g: 0
 unit_size_oz: 12
 tags: [deal-radar, product]
@@ -17,7 +17,14 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
+## Current offers
+
+| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
+|---|---|---|---|---|---|---|---|---|---|---|
+| NOCCO BCAA Energy 12oz | NOCCO (DTC) | 1× 12 | $31.59 | $2.63 | $0.22 | 103% | ❌ SKIP |  |  | [Open deal](https://shop.nocco.com/product/nocco-caribbean) |
+
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $2.63 | ❌ SKIP | NOCCO (DTC) |

@@ -24,7 +24,6 @@ Unit: roll · Size: 2.3 oz · Protein: 20g
 | Legendary Protein Sweet Roll | GNC | 1× 8 | $26.99 | $3.37 | $1.69 | 104% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/healthy-snacks/588847.html) |
 | Legendary Protein Sweet Roll | Legendary Foods (DTC) | 1× 8 | $25.99 | $3.25 | $1.63 | 100% | ❌ SKIP |  |  | [Open deal](https://www.eatlegendary.com/collections/chocolate/products/milk-chocolate-protein-sweet-roll-8-pack) |
 | Legendary Protein Sweet Roll | Vitacost | 1× 8 | $25.99 | $3.25 | $1.63 | 100% | ❌ SKIP |  |  | [Open deal](https://www.vitacost.com/products/legendary-foods-protein-sweet-roll-milk-chocolate-8-pack-2-4-oz-67-g-each-122111) |
-| Legendary Protein Sweet Roll | The Vitamin Shoppe | 1× 8 | $13.98 | $1.75 | $0.88 | 54% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
 
 ## Price ledger
 

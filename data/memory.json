@@ -117,8 +117,8 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.16,
-    "tier": "HOT",
+    "unit_price": 1.24,
+    "tier": "SOLID",
     "date": "2026-11-17"
    },
    "trend_30d": "flat"
@@ -401,7 +401,8 @@
    "size_verified": null,
    "all_time_low": null,
    "last_best": null,
-   "trend_30d": "flat"
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-17"
   },
   "isopure-zc-32": {
    "ref_unit_price": 5.21,
@@ -454,14 +455,14 @@
    "trend_30d": "flat"
   },
   "core-power-elite-42": {
-   "ref_unit_price": 4.67,
-   "ref_updated": null,
-   "ref_source": "seed",
+   "ref_unit_price": 6.66,
+   "ref_updated": "2026-11-17",
+   "ref_source": "calibrated (2 retailers)",
    "protein_verified": {
     "value": 42.0,
-    "source_url": "https://www.walmart.com/ip/931341772",
-    "date": "2026-11-16",
-    "n": 1
+    "source_url": "https://target.com/p/core-power-fairlife-elite-milk-shake-chocolate-14-fl-oz-bottle-pack-of-12/-/A-94139795",
+    "date": "2026-11-17",
+    "n": 2
    },
    "size_verified": null,
    "all_time_low": {
@@ -473,10 +474,11 @@
    },
    "last_best": {
     "unit_price": 5.83,
-    "tier": "SKIP",
+    "tier": "SOLID",
     "date": "2026-11-17"
    },
-   "trend_30d": "flat"
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-17"
   },
   "premier-protein-30": {
    "ref_unit_price": 2.48,
@@ -615,8 +617,8 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.33,
-    "tier": "SOLID",
+    "unit_price": 2.58,
+    "tier": "SKIP",
     "date": "2026-11-17"
    },
    "trend_30d": "flat",
@@ -839,14 +841,14 @@
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 2.36,
+    "unit_price": 2.01,
     "retailer": "The Vitamin Shoppe",
     "date": "2026-11-17",
     "url": "https://www.vitaminshoppe.com/p/discipline-go-rtd-jocko-pom-12-drink-s/jko0024",
     "code": null
    },
    "last_best": {
-    "unit_price": 2.36,
+    "unit_price": 2.01,
     "tier": "SKIP",
     "date": "2026-11-17"
    },
@@ -933,9 +935,20 @@
    "ref_source": "seed",
    "protein_verified": null,
    "size_verified": null,
-   "all_time_low": null,
-   "last_best": null,
-   "trend_30d": "flat"
+   "all_time_low": {
+    "unit_price": 4.47,
+    "retailer": "Target",
+    "date": "2026-11-17",
+    "url": "https://target.com/p/riot-energy-organic-citrus-lime-plant-powered-energy-drink-case-of-12-16-oz/-/A-90510496",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 4.47,
+    "tier": "SKIP",
+    "date": "2026-11-17"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-17"
   },
   "lucky-energy-16": {
    "ref_unit_price": 2.33,
@@ -985,9 +998,20 @@
    "ref_source": "seed",
    "protein_verified": null,
    "size_verified": null,
-   "all_time_low": null,
-   "last_best": null,
-   "trend_30d": "flat"
+   "all_time_low": {
+    "unit_price": 2.63,
+    "retailer": "NOCCO (DTC)",
+    "date": "2026-11-17",
+    "url": "https://shop.nocco.com/product/nocco-caribbean",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.63,
+    "tier": "SKIP",
+    "date": "2026-11-17"
+   },
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-17"
   },
   "kill-cliff-ignite-12": {
    "ref_unit_price": 2.92,
@@ -1050,8 +1074,8 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.08,
-    "tier": "SOLID",
+    "unit_price": 2.2,
+    "tier": "SKIP",
     "date": "2026-11-17"
    },
    "trend_30d": "flat",
@@ -1065,7 +1089,8 @@
    "size_verified": null,
    "all_time_low": null,
    "last_best": null,
-   "trend_30d": "flat"
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-17"
   },
   "fitcrunch-bar": {
    "ref_unit_price": 1.51,
@@ -1225,7 +1250,15 @@
    "cal_attempted": "2026-11-17"
   }
  },
- "dead_codes": [],
+ "dead_codes": [
+  {
+   "code": "ROOTED26",
+   "retailer": "vitamin-shoppe",
+   "reason": "expired",
+   "first_seen_dead": "2026-11-17",
+   "skip_until": "2027-01-16"
+  }
+ ],
  "active_codes": [],
  "alerts_sent": [
   {
@@ -1297,6 +1330,11 @@
    "fingerprint": "jocko-go-12|vitamin-shoppe|2.36|",
    "sent_at": "2026-11-17T06:03:53-08:00",
    "priority": 3
+  },
+  {
+   "fingerprint": "jocko-go-12|vitamin-shoppe|2.01|",
+   "sent_at": "2026-11-17T12:33:33-08:00",
+   "priority": 5
   }
  ],
  "latest_run": {
@@ -1304,13 +1342,13 @@
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 49
+  "searches": 36
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 7,
-   "searches": 138
+   "runs": 8,
+   "searches": 174
   }
  },
  "budget_warning_month": null

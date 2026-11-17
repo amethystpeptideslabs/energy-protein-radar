@@ -21,7 +21,8 @@ Unit: can · Size: 16 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $21.68 | $1.81 | $0.11 | 76% | ✅ SOLID 🏆 |  |  | [Open deal](https://www.vitaminshoppe.com/p/c4-sparkling-on-go-watermelon-12-drink-s/eo-16029) |
+| C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $21.68 | $1.81 | $0.11 | 76% | ✅ SOLID |  |  | [Open deal](https://www.vitaminshoppe.com/p/c4-sparkling-on-go-watermelon-12-drink-s/eo-16029) |
+| C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $21.68 | $1.81 | $0.11 | 76% | ✅ SOLID |  |  | [Open deal](https://www.vitaminshoppe.com/p/c4-sparkling-on-go-blue-razz-12-drink-s/eo-16028) |
 | C4 Energy 16oz | Walmart | 1× 12 | $28.59 | $2.38 | $0.15 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/c/kp/case-c4) |
 | C4 Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 107% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/cellucor-c4-energy.html) |
 | C4 Energy 16oz | Cellucor (DTC) | 1× 12 | $28.59 | $2.38 | $0.15 | 100% | ❌ SKIP |  |  | [Open deal](https://cellucor.com/products/c4-original-carbonated) |

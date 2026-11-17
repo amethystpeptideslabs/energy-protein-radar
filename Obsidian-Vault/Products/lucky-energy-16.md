@@ -22,7 +22,6 @@ Unit: can · Size: 16 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Lucky Energy 16oz | Walmart | 1× 12 | $26.48 | $2.21 | $0.14 | 93% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/15790258050) |
-| Lucky Energy 16oz | Lucky Energy (DTC) | 1× 12 | $26.48 | $2.21 | $0.14 | 93% | ❌ SKIP |  |  | [Open deal](https://luckybevco.com/products/og-luck-12-pack-16oz-can) |
 
 ## Price ledger
 

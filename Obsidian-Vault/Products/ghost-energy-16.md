@@ -23,10 +23,10 @@ Unit: can · Size: 16 oz
 |---|---|---|---|---|---|---|---|---|---|---|
 | Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $26.09 | $2.17 | $0.14 | 79% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/brand/ghost-energy) |
 | Ghost Energy 16oz | Walmart | 1× 1 | $2.73 | $2.73 | $0.17 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/17042262854) |
-| Ghost Energy 16oz | Target | 1× 12 | $57.59 | $4.80 | $0.30 | 177% | ❌ SKIP |  |  | [Open deal](https://target.com/p/ghost-energy-performance-energy-drink-faze-clan-faze-up-16-fl-oz-pack-of-12/-/A-1001269564) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $2.17 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-16 | $2.17 | ❌ SKIP | The Vitamin Shoppe |

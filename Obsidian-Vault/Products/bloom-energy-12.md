@@ -22,10 +22,12 @@ Unit: can · Size: 12 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Bloom Sparkling Energy 12oz | Walmart | 1× 12 | $20.58 | $1.72 | $0.14 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/11395510309) |
-| Bloom Sparkling Energy 12oz | The Vitamin Shoppe | 2× 12 | $43.19 | $1.80 | $0.15 | 105% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-watermelon-12-drink-s/bmn-17135) |
+| Bloom Sparkling Energy 12oz | Target | 1× 12 | $22.09 | $1.84 | $0.15 | 107% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/bloom-variety-pack-energy-drink-12pk-12-fl-oz-cans/-/A-94331839) |
+| Bloom Sparkling Energy 12oz | The Vitamin Shoppe | 1× 12 | $24.39 | $2.03 | $0.17 | 119% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-watermelon-12-drink-s/bmn-17135) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $1.72 | ❌ SKIP | Walmart |
 | 2026-11-16 | $1.72 | ❌ SKIP | Walmart |

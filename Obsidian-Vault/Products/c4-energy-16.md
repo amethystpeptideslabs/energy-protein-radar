@@ -4,8 +4,8 @@ category: energy
 display_name: "C4 Energy 16oz"
 ref_unit_price: 2.33
 ref_source: "calibrated (3 retailers)"
-all_time_low: 2.38
-all_time_low_retailer: "Walmart"
+all_time_low: 1.81
+all_time_low_retailer: "The Vitamin Shoppe"
 protein_g: 0
 unit_size_oz: 16
 tags: [deal-radar, product]
@@ -21,6 +21,7 @@ Unit: can · Size: 16 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
+| C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $21.68 | $1.81 | $0.11 | 76% | ✅ SOLID 🏆 |  |  | [Open deal](https://www.vitaminshoppe.com/p/c4-sparkling-on-go-watermelon-12-drink-s/eo-16029) |
 | C4 Energy 16oz | Walmart | 1× 12 | $28.59 | $2.38 | $0.15 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/c/kp/case-c4) |
 | C4 Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 107% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/cellucor-c4-energy.html) |
 | C4 Energy 16oz | Cellucor (DTC) | 1× 12 | $28.59 | $2.38 | $0.15 | 100% | ❌ SKIP |  |  | [Open deal](https://cellucor.com/products/c4-original-carbonated) |
@@ -29,4 +30,5 @@ Unit: can · Size: 16 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $1.81 | ✅ SOLID | The Vitamin Shoppe |
 | 2026-11-16 | $2.38 | ❌ SKIP | Walmart |

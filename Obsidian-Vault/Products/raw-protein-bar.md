@@ -22,9 +22,11 @@ Unit: bar · Size: 0 oz · Protein: 18g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | RAW Protein Bar | The Vitamin Shoppe | 1× 12 | $29.74 | $2.48 | $1.38 | 85% | ✅ SOLID |  |  | [Open deal](https://www.vitaminshoppe.com/e/exclusive/food-drinks/foods) |
+| RAW Protein Bar | The Vitamin Shoppe | 1× 12 | $29.74 | $2.48 | $1.38 | 85% | ✅ SOLID |  |  | [Open deal](https://www.vitaminshoppe.com/p/protein-bar-peanut-butter-fudge-12-bar-s/grw-16879) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $2.48 | ✅ SOLID | The Vitamin Shoppe |
 | 2026-11-16 | $2.48 | ✅ SOLID | The Vitamin Shoppe |

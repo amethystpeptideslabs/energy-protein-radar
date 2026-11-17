@@ -27,4 +27,5 @@ Unit: bar · Size: 3.52 oz · Protein: 30g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $4.20 | ❌ SKIP | Vitacost |
 | 2026-11-16 | $4.20 | ❌ SKIP | Vitacost |

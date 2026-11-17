@@ -22,10 +22,12 @@ Unit: bar · Size: 1.62 oz · Protein: 16g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | FITCRUNCH Bar (16g) | Sam's Club | 1× 18 | $22.48 | $1.25 | $0.78 | 83% | ✅ SOLID |  |  | [Open deal](https://www.samsclub.com/ip/Chef-Robert-Irvine-s-FITCRUNCH-High-Protein-Baked-Bars-Variety-Pack-1-62-oz-18-ct/81771902116) |
+| FITCRUNCH Bar (16g) | Sam's Club | 1× 18 | $22.48 | $1.25 | $0.78 | 83% | ✅ SOLID |  |  | [Open deal](https://www.samsclub.com/ip/81771902116) |
 | FITCRUNCH Bar (16g) | Walmart | 1× 18 | $31.75 | $1.76 | $1.10 | 117% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/390267653) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $1.25 | ✅ SOLID | Sam's Club |
 | 2026-11-16 | $1.25 | ✅ SOLID | Sam's Club |

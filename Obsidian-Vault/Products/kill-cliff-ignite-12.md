@@ -29,4 +29,5 @@ Unit: can · Size: 12 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $2.72 | ❌ SKIP | Rogue Fitness |
 | 2026-11-16 | $2.72 | ❌ SKIP | Rogue Fitness |

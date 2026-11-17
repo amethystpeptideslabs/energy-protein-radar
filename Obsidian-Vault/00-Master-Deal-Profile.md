@@ -2,7 +2,7 @@
 
 # 00 · Master Deal Profile
 
-_Updated 2026-11-16 after the quick run._
+_Updated 2026-11-17 after the quick run._
 
 ## ⚡ Energy
 
@@ -11,23 +11,23 @@ _Updated 2026-11-16 after the quick run._
 | [[ghost-energy-16\|Ghost Energy 16oz]] | $2.68 | $2.17 | The Vitamin Shoppe | 2026-11-16 | $2.17 ❌ | The Vitamin Shoppe | → |
 | [[3d-energy-16\|3D Energy 16oz]] | $2.50 | $2.22 | The Vitamin Shoppe | 2026-11-16 | $2.22 ❌ | The Vitamin Shoppe | → |
 | [[gorilla-mind-energy-16\|Gorilla Mind Energy 16oz]] | $2.92 | $2.53 | The Vitamin Shoppe | 2026-11-16 | $2.53 ❌ | The Vitamin Shoppe | → |
-| [[bum-energy-12\|RAW Bum Energy 12oz]] | $2.50 | $2.05 | The Vitamin Shoppe | 2026-11-16 | $2.05 ❌ | The Vitamin Shoppe | → |
-| [[celsius-essentials-16\|Celsius Essentials 16oz]] | $2.50 | $1.36 | Walmart | 2026-11-16 | $1.36 🔥 | Walmart | → |
+| [[bum-energy-12\|RAW Bum Energy 12oz]] | $2.50 | $1.30 | The Vitamin Shoppe | 2026-11-17 | $1.30 ✅ | The Vitamin Shoppe | → |
+| [[celsius-essentials-16\|Celsius Essentials 16oz]] | $2.50 | $1.36 | Walmart | 2026-11-16 | $1.86 ❌ | The Vitamin Shoppe | → |
 | [[celsius-original-12\|Celsius Original 12oz]] | $1.67 | $1.16 | Amazon | 2026-11-16 | $1.16 🔥 | Amazon | → |
 | [[bang-16\|Bang Energy 16oz]] | $4.58 | $4.21 | Walmart | 2026-11-16 | $4.21 ❌ | Walmart | → |
 | [[phorm-energy-16\|1st Phorm Energy 16oz]] | $2.75 | $2.39 | The Vitamin Shoppe | 2026-11-16 | $2.39 ❌ | The Vitamin Shoppe | → |
 | [[alani-nu-12\|Alani Nu Energy 12oz]] | $2.25 | $1.55 | Sam's Club | 2026-11-16 | $1.55 ❌ | Sam's Club | → |
-| [[c4-energy-16\|C4 Energy 16oz]] | $2.33 | $2.38 | Walmart | 2026-11-16 | $2.38 ❌ | Walmart | → |
+| [[c4-energy-16\|C4 Energy 16oz]] | $2.33 | $1.81 | The Vitamin Shoppe | 2026-11-17 | $1.81 ✅ | The Vitamin Shoppe | → |
 | [[c4-energy-12\|C4 Energy 12oz]] | $1.67 | $1.72 | Walmart | 2026-11-16 | $1.72 ❌ | Walmart | → |
 | [[reign-16\|Reign Total Body Fuel 16oz]] | $2.17 | $2.53 | Walmart | 2026-11-16 | $2.53 ❌ | Walmart | → |
 | [[reign-inferno-16\|Reign Inferno Thermogenic 16oz]] | $2.50 |  |  |  | — |  | → |
 | [[ryse-fuel-16\|RYSE Fuel 16oz]] | $2.51 | $2.17 | The Vitamin Shoppe | 2026-11-16 | $2.17 ❌ | The Vitamin Shoppe | → |
-| [[bucked-up-16\|Bucked Up Energy 16oz]] | $2.50 |  |  |  | — |  | → |
+| [[bucked-up-16\|Bucked Up Energy 16oz]] | $2.50 | $2.53 | The Vitamin Shoppe | 2026-11-17 | $2.53 ❌ | The Vitamin Shoppe | → |
 | [[on-amino-energy-12\|ON Amino Energy Sparkling 12oz]] | $1.66 | $1.71 | Sam's Club | 2026-11-16 | $1.71 ❌ | Sam's Club | → |
 | [[zoa-16\|ZOA Energy 16oz]] | $2.50 | $2.55 | Walmart | 2026-11-16 | $2.55 ❌ | Walmart | → |
 | [[zoa-12\|ZOA Energy 12oz]] | $2.08 | $2.13 | Walmart | 2026-11-16 | $2.13 ❌ | Walmart | → |
-| [[jocko-go-12\|Jocko GO Energy 12oz]] | $2.50 | $3.05 | Jocko Fuel (DTC) | 2026-11-16 | $3.05 ❌ | Jocko Fuel (DTC) | → |
-| [[oxyshred-energy-12\|OxyShred Ultra Energy 12oz]] | $2.50 |  |  |  | — |  | → |
+| [[jocko-go-12\|Jocko GO Energy 12oz]] | $2.50 | $2.36 | The Vitamin Shoppe | 2026-11-17 | $2.36 ❌ | The Vitamin Shoppe | → |
+| [[oxyshred-energy-12\|OxyShred Ultra Energy 12oz]] | $2.50 | $2.55 | GNC | 2026-11-17 | $2.55 ❌ | GNC | → |
 | [[bloom-energy-12\|Bloom Sparkling Energy 12oz]] | $1.67 | $1.72 | Walmart | 2026-11-16 | $1.72 ❌ | Walmart | → |
 | [[goat-fuel-12\|GOAT Fuel 12oz]] | $2.50 |  |  |  | — |  | → |
 | [[accelerator-12\|Accelerator Active Energy 12oz]] | $2.08 | $2.24 | Target | 2026-11-16 | $2.24 ❌ | Target | → |
@@ -42,15 +42,15 @@ _Updated 2026-11-16 after the quick run._
 
 | Product | Ref $/unit | All-time low | Record at | Record date | Today's best | Best retailer now | 30d |
 |---|---|---|---|---|---|---|---|
-| [[built-puff\|Built Puff]] | $2.50 | $1.54 | Sam's Club | 2026-11-16 | $1.54 🚨 | Sam's Club | → |
-| [[barebells\|Barebells Protein Bar]] | $2.50 | $2.32 | Barebells (DTC) | 2026-11-16 | $2.50 ❌ | Target | → |
-| [[magic-spoon-pastry\|Magic Spoon Protein Pastry]] | $2.44 | $2.13 | Walmart | 2026-11-16 | $2.13 ✅ | Walmart | → |
+| [[built-puff\|Built Puff]] | $2.50 | $1.37 | The Vitamin Shoppe | 2026-11-17 | $1.37 🚨 | The Vitamin Shoppe | → |
+| [[barebells\|Barebells Protein Bar]] | $2.50 | $1.73 | The Vitamin Shoppe | 2026-11-17 | $1.73 🚨 | The Vitamin Shoppe | → |
+| [[magic-spoon-pastry\|Magic Spoon Protein Pastry]] | $2.44 | $2.13 | Walmart | 2026-11-16 | $2.50 ❌ | Target | → |
 | [[drumroll-donuts\|Drumroll Mini Protein Donuts]] | $3.74 | $3.49 | Target | 2026-11-16 | $3.49 ❌ | Target | → |
-| [[prime-bites\|Prime Bites Protein Brownie]] | $3.33 | $2.83 | The Vitamin Shoppe | 2026-11-16 | $2.83 ✅ | The Vitamin Shoppe | → |
-| [[legendary-pastry\|Legendary Protein Pastry]] | $3.48 | $3.24 | Legendary Foods (DTC) | 2026-11-16 | $3.30 ❌ | Walmart | → |
-| [[legendary-donuts\|Legendary Protein Donuts]] | $3.05 | $1.87 | Target | 2026-11-16 | $1.87 🚨 | Target | → |
+| [[prime-bites\|Prime Bites Protein Brownie]] | $3.33 | $2.83 | The Vitamin Shoppe | 2026-11-16 | — |  | → |
+| [[legendary-pastry\|Legendary Protein Pastry]] | $3.48 | $2.50 | Target | 2026-11-17 | $2.50 🔥 | Target | → |
+| [[legendary-donuts\|Legendary Protein Donuts]] | $3.05 | $1.87 | Target | 2026-11-16 | $3.19 ❌ | The Vitamin Shoppe | → |
 | [[legendary-chips\|Legendary Popped Protein Chips]] | $3.71 | $3.57 | Vitacost | 2026-11-16 | $3.57 ❌ | Vitacost | → |
-| [[quest-chips\|Quest Protein Chips]] | $2.01 | $1.76 | Sam's Club | 2026-11-16 | $1.76 ✅ | Sam's Club | → |
+| [[quest-chips\|Quest Protein Chips]] | $2.01 | $1.76 | Sam's Club | 2026-11-16 | $2.25 ❌ | Walmart | → |
 | [[quest-bar\|Quest Protein Bar]] | $2.42 | $2.08 | Target | 2026-11-16 | $2.08 ✅ | Target | → |
 | [[grenade-bar\|Grenade Carb Killa Bar]] | $3.33 |  |  |  | — |  | → |
 | [[fitcrunch-bar\|FITCRUNCH Bar (16g)]] | $1.51 | $1.25 | Sam's Club | 2026-11-16 | $1.25 ✅ | Sam's Club | → |
@@ -67,11 +67,11 @@ _Updated 2026-11-16 after the quick run._
 |---|---|---|---|---|---|---|---|
 | [[raw-protein-rtd\|RAW Protein Shake 12oz]] | $4.17 | $2.66 | The Vitamin Shoppe | 2026-11-16 | $4.17 ❌ | GNC | → |
 | [[isopure-zc-40\|Isopure Zero Carb RTD 20oz (40g)]] | $5.82 |  |  |  | — |  | → |
-| [[isopure-zc-32\|Isopure Zero Carb RTD 16.9oz (32g)]] | $5.21 | $4.63 | GNC | 2026-11-16 | $4.63 ✅ | GNC | → |
-| [[core-power-26\|Fairlife Core Power 26g]] | $3.49 | $3.17 | Target | 2026-11-16 | $3.17 ❌ | Target | → |
+| [[isopure-zc-32\|Isopure Zero Carb RTD 16.9oz (32g)]] | $5.21 | $4.63 | GNC | 2026-11-16 | $5.01 ❌ | The Vitamin Shoppe | → |
+| [[core-power-26\|Fairlife Core Power 26g]] | $3.49 | $3.17 | Target | 2026-11-16 | $3.49 ❌ | Walmart | → |
 | [[core-power-elite-42\|Fairlife Core Power Elite 42g]] | $4.67 | $5.83 | Walmart | 2026-11-16 | $5.83 ❌ | Walmart | → |
 | [[premier-protein-30\|Premier Protein Shake 30g]] | $2.48 | $3.17 | Walmart | 2026-11-16 | $3.17 ❌ | Walmart | → |
 | [[muscle-milk-pro\|Muscle Milk Pro Series]] | $2.25 | $2.25 | Walmart | 2026-11-16 | $2.25 ❌ | Walmart | → |
-| [[quest-shake\|Quest Protein Shake]] | $3.68 | $2.22 | Target | 2026-11-16 | $2.22 🚨 | Target | → |
+| [[quest-shake\|Quest Protein Shake]] | $3.68 | $2.22 | Target | 2026-11-16 | $5.13 ❌ | Walmart | → |
 | [[oikos-pro-shake\|Oikos Pro Shake]] | $2.08 | $1.83 | Walmart | 2026-11-16 | $1.83 ✅ | Walmart | → |
 

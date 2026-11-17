@@ -28,4 +28,5 @@ Unit: can · Size: 12 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $1.71 | ❌ SKIP | Sam's Club |
 | 2026-11-16 | $1.71 | ❌ SKIP | Sam's Club |

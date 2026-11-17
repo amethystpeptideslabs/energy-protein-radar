@@ -30,4 +30,5 @@ Unit: roll · Size: 2.3 oz · Protein: 20g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-17 | $3.25 | ❌ SKIP | Legendary Foods (DTC) |
 | 2026-11-16 | $3.25 | ❌ SKIP | Legendary Foods (DTC) |

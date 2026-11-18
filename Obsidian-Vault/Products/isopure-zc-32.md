@@ -22,6 +22,7 @@ Unit: bottle · Size: 16.9 oz · Protein: 32g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Isopure Zero Carb RTD 16.9oz (32g) | The Vitamin Shoppe | 1× 12 | $60.09 | $5.01 | $1.57 | 95% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/-/np-1149) |
+| Isopure Zero Carb RTD 16.9oz (32g) | The Vitamin Shoppe | 1× 12 | $60.09 | $5.01 | $1.57 | 95% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/protein-fitness/drinks-snacks/protein-drinks) |
 
 ## Price ledger
 

@@ -4,7 +4,7 @@ category: rtd
 display_name: "Fairlife Core Power Elite 42g"
 ref_unit_price: 6.66
 ref_source: "calibrated (2 retailers)"
-all_time_low: 5.83
+all_time_low: 5.75
 all_time_low_retailer: "Walmart"
 protein_g: 42
 unit_size_oz: 14
@@ -21,13 +21,13 @@ Unit: bottle · Size: 14 oz · Protein: 42g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Fairlife Core Power Elite 42g | Walmart | 1× 12 | $70.00 | $5.83 | $1.39 | 88% | ✅ SOLID |  |  | [Open deal](https://www.walmart.com/ip/100979925) |
+| Fairlife Core Power Elite 42g | Walmart | 1× 12 | $69.00 | $5.75 | $1.37 | 86% | ✅ SOLID 🏆 |  |  | [Open deal](https://www.walmart.com/ip/100979925) |
 | Fairlife Core Power Elite 42g | Target | 1× 12 | $85.99 | $7.17 | $1.71 | 108% | ❌ SKIP |  |  | [Open deal](https://target.com/p/core-power-fairlife-elite-milk-shake-chocolate-14-fl-oz-bottle-pack-of-12/-/A-94139795) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
-| 2026-11-18 | $5.83 | ✅ SOLID | Walmart |
+| 2026-11-18 | $5.75 | ✅ SOLID | Walmart |
 | 2026-11-17 | $5.83 | ✅ SOLID | Walmart |
 | 2026-11-16 | $5.83 | ❌ SKIP | Walmart |

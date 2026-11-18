@@ -21,7 +21,7 @@ Unit: can · Size: 12 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Kill Cliff Ignite 12oz | Walmart | 1× 12 | $31.59 | $2.63 | $0.22 | 88% | ❌ SKIP 🏆 |  |  | [Open deal](https://www.walmart.com/ip/117510958) |
+| Kill Cliff Ignite 12oz | Walmart | 1× 12 | $31.59 | $2.63 | $0.22 | 88% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/117510958) |
 | Kill Cliff Ignite 12oz | Walmart | 1× 12 | $36.59 | $3.05 | $0.25 | 103% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/1584428946) |
 | Kill Cliff Ignite 12oz | Rogue Fitness | 1× 12 | $32.59 | $2.72 | $0.23 | 91% | ❌ SKIP |  |  | [Open deal](https://www.roguefitness.com/apo/kill-cliff-ignite-cherry-limeade-12-pack) |
 | Kill Cliff Ignite 12oz | Kill Cliff (DTC) | 1× 12 | $35.59 | $2.97 | $0.25 | 100% | ❌ SKIP |  |  | [Open deal](https://killcliff.com/collections/drinks/products/ignite-smashing-citrus) |

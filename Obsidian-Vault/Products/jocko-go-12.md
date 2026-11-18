@@ -22,6 +22,7 @@ Unit: can · Size: 12 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Jocko GO Energy 12oz | The Vitamin Shoppe | 1× 12 | $28.32 | $2.36 | $0.20 | 92% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/discipline-go-rtd-jocko-pom-12-drink-s/jko0024) |
+| Jocko GO Energy 12oz | The Vitamin Shoppe | 1× 12 | $28.32 | $2.36 | $0.20 | 92% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | Jocko GO Energy 12oz | Jocko Fuel (DTC) | 1× 12 | $36.59 | $3.05 | $0.25 | 120% | ❌ SKIP |  |  | [Open deal](https://www.jockofuel.com/products/jocko-go-energy-drink) |
 
 ## Price ledger

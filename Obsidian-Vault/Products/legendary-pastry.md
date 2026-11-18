@@ -21,7 +21,6 @@ Unit: pastry · Size: 2.15 oz · Protein: 20g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Legendary Protein Pastry | Target | 1× 4 | $9.99 | $2.50 | $1.25 | 72% | 🔥 HOT |  |  | [Open deal](https://www.target.com/p/product/-/A-89790845) |
 | Legendary Protein Pastry | Target | 1× 4 | $9.99 | $2.50 | $1.25 | 72% | 🔥 HOT |  |  | [Open deal](https://www.target.com/p/legendary-foods-protein-pastries-chocolate-cake-8-6oz-4ct/-/A-89790845) |
 | Legendary Protein Pastry | Walmart | 1× 10 | $32.99 | $3.30 | $1.65 | 95% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/Legendary-Foods-Tasty-Pastry-Cake-Style-Blueberry-10-Pastries/2812426459) |
 | Legendary Protein Pastry | GNC | 1× 10 | $34.99 | $3.50 | $1.75 | 101% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/healthy-snacks/588813.html) |

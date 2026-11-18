@@ -24,6 +24,7 @@ Unit: bottle · Size: 12 oz · Protein: 30g
 | RAW Protein Shake 12oz | GNC | 1× 12 | $49.99 | $4.17 | $1.39 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein-shakes/raw-nutrition-protein-shake-rtd.html) |
 | RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/protein-shake-chocolate-milkshake-12-bottle-s/grw-13229) |
 | RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/food-drinks/drinks/protein-drinks/brand/raw) |
+| RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/protein-fitness/drinks-snacks/protein-drinks) |
 
 ## Price ledger
 

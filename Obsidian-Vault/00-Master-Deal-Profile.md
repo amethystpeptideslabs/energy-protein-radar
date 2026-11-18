@@ -17,7 +17,7 @@ _Updated 2026-11-18 after the quick run._
 | [[bang-16\|Bang Energy 16oz]] | $4.58 | $4.17 | Walmart | 2026-11-18 | $4.17 ❌ | Walmart | → |
 | [[phorm-energy-16\|1st Phorm Energy 16oz]] | $2.75 | $2.39 | The Vitamin Shoppe | 2026-11-16 | $2.39 ❌ | The Vitamin Shoppe | → |
 | [[alani-nu-12\|Alani Nu Energy 12oz]] | $2.25 | $1.55 | Sam's Club | 2026-11-16 | $1.55 ❌ | Sam's Club | → |
-| [[c4-energy-16\|C4 Energy 16oz]] | $2.33 | $1.81 | The Vitamin Shoppe | 2026-11-17 | $2.12 ❌ | The Vitamin Shoppe | → |
+| [[c4-energy-16\|C4 Energy 16oz]] | $2.33 | $1.81 | The Vitamin Shoppe | 2026-11-17 | $2.11 ❌ | The Vitamin Shoppe | → |
 | [[c4-energy-12\|C4 Energy 12oz]] | $1.67 | $1.72 | Walmart | 2026-11-16 | $1.72 ❌ | Walmart | → |
 | [[reign-16\|Reign Total Body Fuel 16oz]] | $2.17 | $2.53 | Walmart | 2026-11-16 | $2.53 ❌ | Walmart | → |
 | [[reign-inferno-16\|Reign Inferno Thermogenic 16oz]] | $2.50 |  |  |  | — |  | → |
@@ -34,7 +34,7 @@ _Updated 2026-11-18 after the quick run._
 | [[riot-energy-16\|RIOT Energy 16oz]] | $2.99 | $4.47 | Target | 2026-11-17 | $4.47 ❌ | Target | → |
 | [[lucky-energy-16\|Lucky Energy 16oz]] | $2.33 | $2.21 | Walmart | 2026-11-16 | $2.21 ❌ | Walmart | → |
 | [[lifeaid-12\|LIFEAID FITAID / FOCUSAID 12oz]] | $2.49 | $2.38 | Walmart | 2026-11-16 | $2.38 ❌ | Walmart | → |
-| [[nocco-12\|NOCCO BCAA Energy 12oz]] | $2.50 | $2.63 | NOCCO (DTC) | 2026-11-17 | $2.63 ❌ | NOCCO (DTC) | → |
+| [[nocco-12\|NOCCO BCAA Energy 12oz]] | $2.50 | $1.92 | The Vitamin Shoppe | 2026-11-18 | $1.92 ❌ | The Vitamin Shoppe | → |
 | [[kill-cliff-ignite-12\|Kill Cliff Ignite 12oz]] | $2.92 | $2.63 | Walmart | 2026-11-18 | $2.63 ❌ | Walmart | → |
 | [[grizzly-energy-16\|Grizzly Energy 16oz]] | $2.50 | $2.55 | The Vitamin Shoppe | 2026-11-16 | $2.55 ❌ | The Vitamin Shoppe | → |
 
@@ -69,7 +69,7 @@ _Updated 2026-11-18 after the quick run._
 | [[isopure-zc-40\|Isopure Zero Carb RTD 20oz (40g)]] | $5.82 |  |  |  | — |  | → |
 | [[isopure-zc-32\|Isopure Zero Carb RTD 16.9oz (32g)]] | $5.21 | $4.63 | GNC | 2026-11-16 | $5.01 ❌ | The Vitamin Shoppe | → |
 | [[core-power-26\|Fairlife Core Power 26g]] | $3.49 | $3.17 | Target | 2026-11-16 | $3.49 ❌ | Walmart | → |
-| [[core-power-elite-42\|Fairlife Core Power Elite 42g]] | $6.66 | $5.83 | Walmart | 2026-11-16 | $5.83 ✅ | Walmart | → |
+| [[core-power-elite-42\|Fairlife Core Power Elite 42g]] | $6.66 | $5.75 | Walmart | 2026-11-18 | $5.75 ✅ | Walmart | → |
 | [[premier-protein-30\|Premier Protein Shake 30g]] | $2.48 | $3.17 | Walmart | 2026-11-16 | $3.17 ❌ | Walmart | → |
 | [[muscle-milk-pro\|Muscle Milk Pro Series]] | $2.25 | $2.25 | Walmart | 2026-11-16 | $2.25 ❌ | Walmart | → |
 | [[quest-shake\|Quest Protein Shake]] | $3.68 | $2.22 | Target | 2026-11-16 | $5.13 ❌ | Walmart | → |

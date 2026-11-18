@@ -27,5 +27,6 @@ Unit: bottle · Size: 16.9 oz · Protein: 32g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $5.01 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-17 | $5.01 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-16 | $4.63 | ✅ SOLID | GNC |

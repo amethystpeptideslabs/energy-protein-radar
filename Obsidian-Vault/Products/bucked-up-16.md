@@ -28,4 +28,5 @@ Unit: can · Size: 16 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $2.53 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-17 | $2.53 | ❌ SKIP | The Vitamin Shoppe |

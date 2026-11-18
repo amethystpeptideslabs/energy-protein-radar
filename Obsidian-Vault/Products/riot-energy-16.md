@@ -27,4 +27,5 @@ Unit: can · Size: 16 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $4.47 | ❌ SKIP | Target |
 | 2026-11-17 | $4.47 | ❌ SKIP | Target |

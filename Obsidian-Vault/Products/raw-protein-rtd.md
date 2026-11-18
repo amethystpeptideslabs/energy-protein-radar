@@ -29,5 +29,6 @@ Unit: bottle · Size: 12 oz · Protein: 30g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $4.17 | ❌ SKIP | GNC |
 | 2026-11-17 | $4.17 | ❌ SKIP | GNC |
 | 2026-11-16 | $2.66 | 🚨 STEAL | The Vitamin Shoppe |

@@ -29,5 +29,6 @@ Unit: can · Size: 12 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $1.24 | ✅ SOLID | Amazon |
 | 2026-11-17 | $1.16 | 🔥 HOT | Amazon |
 | 2026-11-16 | $1.16 | 🔥 HOT | Amazon |

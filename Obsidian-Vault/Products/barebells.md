@@ -30,5 +30,6 @@ Unit: bar · Size: 1.94 oz · Protein: 20g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $1.73 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-17 | $1.73 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-16 | $2.32 | ❌ SKIP | Barebells (DTC) |

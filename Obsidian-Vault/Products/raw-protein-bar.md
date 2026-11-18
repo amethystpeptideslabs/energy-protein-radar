@@ -27,5 +27,6 @@ Unit: bar · Size: 0 oz · Protein: 18g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $2.48 | ✅ SOLID | The Vitamin Shoppe |
 | 2026-11-17 | $2.48 | ✅ SOLID | The Vitamin Shoppe |
 | 2026-11-16 | $2.48 | ✅ SOLID | The Vitamin Shoppe |

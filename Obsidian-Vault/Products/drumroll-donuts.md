@@ -29,5 +29,6 @@ Unit: pack (3 donuts) · Size: 2.6 oz · Protein: 10g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $3.49 | ❌ SKIP | Target |
 | 2026-11-17 | $3.49 | ❌ SKIP | Target |
 | 2026-11-16 | $3.49 | ❌ SKIP | Target |

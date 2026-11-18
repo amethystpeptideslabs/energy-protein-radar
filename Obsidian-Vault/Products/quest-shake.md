@@ -27,5 +27,6 @@ Unit: bottle · Size: 11 oz · Protein: 30g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $5.13 | ❌ SKIP | Walmart |
 | 2026-11-17 | $5.13 | ❌ SKIP | Walmart |
 | 2026-11-16 | $2.22 | 🚨 STEAL | Target |

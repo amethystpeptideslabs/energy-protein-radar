@@ -28,5 +28,6 @@ Unit: bar · Size: 2.19 oz · Protein: 28g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $3.25 | ❌ SKIP | Walmart |
 | 2026-11-17 | $3.25 | ❌ SKIP | Walmart |
 | 2026-11-16 | $3.25 | ❌ SKIP | Walmart |

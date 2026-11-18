@@ -30,5 +30,6 @@ Unit: bar · Size: 2.12 oz · Protein: 21g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $2.20 | ❌ SKIP | Walmart |
 | 2026-11-17 | $2.08 | ✅ SOLID | Target |
 | 2026-11-16 | $2.08 | ✅ SOLID | Target |

@@ -28,5 +28,6 @@ Unit: bar · Size: 1.94 oz · Protein: 16g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $2.58 | ❌ SKIP | Barebells (DTC) |
 | 2026-11-17 | $2.33 | ✅ SOLID | Muscle & Strength |
 | 2026-11-16 | $2.33 | ✅ SOLID | Muscle & Strength |

@@ -27,5 +27,6 @@ Unit: bag · Size: 1.1 oz · Protein: 19g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $2.25 | ❌ SKIP | Walmart |
 | 2026-11-17 | $2.25 | ❌ SKIP | Walmart |
 | 2026-11-16 | $1.76 | ✅ SOLID | Sam's Club |

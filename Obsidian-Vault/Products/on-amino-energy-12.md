@@ -22,11 +22,12 @@ Unit: can · Size: 12 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | ON Amino Energy Sparkling 12oz | Sam's Club | 1× 12 | $20.48 | $1.71 | $0.14 | 100% | ❌ SKIP |  |  | [Open deal](https://www.samsclub.com/ip/optimum-nutrition-essential-amino-energy-electrolytes-hydration-drink/13567466352) |
-| ON Amino Energy Sparkling 12oz | The Vitamin Shoppe | 1× 12 | $26.09 | $2.17 | $0.18 | 128% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/amino-energy-sparkling-rtd-grape-12-drinks/op-3035) |
+| ON Amino Energy Sparkling 12oz | The Vitamin Shoppe | 1× 12 | $30.59 | $2.55 | $0.21 | 151% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/amino-energy-sparkling-rtd-grape-12-drinks/op-3035) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-18 | $1.71 | ❌ SKIP | Sam's Club |
 | 2026-11-17 | $1.71 | ❌ SKIP | Sam's Club |
 | 2026-11-16 | $1.71 | ❌ SKIP | Sam's Club |

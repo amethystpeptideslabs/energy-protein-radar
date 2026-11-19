@@ -1,7 +1,7 @@
 {
   "3d-energy-16": [["2026-11-16",2.22,"SKIP","The Vitamin Shoppe"],["2026-11-17",2.22,"SKIP","The Vitamin Shoppe"],["2026-11-18",2.22,"SKIP","The Vitamin Shoppe"],["2026-11-19",2.22,"SKIP","The Vitamin Shoppe"]],
   "accelerator-12": [["2026-11-16",2.24,"SKIP","Target"],["2026-11-17",2.24,"SKIP","Target"],["2026-11-18",2.24,"SKIP","Target"]],
-  "alani-nu-12": [["2026-11-16",1.55,"SKIP","Sam's Club"],["2026-11-17",1.55,"SKIP","Sam's Club"],["2026-11-18",1.55,"SKIP","Sam's Club"],["2026-11-19",1.84,"SKIP","Target"]],
+  "alani-nu-12": [["2026-11-16",1.55,"SKIP","Sam's Club"],["2026-11-17",1.55,"SKIP","Sam's Club"],["2026-11-18",1.55,"SKIP","Sam's Club"],["2026-11-19",1.05,"HOT","The Vitamin Shoppe"]],
   "bang-16": [["2026-11-16",4.21,"SKIP","Walmart"],["2026-11-17",4.21,"SKIP","Walmart"],["2026-11-18",4.17,"SKIP","Walmart"],["2026-11-19",4.17,"SKIP","Walmart"]],
   "barebells": [["2026-11-16",2.32,"SKIP","Barebells (DTC)"],["2026-11-17",1.73,"STEAL","The Vitamin Shoppe"],["2026-11-18",1.73,"STEAL","The Vitamin Shoppe"],["2026-11-19",1.73,"STEAL","The Vitamin Shoppe"]],
   "barebells-soft": [["2026-11-16",2.33,"SOLID","Muscle & Strength"],["2026-11-17",2.33,"SOLID","Muscle & Strength"],["2026-11-18",2.58,"SKIP","Barebells (DTC)"],["2026-11-19",3.33,"SKIP","Bodybuilding.com Shop"]],
@@ -20,7 +20,7 @@
   "fitcrunch-bar": [["2026-11-16",1.25,"SOLID","Sam's Club"],["2026-11-17",1.25,"SOLID","Sam's Club"],["2026-11-18",1.25,"SOLID","Sam's Club"],["2026-11-19",1.25,"SOLID","Sam's Club"]],
   "ghost-energy-16": [["2026-11-16",2.17,"SKIP","The Vitamin Shoppe"],["2026-11-17",2.17,"SKIP","The Vitamin Shoppe"],["2026-11-18",1.93,"SKIP","The Vitamin Shoppe"],["2026-11-19",1.93,"SKIP","The Vitamin Shoppe"]],
   "gorilla-mind-energy-16": [["2026-11-16",2.53,"SKIP","The Vitamin Shoppe"],["2026-11-17",2.53,"SKIP","The Vitamin Shoppe"],["2026-11-18",2.53,"SKIP","The Vitamin Shoppe"],["2026-11-19",2.8,"SKIP","Walmart"]],
-  "grizzly-energy-16": [["2026-11-16",2.55,"SKIP","The Vitamin Shoppe"],["2026-11-17",2.55,"SKIP","The Vitamin Shoppe"],["2026-11-18",2.55,"SKIP","The Vitamin Shoppe"]],
+  "grizzly-energy-16": [["2026-11-16",2.55,"SKIP","The Vitamin Shoppe"],["2026-11-17",2.55,"SKIP","The Vitamin Shoppe"],["2026-11-18",2.55,"SKIP","The Vitamin Shoppe"],["2026-11-19",2.55,"SKIP","The Vitamin Shoppe"]],
   "isopure-zc-32": [["2026-11-16",4.63,"SOLID","GNC"],["2026-11-17",5.01,"SKIP","The Vitamin Shoppe"],["2026-11-18",5.01,"SKIP","The Vitamin Shoppe"],["2026-11-19",4.63,"SOLID","GNC"]],
   "jocko-go-12": [["2026-11-16",3.05,"SKIP","Jocko Fuel (DTC)"],["2026-11-17",2.01,"SKIP","The Vitamin Shoppe"],["2026-11-18",2.36,"SKIP","The Vitamin Shoppe"],["2026-11-19",2.36,"SKIP","The Vitamin Shoppe"]],
   "kill-cliff-ignite-12": [["2026-11-16",2.72,"SKIP","Rogue Fitness"],["2026-11-17",2.72,"SKIP","Rogue Fitness"],["2026-11-18",2.63,"SKIP","Walmart"],["2026-11-19",2.72,"SKIP","Rogue Fitness"]],

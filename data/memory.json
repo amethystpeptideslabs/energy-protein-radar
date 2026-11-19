@@ -652,18 +652,18 @@
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 1.55,
-    "retailer": "Sam's Club",
-    "date": "2026-11-16",
-    "url": "https://www.samsclub.com/ip/19590672442",
+    "unit_price": 1.05,
+    "retailer": "The Vitamin Shoppe",
+    "date": "2026-11-19",
+    "url": "https://www.mensfitness.com/news/alani-nu-energy-drinks-1-at-vitamin-shoppe-this-week",
     "code": null
    },
    "last_best": {
-    "unit_price": 1.84,
-    "tier": "SKIP",
+    "unit_price": 1.05,
+    "tier": "HOT",
     "date": "2026-11-19"
    },
-   "trend_30d": "up",
+   "trend_30d": "down",
    "cal_attempted": "2026-11-16"
   },
   "c4-energy-16": {
@@ -890,7 +890,7 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.54,
+    "unit_price": 1.72,
     "tier": "SKIP",
     "date": "2026-11-19"
    },
@@ -1050,7 +1050,7 @@
    "last_best": {
     "unit_price": 2.55,
     "tier": "SKIP",
-    "date": "2026-11-18"
+    "date": "2026-11-19"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1372,20 +1372,35 @@
    "fingerprint": "bloom-energy-12|vitamin-shoppe|1.54|",
    "sent_at": "2026-11-19T05:59:48-08:00",
    "priority": 5
+  },
+  {
+   "fingerprint": "alani-nu-12|vitamin-shoppe|1.05|",
+   "sent_at": "2026-11-19T12:35:11-08:00",
+   "priority": 5
+  },
+  {
+   "fingerprint": "built-puff|sams-club|1.54|",
+   "sent_at": "2026-11-19T12:35:11-08:00",
+   "priority": 4
+  },
+  {
+   "fingerprint": "built-puff|vitamin-shoppe|1.63|",
+   "sent_at": "2026-11-19T12:35:11-08:00",
+   "priority": 4
   }
  ],
  "latest_run": {
   "date": "2026-11-19",
-  "mode": "deep",
+  "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 64
+  "searches": 35
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 11,
-   "searches": 307
+   "runs": 12,
+   "searches": 342
   }
  },
  "budget_warning_month": null

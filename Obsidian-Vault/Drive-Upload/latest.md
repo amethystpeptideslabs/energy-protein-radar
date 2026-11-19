@@ -1,8 +1,8 @@
 ---
 date: 2026-11-19
-run_mode: deep
+run_mode: quick
 status: ok
-deals: 14
+deals: 15
 tags: [deal-radar]
 ---
 
@@ -16,6 +16,7 @@ tags: [deal-radar]
 |---|---|---|---|---|---|---|
 | 🍫 Built Puff (Sour Puff Tropical Mango Burst) | $1.37/bar | $16.48 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | 🍫 Barebells Protein Bar (Birthday Cake) | $1.73/bar | $1.73 for 1 | The Vitamin Shoppe | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
+| ⚡ Alani Nu Energy 12oz (Assorted flavors) | $1.05/can | $1.05 for 1 | The Vitamin Shoppe | 🏬 In store (local) | 🔥 HOT 🏆 | [Open deal](https://www.mensfitness.com/news/alani-nu-energy-drinks-1-at-vitamin-shoppe-this-week) |
 | ⚡ Celsius Essentials 16oz (Sparkling Dragonberry) | $1.36/can | $16.34 for 12 📦 case | Walmart | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
 | 🍫 Legendary Protein Pastry (Chocolate Cake) | $2.50/pastry | $9.99 for 4 | Target | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.target.com/p/legendary-foods-protein-pastries-chocolate-cake-8-6oz-4ct/-/A-89790845) |
 | 🍫 FITCRUNCH Bar (16g) (Variety Pack) | $1.25/bar | $22.48 for 18 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/ip/81771902116) |
@@ -39,12 +40,13 @@ tags: [deal-radar]
 
 | Deal | Per unit | You pay | Store | Where | Promo | Link |
 |---|---|---|---|---|---|---|
-| ⚡ Bloom Sparkling Energy 12oz (Strawberry Shortie) | $1.54/can | $36.89 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-shortie-12-drink-s/ble-17925) |
+| ⚡ Bloom Sparkling Energy 12oz (Strawberry Shortie) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-shortie-12-drink-s/ble-17925) |
 | ⚡ Bloom Sparkling Energy 12oz (Strawberry Shortie) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
+| ⚡ Bloom Sparkling Energy 12oz (Shirley Temple) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-shirley-temple-12-drink-s/bmn-17140) |
 | ⚡ Alani Nu Energy 12oz (Hawaiian Shaved Ice) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/energy-hawaiian-shaved-ice-12-drink-s/ala0015) |
 | ⚡ Alani Nu Energy 12oz (Cherry Slush) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
 | ⚡ RAW Bum Energy 12oz (Root Beer) | $2.05/can | $24.59 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🏷️ Sale | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
-| 🍫 Quest Protein Bar (Chocolate Chip Cookie Dough) | $2.50/bar | $59.99 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/foods/bars/shop-by-deal/buy-one-get-one-50-off) |
+| 🍫 Quest Protein Bar (Cookies & Cream) | $2.50/bar | $59.99 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/foods/bars/shop-by-deal/buy-one-get-one-50-off) |
 
 ## 📋 All products today
 
@@ -58,8 +60,8 @@ tags: [deal-radar]
 | ⚡ Celsius Original 12oz | $1.24/can | $14.84 for 12 📦 | Amazon | ✅ SOLID | $1.67 | $1.16 | [Open deal](https://hip2save.com/deals/celsius-drink/) |
 | ⚡ Bang Energy 16oz | $4.17/can | $50.09 for 12 📦 | Walmart | ❌ SKIP | $4.58 | $4.17 | [Open deal](https://www.walmart.com/ip/1216905444) |
 | ⚡ 1st Phorm Energy 16oz | $2.39/can | $28.64 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.75 | $2.39 | [Open deal](https://www.vitaminshoppe.com/p/1st-phorm-energy-screamin-freedom-12-drink-s/1ph-13673) |
-| ⚡ Alani Nu Energy 12oz | $1.84/can | $22.09 for 12 📦 | Target | ❌ SKIP | $2.25 | $1.55 | [Open deal](https://target.com/p/alani-nu-variety-pack-energy-drink-cherry-twist-orange-kiss-pink-slush-12pk-12-fl-oz-cans/-/A-94052554) |
-| ⚡ C4 Energy 16oz | $2.11/can | $25.32 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.33 | $1.81 | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
+| ⚡ Alani Nu Energy 12oz | $1.05/can | $1.05 for 1 | The Vitamin Shoppe | 🔥 HOT | $2.25 | $1.05 | [Open deal](https://www.mensfitness.com/news/alani-nu-energy-drinks-1-at-vitamin-shoppe-this-week) |
+| ⚡ C4 Energy 16oz | $2.11/can | $25.32 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.33 | $1.81 | [Open deal](https://www.vitaminshoppe.com/cl/clearance-up-to-75-off/protein-fitness/drinks-snacks/energy-drinks/life-stage-people/adults) |
 | ⚡ C4 Energy 12oz | no offer found |  |  |  | $1.67 | $1.72 |  |
 | ⚡ Reign Total Body Fuel 16oz | $2.63/can | $31.56 for 12 📦 | Walmart | ❌ SKIP | $2.17 | $2.53 | [Open deal](https://walmart.com/ip/seort/5321085482) |
 | ⚡ Reign Inferno Thermogenic 16oz | no offer found |  |  |  | $2.50 |  |  |
@@ -70,7 +72,7 @@ tags: [deal-radar]
 | ⚡ ZOA Energy 12oz | no offer found |  |  |  | $2.08 | $2.13 |  |
 | ⚡ Jocko GO Energy 12oz | $2.36/can | $28.32 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.50 | $2.01 | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | ⚡ OxyShred Ultra Energy 12oz | $2.55/can | $30.59 for 12 📦 | GNC | ❌ SKIP | $2.50 | $2.55 | [Open deal](https://www.gnc.com/energy-drinks/559641.html) |
-| ⚡ Bloom Sparkling Energy 12oz | $1.54/can | $36.89 for 24 📦 | The Vitamin Shoppe | ❌ SKIP | $1.67 | $1.54 | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-shortie-12-drink-s/ble-17925) |
+| ⚡ Bloom Sparkling Energy 12oz | $1.72/can | $20.58 for 12 📦 | Walmart | ❌ SKIP | $1.67 | $1.54 | [Open deal](https://www.walmart.com/ip/seort/11395510309) |
 | ⚡ GOAT Fuel 12oz | no offer found |  |  |  | $2.50 |  |  |
 | ⚡ Accelerator Active Energy 12oz | no offer found |  |  |  | $2.08 | $2.24 |  |
 | ⚡ RIOT Energy 16oz | no offer found |  |  |  | $2.99 | $4.47 |  |
@@ -78,7 +80,7 @@ tags: [deal-radar]
 | ⚡ LIFEAID FITAID / FOCUSAID 12oz | no offer found |  |  |  | $2.49 | $2.38 |  |
 | ⚡ NOCCO BCAA Energy 12oz | $1.92/can | $23.07 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.50 | $1.92 | [Open deal](https://www.vitaminshoppe.com/cl/clearance-up-to-75-off/protein-fitness/drinks-snacks/energy-drinks/life-stage-people/adults) |
 | ⚡ Kill Cliff Ignite 12oz | $2.72/can | $32.59 for 12 📦 | Rogue Fitness | ❌ SKIP | $2.92 | $2.63 | [Open deal](https://www.roguefitness.com/apo/kill-cliff-ignite-smashing-citrus-12-pack) |
-| ⚡ Grizzly Energy 16oz | no offer found |  |  |  | $2.50 | $2.55 |  |
+| ⚡ Grizzly Energy 16oz | $2.55/can | $30.59 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.50 | $2.55 | [Open deal](https://stack3d.com/2026/11/grizzly-energy-shirley-temple) |
 | 🍫 Built Puff | $1.37/bar | $16.48 for 12 📦 | The Vitamin Shoppe | 🚨 STEAL | $2.50 | $1.37 | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | 🍫 Barebells Protein Bar | $1.73/bar | $1.73 for 1 | The Vitamin Shoppe | 🚨 STEAL | $2.50 | $1.73 | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | 🍫 Magic Spoon Protein Pastry | $2.13/pastry | $8.53 for 4 | Walmart | ✅ SOLID | $2.44 | $2.13 | [Open deal](https://www.walmart.com/ip/seort/19124451285) |
@@ -109,11 +111,12 @@ tags: [deal-radar]
 
 ## 🧾 How to get the top price
 
-**⚡ Celsius Essentials 16oz @ Walmart**
-1. Add 1× 12-can pack ($15.74 each)
-2. CA CRV +$0.60
-3. Expected $16.34 → $1.36/can
-[Open deal](https://www.walmart.com/ip/seort/5066049697)
+**⚡ Alani Nu Energy 12oz @ The Vitamin Shoppe**
+1. Add 1× can ($3.29 each)
+2. promo price $1.00/unit → $1.00
+3. CA CRV +$0.05
+4. Expected $1.05 → $1.05/can
+[Open deal](https://www.mensfitness.com/news/alani-nu-energy-drinks-1-at-vitamin-shoppe-this-week)
 
 **🍫 Built Puff @ The Vitamin Shoppe**
 1. Add 1× 12-bar pack ($16.48 each)

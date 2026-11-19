@@ -22,7 +22,7 @@ Unit: can · Size: 12 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Celsius Original 12oz | Amazon | 1× 12 | $14.84 | $1.24 | $0.10 | 71% | ✅ SOLID |  | 2026-11-21 | [Open deal](https://hip2save.com/deals/celsius-drink/) |
-| Celsius Original 12oz | The Vitamin Shoppe | 1× 12 | $17.59 | $1.47 | $0.12 | 85% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
+| Celsius Original 12oz | The Vitamin Shoppe | 1× 12 | $20.59 | $1.72 | $0.14 | 100% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 
 ## Price ledger
 

@@ -22,6 +22,7 @@ Unit: bag · Size: 1.1 oz · Protein: 19g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Quest Protein Chips | Sam's Club | 1× 14 | $24.68 | $1.76 | $0.93 | 88% | ✅ SOLID |  |  | [Open deal](https://www.samsclub.com/s/quest+chips) |
+| Quest Protein Chips | Sam's Club | 1× 14 | $24.68 | $1.76 | $0.93 | 88% | ✅ SOLID |  |  | [Open deal](https://www.samsclub.com/s/quest+chips+variety+pack) |
 
 ## Price ledger
 

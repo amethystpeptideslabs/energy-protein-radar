@@ -2,7 +2,7 @@
 
 # 00 · Master Deal Profile
 
-_Updated 2026-11-19 after the deep run._
+_Updated 2026-11-19 after the quick run._
 
 ## ⚡ Energy
 
@@ -16,7 +16,7 @@ _Updated 2026-11-19 after the deep run._
 | [[celsius-original-12\|Celsius Original 12oz]] | $1.67 | $1.16 | Amazon | 2026-11-16 | $1.24 ✅ | Amazon | ↗️ |
 | [[bang-16\|Bang Energy 16oz]] | $4.58 | $4.17 | Walmart | 2026-11-18 | $4.17 ❌ | Walmart | → |
 | [[phorm-energy-16\|1st Phorm Energy 16oz]] | $2.75 | $2.39 | The Vitamin Shoppe | 2026-11-16 | $2.39 ❌ | The Vitamin Shoppe | → |
-| [[alani-nu-12\|Alani Nu Energy 12oz]] | $2.25 | $1.55 | Sam's Club | 2026-11-16 | $1.84 ❌ | Target | ↗️ |
+| [[alani-nu-12\|Alani Nu Energy 12oz]] | $2.25 | $1.05 | The Vitamin Shoppe | 2026-11-19 | $1.05 🔥 | The Vitamin Shoppe | ↘️ |
 | [[c4-energy-16\|C4 Energy 16oz]] | $2.33 | $1.81 | The Vitamin Shoppe | 2026-11-17 | $2.11 ❌ | The Vitamin Shoppe | → |
 | [[c4-energy-12\|C4 Energy 12oz]] | $1.67 | $1.72 | Walmart | 2026-11-16 | — |  | → |
 | [[reign-16\|Reign Total Body Fuel 16oz]] | $2.17 | $2.53 | Walmart | 2026-11-16 | $2.63 ❌ | Walmart | → |
@@ -28,7 +28,7 @@ _Updated 2026-11-19 after the deep run._
 | [[zoa-12\|ZOA Energy 12oz]] | $2.08 | $2.13 | Walmart | 2026-11-16 | — |  | → |
 | [[jocko-go-12\|Jocko GO Energy 12oz]] | $2.50 | $2.01 | The Vitamin Shoppe | 2026-11-17 | $2.36 ❌ | The Vitamin Shoppe | ↘️ |
 | [[oxyshred-energy-12\|OxyShred Ultra Energy 12oz]] | $2.50 | $2.55 | GNC | 2026-11-17 | $2.55 ❌ | GNC | → |
-| [[bloom-energy-12\|Bloom Sparkling Energy 12oz]] | $1.67 | $1.54 | The Vitamin Shoppe | 2026-11-19 | $1.54 ❌ | The Vitamin Shoppe | ↘️ |
+| [[bloom-energy-12\|Bloom Sparkling Energy 12oz]] | $1.67 | $1.54 | The Vitamin Shoppe | 2026-11-19 | $1.72 ❌ | Walmart | ↘️ |
 | [[goat-fuel-12\|GOAT Fuel 12oz]] | $2.50 |  |  |  | — |  | → |
 | [[accelerator-12\|Accelerator Active Energy 12oz]] | $2.08 | $2.24 | Target | 2026-11-16 | — |  | → |
 | [[riot-energy-16\|RIOT Energy 16oz]] | $2.99 | $4.47 | Target | 2026-11-17 | — |  | → |
@@ -36,7 +36,7 @@ _Updated 2026-11-19 after the deep run._
 | [[lifeaid-12\|LIFEAID FITAID / FOCUSAID 12oz]] | $2.49 | $2.38 | Walmart | 2026-11-16 | — |  | → |
 | [[nocco-12\|NOCCO BCAA Energy 12oz]] | $2.50 | $1.92 | The Vitamin Shoppe | 2026-11-18 | $1.92 ❌ | The Vitamin Shoppe | → |
 | [[kill-cliff-ignite-12\|Kill Cliff Ignite 12oz]] | $2.92 | $2.63 | Walmart | 2026-11-18 | $2.72 ❌ | Rogue Fitness | → |
-| [[grizzly-energy-16\|Grizzly Energy 16oz]] | $2.50 | $2.55 | The Vitamin Shoppe | 2026-11-16 | — |  | → |
+| [[grizzly-energy-16\|Grizzly Energy 16oz]] | $2.50 | $2.55 | The Vitamin Shoppe | 2026-11-16 | $2.55 ❌ | The Vitamin Shoppe | → |
 
 ## 🍫 Protein Snacks
 

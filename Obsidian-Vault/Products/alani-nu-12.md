@@ -4,8 +4,8 @@ category: energy
 display_name: "Alani Nu Energy 12oz"
 ref_unit_price: 2.25
 ref_source: "calibrated (3 retailers)"
-all_time_low: 1.55
-all_time_low_retailer: "Sam's Club"
+all_time_low: 1.05
+all_time_low_retailer: "The Vitamin Shoppe"
 protein_g: 0
 unit_size_oz: 12
 tags: [deal-radar, product]
@@ -21,6 +21,7 @@ Unit: can · Size: 12 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
+| Alani Nu Energy 12oz | The Vitamin Shoppe | 1× 1 | $1.05 | $1.05 | $0.09 | 44% | 🔥 HOT 🏆 |  | 2026-11-22 | [Open deal](https://www.mensfitness.com/news/alani-nu-energy-drinks-1-at-vitamin-shoppe-this-week) |
 | Alani Nu Energy 12oz | Target | 1× 12 | $22.09 | $1.84 | $0.15 | 80% | ❌ SKIP |  |  | [Open deal](https://target.com/p/alani-nu-variety-pack-energy-drink-cherry-twist-orange-kiss-pink-slush-12pk-12-fl-oz-cans/-/A-94052554) |
 | Alani Nu Energy 12oz | The Vitamin Shoppe | 2× 12 | $46.19 | $1.92 | $0.16 | 83% | ❌ SKIP |  | 2026-11-23 | [Open deal](https://www.vitaminshoppe.com/p/energy-hawaiian-shaved-ice-12-drink-s/ala0015) |
 | Alani Nu Energy 12oz | The Vitamin Shoppe | 2× 12 | $46.19 | $1.92 | $0.16 | 83% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
@@ -30,7 +31,7 @@ Unit: can · Size: 12 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
-| 2026-11-19 | $1.84 | ❌ SKIP | Target |
+| 2026-11-19 | $1.05 | 🔥 HOT | The Vitamin Shoppe |
 | 2026-11-18 | $1.55 | ❌ SKIP | Sam's Club |
 | 2026-11-17 | $1.55 | ❌ SKIP | Sam's Club |
 | 2026-11-16 | $1.55 | ❌ SKIP | Sam's Club |

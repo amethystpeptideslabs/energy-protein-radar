@@ -622,6 +622,32 @@ products:
     retailers_priority: [vitamin-shoppe, gnc, amazon, raw-dtc]
     ref_unit_price: 3.98
 
+  - id: gnc-wheybolic-40
+    category: rtd
+    brand: GNC AMP
+    line: Wheybolic 40 RTD
+    display_name: GNC AMP Wheybolic 40 Shake 14oz
+    unit_size_oz: 14
+    protein_g: 40
+    aliases: [wheybolic, wheybolic 40, gnc amp wheybolic]
+    search_terms: ["GNC AMP Wheybolic 40 ready to drink 12 bottles", "Wheybolic 40 RTD BOGO"]
+    extra_exclude_terms: [powder]
+    retailers_priority: [gnc, walmart, amazon]
+    ref_unit_price: 3.58          # $42.99 / 12 bottles at GNC (2026-11-19)
+
+  - id: gnc-total-lean-25
+    category: rtd
+    brand: GNC Total Lean
+    line: Lean Shake 25 RTD
+    display_name: GNC Total Lean Shake 25 14oz
+    unit_size_oz: 14
+    protein_g: 25
+    aliases: [total lean, lean shake 25, gnc lean shake]
+    search_terms: ["GNC Total Lean Lean Shake 25 ready to drink 12 bottles", "GNC Lean Shake 25 BOGO"]
+    extra_exclude_terms: [powder, burn]
+    retailers_priority: [gnc, walmart, amazon]
+    ref_unit_price: 2.92          # $34.99 / 12 bottles at GNC (2026-11-19)
+
   - id: isopure-zc-40
     category: rtd
     brand: Isopure

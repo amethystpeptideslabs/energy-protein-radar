@@ -90,6 +90,9 @@ research:
     quick_amazon: 6            # Amazon sweep: rotating third of the energy drinks + deal pages
     midday_amazon: 3           # Amazon Today's Deals / Lightning deals + fresh Slickdeals posts
     deep_amazon: 12            # every tracked energy drink on Amazon
+    quick_gnc: 5               # GNC weekly deals: badges on gnc.com pages + $1 in-store drink days
+    midday_gnc: 3              # GNC deals that went live today / this weekend
+    deep_gnc: 8
   focus_groups: {energy: 3, snack: 2}   # quick runs research 1/N of the category in depth (rotates daily)
   deep_jobs: {energy: 2, snack: 2}      # deep runs split the category into N jobs
   calibrate_new_per_run: 6     # newly added products calibrated per run until all are done
@@ -166,8 +169,20 @@ retailers:
       - {name: Aliso Viejo, id: 133, address: "26831 Aliso Creek Rd, Aliso Viejo, CA 92656", phone: "(949) 349-0690"}
       - {name: Costa Mesa, address: "3929 S Bristol St, Bldg C, Santa Ana, CA 92704"}
       - {name: Huntington Beach, address: "7672 Edinger Ave, Huntington Beach, CA 92647"}
-  gnc: {physical: true, pickup: true, stock_search: "https://www.gnc.com/search?q={q}", name: GNC, domains: [gnc.com], type: supplement,
-    playbook: "BOGO 50% on RTD/bars is common. Pro Access member pricing is membership-gated (🔒). In-store $1 energy promos mirror Vitamin Shoppe some weekends."}
+  gnc:
+    physical: true
+    pickup: true
+    stock_search: "https://www.gnc.com/search?q={q}"
+    name: GNC
+    domains: [gnc.com]
+    type: supplement
+    playbook: "Weekly deals show as badges on gnc.com tiles and product pages: BOGO 50% Off Mix-and-Match (add 2), BOGO FREE when you buy online + pick up in store, PRO ACCESS BOGO (members only 🔒). In-store $1 / 90-cent drink days are announced by email and Stack3d (limit ~6, participating stores: call ahead). Store pick-up is ready in about 2 hours. gnc.com blocks automated browsers, so stock can't be checked."
+    home_store: Placentia       # closest GNC to Anaheim Hills (the Anaheim Hills Festival store is no longer listed)
+    local_stores:   # Orange County GNC stores in GNC's store list (checked 2026-11-19)
+      - {name: Placentia, id: 6334, address: "634 N Rose Dr, Placentia, CA 92870", phone: "(714) 577-8525"}
+      - {name: Anaheim, address: "2050 E Lincoln Ave, Anaheim, CA 92806", phone: "(714) 491-9228"}
+      - {name: Orange, address: "20 City Blvd W, Suite C-5, Orange, CA 92868", phone: "(714) 940-9972"}
+      - {name: Santa Ana, address: "2026 E 17th St, Santa Ana, CA 92705", phone: "(714) 834-9712"}
   campus-protein: {physical: false, name: Campus Protein, domains: [campusprotein.com], type: supplement, playbook: "Site-wide % codes; free shipping thresholds."}
   suppz: {physical: false, name: Suppz, domains: [suppz.com], type: supplement, playbook: "Frequent sitewide codes; check shipping minimum."}
   muscle-strength: {physical: false, name: Muscle & Strength, domains: [muscleandstrength.com], type: supplement, playbook: "Store codes stack with some brand promos; free shipping over threshold."}

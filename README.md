@@ -1,6 +1,6 @@
 # Energy + Protein Deal Radar
 
-Daily deal hunter for **RTD energy drinks, protein snacks and RTD protein shakes** (56 products: 29 gym/performance energy drinks, 18 protein bars/snacks, 9 shakes),
+Daily deal hunter for **RTD energy drinks, protein snacks and RTD protein shakes** (58 products: 29 gym/performance energy drinks, 18 protein bars/snacks, 11 shakes),
 **cases first** (12/15/18/24-packs, boxes) with single-can promos included. No API credits: a
 scheduled Claude session on the owner's existing Claude plan does the web research
 (`docs/RESEARCH_PROTOCOL.md`), and Python in this repo does every check and every price.
@@ -85,6 +85,9 @@ python -m http.server               # then open http://localhost:8000
   rotating third, midday Amazon's Today's Deals. Only Sold by Amazon.com or the brand's store counts
   (resellers dropped, unknown seller hidden); clip coupons ($ or %) and Subscribe & Save are priced in,
   and the same $/can tiers decide whether it's a deal.
+- GNC is swept every scan (`gnc` job): the BOGO / BOGO-free-with-pickup badges on gnc.com pages and
+  in-store $1 drink days from posts dated within 7 days. GNC stores near Anaheim Hills: Placentia,
+  Anaheim (E Lincoln), Orange, Santa Ana. gnc.com blocks automated browsers, so GNC stock isn't checked.
 - No expired sales: every scan re-checks each live sale and deal on its store page (`verify` job).
   A sale or deal no scan re-confirmed in 20 hours drops off, as do sales past their end date or not
   started yet; sale evidence older than 7 days is rejected. The app hides anything not confirmed in

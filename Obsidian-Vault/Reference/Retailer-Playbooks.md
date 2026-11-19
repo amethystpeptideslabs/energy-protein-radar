@@ -8,7 +8,7 @@
 
 ## GNC
 - Domains: gnc.com
-- BOGO 50% on RTD/bars is common. Pro Access member pricing is membership-gated (🔒). In-store $1 energy promos mirror Vitamin Shoppe some weekends.
+- Weekly deals show as badges on gnc.com tiles and product pages: BOGO 50% Off Mix-and-Match (add 2), BOGO FREE when you buy online + pick up in store, PRO ACCESS BOGO (members only 🔒). In-store $1 / 90-cent drink days are announced by email and Stack3d (limit ~6, participating stores: call ahead). Store pick-up is ready in about 2 hours. gnc.com blocks automated browsers, so stock can't be checked.
 
 ## Campus Protein
 - Domains: campusprotein.com

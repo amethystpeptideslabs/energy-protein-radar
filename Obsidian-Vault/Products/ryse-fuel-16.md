@@ -22,11 +22,13 @@ Unit: can · Size: 16 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | RYSE Fuel 16oz | The Vitamin Shoppe | 1× 12 | $6.98 | $0.58 | $0.04 | 21% | 🚨 STEAL ⚠️ UNVERIFIED |  |  | [Open deal](https://www.vitaminshoppe.com/p/ryse-fuel-200-mg-kool-aid-tropical-punch-12-drink-s/rys0031?store=179) |
+| RYSE Fuel 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-19 | $2.55 | ❌ SKIP | GNC |
 | 2026-11-18 | $2.17 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-17 | $2.17 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-16 | $2.17 | ❌ SKIP | The Vitamin Shoppe |

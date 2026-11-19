@@ -22,6 +22,7 @@ Unit: can · Size: 16 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $23.15 | $1.93 | $0.12 | 70% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
+| Ghost Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 93% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/buy/canned-energy-drinks) |
 
 ## Price ledger
 

@@ -109,6 +109,35 @@ Chrome) and never WebFetch it.** Amazon prices come only from sources that quote
    Amazon offers without a seller. Python prices the cart (coupon, S&S, CA CRV) and the same $/can
    tiers decide whether it's a deal. Each card says when the deal was posted.
 
+## 2e. GNC weekly deals (every run, `gnc` job)
+
+GNC posts its weekly deals as badges on its own product tiles and product pages, and runs in-store
+$1 / 90-cent drink days that it announces by email (Stack3d, Slickdeals and Hip2Save repost them).
+
+1. WebSearch for gnc.com drink, energy-drink, snack, protein-bar and ready-to-drink shake pages
+   (for example `gnc.com/food-drink/drinks/`, `gnc.com/buy/canned-energy-drinks`,
+   `gnc.com/food-drink/snacks/`) and WebFetch the ones it returns. Each tile shows the pack price and
+   a promo badge when there is one.
+2. **Never open gnc.com in the built-in browser or Chrome.** GNC's bot check ("Access to this page
+   has been denied") blocks automated browsing; a CAPTCHA is never solved. If WebFetch is refused,
+   skip that page. GNC store stock can't be checked, so GNC offers have no `stock_note`.
+3. Badge → fields:
+   - "BOGO 50% Off Mix-and-Match", "BOGO 50% Off Almost Everything", "BOGO 50% OFF PRE-BLACK FRIDAY
+     SALE" → `promo_type: "bogo_50"`.
+   - "BOGO FREE when you Buy Online + Pick Up in Store" → `promo_type: "bogo_free"`,
+     `pickup_available: true`.
+   - "PRO ACCESS BOGO ..." → the BOGO type plus `membership_required: true`.
+   - "IN STORE ONLY ..." → `in_store_only: true`.
+   - "Offer valid ... through <date>" → `ends`. A badge on a listing page with no date still counts
+     for today (`evidence_date` = today).
+4. $1 / 90-cent in-store drink days: only from a post or GNC page dated within the last 7 days that
+   names the dates. Report `promo_type: "fixed_unit_price"`, `promo_value: 1` (or `0.9`),
+   `pack_count: 1`, `in_store_only: true`, `limit_per_customer`, `starts`, `ends`.
+5. Report regular GNC prices for tracked products too (one offer per flavor), so the app can compare.
+6. GNC's Orange County stores (GNC's store list, checked Nov 19 2026): Placentia (634 N Rose Dr,
+   closest to Anaheim Hills), Anaheim (2050 E Lincoln Ave), Orange (Outlets at Orange, 20 City Blvd W),
+   Santa Ana (2026 E 17th St). Pick-up orders are ready in about 2 hours.
+
 ## 2c. No expired sales: re-check job (every run)
 
 The plan's last job is `verify`: every sale and deal the app is showing right now (BOGO, % off,

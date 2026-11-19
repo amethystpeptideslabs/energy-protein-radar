@@ -197,6 +197,7 @@ def build_jobs(cfg: Config, mode: str, slot: str, only: str | None,
                          f"products:\n{lines}{also}\n{focus}\nPrioritize the biggest discounts. Report every "
                          f"concrete sourced offer as OFFER blocks.", max_uses))
     jobs.append(_amazon_job(products, mode, slot, r, today, day, max_uses))
+    jobs.append(_gnc_job(products, mode, slot, today, day, max_uses))
     return jobs
 
 
@@ -354,3 +355,44 @@ def dump_debug(results: list[ResearchResult]) -> str:
     return json.dumps([{"label": r.label, "urls": len(r.urls), "searches": r.searches,
                         "stop": r.stop_reason, "chars": len(r.dossier), "error": r.error}
                        for r in results], indent=1)
+
+
+GNC_RULES = (
+    "Read GNC's live prices from gnc.com pages that WebSearch returns (category pages such as "
+    "gnc.com/food-drink/drinks/, gnc.com/buy/canned-energy-drinks, gnc.com/food-drink/snacks/, and product "
+    "pages) with WebFetch: each tile or product page shows the 12-pack price and a promo badge if there is one. "
+    "Never open gnc.com in the built-in browser or Chrome: GNC's bot check blocks automated browsing, and a "
+    "CAPTCHA is never solved. If WebFetch is refused or shows 'Access to this page has been denied', skip that "
+    "page.\n"
+    "Report every tracked product GNC lists, deal or not, as its own offer with the flavor. Badge -> fields: "
+    "'BOGO 50% Off Mix-and-Match' / 'BOGO 50% Off Almost Everything' / '... PRE-BLACK FRIDAY SALE' -> "
+    "promo_type bogo_50; 'BOGO FREE when you Buy Online + Pick Up in Store' -> promo_type bogo_free, "
+    "pickup_available true (store pickup only); 'PRO ACCESS BOGO ...' -> the BOGO type with "
+    "membership_required true; 'IN STORE ONLY' -> in_store_only true; a $1 or 90-cent drink day -> "
+    "fixed_unit_price, promo_value 1 (or 0.9), pack_count 1, in_store_only true, limit_per_customer as stated, "
+    "starts/ends = the event dates. Copy 'Offer valid ... through <date>' into ends. A badge on a "
+    "listing page with no product-page date still counts for today (evidence_date = today).\n"
+    "$1 / 90-cent in-store drink days only count from a post or GNC page dated within the last 7 days that "
+    "names the dates; they are at participating stores, so leave stock_note empty.")
+
+
+def _gnc_job(products: list[Product], mode: str, slot: str, today: date, day: str,
+             max_uses: int) -> tuple[str, list[str], str, int]:
+    """GNC weekly deals every scan: the badges on GNC's own pages (BOGO 50%, BOGO free with store
+    pickup, Pre-Black Friday) and in-store $1 drink days from deal posts. Any tracked product counts."""
+    tracked = [p for p in products if "gnc" in p.retailers_priority]
+    names = ", ".join(f"{p.id} ({p.display_name})" for p in tracked)
+    if slot == "midday":
+        what = ("Look for GNC deals that went live TODAY or start THIS WEEKEND: new BOGO badges on gnc.com drink, "
+                "snack and protein-shake pages, and $1 / 90-cent in-store drink days (Stack3d, Slickdeals and "
+                "Hip2Save posts from the last 24 hours).")
+    else:
+        what = ("Sweep GNC's weekly deals: (1) WebSearch for gnc.com energy-drink, protein-bar, snack and "
+                "ready-to-drink protein shake pages and WebFetch them to read each tile's price and promo badge; "
+                "(2) WebSearch for this week's GNC deals: '$1 energy drinks at GNC', 'GNC BOGO', 'GNC Black "
+                "Friday', Stack3d / Slickdeals / Hip2Save posts from the last 7 days.")
+    others = ", ".join(f"{p.id} ({p.display_name})" for p in products if p not in tracked)
+    return ("gnc", [p.id for p in products],
+            f"Today is {day}. GNC WEEKLY DEALS. {what}\nTracked products GNC usually carries: {names}.\n"
+            f"{GNC_RULES}\nIf GNC has another tracked product on a deal, report it too: {others}.\n"
+            f"Report every concrete sourced offer as OFFER blocks.", max_uses)

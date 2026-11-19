@@ -23,6 +23,7 @@ Unit: can · Size: 12 oz
 |---|---|---|---|---|---|---|---|---|---|---|
 | RAW Bum Energy 12oz | The Vitamin Shoppe | 1× 12 | $6.99 | $0.58 | $0.05 | 21% | 🚨 STEAL ⚠️ UNVERIFIED |  |  | [Open deal](https://www.vitaminshoppe.com/p/bum-energy-citrus-burst-12-drink-s/bum-11570) |
 | RAW Bum Energy 12oz | The Vitamin Shoppe | 1× 12 | $24.59 | $2.05 | $0.17 | 80% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
+| RAW Bum Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 
 ## Price ledger
 

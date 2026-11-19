@@ -24,6 +24,7 @@ Unit: can · Size: 16 oz
 | C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $25.32 | $2.11 | $0.13 | 88% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/cl/clearance-up-to-75-off/protein-fitness/drinks-snacks/energy-drinks/life-stage-people/adults) |
 | C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $25.40 | $2.12 | $0.13 | 89% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | C4 Energy 16oz | Walmart | 1× 12 | $28.59 | $2.38 | $0.15 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/542036504) |
+| C4 Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 107% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/buy/canned-energy-drinks) |
 
 ## Price ledger
 

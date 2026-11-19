@@ -23,6 +23,7 @@ Unit: can · Size: 16 oz
 |---|---|---|---|---|---|---|---|---|---|---|
 | Gorilla Mind Energy 16oz | Walmart | 1× 12 | $33.65 | $2.80 | $0.18 | 94% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/Gorilla-Mind-Energy-Drink-Orange-Rush-12-Drinks-16-Fl-Oz-Each/5001446820) |
 | Gorilla Mind Energy 16oz | GNC | 1× 12 | $35.59 | $2.97 | $0.19 | 100% | ❌ SKIP |  |  | [Open deal](https://gnc.com/energy-drinks/680345.html) |
+| Gorilla Mind Energy 16oz | GNC | 1× 12 | $35.59 | $2.97 | $0.19 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 
 ## Price ledger
 

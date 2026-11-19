@@ -23,6 +23,7 @@ Unit: bar · Size: 1.94 oz · Protein: 20g
 |---|---|---|---|---|---|---|---|---|---|---|
 | Barebells Protein Bar | The Vitamin Shoppe | 1× 1 | $1.73 | $1.73 | $0.87 | 69% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | Barebells Protein Bar | Target | 1× 12 | $27.99 | $2.33 | $1.17 | 93% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/barebells-nutrition-bars-cookies-38-cream-12pk/-/A-83942841) |
+| Barebells Protein Bar | GNC | 1× 12 | $30.99 | $2.58 | $1.29 | 103% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/snacks/) |
 
 ## Price ledger
 

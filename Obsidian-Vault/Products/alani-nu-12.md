@@ -21,11 +21,12 @@ Unit: can · Size: 12 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Alani Nu Energy 12oz | The Vitamin Shoppe | 1× 1 | $1.05 | $1.05 | $0.09 | 44% | 🔥 HOT 🏆 |  | 2026-11-22 | [Open deal](https://www.mensfitness.com/news/alani-nu-energy-drinks-1-at-vitamin-shoppe-this-week) |
+| Alani Nu Energy 12oz | The Vitamin Shoppe | 1× 1 | $1.05 | $1.05 | $0.09 | 44% | 🔥 HOT |  | 2026-11-22 | [Open deal](https://www.mensfitness.com/news/alani-nu-energy-drinks-1-at-vitamin-shoppe-this-week) |
 | Alani Nu Energy 12oz | Target | 1× 12 | $22.09 | $1.84 | $0.15 | 80% | ❌ SKIP |  |  | [Open deal](https://target.com/p/alani-nu-variety-pack-energy-drink-cherry-twist-orange-kiss-pink-slush-12pk-12-fl-oz-cans/-/A-94052554) |
 | Alani Nu Energy 12oz | The Vitamin Shoppe | 2× 12 | $46.19 | $1.92 | $0.16 | 83% | ❌ SKIP |  | 2026-11-23 | [Open deal](https://www.vitaminshoppe.com/p/energy-hawaiian-shaved-ice-12-drink-s/ala0015) |
 | Alani Nu Energy 12oz | The Vitamin Shoppe | 2× 12 | $46.19 | $1.92 | $0.16 | 83% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
 | Alani Nu Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 111% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/561543.html) |
+| Alani Nu Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 111% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 
 ## Price ledger
 

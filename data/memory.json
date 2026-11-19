@@ -312,11 +312,11 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 3.19,
+    "unit_price": 3.25,
     "tier": "SKIP",
-    "date": "2026-11-18"
+    "date": "2026-11-19"
    },
-   "trend_30d": "flat"
+   "trend_30d": "up"
   },
   "legendary-chips": {
    "ref_unit_price": 3.71,
@@ -617,7 +617,7 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 3.33,
+    "unit_price": 2.58,
     "tier": "SKIP",
     "date": "2026-11-19"
    },
@@ -743,11 +743,11 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.17,
+    "unit_price": 2.55,
     "tier": "SKIP",
-    "date": "2026-11-18"
+    "date": "2026-11-19"
    },
-   "trend_30d": "flat",
+   "trend_30d": "up",
    "cal_attempted": "2026-11-16"
   },
   "bucked-up-16": {
@@ -1087,8 +1087,18 @@
    "ref_source": "seed",
    "protein_verified": null,
    "size_verified": null,
-   "all_time_low": null,
-   "last_best": null,
+   "all_time_low": {
+    "unit_price": 2.92,
+    "retailer": "GNC",
+    "date": "2026-11-19",
+    "url": "https://www.gnc.com/food-drink/snacks/",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.92,
+    "tier": "SOLID",
+    "date": "2026-11-19"
+   },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
   },
@@ -1248,6 +1258,46 @@
    "last_best": null,
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
+  },
+  "gnc-wheybolic-40": {
+   "ref_unit_price": 3.58,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 2.69,
+    "retailer": "GNC",
+    "date": "2026-11-19",
+    "url": "https://www.gnc.com/food-drink/drinks/",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 2.69,
+    "tier": "HOT",
+    "date": "2026-11-19"
+   },
+   "trend_30d": "flat"
+  },
+  "gnc-total-lean-25": {
+   "ref_unit_price": 2.92,
+   "ref_updated": null,
+   "ref_source": "seed",
+   "protein_verified": null,
+   "size_verified": null,
+   "all_time_low": {
+    "unit_price": 1.46,
+    "retailer": "GNC",
+    "date": "2026-11-19",
+    "url": "https://www.gnc.com/ready-to-drink-protein/GNCTotalLeanLeanShake12Pack.html",
+    "code": null
+   },
+   "last_best": {
+    "unit_price": 1.46,
+    "tier": "STEAL",
+    "date": "2026-11-19"
+   },
+   "trend_30d": "flat"
   }
  },
  "dead_codes": [
@@ -1387,6 +1437,11 @@
    "fingerprint": "built-puff|vitamin-shoppe|1.63|",
    "sent_at": "2026-11-19T12:35:11-08:00",
    "priority": 4
+  },
+  {
+   "fingerprint": "gnc-total-lean-25|gnc|1.46|",
+   "sent_at": "2026-11-19T15:09:52-08:00",
+   "priority": 4
   }
  ],
  "latest_run": {
@@ -1394,13 +1449,13 @@
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 35
+  "searches": 16
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 12,
-   "searches": 342
+   "runs": 13,
+   "searches": 358
   }
  },
  "budget_warning_month": null

@@ -17,13 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| LIFEAID FITAID / FOCUSAID 12oz | Walmart | 1× 12 | $28.59 | $2.38 | $0.20 | 94% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/1453919712) |
-| LIFEAID FITAID / FOCUSAID 12oz | Walmart | 1× 12 | $30.48 | $2.54 | $0.21 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/108282873) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

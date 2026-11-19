@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: bottle · Size: 11 oz · Protein: 30g
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Quest Protein Shake | Walmart | 1× 4 | $20.53 | $5.13 | $1.71 | 139% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/445356188) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

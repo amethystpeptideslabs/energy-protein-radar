@@ -21,15 +21,15 @@ Unit: bottle · Size: 12 oz · Protein: 30g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| RAW Protein Shake 12oz | GNC | 1× 12 | $49.99 | $4.17 | $1.39 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein-shakes/raw-nutrition-protein-shake-rtd.html) |
-| RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/protein-shake-chocolate-milkshake-12-bottle-s/grw-13229) |
 | RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/food-drinks/drinks/protein-drinks/brand/raw) |
 | RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/protein-fitness/drinks-snacks/protein-drinks) |
+| RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/protein-shake-chocolate-milkshake-12-bottle-s/grw-13229) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-19 | $4.25 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-18 | $4.17 | ❌ SKIP | GNC |
 | 2026-11-17 | $4.17 | ❌ SKIP | GNC |
 | 2026-11-16 | $2.66 | 🚨 STEAL | The Vitamin Shoppe |

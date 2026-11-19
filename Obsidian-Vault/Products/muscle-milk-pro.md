@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: bottle · Size: 11 oz · Protein: 33g
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Muscle Milk Pro Series | Walmart | 1× 12 | $26.98 | $2.25 | $0.68 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/19298256108) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

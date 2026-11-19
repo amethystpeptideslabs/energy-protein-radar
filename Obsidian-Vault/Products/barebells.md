@@ -22,14 +22,13 @@ Unit: bar · Size: 1.94 oz · Protein: 20g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Barebells Protein Bar | The Vitamin Shoppe | 1× 1 | $1.73 | $1.73 | $0.87 | 69% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
-| Barebells Protein Bar | Target | 1× 12 | $29.99 | $2.50 | $1.25 | 100% | ❌ SKIP |  |  | [Open deal](https://target.com/p/barebells-nutrition-bars-chocolate-dough-12pk/-/A-83942845) |
-| Barebells Protein Bar | Barebells (DTC) | 1× 12 | $27.89 | $2.32 | $1.16 | 93% | ❌ SKIP |  |  | [Open deal](https://shop.barebells.com/product/salty-peanut/) |
-| Barebells Protein Bar | Vitacost | 1× 12 | $29.39 | $2.45 | $1.23 | 98% | ❌ SKIP |  |  | [Open deal](https://www.vitacost.com/barebells-protein-bar-salty-peanut-4-bars) |
+| Barebells Protein Bar | Target | 1× 12 | $27.99 | $2.33 | $1.17 | 93% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/barebells-nutrition-bars-cookies-38-cream-12pk/-/A-83942841) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-19 | $1.73 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-18 | $1.73 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-17 | $1.73 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-16 | $2.32 | ❌ SKIP | Barebells (DTC) |

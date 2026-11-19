@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Accelerator Active Energy 12oz | Target | 1× 1 | $2.24 | $2.24 | $0.19 | 105% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/-/A-88067955) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

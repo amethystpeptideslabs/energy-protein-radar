@@ -22,13 +22,12 @@ Unit: can · Size: 16 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $23.15 | $1.93 | $0.12 | 70% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
-| Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $26.09 | $2.17 | $0.14 | 79% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/brand/ghost-energy) |
-| Ghost Energy 16oz | Walmart | 1× 1 | $2.73 | $2.73 | $0.17 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/17042262854) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-19 | $1.93 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-18 | $1.93 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-17 | $2.17 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-16 | $2.17 | ❌ SKIP | The Vitamin Shoppe |

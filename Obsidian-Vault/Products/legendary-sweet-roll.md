@@ -17,14 +17,6 @@ tags: [deal-radar, product]
 
 Unit: roll · Size: 2.3 oz · Protein: 20g
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Legendary Protein Sweet Roll | GNC | 1× 8 | $26.99 | $3.37 | $1.69 | 104% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/healthy-snacks/588847.html) |
-| Legendary Protein Sweet Roll | Legendary Foods (DTC) | 1× 8 | $25.99 | $3.25 | $1.63 | 100% | ❌ SKIP |  |  | [Open deal](https://www.eatlegendary.com/collections/chocolate/products/milk-chocolate-protein-sweet-roll-8-pack) |
-| Legendary Protein Sweet Roll | Vitacost | 1× 8 | $25.99 | $3.25 | $1.63 | 100% | ❌ SKIP |  |  | [Open deal](https://www.vitacost.com/products/legendary-foods-protein-sweet-roll-milk-chocolate-8-pack-2-4-oz-67-g-each-122111) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

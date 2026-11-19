@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 16 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| RIOT Energy 16oz | Target | 1× 12 | $53.59 | $4.47 | $0.28 | 148% | ❌ SKIP |  |  | [Open deal](https://target.com/p/riot-energy-organic-citrus-lime-plant-powered-energy-drink-case-of-12-16-oz/-/A-90510496) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

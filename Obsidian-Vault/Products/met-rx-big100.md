@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: bar · Size: 3.52 oz · Protein: 30g
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| MET-Rx Big 100 Bar (30g) | Vitacost | 1× 9 | $37.83 | $4.20 | $1.40 | 100% | ❌ SKIP |  |  | [Open deal](https://www.vitacost.com/products/met-rx-big-100-meal-replacement-bar-salted-caramel-brownie-crunch-9-bars-3-52-oz-100-g-each-136362) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

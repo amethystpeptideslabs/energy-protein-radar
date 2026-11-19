@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| ZOA Energy 12oz | Walmart | 1× 12 | $25.59 | $2.13 | $0.18 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/ZOA-Zero-Sugar-Energy-Drink-Wild-Orange-12-Pack-12oz/723858447) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

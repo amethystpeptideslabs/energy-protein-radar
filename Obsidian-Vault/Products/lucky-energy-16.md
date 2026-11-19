@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 16 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Lucky Energy 16oz | Walmart | 1× 12 | $26.48 | $2.21 | $0.14 | 93% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/15790258050) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

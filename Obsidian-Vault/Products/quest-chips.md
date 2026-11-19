@@ -21,12 +21,13 @@ Unit: bag · Size: 1.1 oz · Protein: 19g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Quest Protein Chips | Walmart | 1× 12 | $26.98 | $2.25 | $1.18 | 112% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/14406622055) |
+| Quest Protein Chips | Sam's Club | 1× 14 | $24.68 | $1.76 | $0.93 | 88% | ✅ SOLID |  |  | [Open deal](https://www.samsclub.com/s/quest+chips) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-19 | $1.76 | ✅ SOLID | Sam's Club |
 | 2026-11-18 | $2.25 | ❌ SKIP | Walmart |
 | 2026-11-17 | $2.25 | ❌ SKIP | Walmart |
 | 2026-11-16 | $1.76 | ✅ SOLID | Sam's Club |

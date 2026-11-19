@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 16 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| ZOA Energy 16oz | Walmart | 1× 12 | $30.59 | $2.55 | $0.16 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/909589999) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

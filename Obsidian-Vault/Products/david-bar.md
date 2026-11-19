@@ -17,13 +17,6 @@ tags: [deal-radar, product]
 
 Unit: bar · Size: 2.19 oz · Protein: 28g
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| David Protein Bar (28g) | Walmart | 1× 12 | $39.00 | $3.25 | $1.16 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/15164761476) |
-| David Protein Bar (28g) | David (DTC) | 1× 12 | $39.00 | $3.25 | $1.16 | 100% | ❌ SKIP |  |  | [Open deal](https://davidprotein.com/BNC) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

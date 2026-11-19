@@ -28,6 +28,7 @@ Unit: bottle · Size: 12 oz · Protein: 30g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-19 | $1.83 | ✅ SOLID | Walmart |
 | 2026-11-18 | $1.83 | ✅ SOLID | Walmart |
 | 2026-11-17 | $1.83 | ✅ SOLID | Walmart |
 | 2026-11-16 | $1.83 | ✅ SOLID | Walmart |

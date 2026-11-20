@@ -17,13 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| OxyShred Ultra Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/559641.html) |
-| OxyShred Ultra Energy 12oz | EHPlabs (DTC) | 1× 12 | $30.55 | $2.55 | $0.21 | 100% | ❌ SKIP |  |  | [Open deal](https://ehplabs.com/products/oxyshred-energy-12-pack) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

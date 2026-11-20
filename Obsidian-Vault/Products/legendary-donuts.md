@@ -27,6 +27,7 @@ Unit: pack (2 donuts) · Size: 2.4 oz · Protein: 20g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-20 | $3.25 | ❌ SKIP | GNC |
 | 2026-11-19 | $3.25 | ❌ SKIP | GNC |
 | 2026-11-18 | $3.19 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-17 | $3.19 | ❌ SKIP | The Vitamin Shoppe |

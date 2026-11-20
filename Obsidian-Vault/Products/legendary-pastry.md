@@ -28,6 +28,7 @@ Unit: pastry · Size: 2.15 oz · Protein: 20g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-20 | $2.50 | 🔥 HOT | Target |
 | 2026-11-19 | $2.50 | 🔥 HOT | Target |
 | 2026-11-18 | $2.50 | 🔥 HOT | Target |
 | 2026-11-17 | $2.50 | 🔥 HOT | Target |

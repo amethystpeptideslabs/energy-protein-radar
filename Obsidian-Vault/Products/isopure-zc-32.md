@@ -25,11 +25,13 @@ Unit: bottle · Size: 16.9 oz · Protein: 32g
 | Isopure Zero Carb RTD 16.9oz (32g) | The Vitamin Shoppe | 1× 12 | $60.09 | $5.01 | $1.57 | 95% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/-/np-1149) |
 | Isopure Zero Carb RTD 16.9oz (32g) | The Vitamin Shoppe | 1× 12 | $60.09 | $5.01 | $1.57 | 95% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/protein-fitness/drinks-snacks/protein-drinks) |
 | Isopure Zero Carb RTD 16.9oz (32g) | The Vitamin Shoppe | 1× 12 | $60.09 | $5.01 | $1.57 | 95% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/nature-best-isopure-isopure-rtd-zero-carb-blue-ras-12-drinks/np-1152) |
+| Isopure Zero Carb RTD 16.9oz (32g) | The Vitamin Shoppe | 1× 12 | $60.09 | $5.01 | $1.57 | 95% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/nature-best-isopure-isopure-rtd-zero-carb-alpine-punch-12-drinks/np-1149) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-20 | $4.63 | ✅ SOLID | GNC |
 | 2026-11-19 | $4.63 | ✅ SOLID | GNC |
 | 2026-11-18 | $5.01 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-17 | $5.01 | ❌ SKIP | The Vitamin Shoppe |

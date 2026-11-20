@@ -28,6 +28,7 @@ Unit: bottle · Size: 14 oz · Protein: 26g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-20 | $3.49 | ❌ SKIP | Walmart |
 | 2026-11-19 | $3.49 | ❌ SKIP | Walmart |
 | 2026-11-18 | $3.49 | ❌ SKIP | Walmart |
 | 2026-11-17 | $3.49 | ❌ SKIP | Walmart |

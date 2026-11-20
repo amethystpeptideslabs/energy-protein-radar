@@ -28,6 +28,7 @@ Unit: can · Size: 16 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-20 | $1.36 | 🔥 HOT | Walmart |
 | 2026-11-19 | $1.36 | 🔥 HOT | Walmart |
 | 2026-11-18 | $1.86 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-17 | $1.86 | ❌ SKIP | The Vitamin Shoppe |

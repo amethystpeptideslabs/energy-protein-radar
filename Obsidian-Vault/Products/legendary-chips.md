@@ -28,6 +28,7 @@ Unit: bag · Size: 1.25 oz · Protein: 20g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-20 | $3.71 | ❌ SKIP | Legendary Foods (DTC) |
 | 2026-11-19 | $3.71 | ❌ SKIP | Legendary Foods (DTC) |
 | 2026-11-18 | $3.57 | ❌ SKIP | Vitacost |
 | 2026-11-17 | $3.57 | ❌ SKIP | Vitacost |

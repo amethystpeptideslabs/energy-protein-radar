@@ -17,13 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| NOCCO BCAA Energy 12oz | The Vitamin Shoppe | 1× 12 | $23.07 | $1.92 | $0.16 | 75% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/cl/clearance-up-to-75-off/protein-fitness/drinks-snacks/energy-drinks/life-stage-people/adults) |
-| NOCCO BCAA Energy 12oz | NOCCO (DTC) | 1× 12 | $31.59 | $2.63 | $0.22 | 103% | ❌ SKIP |  |  | [Open deal](https://shop.nocco.com/product/nocco-caribbean) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

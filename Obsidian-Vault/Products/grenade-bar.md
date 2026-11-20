@@ -27,4 +27,5 @@ Unit: bar · Size: 2.12 oz · Protein: 20g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-20 | $2.92 | ✅ SOLID | GNC |
 | 2026-11-19 | $2.92 | ✅ SOLID | GNC |

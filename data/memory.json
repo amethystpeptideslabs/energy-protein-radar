@@ -9,16 +9,16 @@
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 1.93,
-    "retailer": "The Vitamin Shoppe",
-    "date": "2026-11-18",
-    "url": "https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks",
+    "unit_price": 1.92,
+    "retailer": "GNC",
+    "date": "2026-11-20",
+    "url": "https://www.gnc.com/food-drink/drinks/",
     "code": null
    },
    "last_best": {
-    "unit_price": 1.93,
+    "unit_price": 1.92,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "down"
   },
@@ -38,7 +38,7 @@
    "last_best": {
     "unit_price": 2.22,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -50,18 +50,18 @@
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 2.53,
-    "retailer": "The Vitamin Shoppe",
-    "date": "2026-11-16",
-    "url": "https://www.vitaminshoppe.com/c/ready-to-drink-bars-snacks/protein-fitness/drinks-snacks/energy-drinks/brand/gorilla-mind",
+    "unit_price": 2.24,
+    "retailer": "GNC",
+    "date": "2026-11-20",
+    "url": "https://www.gnc.com/food-drink/drinks/",
     "code": null
    },
    "last_best": {
-    "unit_price": 2.8,
+    "unit_price": 2.24,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
-   "trend_30d": "up"
+   "trend_30d": "flat"
   },
   "bum-energy-12": {
    "ref_unit_price": 2.5,
@@ -77,11 +77,11 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.05,
+    "unit_price": 1.92,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
-   "trend_30d": "flat"
+   "trend_30d": "up"
   },
   "celsius-essentials-16": {
    "ref_unit_price": 2.5,
@@ -99,9 +99,9 @@
    "last_best": {
     "unit_price": 1.36,
     "tier": "HOT",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
-   "trend_30d": "flat"
+   "trend_30d": "down"
   },
   "celsius-original-12": {
    "ref_unit_price": 1.67,
@@ -119,7 +119,7 @@
    "last_best": {
     "unit_price": 1.24,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "up"
   },
@@ -139,7 +139,7 @@
    "last_best": {
     "unit_price": 4.17,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat"
   },
@@ -164,7 +164,7 @@
    "last_best": {
     "unit_price": 1.37,
     "tier": "STEAL",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "down"
   },
@@ -189,7 +189,7 @@
    "last_best": {
     "unit_price": 1.73,
     "tier": "STEAL",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "down"
   },
@@ -214,7 +214,7 @@
    "last_best": {
     "unit_price": 2.13,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat"
   },
@@ -264,7 +264,7 @@
    "last_best": {
     "unit_price": 2.83,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat"
   },
@@ -289,7 +289,7 @@
    "last_best": {
     "unit_price": 2.5,
     "tier": "HOT",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "down"
   },
@@ -314,7 +314,7 @@
    "last_best": {
     "unit_price": 3.25,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "up"
   },
@@ -339,7 +339,7 @@
    "last_best": {
     "unit_price": 3.71,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat"
   },
@@ -355,18 +355,18 @@
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 1.76,
+    "unit_price": 1.7,
     "retailer": "Sam's Club",
-    "date": "2026-11-16",
-    "url": "https://www.samsclub.com/s/quest+chips",
+    "date": "2026-11-20",
+    "url": "https://www.samsclub.com/s/quest+chips+variety+pack",
     "code": null
    },
    "last_best": {
-    "unit_price": 1.76,
+    "unit_price": 1.7,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
-   "trend_30d": "flat"
+   "trend_30d": "down"
   },
   "raw-protein-rtd": {
    "ref_unit_price": 4.17,
@@ -387,9 +387,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 4.25,
-    "tier": "SKIP",
-    "date": "2026-11-19"
+    "unit_price": 3.12,
+    "tier": "HOT",
+    "date": "2026-11-20"
    },
    "trend_30d": "up"
   },
@@ -425,7 +425,7 @@
    "last_best": {
     "unit_price": 4.63,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat"
   },
@@ -450,7 +450,7 @@
    "last_best": {
     "unit_price": 3.49,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "up"
   },
@@ -475,7 +475,7 @@
    "last_best": {
     "unit_price": 5.83,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -492,18 +492,18 @@
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 3.17,
+    "unit_price": 2.34,
     "retailer": "Walmart",
-    "date": "2026-11-16",
-    "url": "https://www.walmart.com/ip/Premier-Protein-Shakes-Strawberries-Cream-11-Fluid-Ounce-Pack-of-18/889861937",
+    "date": "2026-11-20",
+    "url": "https://www.walmart.com/ip/114617881",
     "code": null
    },
    "last_best": {
-    "unit_price": 3.17,
+    "unit_price": 2.34,
     "tier": "SKIP",
-    "date": "2026-11-18"
+    "date": "2026-11-20"
    },
-   "trend_30d": "flat"
+   "trend_30d": "down"
   },
   "muscle-milk-pro": {
    "ref_unit_price": 2.25,
@@ -584,7 +584,7 @@
    "last_best": {
     "unit_price": 1.83,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat"
   },
@@ -619,7 +619,7 @@
    "last_best": {
     "unit_price": 2.58,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "up",
    "cal_attempted": "2026-11-16"
@@ -640,7 +640,7 @@
    "last_best": {
     "unit_price": 2.39,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -661,7 +661,7 @@
    "last_best": {
     "unit_price": 1.05,
     "tier": "HOT",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -680,9 +680,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.11,
+    "unit_price": 2.12,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -724,7 +724,7 @@
    "last_best": {
     "unit_price": 2.63,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -736,18 +736,18 @@
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 2.17,
-    "retailer": "The Vitamin Shoppe",
-    "date": "2026-11-16",
-    "url": "https://www.vitaminshoppe.com/p/ryse-fuel-frosted-lemonade-12-drink-s/rys-16800",
+    "unit_price": 1.92,
+    "retailer": "GNC",
+    "date": "2026-11-20",
+    "url": "https://www.gnc.com/food-drink/drinks/",
     "code": null
    },
    "last_best": {
-    "unit_price": 2.55,
+    "unit_price": 1.92,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
-   "trend_30d": "up",
+   "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
   },
   "bucked-up-16": {
@@ -766,7 +766,7 @@
    "last_best": {
     "unit_price": 2.53,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -787,7 +787,7 @@
    "last_best": {
     "unit_price": 1.71,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -850,7 +850,7 @@
    "last_best": {
     "unit_price": 2.36,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -892,7 +892,7 @@
    "last_best": {
     "unit_price": 1.72,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -1029,7 +1029,7 @@
    "last_best": {
     "unit_price": 2.72,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1050,7 +1050,7 @@
    "last_best": {
     "unit_price": 2.55,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1074,9 +1074,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.2,
+    "unit_price": 2.5,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "up",
    "cal_attempted": "2026-11-16"
@@ -1097,7 +1097,7 @@
    "last_best": {
     "unit_price": 2.92,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -1123,7 +1123,7 @@
    "last_best": {
     "unit_price": 1.25,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1149,7 +1149,7 @@
    "last_best": {
     "unit_price": 3.25,
     "tier": "SKIP",
-    "date": "2026-11-18"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1175,7 +1175,7 @@
    "last_best": {
     "unit_price": 2.55,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1192,18 +1192,18 @@
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 3.25,
-    "retailer": "Legendary Foods (DTC)",
-    "date": "2026-11-16",
-    "url": "https://www.eatlegendary.com/collections/chocolate/products/milk-chocolate-protein-sweet-roll-8-pack",
+    "unit_price": 1.75,
+    "retailer": "The Vitamin Shoppe",
+    "date": "2026-11-20",
+    "url": "https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022",
     "code": null
    },
    "last_best": {
-    "unit_price": 3.25,
-    "tier": "SKIP",
-    "date": "2026-11-18"
+    "unit_price": 1.75,
+    "tier": "STEAL",
+    "date": "2026-11-20"
    },
-   "trend_30d": "flat",
+   "trend_30d": "down",
    "cal_attempted": "2026-11-16"
   },
   "met-rx-big100": {
@@ -1243,7 +1243,7 @@
    "last_best": {
     "unit_price": 2.48,
     "tier": "SOLID",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1263,7 +1263,12 @@
    "ref_unit_price": 3.58,
    "ref_updated": null,
    "ref_source": "seed",
-   "protein_verified": null,
+   "protein_verified": {
+    "value": 40.0,
+    "source_url": "https://www.gnc.com/protein-shakes/449914.html",
+    "date": "2026-11-20",
+    "n": 1
+   },
    "size_verified": null,
    "all_time_low": {
     "unit_price": 2.69,
@@ -1275,15 +1280,21 @@
    "last_best": {
     "unit_price": 2.69,
     "tier": "HOT",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
-   "trend_30d": "flat"
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-20"
   },
   "gnc-total-lean-25": {
    "ref_unit_price": 2.92,
    "ref_updated": null,
    "ref_source": "seed",
-   "protein_verified": null,
+   "protein_verified": {
+    "value": 25.0,
+    "source_url": "https://www.gnc.com/protein-drinks/GNCTotalLeanLeanShake12Pack.html",
+    "date": "2026-11-20",
+    "n": 1
+   },
    "size_verified": null,
    "all_time_low": {
     "unit_price": 1.46,
@@ -1295,9 +1306,10 @@
    "last_best": {
     "unit_price": 1.46,
     "tier": "STEAL",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
-   "trend_30d": "flat"
+   "trend_30d": "flat",
+   "cal_attempted": "2026-11-20"
   }
  },
  "dead_codes": [
@@ -1442,20 +1454,60 @@
    "fingerprint": "gnc-total-lean-25|gnc|1.46|",
    "sent_at": "2026-11-19T15:09:52-08:00",
    "priority": 4
+  },
+  {
+   "fingerprint": "legendary-sweet-roll|vitamin-shoppe|1.75|",
+   "sent_at": "2026-11-20T06:06:03-08:00",
+   "priority": 5
+  },
+  {
+   "fingerprint": "quest-chips|sams-club|1.70|",
+   "sent_at": "2026-11-20T06:06:03-08:00",
+   "priority": 5
+  },
+  {
+   "fingerprint": "ryse-fuel-16|gnc|1.92|",
+   "sent_at": "2026-11-20T06:06:03-08:00",
+   "priority": 3
+  },
+  {
+   "fingerprint": "ghost-energy-16|gnc|1.92|",
+   "sent_at": "2026-11-20T06:06:03-08:00",
+   "priority": 3
+  },
+  {
+   "fingerprint": "gorilla-mind-energy-16|gnc|2.24|",
+   "sent_at": "2026-11-20T06:06:03-08:00",
+   "priority": 3
+  },
+  {
+   "fingerprint": "premier-protein-30|walmart|2.34|",
+   "sent_at": "2026-11-20T06:06:03-08:00",
+   "priority": 3
+  },
+  {
+   "fingerprint": "built-puff|vitamin-shoppe|1.37|",
+   "sent_at": "2026-11-20T06:06:03-08:00",
+   "priority": 3
+  },
+  {
+   "fingerprint": "barebells|vitamin-shoppe|1.73|",
+   "sent_at": "2026-11-20T06:06:03-08:00",
+   "priority": 3
   }
  ],
  "latest_run": {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 16
+  "searches": 48
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 13,
-   "searches": 358
+   "runs": 14,
+   "searches": 406
   }
  },
  "budget_warning_month": null

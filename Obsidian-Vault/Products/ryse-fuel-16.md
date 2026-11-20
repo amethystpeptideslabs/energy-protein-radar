@@ -21,7 +21,7 @@ Unit: can · Size: 16 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| RYSE Fuel 16oz | GNC | 2× 12 | $46.19 | $1.92 | $0.12 | 74% | ❌ SKIP 🏆 |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
+| RYSE Fuel 16oz | GNC | 2× 12 | $46.19 | $1.92 | $0.12 | 74% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | RYSE Fuel 16oz | The Vitamin Shoppe | 1× 12 | $26.09 | $2.17 | $0.14 | 84% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/form/drink-s) |
 
 ## Price ledger

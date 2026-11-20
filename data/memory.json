@@ -97,8 +97,8 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.36,
-    "tier": "HOT",
+    "unit_price": 2.17,
+    "tier": "SKIP",
     "date": "2026-11-20"
    },
    "trend_30d": "down"
@@ -117,8 +117,8 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.24,
-    "tier": "SOLID",
+    "unit_price": 1.62,
+    "tier": "SKIP",
     "date": "2026-11-20"
    },
    "trend_30d": "up"
@@ -255,15 +255,15 @@
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 2.83,
-    "retailer": "The Vitamin Shoppe",
-    "date": "2026-11-16",
-    "url": "https://www.vitaminshoppe.com/p/prime-bites-protein-brownie-glazed-cinnamon-roll-12-brownies/aps-10699?store=73",
+    "unit_price": 2.5,
+    "retailer": "GNC",
+    "date": "2026-11-20",
+    "url": "https://www.gnc.com/protein/drinks-snacks/",
     "code": null
    },
    "last_best": {
-    "unit_price": 2.83,
-    "tier": "SOLID",
+    "unit_price": 2.5,
+    "tier": "HOT",
     "date": "2026-11-20"
    },
    "trend_30d": "flat"
@@ -473,7 +473,7 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 5.83,
+    "unit_price": 5.75,
     "tier": "SOLID",
     "date": "2026-11-20"
    },
@@ -610,18 +610,18 @@
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 2.33,
-    "retailer": "Muscle & Strength",
-    "date": "2026-11-16",
-    "url": "https://www.muscleandstrength.com/store/barebells-soft-protein-bar.html",
+    "unit_price": 1.94,
+    "retailer": "GNC",
+    "date": "2026-11-20",
+    "url": "https://www.gnc.com/protein/drinks-snacks/",
     "code": null
    },
    "last_best": {
-    "unit_price": 2.58,
-    "tier": "SKIP",
+    "unit_price": 1.94,
+    "tier": "STEAL",
     "date": "2026-11-20"
    },
-   "trend_30d": "up",
+   "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
   },
   "phorm-energy-16": {
@@ -680,7 +680,7 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.12,
+    "unit_price": 2.11,
     "tier": "SKIP",
     "date": "2026-11-20"
    },
@@ -1008,9 +1008,9 @@
    "last_best": {
     "unit_price": 1.92,
     "tier": "SKIP",
-    "date": "2026-11-19"
+    "date": "2026-11-20"
    },
-   "trend_30d": "flat",
+   "trend_30d": "down",
    "cal_attempted": "2026-11-17"
   },
   "kill-cliff-ignite-12": {
@@ -1074,7 +1074,7 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.5,
+    "unit_price": 2.19,
     "tier": "SKIP",
     "date": "2026-11-20"
    },
@@ -1494,6 +1494,16 @@
    "fingerprint": "barebells|vitamin-shoppe|1.73|",
    "sent_at": "2026-11-20T06:06:03-08:00",
    "priority": 3
+  },
+  {
+   "fingerprint": "barebells-soft|gnc|1.94|",
+   "sent_at": "2026-11-20T12:34:17-08:00",
+   "priority": 5
+  },
+  {
+   "fingerprint": "prime-bites|gnc|2.50|",
+   "sent_at": "2026-11-20T12:34:17-08:00",
+   "priority": 5
   }
  ],
  "latest_run": {
@@ -1501,13 +1511,13 @@
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 48
+  "searches": 36
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 14,
-   "searches": 406
+   "runs": 15,
+   "searches": 442
   }
  },
  "budget_warning_month": null

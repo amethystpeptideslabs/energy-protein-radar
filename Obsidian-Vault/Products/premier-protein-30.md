@@ -21,7 +21,7 @@ Unit: bottle · Size: 11.5 oz · Protein: 30g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Premier Protein Shake 30g | Walmart | 1× 12 | $28.12 | $2.34 | $0.78 | 94% | ❌ SKIP 🏆 |  |  | [Open deal](https://www.walmart.com/ip/114617881) |
+| Premier Protein Shake 30g | Walmart | 1× 12 | $28.12 | $2.34 | $0.78 | 94% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/114617881) |
 
 ## Price ledger
 

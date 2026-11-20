@@ -2,7 +2,7 @@
 date: 2026-11-20
 run_mode: quick
 status: ok
-deals: 20
+deals: 18
 tags: [deal-radar]
 ---
 
@@ -14,43 +14,39 @@ tags: [deal-radar]
 
 | Deal | Per unit | You pay | Store | Where | Tier | Link |
 |---|---|---|---|---|---|---|
-| 🥤 GNC Total Lean Shake 25 14oz (Swiss Chocolate) | $1.46/bottle | $34.99 for 24 📦 case | GNC | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.gnc.com/ready-to-drink-protein/GNCTotalLeanLeanShake12Pack.html) |
-| 🍫 Legendary Protein Sweet Roll (Chocolate) | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 📍 Local pickup | 🚨 STEAL 🏆 | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
+| 🥤 GNC Total Lean Shake 25 14oz (Swiss Chocolate) | $1.46/bottle | $34.99 for 24 📦 case | GNC | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.gnc.com/protein-drinks/GNCTotalLeanLeanShake12Pack.html) |
+| 🍫 Legendary Protein Sweet Roll (Chocolate) | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
 | 🍫 Built Puff (Sour Puff Tropical Mango Burst) | $1.37/bar | $16.48 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
+| 🍫 Barebells Soft Bar (16g) (Salted Peanut Caramel) | $1.94/bar | $46.49 for 24 📦 case | GNC | 📍 Local pickup | 🚨 STEAL 🏆 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | 🍫 Barebells Protein Bar (Birthday Cake) | $1.73/bar | $1.73 for 1 | The Vitamin Shoppe | 📍 Local pickup | 🚨 STEAL | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | ⚡ Alani Nu Energy 12oz (Assorted flavors) | $1.05/can | $1.05 for 1 | The Vitamin Shoppe | 🏬 In store (local) | 🔥 HOT | [Open deal](https://www.mensfitness.com/news/alani-nu-energy-drinks-1-at-vitamin-shoppe-this-week) |
-| ⚡ Celsius Essentials 16oz (Sparkling Dragonberry) | $1.36/can | $16.34 for 12 📦 case | Walmart | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
 | 🍫 Legendary Protein Pastry (Chocolate Cake) | $2.50/pastry | $9.99 for 4 | Target | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.target.com/p/legendary-foods-protein-pastries-chocolate-cake-8-6oz-4ct/-/A-89790845) |
 | 🥤 RAW Protein Shake 12oz (Chocolate Milkshake) | $3.12/bottle | $74.99 for 24 📦 case | GNC | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | 🥤 GNC AMP Wheybolic 40 Shake 14oz (Wheybolic 40 (12 pack)) | $2.69/bottle | $64.49 for 24 📦 case | GNC | 📍 Local pickup | 🔥 HOT | [Open deal](https://www.gnc.com/food-drink/drinks/) |
+| 🍫 Prime Bites Protein Brownie (Chocolate Glazed Donut) | $2.50/brownie | $59.99 for 24 📦 case | GNC | 📍 Local pickup | 🔥 HOT 🏆 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | 🍫 FITCRUNCH Bar (16g) (Variety Pack) | $1.25/bar | $22.48 for 18 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/ip/81771902116) |
-| 🍫 Quest Protein Chips (Tortilla Style Variety Pack) | $1.70/bag | $33.98 for 20 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID 🏆 | [Open deal](https://www.samsclub.com/s/quest+chips+variety+pack) |
+| 🍫 Quest Protein Chips (Tortilla Style Variety Pack) | $1.70/bag | $33.98 for 20 📦 case | Sam's Club | 📍 Local pickup 🔒 | ✅ SOLID | [Open deal](https://www.samsclub.com/s/quest+chips+variety+pack) |
 | 🍫 RAW Protein Bar (Peanut Butter Fudge) | $2.48/bar | $29.74 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/protein-bar-peanut-butter-fudge-12-bar-s/grw-16879) |
 | 🍫 1st Phorm Level-1 Bar (Peanut Butter & Jelly) | $2.55/bar | $38.24 for 15 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364) |
-| 🍫 Prime Bites Protein Brownie (Glazed Cinnamon Roll) | $2.83/brownie | $33.99 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.vitaminshoppe.com/p/prime-bites-protein-brownie-glazed-cinnamon-roll-12-brownies/aps-10699) |
+| 🥤 Fairlife Core Power Elite 42g (Vanilla) | $5.75/bottle | $68.98 for 12 📦 case | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/100979925) |
 | 🍫 Magic Spoon Protein Pastry (Frosted Strawberry) | $2.13/pastry | $8.53 for 4 | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/19124451285) |
-| 🥤 Fairlife Core Power Elite 42g (Vanilla) | $5.83/bottle | $70.00 for 12 📦 case | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/100979925) |
-| 🍫 Grenade Carb Killa Bar (Oreo) | $2.92/bar | $34.99 for 12 📦 case | GNC | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.gnc.com/food-drink/snacks/) |
 | 🥤 Isopure Zero Carb RTD 16.9oz (32g) (Alpine Punch) | $4.63/bottle | $55.59 for 12 📦 case | GNC | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
 | 🥤 Oikos Pro Shake (Chocolate) | $1.83/bottle | $21.99 for 12 📦 case | Walmart | 📍 Local pickup | ✅ SOLID | [Open deal](https://www.walmart.com/ip/seort/16113764509) |
-| ⚡ Celsius Original 12oz (Sparkling Spritz Vibe) | $1.24/can | $14.84 for 12 📦 case | Amazon | 🚚 Ships to you | ✅ SOLID | [Open deal](https://hip2save.com/deals/celsius-drink/) |
-
-## 🛒 Amazon deals
-
-| Deal | Per unit | You pay | Store | Where | Tier | Link |
-|---|---|---|---|---|---|---|
-| ⚡ Celsius Original 12oz (Sparkling Spritz Vibe) | $1.24/can | $14.84 for 12 📦 case | Amazon | 🚚 Ships to you | ✅ SOLID · posted 2026-11-11 | [Open deal](https://hip2save.com/deals/celsius-drink/) |
 
 ## 🎁 BOGO & sales right now
 
 | Deal | Per unit | You pay | Store | Where | Promo | Link |
 |---|---|---|---|---|---|---|
-| 🥤 GNC Total Lean Shake 25 14oz (Swiss Chocolate) | $1.46/bottle | $34.99 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO free (add 2) | [Open deal](https://www.gnc.com/protein-drinks/GNCTotalLeanLeanShake12Pack.html) |
+| 🥤 GNC Total Lean Shake 25 14oz (Swiss Chocolate) | $1.46/bottle | $34.99 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO free (add 2) | [Open deal](https://www.gnc.com/food-drink/) |
+| 🥤 RAW Protein Shake 12oz (Chocolate Milkshake) | $3.12/bottle | $74.99 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | 🥤 GNC Total Lean Shake 25 14oz (Swiss Chocolate) | $2.19/bottle | $52.49 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/food-drink/drinks/) |
+| 🥤 GNC Total Lean Shake 25 14oz (Swiss Chocolate) | $2.19/bottle | $52.49 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| 🥤 GNC AMP Wheybolic 40 Shake 14oz (Wheybolic 40 (12 pack)) | $2.69/bottle | $64.49 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| 🍫 Legendary Protein Pastry (Strawberry) | $2.62/pastry | $52.49 for 20 | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| 🍫 Barebells Protein Bar (Pumpkin Spice) | $1.94/bar | $46.49 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | ⚡ Bloom Sparkling Energy 12oz (Strawberry Shortie) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-strawberry-shortie-12-drink-s/ble-17925) |
 | ⚡ Bloom Sparkling Energy 12oz (Strawberry Shortie) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
-| ⚡ Bloom Sparkling Energy 12oz (Shirley Temple) | $1.80/can | $43.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/sparkling-energy-shirley-temple-12-drink-s/bmn-17140) |
-| ⚡ Alani Nu Energy 12oz (Hawaiian Shaved Ice) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/energy-hawaiian-shaved-ice-12-drink-s/ala0015) |
+| ⚡ Alani Nu Energy 12oz (Cherry Slush) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/alani-nu-energy-cherry-slush-12-drink-s/ala0047) |
 | ⚡ Alani Nu Energy 12oz (Cherry Slush) | $1.92/can | $46.19 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
 | ⚡ RYSE Fuel 16oz (Kool-Aid Tropical Punch) | $1.92/can | $46.19 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | ⚡ Alani Nu Energy 12oz (Witch's Brew) | $1.92/can | $46.19 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/food-drink/drinks/) |
@@ -58,7 +54,10 @@ tags: [deal-radar]
 | ⚡ Ghost Energy 16oz ('Merica Pop) | $1.92/can | $46.19 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | ⚡ RAW Bum Energy 12oz (Root Beer) | $2.05/can | $24.59 for 12 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🏷️ Sale | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | ⚡ Gorilla Mind Energy 16oz (Candy Apple) | $2.24/can | $53.69 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/food-drink/drinks/) |
+| 🍫 Quest Protein Bar (Chocolate Chip Cookie Dough) | $2.19/bar | $52.49 for 24 📦 case | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | 🍫 Quest Protein Bar (Chocolate Chip Cookie Dough) | $2.50/bar | $59.99 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/foods/bars/shop-by-deal/buy-one-get-one-50-off) |
+| 🍫 Quest Protein Bar (Chocolate Chip Cookie Dough) | $2.50/bar | $59.99 for 24 📦 case | The Vitamin Shoppe | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.vitaminshoppe.com/p/quest-nutrition-questbar-chocolate-chip-cookie-dough-12-bars/qc-1015) |
+| 🍫 Quest Protein Chips (Spicy Sweet Chili) | $2.16/bag | $34.49 for 16 | GNC | 📍 Local pickup | 🎁 BOGO 50% (add 2) | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 
 ## 📋 All products today
 
@@ -68,12 +67,12 @@ tags: [deal-radar]
 | ⚡ 3D Energy 16oz | $2.22/can | $26.59 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.50 | $2.22 | [Open deal](https://www.vitaminshoppe.com/p/3d-energy-raspberry-sorbet-12-drink-s/3de-17306) |
 | ⚡ Gorilla Mind Energy 16oz | $2.24/can | $53.69 for 24 📦 | GNC | ❌ SKIP | $2.92 | $2.24 | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | ⚡ RAW Bum Energy 12oz | $1.92/can | $46.19 for 24 📦 | GNC | ❌ SKIP | $2.50 | $1.30 | [Open deal](https://www.gnc.com/food-drink/drinks/) |
-| ⚡ Celsius Essentials 16oz | $1.36/can | $16.34 for 12 📦 | Walmart | 🔥 HOT | $2.50 | $1.36 | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
-| ⚡ Celsius Original 12oz | $1.24/can | $14.84 for 12 📦 | Amazon | ✅ SOLID | $1.67 | $1.16 | [Open deal](https://hip2save.com/deals/celsius-drink/) |
+| ⚡ Celsius Essentials 16oz | $2.17/can | $26.09 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.50 | $1.36 | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
+| ⚡ Celsius Original 12oz | $1.62/can | $19.40 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $1.67 | $1.16 | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | ⚡ Bang Energy 16oz | $4.17/can | $50.09 for 12 📦 | Walmart | ❌ SKIP | $4.58 | $4.17 | [Open deal](https://www.walmart.com/ip/1216905444) |
 | ⚡ 1st Phorm Energy 16oz | $2.39/can | $28.64 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.75 | $2.39 | [Open deal](https://www.vitaminshoppe.com/p/1st-phorm-energy-screamin-freedom-12-drink-s/1ph-13673) |
 | ⚡ Alani Nu Energy 12oz | $1.05/can | $1.05 for 1 | The Vitamin Shoppe | 🔥 HOT | $2.25 | $1.05 | [Open deal](https://www.mensfitness.com/news/alani-nu-energy-drinks-1-at-vitamin-shoppe-this-week) |
-| ⚡ C4 Energy 16oz | $2.12/can | $25.40 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.33 | $1.81 | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
+| ⚡ C4 Energy 16oz | $2.11/can | $25.32 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.33 | $1.81 | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | ⚡ C4 Energy 12oz | no offer found |  |  |  | $1.67 | $1.72 |  |
 | ⚡ Reign Total Body Fuel 16oz | $2.63/can | $31.56 for 12 📦 | Walmart | ❌ SKIP | $2.17 | $2.53 | [Open deal](https://walmart.com/ip/seort/5321085482) |
 | ⚡ Reign Inferno Thermogenic 16oz | no offer found |  |  |  | $2.50 |  |  |
@@ -90,34 +89,34 @@ tags: [deal-radar]
 | ⚡ RIOT Energy 16oz | no offer found |  |  |  | $2.99 | $4.47 |  |
 | ⚡ Lucky Energy 16oz | no offer found |  |  |  | $2.33 | $2.21 |  |
 | ⚡ LIFEAID FITAID / FOCUSAID 12oz | no offer found |  |  |  | $2.49 | $2.38 |  |
-| ⚡ NOCCO BCAA Energy 12oz | no offer found |  |  |  | $2.50 | $1.92 |  |
+| ⚡ NOCCO BCAA Energy 12oz | $1.92/can | $23.07 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.50 | $1.92 | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | ⚡ Kill Cliff Ignite 12oz | $2.72/can | $32.59 for 12 📦 | Rogue Fitness | ❌ SKIP | $2.92 | $2.63 | [Open deal](https://www.roguefitness.com/apo/kill-cliff-ignite-smashing-citrus-12-pack) |
 | ⚡ Grizzly Energy 16oz | $2.55/can | $30.59 for 12 📦 | The Vitamin Shoppe | ❌ SKIP | $2.50 | $2.55 | [Open deal](https://stack3d.com/2026/11/grizzly-energy-shirley-temple) |
 | 🍫 Built Puff | $1.37/bar | $16.48 for 12 📦 | The Vitamin Shoppe | 🚨 STEAL | $2.50 | $1.37 | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | 🍫 Barebells Protein Bar | $1.73/bar | $1.73 for 1 | The Vitamin Shoppe | 🚨 STEAL | $2.50 | $1.73 | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | 🍫 Magic Spoon Protein Pastry | $2.13/pastry | $8.53 for 4 | Walmart | ✅ SOLID | $2.44 | $2.13 | [Open deal](https://www.walmart.com/ip/seort/19124451285) |
 | 🍫 Drumroll Mini Protein Donuts | no offer found |  |  |  | $3.74 | $3.49 |  |
-| 🍫 Prime Bites Protein Brownie | $2.83/brownie | $33.99 for 12 📦 | The Vitamin Shoppe | ✅ SOLID | $3.33 | $2.83 | [Open deal](https://www.vitaminshoppe.com/p/prime-bites-protein-brownie-glazed-cinnamon-roll-12-brownies/aps-10699) |
+| 🍫 Prime Bites Protein Brownie | $2.50/brownie | $59.99 for 24 📦 | GNC | 🔥 HOT | $3.33 | $2.50 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | 🍫 Legendary Protein Pastry | $2.50/pastry | $9.99 for 4 | Target | 🔥 HOT | $3.48 | $2.50 | [Open deal](https://www.target.com/p/legendary-foods-protein-pastries-chocolate-cake-8-6oz-4ct/-/A-89790845) |
 | 🍫 Legendary Protein Donuts | $3.25/pack | $38.99 for 12 📦 | GNC | ❌ SKIP | $3.05 | $1.87 | [Open deal](https://www.gnc.com/food-drink/snacks/) |
 | 🍫 Legendary Popped Protein Chips | $3.71/bag | $25.99 for 7 | Legendary Foods (DTC) | ❌ SKIP | $3.71 | $3.57 | [Open deal](https://www.eatlegendary.com/products/nacho-cheese-popped-protein-chips-7-pack) |
 | 🍫 Quest Protein Chips | $1.70/bag | $33.98 for 20 📦 | Sam's Club | ✅ SOLID | $2.01 | $1.70 | [Open deal](https://www.samsclub.com/s/quest+chips+variety+pack) |
-| 🍫 Quest Protein Bar | $2.50/bar | $59.99 for 24 📦 | The Vitamin Shoppe | ❌ SKIP | $2.42 | $2.08 | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/foods/bars/shop-by-deal/buy-one-get-one-50-off) |
-| 🍫 Grenade Carb Killa Bar | $2.92/bar | $34.99 for 12 📦 | GNC | ✅ SOLID | $3.33 | $2.92 | [Open deal](https://www.gnc.com/food-drink/snacks/) |
+| 🍫 Quest Protein Bar | $2.19/bar | $52.49 for 24 📦 | GNC | ❌ SKIP | $2.42 | $2.08 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| 🍫 Grenade Carb Killa Bar | no offer found |  |  |  | $3.33 | $2.92 |  |
 | 🍫 FITCRUNCH Bar (16g) | $1.25/bar | $22.48 for 18 📦 | Sam's Club | ✅ SOLID | $1.51 | $1.25 | [Open deal](https://www.samsclub.com/ip/81771902116) |
 | 🍫 David Protein Bar (28g) | $3.25/bar | $39.00 for 12 📦 | Walmart | ❌ SKIP | $3.25 | $3.25 | [Open deal](https://www.walmart.com/ip/15164761476) |
 | 🍫 1st Phorm Level-1 Bar | $2.55/bar | $38.24 for 15 📦 | The Vitamin Shoppe | ✅ SOLID | $3.00 | $2.55 | [Open deal](https://www.vitaminshoppe.com/p/level-1-bar-peanut-butter-jelly-15-bar-s/1ph-16364) |
 | 🍫 Legendary Protein Sweet Roll | $1.75/roll | $13.98 for 8 | The Vitamin Shoppe | 🚨 STEAL | $3.25 | $1.75 | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
-| 🍫 Barebells Soft Bar (16g) | $2.58/bar | $30.99 for 12 📦 | GNC | ❌ SKIP | $2.83 | $2.33 | [Open deal](https://www.gnc.com/food-drink/snacks/) |
+| 🍫 Barebells Soft Bar (16g) | $1.94/bar | $46.49 for 24 📦 | GNC | 🚨 STEAL | $2.83 | $1.94 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | 🍫 MET-Rx Big 100 Bar (30g) | no offer found |  |  |  | $4.20 | $4.20 |  |
 | 🍫 RAW Protein Bar | $2.48/bar | $29.74 for 12 📦 | The Vitamin Shoppe | ✅ SOLID | $2.92 | $2.48 | [Open deal](https://www.vitaminshoppe.com/p/protein-bar-peanut-butter-fudge-12-bar-s/grw-16879) |
 | 🥤 RAW Protein Shake 12oz | $3.12/bottle | $74.99 for 24 📦 | GNC | 🔥 HOT | $4.17 | $2.66 | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | 🥤 GNC AMP Wheybolic 40 Shake 14oz | $2.69/bottle | $64.49 for 24 📦 | GNC | 🔥 HOT | $3.58 | $2.69 | [Open deal](https://www.gnc.com/food-drink/drinks/) |
-| 🥤 GNC Total Lean Shake 25 14oz | $1.46/bottle | $34.99 for 24 📦 | GNC | 🚨 STEAL | $2.92 | $1.46 | [Open deal](https://www.gnc.com/ready-to-drink-protein/GNCTotalLeanLeanShake12Pack.html) |
+| 🥤 GNC Total Lean Shake 25 14oz | $1.46/bottle | $34.99 for 24 📦 | GNC | 🚨 STEAL | $2.92 | $1.46 | [Open deal](https://www.gnc.com/protein-drinks/GNCTotalLeanLeanShake12Pack.html) |
 | 🥤 Isopure Zero Carb RTD 20oz (40g) | no offer found |  |  |  | $5.82 |  |  |
 | 🥤 Isopure Zero Carb RTD 16.9oz (32g) | $4.63/bottle | $55.59 for 12 📦 | GNC | ✅ SOLID | $5.21 | $4.63 | [Open deal](https://www.gnc.com/protein-shakes/isopure-protein-drink.html) |
 | 🥤 Fairlife Core Power 26g | $3.49/bottle | $41.88 for 12 📦 | Walmart | ❌ SKIP | $3.49 | $3.17 | [Open deal](https://www.walmart.com/ip/seort/538426607) |
-| 🥤 Fairlife Core Power Elite 42g | $5.83/bottle | $70.00 for 12 📦 | Walmart | ✅ SOLID | $6.66 | $5.75 | [Open deal](https://www.walmart.com/ip/100979925) |
+| 🥤 Fairlife Core Power Elite 42g | $5.75/bottle | $68.98 for 12 📦 | Walmart | ✅ SOLID | $6.66 | $5.75 | [Open deal](https://www.walmart.com/ip/100979925) |
 | 🥤 Premier Protein Shake 30g | $2.34/bottle | $28.12 for 12 📦 | Walmart | ❌ SKIP | $2.48 | $2.34 | [Open deal](https://www.walmart.com/ip/114617881) |
 | 🥤 Muscle Milk Pro Series | no offer found |  |  |  | $2.25 | $2.25 |  |
 | 🥤 Quest Protein Shake | no offer found |  |  |  | $3.68 | $2.22 |  |
@@ -126,7 +125,7 @@ tags: [deal-radar]
 ## 🧾 How to get the top price
 
 **⚡ Alani Nu Energy 12oz @ The Vitamin Shoppe**
-1. Add 1× can ($3.29 each)
+1. Add 1× can ($1.00 each)
 2. promo price $1.00/unit → $1.00
 3. CA CRV +$0.05
 4. Expected $1.05 → $1.05/can
@@ -141,5 +140,5 @@ tags: [deal-radar]
 1. Add 2× 12-bottle pack ($34.99 each)
 2. BOGO free auto-applies → $34.99
 3. Expected $34.99 → $1.46/bottle ($0.58/10g protein)
-[Open deal](https://www.gnc.com/ready-to-drink-protein/GNCTotalLeanLeanShake12Pack.html)
+[Open deal](https://www.gnc.com/protein-drinks/GNCTotalLeanLeanShake12Pack.html)
 

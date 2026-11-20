@@ -21,7 +21,6 @@ Unit: bottle · Size: 14 oz · Protein: 26g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Fairlife Core Power 26g | Amazon | 1× 12 | $18.60 | $1.55 | $0.60 | 44% | 🚨 STEAL ⚠️ UNVERIFIED |  |  | [Open deal](https://hip2save.com/deals/fairlife-core-power/) |
 | Fairlife Core Power 26g | Walmart | 1× 12 | $41.88 | $3.49 | $1.34 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/538426607) |
 
 ## Price ledger

@@ -21,7 +21,6 @@ Unit: bar · Size: 1.41 oz · Protein: 17g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Built Puff | Sam's Club | 1× 13 | $15.98 | $1.23 | $0.72 | 49% | 🚨 STEAL ⚠️ UNVERIFIED |  |  | [Open deal](https://www.samsclub.com/ip/built-sour-puff-bars-variety-pack-13-ct/19583258714) |
 | Built Puff | The Vitamin Shoppe | 1× 12 | $16.48 | $1.37 | $0.81 | 55% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | Built Puff | The Vitamin Shoppe | 1× 1 | $1.63 | $1.63 | $0.96 | 65% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | Built Puff | Target | 1× 4 | $8.49 | $2.12 | $1.25 | 85% | ✅ SOLID |  |  | [Open deal](https://www.target.com/c/protein-bars-nutrition-health/sale/-/N-4rsq0Z5tdv0) |

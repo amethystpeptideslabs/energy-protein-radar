@@ -23,6 +23,7 @@ Unit: pack (2 donuts) · Size: 2.4 oz · Protein: 20g
 |---|---|---|---|---|---|---|---|---|---|---|
 | Legendary Protein Donuts | GNC | 2× 12 | $58.49 | $2.44 | $1.22 | 80% | 🔥 HOT |  | 2026-11-21 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | Legendary Protein Donuts | GNC | 1× 12 | $38.99 | $3.25 | $1.63 | 107% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/snacks/) |
+| Legendary Protein Donuts | GNC | 1× 12 | $38.99 | $3.25 | $1.63 | 107% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/snacks/legendary-foods-protein-donuts.html) |
 
 ## Price ledger
 

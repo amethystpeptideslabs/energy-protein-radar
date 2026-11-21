@@ -23,6 +23,7 @@ Unit: bar · Size: 1.94 oz · Protein: 16g
 |---|---|---|---|---|---|---|---|---|---|---|
 | Barebells Soft Bar (16g) | GNC | 2× 12 | $46.49 | $1.94 | $1.21 | 69% | 🚨 STEAL |  | 2026-11-21 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | Barebells Soft Bar (16g) | GNC | 1× 12 | $30.99 | $2.58 | $1.61 | 91% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/snacks/) |
+| Barebells Soft Bar (16g) | GNC | 1× 12 | $30.99 | $2.58 | $1.61 | 91% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
 
 ## Price ledger
 

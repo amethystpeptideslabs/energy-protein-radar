@@ -21,12 +21,13 @@ Unit: can · Size: 16 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Ghost Energy 16oz | GNC | 2× 12 | $46.19 | $1.92 | $0.12 | 70% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
+| Ghost Energy 16oz | GNC | 2× 12 | $46.19 | $1.92 | $0.12 | 70% | ❌ SKIP |  | 2026-11-21 | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $23.15 | $1.93 | $0.12 | 70% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $26.09 | $2.17 | $0.14 | 79% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/form/drink-s) |
 | Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $26.09 | $2.17 | $0.14 | 79% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/brand/ghost-energy) |
 | Ghost Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 93% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/buy/canned-energy-drinks) |
 | Ghost Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 93% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/ghost-energy-drink.html) |
+| Ghost Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 93% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
 | Ghost Energy 16oz | Amazon | 1× 12 | $25.60 | $2.13 | $0.13 | 78% | ❌ SKIP ⚠️ UNVERIFIED |  |  | [Open deal](https://9to5toys.com/2026/11/20/protein-powder-and-bar-deals/) |
 
 ## Price ledger

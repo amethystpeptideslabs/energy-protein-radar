@@ -22,12 +22,14 @@ Unit: can · Size: 16 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Bucked Up Energy 16oz | The Vitamin Shoppe | 1× 12 | $30.34 | $2.53 | $0.16 | 99% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/bucked-up-energy-rtd-erica-rocket-pop-12-drinks/dls0023?store=913) |
+| Bucked Up Energy 16oz | The Vitamin Shoppe | 1× 12 | $30.34 | $2.53 | $0.16 | 99% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/brand/bucked-up) |
 | Bucked Up Energy 16oz | GNC | 1× 12 | $35.59 | $2.97 | $0.19 | 117% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/buy/canned-energy-drinks) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-21 | $2.53 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-20 | $2.53 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-19 | $2.53 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-18 | $2.53 | ❌ SKIP | The Vitamin Shoppe |

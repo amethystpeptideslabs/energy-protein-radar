@@ -21,7 +21,8 @@ Unit: bar · Size: 2.12 oz · Protein: 21g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Quest Protein Bar | GNC | 2× 12 | $52.49 | $2.19 | $1.04 | 90% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| Quest Protein Bar | GNC | 2× 12 | $52.49 | $2.19 | $1.04 | 90% | ❌ SKIP |  | 2026-11-21 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| Quest Protein Bar | Walmart | 1× 12 | $26.36 | $2.20 | $1.05 | 91% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/health/quest-bars/976760_1166769_3046134_5804235) |
 | Quest Protein Bar | The Vitamin Shoppe | 2× 12 | $59.99 | $2.50 | $1.19 | 103% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/foods/bars/shop-by-deal/buy-one-get-one-50-off) |
 | Quest Protein Bar | The Vitamin Shoppe | 2× 12 | $59.99 | $2.50 | $1.19 | 103% | ❌ SKIP |  | 2026-11-23 | [Open deal](https://www.vitaminshoppe.com/p/quest-nutrition-questbar-chocolate-chip-cookie-dough-12-bars/qc-1015) |
 | Quest Protein Bar | GNC | 1× 12 | $34.99 | $2.92 | $1.39 | 121% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/bars/) |
@@ -30,6 +31,7 @@ Unit: bar · Size: 2.12 oz · Protein: 21g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-21 | $2.19 | ❌ SKIP | GNC |
 | 2026-11-20 | $2.19 | ❌ SKIP | GNC |
 | 2026-11-19 | $2.20 | ❌ SKIP | Walmart |
 | 2026-11-18 | $2.20 | ❌ SKIP | Walmart |

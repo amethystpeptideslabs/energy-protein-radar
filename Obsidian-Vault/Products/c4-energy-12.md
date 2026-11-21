@@ -17,10 +17,18 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
+## Current offers
+
+| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
+|---|---|---|---|---|---|---|---|---|---|---|
+| C4 Energy 12oz | Walmart | 1× 12 | $20.59 | $1.72 | $0.14 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/6177361684) |
+| C4 Energy 12oz | Walmart | 1× 12 | $23.09 | $1.92 | $0.16 | 112% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/food/c4-energy-drinks/976759_976782_9357528_6944733) |
+
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-21 | $1.72 | ❌ SKIP | Walmart |
 | 2026-11-18 | $1.72 | ❌ SKIP | Walmart |
 | 2026-11-17 | $1.72 | ❌ SKIP | Walmart |
 | 2026-11-16 | $1.72 | ❌ SKIP | Walmart |

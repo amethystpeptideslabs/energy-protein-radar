@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: roll · Size: 2.3 oz · Protein: 20g
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Legendary Protein Sweet Roll | The Vitamin Shoppe | 1× 8 | $13.98 | $1.75 | $0.88 | 54% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/p/protein-sweet-rolls-chocolate-8-roll-s/lgd1022) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

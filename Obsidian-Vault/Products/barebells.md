@@ -22,14 +22,16 @@ Unit: bar · Size: 1.94 oz · Protein: 20g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Barebells Protein Bar | The Vitamin Shoppe | 1× 1 | $1.73 | $1.73 | $0.87 | 69% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
-| Barebells Protein Bar | GNC | 2× 12 | $46.49 | $1.94 | $0.97 | 78% | 🔥 HOT |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| Barebells Protein Bar | GNC | 2× 12 | $46.49 | $1.94 | $0.97 | 78% | 🔥 HOT |  | 2026-11-21 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | Barebells Protein Bar | Target | 1× 12 | $27.99 | $2.33 | $1.17 | 93% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/barebells-nutrition-bars-cookies-38-cream-12pk/-/A-83942841) |
 | Barebells Protein Bar | GNC | 1× 12 | $30.99 | $2.58 | $1.29 | 103% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/snacks/) |
+| Barebells Protein Bar | The Vitamin Shoppe | 1× 12 | $32.99 | $2.75 | $1.38 | 110% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/pr/black-friday-deals) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-21 | $1.73 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-20 | $1.73 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-19 | $1.73 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-18 | $1.73 | 🚨 STEAL | The Vitamin Shoppe |

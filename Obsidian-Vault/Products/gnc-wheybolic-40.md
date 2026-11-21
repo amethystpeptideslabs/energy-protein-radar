@@ -22,12 +22,13 @@ Unit: bottle · Size: 14 oz · Protein: 40g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | GNC AMP Wheybolic 40 Shake 14oz | GNC | 2× 12 | $64.49 | $2.69 | $0.67 | 75% | 🔥 HOT |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
-| GNC AMP Wheybolic 40 Shake 14oz | GNC | 2× 12 | $64.49 | $2.69 | $0.67 | 75% | 🔥 HOT |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| GNC AMP Wheybolic 40 Shake 14oz | GNC | 2× 12 | $64.49 | $2.69 | $0.67 | 75% | 🔥 HOT |  | 2026-11-21 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | GNC AMP Wheybolic 40 Shake 14oz | GNC | 1× 12 | $42.99 | $3.58 | $0.90 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein-shakes/449914.html) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-21 | $2.69 | 🔥 HOT | GNC |
 | 2026-11-20 | $2.69 | 🔥 HOT | GNC |
 | 2026-11-19 | $2.69 | 🔥 HOT | GNC |

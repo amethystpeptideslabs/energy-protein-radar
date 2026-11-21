@@ -21,14 +21,16 @@ Unit: can · Size: 16 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Gorilla Mind Energy 16oz | GNC | 2× 12 | $53.69 | $2.24 | $0.14 | 75% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | Gorilla Mind Energy 16oz | The Vitamin Shoppe | 1× 12 | $30.34 | $2.53 | $0.16 | 85% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/form/drink-s) |
+| Gorilla Mind Energy 16oz | The Vitamin Shoppe | 1× 12 | $30.34 | $2.53 | $0.16 | 85% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/brand/gorilla-mind) |
+| Gorilla Mind Energy 16oz | GNC | 1× 12 | $35.59 | $2.97 | $0.19 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | Gorilla Mind Energy 16oz | GNC | 1× 12 | $35.59 | $2.97 | $0.19 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/gorilla-mind-energy-drink.html) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-21 | $2.53 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-20 | $2.24 | ❌ SKIP | GNC |
 | 2026-11-19 | $2.80 | ❌ SKIP | Walmart |
 | 2026-11-18 | $2.53 | ❌ SKIP | The Vitamin Shoppe |

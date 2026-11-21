@@ -28,6 +28,7 @@ Unit: pastry · Size: 1.76 oz · Protein: 11g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-21 | $2.13 | ✅ SOLID | Walmart |
 | 2026-11-20 | $2.13 | ✅ SOLID | Walmart |
 | 2026-11-19 | $2.13 | ✅ SOLID | Walmart |
 | 2026-11-18 | $2.50 | ❌ SKIP | Target |

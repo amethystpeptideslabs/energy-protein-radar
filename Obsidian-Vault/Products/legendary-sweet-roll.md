@@ -17,10 +17,17 @@ tags: [deal-radar, product]
 
 Unit: roll · Size: 2.3 oz · Protein: 20g
 
+## Current offers
+
+| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Legendary Protein Sweet Roll | Target | 1× 4 | $9.99 | $2.50 | $1.25 | 77% | 🔥 HOT |  |  | [Open deal](https://target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-sweet-roll-sticky-bun-9-2oz-4ct/-/A-93117091) |
+
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-22 | $2.50 | 🔥 HOT | Target |
 | 2026-11-20 | $1.75 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-18 | $3.25 | ❌ SKIP | Legendary Foods (DTC) |
 | 2026-11-17 | $3.25 | ❌ SKIP | Legendary Foods (DTC) |

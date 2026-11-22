@@ -24,14 +24,14 @@ Unit: can · Size: 12 oz
 | Bloom Sparkling Energy 12oz | Walmart | 1× 12 | $20.58 | $1.72 | $0.14 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/11395510309) |
 | Bloom Sparkling Energy 12oz | The Vitamin Shoppe | 2× 12 | $43.19 | $1.80 | $0.15 | 105% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
 | Bloom Sparkling Energy 12oz | Target | 1× 12 | $22.09 | $1.84 | $0.15 | 107% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/bloom-variety-pack-energy-drink-12pk-12-fl-oz-cans/-/A-94331839) |
-| Bloom Sparkling Energy 12oz | GNC | 1× 12 | $28.59 | $2.38 | $0.20 | 140% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/448071.html) |
-| Bloom Sparkling Energy 12oz | GNC | 1× 12 | $28.59 | $2.38 | $0.20 | 140% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 | Bloom Sparkling Energy 12oz | GNC | 1× 12 | $28.59 | $2.38 | $0.20 | 140% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
+| Bloom Sparkling Energy 12oz | GNC | 1× 12 | $28.59 | $2.38 | $0.20 | 140% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-22 | $1.72 | ❌ SKIP | Walmart |
 | 2026-11-21 | $1.72 | ❌ SKIP | Walmart |
 | 2026-11-20 | $1.72 | ❌ SKIP | Walmart |
 | 2026-11-19 | $1.54 | ❌ SKIP | The Vitamin Shoppe |

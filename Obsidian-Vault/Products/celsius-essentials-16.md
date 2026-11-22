@@ -21,13 +21,14 @@ Unit: can · Size: 16 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
+| Celsius Essentials 16oz | Walmart | 1× 12 | $16.34 | $1.36 | $0.09 | 52% | 🔥 HOT |  |  | [Open deal](https://www.walmart.com/ip/seort/5066049697) |
 | Celsius Essentials 16oz | The Vitamin Shoppe | 1× 12 | $22.27 | $1.86 | $0.12 | 72% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
-| Celsius Essentials 16oz | The Vitamin Shoppe | 1× 12 | $22.27 | $1.86 | $0.12 | 72% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/shop-by-deal/sale) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-22 | $1.36 | 🔥 HOT | Walmart |
 | 2026-11-21 | $1.86 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-20 | $1.36 | 🔥 HOT | Walmart |
 | 2026-11-19 | $1.36 | 🔥 HOT | Walmart |

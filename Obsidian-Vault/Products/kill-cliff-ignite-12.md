@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Kill Cliff Ignite 12oz | Rogue Fitness | 1× 12 | $32.59 | $2.72 | $0.23 | 91% | ❌ SKIP |  |  | [Open deal](https://www.roguefitness.com/apo/kill-cliff-ignite-smashing-citrus-12-pack) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

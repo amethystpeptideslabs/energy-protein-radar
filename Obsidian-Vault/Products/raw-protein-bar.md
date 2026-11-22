@@ -21,13 +21,13 @@ Unit: bar · Size: 0 oz · Protein: 18g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| RAW Protein Bar | GNC | 1× 12 | $34.99 | $2.92 | $1.62 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/snacks/) |
 | RAW Protein Bar | GNC | 1× 12 | $34.99 | $2.92 | $1.62 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/bars/) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-22 | $2.92 | ❌ SKIP | GNC |
 | 2026-11-21 | $2.48 | ✅ SOLID | The Vitamin Shoppe |
 | 2026-11-20 | $2.48 | ✅ SOLID | The Vitamin Shoppe |
 | 2026-11-19 | $2.48 | ✅ SOLID | The Vitamin Shoppe |

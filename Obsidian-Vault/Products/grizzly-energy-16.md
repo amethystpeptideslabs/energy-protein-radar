@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 16 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Grizzly Energy 16oz | The Vitamin Shoppe | 1× 12 | $30.59 | $2.55 | $0.16 | 100% | ❌ SKIP |  |  | [Open deal](https://stack3d.com/2026/11/grizzly-energy-shirley-temple) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

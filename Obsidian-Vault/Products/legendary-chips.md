@@ -17,13 +17,6 @@ tags: [deal-radar, product]
 
 Unit: bag · Size: 1.25 oz · Protein: 20g
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Legendary Popped Protein Chips | Legendary Foods (DTC) | 1× 7 | $25.99 | $3.71 | $1.86 | 100% | ❌ SKIP |  |  | [Open deal](https://www.eatlegendary.com/products/nacho-cheese-popped-protein-chips-7-pack) |
-| Legendary Popped Protein Chips | Bodybuilding.com Shop | 1× 7 | $27.49 | $3.93 | $1.97 | 106% | ❌ SKIP |  |  | [Open deal](https://shop.bodybuilding.com/products/legendary-foods-popped-protein-chips-7-pack) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

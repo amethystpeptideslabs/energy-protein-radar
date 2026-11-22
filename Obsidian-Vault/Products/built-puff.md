@@ -23,13 +23,14 @@ Unit: bar · Size: 1.41 oz · Protein: 17g
 |---|---|---|---|---|---|---|---|---|---|---|
 | Built Puff | The Vitamin Shoppe | 1× 12 | $16.48 | $1.37 | $0.81 | 55% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
 | Built Puff | The Vitamin Shoppe | 1× 1 | $1.63 | $1.63 | $0.96 | 65% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
-| Built Puff | Target | 1× 4 | $8.49 | $2.12 | $1.25 | 85% | ✅ SOLID |  |  | [Open deal](https://www.target.com/c/protein-bars-nutrition-health/sale/-/N-4rsq0Z5tdv0) |
 | Built Puff | Target | 1× 12 | $29.99 | $2.50 | $1.47 | 100% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/built-bar-dieting-protein-bars-cookies-39-n-cream-puff-12ct/-/A-94635560) |
+| Built Puff | Walmart | 1× 12 | $29.99 | $2.50 | $1.47 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/BUILT-Puff-Protein-Bar-Collagen-Gluten-Free-Low-Sugar-Churro-12-Ct-Box/519823178) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-22 | $1.37 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-21 | $1.37 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-20 | $1.37 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-19 | $1.37 | 🚨 STEAL | The Vitamin Shoppe |

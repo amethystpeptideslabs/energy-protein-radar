@@ -27,4 +27,5 @@ Unit: can · Size: 16 oz
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-22 | $3.59 | ❌ SKIP | Walmart |
 | 2026-11-21 | $3.59 | ❌ SKIP | Walmart |

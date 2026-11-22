@@ -18,7 +18,7 @@
    "last_best": {
     "unit_price": 1.92,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -29,18 +29,18 @@
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 2.22,
+    "unit_price": 1.89,
     "retailer": "The Vitamin Shoppe",
-    "date": "2026-11-16",
-    "url": "https://www.vitaminshoppe.com/p/3d-energy-raspberry-sorbet-12-drink-s/3de-17306",
+    "date": "2026-11-22",
+    "url": "https://www.vitaminshoppe.com/c/select-drink-cases-buy-online-pick-up-in-store/protein-fitness/drinks-snacks/energy-drinks/brand/3d-energy-drinks",
     "code": null
    },
    "last_best": {
-    "unit_price": 2.22,
+    "unit_price": 1.89,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
-   "trend_30d": "flat",
+   "trend_30d": "down",
    "cal_attempted": "2026-11-17"
   },
   "gorilla-mind-energy-16": {
@@ -59,7 +59,7 @@
    "last_best": {
     "unit_price": 2.24,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -79,7 +79,7 @@
    "last_best": {
     "unit_price": 1.92,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "up"
   },
@@ -97,9 +97,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.86,
-    "tier": "SKIP",
-    "date": "2026-11-21"
+    "unit_price": 1.36,
+    "tier": "HOT",
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -119,7 +119,7 @@
    "last_best": {
     "unit_price": 1.17,
     "tier": "SOLID",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat"
   },
@@ -164,7 +164,7 @@
    "last_best": {
     "unit_price": 1.37,
     "tier": "STEAL",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -189,7 +189,7 @@
    "last_best": {
     "unit_price": 1.73,
     "tier": "STEAL",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -214,7 +214,7 @@
    "last_best": {
     "unit_price": 2.5,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -239,7 +239,7 @@
    "last_best": {
     "unit_price": 3.49,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat"
   },
@@ -264,7 +264,7 @@
    "last_best": {
     "unit_price": 2.5,
     "tier": "HOT",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -289,7 +289,7 @@
    "last_best": {
     "unit_price": 2.45,
     "tier": "HOT",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -314,7 +314,7 @@
    "last_best": {
     "unit_price": 2.44,
     "tier": "HOT",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "up"
   },
@@ -362,9 +362,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.7,
-    "tier": "SOLID",
-    "date": "2026-11-21"
+    "unit_price": 2.16,
+    "tier": "SKIP",
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -389,7 +389,7 @@
    "last_best": {
     "unit_price": 3.12,
     "tier": "HOT",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -425,7 +425,7 @@
    "last_best": {
     "unit_price": 4.63,
     "tier": "SOLID",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -448,11 +448,11 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 3.49,
+    "unit_price": 3.33,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
-   "trend_30d": "up"
+   "trend_30d": "flat"
   },
   "core-power-elite-42": {
    "ref_unit_price": 6.66,
@@ -499,9 +499,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.23,
-    "tier": "SOLID",
-    "date": "2026-11-21"
+    "unit_price": 2.34,
+    "tier": "SKIP",
+    "date": "2026-11-22"
    },
    "trend_30d": "down"
   },
@@ -530,7 +530,7 @@
    "last_best": {
     "unit_price": 2.25,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat"
   },
@@ -584,7 +584,7 @@
    "last_best": {
     "unit_price": 1.83,
     "tier": "SOLID",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat"
   },
@@ -619,7 +619,7 @@
    "last_best": {
     "unit_price": 1.94,
     "tier": "STEAL",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -661,7 +661,7 @@
    "last_best": {
     "unit_price": 1.84,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -682,7 +682,7 @@
    "last_best": {
     "unit_price": 2.01,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -701,9 +701,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.55,
+    "unit_price": 1.72,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -724,7 +724,7 @@
    "last_best": {
     "unit_price": 2.53,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -743,9 +743,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.92,
+    "unit_price": 2.17,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -766,7 +766,7 @@
    "last_best": {
     "unit_price": 2.53,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -785,11 +785,11 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.71,
+    "unit_price": 2.17,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
-   "trend_30d": "flat",
+   "trend_30d": "up",
    "cal_attempted": "2026-11-16"
   },
   "zoa-16": {
@@ -850,7 +850,7 @@
    "last_best": {
     "unit_price": 2.36,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -892,9 +892,9 @@
    "last_best": {
     "unit_price": 1.72,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
-   "trend_30d": "down",
+   "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
   },
   "goat-fuel-12": {
@@ -1008,7 +1008,7 @@
    "last_best": {
     "unit_price": 1.92,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-17"
@@ -1076,7 +1076,7 @@
    "last_best": {
     "unit_price": 2.19,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "up",
    "cal_attempted": "2026-11-16"
@@ -1123,7 +1123,7 @@
    "last_best": {
     "unit_price": 1.25,
     "tier": "SOLID",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1149,7 +1149,7 @@
    "last_best": {
     "unit_price": 3.25,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1199,9 +1199,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.75,
-    "tier": "STEAL",
-    "date": "2026-11-20"
+    "unit_price": 2.5,
+    "tier": "HOT",
+    "date": "2026-11-22"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -1243,9 +1243,9 @@
    "last_best": {
     "unit_price": 2.92,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
-   "trend_30d": "flat",
+   "trend_30d": "up",
    "cal_attempted": "2026-11-16"
   },
   "reign-inferno-16": {
@@ -1264,7 +1264,7 @@
    "last_best": {
     "unit_price": 3.59,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -1290,7 +1290,7 @@
    "last_best": {
     "unit_price": 2.69,
     "tier": "HOT",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-20"
@@ -1316,7 +1316,7 @@
    "last_best": {
     "unit_price": 1.46,
     "tier": "STEAL",
-    "date": "2026-11-21"
+    "date": "2026-11-22"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-20"
@@ -1541,20 +1541,25 @@
    "fingerprint": "c4-energy-12|walmart|1.55|",
    "sent_at": "2026-11-21T12:35:09-08:00",
    "priority": 5
+  },
+  {
+   "fingerprint": "3d-energy-16|vitamin-shoppe|1.89|",
+   "sent_at": "2026-11-22T06:05:18-08:00",
+   "priority": 5
   }
  ],
  "latest_run": {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 33
+  "searches": 40
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 17,
-   "searches": 511
+   "runs": 18,
+   "searches": 551
   }
  },
  "budget_warning_month": null

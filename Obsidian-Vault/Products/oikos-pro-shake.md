@@ -22,6 +22,7 @@ Unit: bottle · Size: 12 oz · Protein: 30g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Oikos Pro Shake | Walmart | 1× 12 | $21.99 | $1.83 | $0.61 | 88% | ✅ SOLID |  |  | [Open deal](https://www.walmart.com/ip/seort/16113764509) |
+| Oikos Pro Shake | Target | 1× 12 | $26.99 | $2.25 | $0.75 | 108% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/product/-/A-94853004) |
 | Oikos Pro Shake | Walmart | 1× 12 | $29.91 | $2.49 | $0.83 | 120% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/16365764281) |
 
 ## Price ledger

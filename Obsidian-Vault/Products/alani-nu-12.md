@@ -24,7 +24,10 @@ Unit: can · Size: 12 oz
 | Alani Nu Energy 12oz | Target | 1× 12 | $22.09 | $1.84 | $0.15 | 80% | ❌ SKIP |  |  | [Open deal](https://target.com/p/alani-nu-variety-pack-energy-drink-cherry-twist-orange-kiss-pink-slush-12pk-12-fl-oz-cans/-/A-94052554) |
 | Alani Nu Energy 12oz | The Vitamin Shoppe | 2× 12 | $46.19 | $1.92 | $0.16 | 83% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
 | Alani Nu Energy 12oz | The Vitamin Shoppe | 2× 12 | $46.19 | $1.92 | $0.16 | 83% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/save-when-you-buy-online-pick-up-in-store/food-drinks/drinks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
+| Alani Nu Energy 12oz | The Vitamin Shoppe | 2× 12 | $46.19 | $1.92 | $0.16 | 83% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
+| Alani Nu Energy 12oz | The Vitamin Shoppe | 2× 12 | $46.19 | $1.92 | $0.16 | 83% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks) |
 | Alani Nu Energy 12oz | Walmart | 1× 12 | $23.57 | $1.96 | $0.16 | 85% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/food/energy-drinks/976759_976782_9357528_1688487) |
+| Alani Nu Energy 12oz | Target | 1× 12 | $23.59 | $1.97 | $0.16 | 85% | ❌ SKIP |  |  | [Open deal](https://target.com/p/alani-nu-variety-pack-energy-drink-cherry-slush-hawaiian-shaved-ice-peach-12pk-12-fl-oz-cans/-/A-94052555) |
 | Alani Nu Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 111% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
 | Alani Nu Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 111% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/561619.html) |
 

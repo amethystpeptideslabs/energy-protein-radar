@@ -8,10 +8,10 @@ _Updated 2026-11-23 after the quick run._
 
 | Product | Ref $/unit | All-time low | Record at | Record date | Today's best | Best retailer now | 30d |
 |---|---|---|---|---|---|---|---|
-| [[ghost-energy-16\|Ghost Energy 16oz]] | $2.68 | $1.92 | GNC | 2026-11-20 | $1.92 ❌ | GNC | ↘️ |
+| [[ghost-energy-16\|Ghost Energy 16oz]] | $2.68 | $1.92 | GNC | 2026-11-20 | $1.93 ❌ | The Vitamin Shoppe | ↘️ |
 | [[3d-energy-16\|3D Energy 16oz]] | $2.50 | $1.89 | The Vitamin Shoppe | 2026-11-22 | $1.89 ❌ | The Vitamin Shoppe | ↘️ |
-| [[gorilla-mind-energy-16\|Gorilla Mind Energy 16oz]] | $2.92 | $2.24 | GNC | 2026-11-20 | $2.24 ❌ | GNC | ↘️ |
-| [[bum-energy-12\|RAW Bum Energy 12oz]] | $2.50 | $1.30 | The Vitamin Shoppe | 2026-11-17 | $1.92 ❌ | GNC | ↗️ |
+| [[gorilla-mind-energy-16\|Gorilla Mind Energy 16oz]] | $2.92 | $2.24 | GNC | 2026-11-20 | $2.53 ❌ | The Vitamin Shoppe | ↘️ |
+| [[bum-energy-12\|RAW Bum Energy 12oz]] | $2.50 | $1.30 | The Vitamin Shoppe | 2026-11-17 | $2.05 ❌ | The Vitamin Shoppe | ↗️ |
 | [[celsius-essentials-16\|Celsius Essentials 16oz]] | $2.50 | $1.36 | Walmart | 2026-11-16 | $1.36 🔥 | Walmart | ↘️ |
 | [[celsius-original-12\|Celsius Original 12oz]] | $1.67 | $1.16 | Amazon | 2026-11-16 | $1.21 ✅ | Walmart | → |
 | [[bang-16\|Bang Energy 16oz]] | $4.58 | $4.17 | Walmart | 2026-11-18 | — |  | → |
@@ -33,7 +33,7 @@ _Updated 2026-11-23 after the quick run._
 | [[accelerator-12\|Accelerator Active Energy 12oz]] | $2.08 | $2.24 | Target | 2026-11-16 | — |  | → |
 | [[riot-energy-16\|RIOT Energy 16oz]] | $2.99 | $4.47 | Target | 2026-11-17 | — |  | → |
 | [[lucky-energy-16\|Lucky Energy 16oz]] | $2.33 | $2.21 | Walmart | 2026-11-16 | — |  | → |
-| [[lifeaid-12\|LIFEAID FITAID / FOCUSAID 12oz]] | $2.49 | $2.38 | Walmart | 2026-11-16 | — |  | → |
+| [[lifeaid-12\|LIFEAID FITAID / FOCUSAID 12oz]] | $2.49 | $1.71 | Amazon | 2026-11-23 | $1.71 ❌ | Amazon | ↘️ |
 | [[nocco-12\|NOCCO BCAA Energy 12oz]] | $2.50 | $1.92 | The Vitamin Shoppe | 2026-11-18 | — |  | ↘️ |
 | [[kill-cliff-ignite-12\|Kill Cliff Ignite 12oz]] | $2.92 | $2.63 | Walmart | 2026-11-18 | — |  | → |
 | [[grizzly-energy-16\|Grizzly Energy 16oz]] | $2.50 | $2.55 | The Vitamin Shoppe | 2026-11-16 | — |  | → |
@@ -46,18 +46,18 @@ _Updated 2026-11-23 after the quick run._
 | [[barebells\|Barebells Protein Bar]] | $2.50 | $1.73 | The Vitamin Shoppe | 2026-11-17 | $1.73 🚨 | The Vitamin Shoppe | ↘️ |
 | [[magic-spoon-pastry\|Magic Spoon Protein Pastry]] | $2.44 | $2.13 | Walmart | 2026-11-16 | — |  | ↘️ |
 | [[drumroll-donuts\|Drumroll Mini Protein Donuts]] | $3.74 | $3.49 | Target | 2026-11-16 | $3.49 ❌ | Target | → |
-| [[prime-bites\|Prime Bites Protein Brownie]] | $3.33 | $2.50 | GNC | 2026-11-20 | $2.50 🔥 | GNC | ↘️ |
+| [[prime-bites\|Prime Bites Protein Brownie]] | $3.33 | $2.50 | GNC | 2026-11-20 | $3.33 ❌ | GNC | ↘️ |
 | [[legendary-pastry\|Legendary Protein Pastry]] | $3.48 | $2.45 | Target | 2026-11-21 | $2.50 🔥 | Target | ↘️ |
 | [[legendary-donuts\|Legendary Protein Donuts]] | $3.05 | $1.87 | Target | 2026-11-16 | $1.87 🚨 | Target | ↘️ |
 | [[legendary-chips\|Legendary Popped Protein Chips]] | $3.71 | $3.57 | Vitacost | 2026-11-16 | — |  | ↗️ |
-| [[quest-chips\|Quest Protein Chips]] | $2.01 | $1.70 | Sam's Club | 2026-11-20 | $2.16 ❌ | GNC | ↘️ |
-| [[quest-bar\|Quest Protein Bar]] | $2.42 | $2.08 | Target | 2026-11-16 | $2.19 ❌ | GNC | → |
+| [[quest-chips\|Quest Protein Chips]] | $2.01 | $1.70 | Sam's Club | 2026-11-20 | $2.25 ❌ | Walmart | ↘️ |
+| [[quest-bar\|Quest Protein Bar]] | $2.42 | $2.08 | Target | 2026-11-16 | $2.20 ❌ | Walmart | → |
 | [[grenade-bar\|Grenade Carb Killa Bar]] | $3.33 | $2.92 | GNC | 2026-11-19 | — |  | → |
 | [[fitcrunch-bar\|FITCRUNCH Bar (16g)]] | $1.51 | $1.25 | Sam's Club | 2026-11-16 | $1.25 ✅ | Sam's Club | → |
 | [[david-bar\|David Protein Bar (28g)]] | $3.25 | $3.25 | Walmart | 2026-11-16 | $3.25 ❌ | Target | → |
 | [[phorm-level1-bar\|1st Phorm Level-1 Bar]] | $3.00 | $2.55 | The Vitamin Shoppe | 2026-11-16 | — |  | → |
 | [[legendary-sweet-roll\|Legendary Protein Sweet Roll]] | $3.25 | $1.75 | The Vitamin Shoppe | 2026-11-20 | $2.50 🔥 | Target | ↘️ |
-| [[barebells-soft\|Barebells Soft Bar (16g)]] | $2.83 | $1.94 | GNC | 2026-11-20 | $1.94 🚨 | GNC | ↘️ |
+| [[barebells-soft\|Barebells Soft Bar (16g)]] | $2.83 | $1.94 | GNC | 2026-11-20 | $2.58 ❌ | GNC | ↘️ |
 | [[met-rx-big100\|MET-Rx Big 100 Bar (30g)]] | $4.20 | $4.20 | Vitacost | 2026-11-16 | — |  | → |
 | [[raw-protein-bar\|RAW Protein Bar]] | $2.92 | $2.48 | The Vitamin Shoppe | 2026-11-16 | — |  | ↗️ |
 
@@ -65,7 +65,7 @@ _Updated 2026-11-23 after the quick run._
 
 | Product | Ref $/unit | All-time low | Record at | Record date | Today's best | Best retailer now | 30d |
 |---|---|---|---|---|---|---|---|
-| [[raw-protein-rtd\|RAW Protein Shake 12oz]] | $4.17 | $2.66 | The Vitamin Shoppe | 2026-11-16 | $3.12 🔥 | GNC | ↘️ |
+| [[raw-protein-rtd\|RAW Protein Shake 12oz]] | $4.17 | $2.66 | The Vitamin Shoppe | 2026-11-16 | $4.17 ❌ | GNC | ↘️ |
 | [[gnc-wheybolic-40\|GNC AMP Wheybolic 40 Shake 14oz]] | $3.58 | $2.69 | GNC | 2026-11-19 | $2.69 🔥 | GNC | → |
 | [[gnc-total-lean-25\|GNC Total Lean Shake 25 14oz]] | $2.92 | $1.46 | GNC | 2026-11-19 | $1.46 🚨 | GNC | → |
 | [[isopure-zc-40\|Isopure Zero Carb RTD 20oz (40g)]] | $5.82 |  |  |  | — |  | → |

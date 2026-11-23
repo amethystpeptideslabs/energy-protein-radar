@@ -21,15 +21,14 @@ Unit: brownie · Size: 1.76 oz · Protein: 19g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Prime Bites Protein Brownie | GNC | 2× 12 | $59.99 | $2.50 | $1.32 | 75% | 🔥 HOT |  | 2026-11-22 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
-| Prime Bites Protein Brownie | Walmart | 1× 12 | $35.18 | $2.93 | $1.54 | 88% | ✅ SOLID |  |  | [Open deal](https://www.walmart.com/ip/seort/3160167580) |
-| Prime Bites Protein Brownie | GNC | 1× 12 | $39.99 | $3.33 | $1.75 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/bars/) |
+| Prime Bites Protein Brownie | GNC | 2× 12 | $59.99 | $2.50 | $1.32 | 75% | 🔥 HOT |  | 2026-11-23 | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | Prime Bites Protein Brownie | GNC | 1× 12 | $39.99 | $3.33 | $1.75 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-23 | $2.50 | 🔥 HOT | GNC |
 | 2026-11-22 | $2.50 | 🔥 HOT | GNC |
 | 2026-11-21 | $2.50 | 🔥 HOT | GNC |
 | 2026-11-20 | $2.50 | 🔥 HOT | GNC |

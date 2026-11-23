@@ -30,6 +30,7 @@ Unit: bar · Size: 1.41 oz · Protein: 17g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-23 | $1.37 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-22 | $1.37 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-21 | $1.37 | 🚨 STEAL | The Vitamin Shoppe |
 | 2026-11-20 | $1.37 | 🚨 STEAL | The Vitamin Shoppe |

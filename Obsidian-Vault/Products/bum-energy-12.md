@@ -23,15 +23,14 @@ Unit: can · Size: 12 oz
 |---|---|---|---|---|---|---|---|---|---|---|
 | RAW Bum Energy 12oz | GNC | 2× 12 | $46.19 | $1.92 | $0.16 | 75% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
 | RAW Bum Energy 12oz | The Vitamin Shoppe | 1× 12 | $24.59 | $2.05 | $0.17 | 80% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
-| RAW Bum Energy 12oz | The Vitamin Shoppe | 1× 12 | $24.59 | $2.05 | $0.17 | 80% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks/form/drink-s) |
-| RAW Bum Energy 12oz | GNC | 1× 12 | $27.59 | $2.30 | $0.19 | 90% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/604825.html) |
-| RAW Bum Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/bum-energy-drink.html) |
 | RAW Bum Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/drinks/) |
+| RAW Bum Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/bum-energy-drink.html) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-23 | $1.92 | ❌ SKIP | GNC |
 | 2026-11-22 | $1.92 | ❌ SKIP | GNC |
 | 2026-11-21 | $1.92 | ❌ SKIP | GNC |
 | 2026-11-20 | $1.92 | ❌ SKIP | GNC |

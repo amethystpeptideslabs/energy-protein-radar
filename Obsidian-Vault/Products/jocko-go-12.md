@@ -21,14 +21,13 @@ Unit: can · Size: 12 oz
 
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Jocko GO Energy 12oz | The Vitamin Shoppe | 1× 12 | $28.32 | $2.36 | $0.20 | 92% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
-| Jocko GO Energy 12oz | The Vitamin Shoppe | 1× 12 | $28.32 | $2.36 | $0.20 | 92% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/more-ways-to-shop/sale) |
-| Jocko GO Energy 12oz | The Vitamin Shoppe | 1× 12 | $32.04 | $2.67 | $0.22 | 105% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/form/drink-s) |
+| Jocko GO Energy 12oz | The Vitamin Shoppe | 1× 12 | $28.32 | $2.36 | $0.20 | 92% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/more-ways-to-shop/sale) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-23 | $2.36 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-22 | $2.36 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-21 | $2.36 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-20 | $2.36 | ❌ SKIP | The Vitamin Shoppe |

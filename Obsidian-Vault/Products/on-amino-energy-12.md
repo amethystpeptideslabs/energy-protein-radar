@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| ON Amino Energy Sparkling 12oz | The Vitamin Shoppe | 1× 12 | $26.09 | $2.17 | $0.18 | 128% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/form/drink-s) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

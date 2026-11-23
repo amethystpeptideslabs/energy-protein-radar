@@ -22,12 +22,12 @@ Unit: can · Size: 16 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Reign Total Body Fuel 16oz | Walmart | 1× 12 | $30.36 | $2.53 | $0.16 | 114% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/food/reign-energy-drinks/976759_976782_9357528_1311055) |
-| Reign Total Body Fuel 16oz | Walmart | 1× 12 | $31.56 | $2.63 | $0.16 | 119% | ❌ SKIP |  |  | [Open deal](https://walmart.com/ip/seort/5321085482) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-23 | $2.53 | ❌ SKIP | Walmart |
 | 2026-11-22 | $2.53 | ❌ SKIP | Walmart |
 | 2026-11-21 | $2.53 | ❌ SKIP | Walmart |
 | 2026-11-20 | $2.63 | ❌ SKIP | Walmart |

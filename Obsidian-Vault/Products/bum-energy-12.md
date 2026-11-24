@@ -23,10 +23,10 @@ Unit: can · Size: 12 oz
 |---|---|---|---|---|---|---|---|---|---|---|
 | RAW Bum Energy 12oz | Walmart | 1× 12 | $23.88 | $1.99 | $0.17 | 78% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/Raw-Nutrition-BUM-Energy-Drink-112-mg-Natural-Caffeine-Blue-Snow-Cone-12-fl-oz-12-Pack/5333188963) |
 | RAW Bum Energy 12oz | The Vitamin Shoppe | 1× 12 | $24.59 | $2.05 | $0.17 | 80% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
-| RAW Bum Energy 12oz | The Vitamin Shoppe | 1× 12 | $24.59 | $2.05 | $0.17 | 80% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks) |
-| RAW Bum Energy 12oz | GNC | 1× 12 | $27.59 | $2.30 | $0.19 | 90% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/bum-energy-drink.html) |
+| RAW Bum Energy 12oz | The Vitamin Shoppe | 1× 12 | $24.59 | $2.05 | $0.17 | 80% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/bum-energy-root-beer-12-can-s/bum-12618) |
 | RAW Bum Energy 12oz | GNC | 1× 12 | $27.59 | $2.30 | $0.19 | 90% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/604863.html) |
 | RAW Bum Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
+| RAW Bum Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/bum-energy-drink.html) |
 
 ## Price ledger
 

@@ -22,6 +22,7 @@ Unit: brownie · Size: 1.76 oz · Protein: 19g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Prime Bites Protein Brownie | GNC | 2× 12 | $59.99 | $2.50 | $1.32 | 75% | 🔥 HOT |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| Prime Bites Protein Brownie | The Vitamin Shoppe | 1× 12 | $33.99 | $2.83 | $1.49 | 85% | ✅ SOLID |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/protein-fitness/drinks-snacks/protein-bars) |
 | Prime Bites Protein Brownie | Walmart | 1× 12 | $37.00 | $3.08 | $1.62 | 92% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/health-medicine/prime-bites-protein-brownie/976760_1166769_6765253_3044262) |
 | Prime Bites Protein Brownie | GNC | 1× 12 | $39.99 | $3.33 | $1.75 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
 | Prime Bites Protein Brownie | GNC | 1× 12 | $39.99 | $3.33 | $1.75 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/bars/) |

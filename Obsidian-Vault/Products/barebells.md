@@ -22,9 +22,11 @@ Unit: bar · Size: 1.94 oz · Protein: 20g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Barebells Protein Bar | The Vitamin Shoppe | 1× 1 | $1.73 | $1.73 | $0.87 | 69% | 🚨 STEAL |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
-| Barebells Protein Bar | GNC | 2× 12 | $46.49 | $1.94 | $0.97 | 78% | 🔥 HOT |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| Barebells Protein Bar | The Vitamin Shoppe | 1× 12 | $28.04 | $2.34 | $1.17 | 94% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/protein-fitness/drinks-snacks/protein-bars) |
 | Barebells Protein Bar | GNC | 1× 12 | $30.99 | $2.58 | $1.29 | 103% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
+| Barebells Protein Bar | GNC | 1× 12 | $30.99 | $2.58 | $1.29 | 103% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | Barebells Protein Bar | GNC | 1× 12 | $30.99 | $2.58 | $1.29 | 103% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/bars/) |
+| Barebells Protein Bar | Target | 1× 12 | $35.99 | $3.00 | $1.50 | 120% | ❌ SKIP |  |  | [Open deal](https://target.com/p/barebells-protein-bar-caramel-cashew-12-bars-1-94-oz-55-g-each/-/A-1002751166) |
 
 ## Price ledger
 

@@ -17,10 +17,17 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 16 oz
 
+## Current offers
+
+| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1st Phorm Energy 16oz | The Vitamin Shoppe | 1× 12 | $28.64 | $2.39 | $0.15 | 85% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/p/orange-sunrise-rtd-orange-sunrise-12-drink-s/1ph0015) |
+
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $2.39 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-21 | $2.39 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-20 | $2.39 | ❌ SKIP | The Vitamin Shoppe |
 | 2026-11-19 | $2.39 | ❌ SKIP | The Vitamin Shoppe |

@@ -4,8 +4,8 @@ category: rtd
 display_name: "Fairlife Core Power Elite 42g"
 ref_unit_price: 6.66
 ref_source: "calibrated (2 retailers)"
-all_time_low: 5.74
-all_time_low_retailer: "Walmart"
+all_time_low: 5.49
+all_time_low_retailer: "Ralphs"
 protein_g: 42
 unit_size_oz: 14
 tags: [deal-radar, product]
@@ -17,10 +17,17 @@ tags: [deal-radar, product]
 
 Unit: bottle · Size: 14 oz · Protein: 42g
 
+## Current offers
+
+| Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Fairlife Core Power Elite 42g | Ralphs | 1× 1 | $5.49 | $5.49 | $1.31 | 82% | ✅ SOLID 🏆 |  |  | [Open deal](https://www.ralphs.com/q/fairlife+core+power) |
+
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $5.49 | ✅ SOLID | Ralphs |
 | 2026-11-21 | $5.74 | ✅ SOLID | Walmart |
 | 2026-11-20 | $5.75 | ✅ SOLID | Walmart |
 | 2026-11-19 | $5.83 | ✅ SOLID | Walmart |

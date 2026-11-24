@@ -23,6 +23,7 @@ Unit: can · Size: 12 oz
 |---|---|---|---|---|---|---|---|---|---|---|
 | C4 Energy 12oz | Walmart | 1× 12 | $20.57 | $1.71 | $0.14 | 99% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/food/energy-drinks/976759_976782_9357528_1688487) |
 | C4 Energy 12oz | Walmart | 1× 12 | $21.96 | $1.83 | $0.15 | 107% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/food/c4-energy-drinks/976759_976782_9357528_6944733) |
+| C4 Energy 12oz | Walmart | 1× 12 | $21.96 | $1.83 | $0.15 | 107% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/c/kp/case-c4) |
 | C4 Energy 12oz | Target | 1× 12 | $22.59 | $1.88 | $0.16 | 110% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/c4-smart-energy-performance-popsicle-energy-drink-12pk-12-fl-oz-cans/-/A-94043627) |
 | C4 Energy 12oz | Walmart | 1× 12 | $23.09 | $1.92 | $0.16 | 112% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/6177361684) |
 

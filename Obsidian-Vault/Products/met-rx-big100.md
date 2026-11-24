@@ -21,7 +21,7 @@ Unit: bar · Size: 3.52 oz · Protein: 30g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| MET-Rx Big 100 Bar (30g) | Target | 1× 9 | $35.99 | $4.00 | $1.33 | 95% | ❌ SKIP 🏆 |  |  | [Open deal](https://www.target.com/p/-/A-83696754) |
+| MET-Rx Big 100 Bar (30g) | Target | 1× 9 | $35.99 | $4.00 | $1.33 | 95% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/-/A-83696754) |
 
 ## Price ledger
 

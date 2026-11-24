@@ -416,18 +416,18 @@
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 4.63,
-    "retailer": "GNC",
-    "date": "2026-11-16",
-    "url": "https://www.gnc.com/protein-shakes/isopure-protein-drink.html",
+    "unit_price": 3.77,
+    "retailer": "The Vitamin Shoppe",
+    "date": "2026-11-24",
+    "url": "https://www.vitaminshoppe.com/p/nature-best-isopure-isopure-rtd-zero-carb-alpine-punch-12-drinks/np-1149",
     "code": null
    },
    "last_best": {
-    "unit_price": 5.01,
-    "tier": "SKIP",
+    "unit_price": 3.77,
+    "tier": "HOT",
     "date": "2026-11-24"
    },
-   "trend_30d": "flat"
+   "trend_30d": "down"
   },
   "core-power-26": {
    "ref_unit_price": 3.49,
@@ -466,16 +466,16 @@
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 5.74,
-    "retailer": "Walmart",
-    "date": "2026-11-21",
-    "url": "https://www.walmart.com/browse/health-medicine/core-power-protein-shakes/976760_1166769_3755446",
+    "unit_price": 5.49,
+    "retailer": "Ralphs",
+    "date": "2026-11-24",
+    "url": "https://www.ralphs.com/q/fairlife+core+power",
     "code": null
    },
    "last_best": {
-    "unit_price": 5.74,
+    "unit_price": 5.49,
     "tier": "SOLID",
-    "date": "2026-11-21"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -617,8 +617,8 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.94,
-    "tier": "STEAL",
+    "unit_price": 2.58,
+    "tier": "SKIP",
     "date": "2026-11-24"
    },
    "trend_30d": "down",
@@ -640,7 +640,7 @@
    "last_best": {
     "unit_price": 2.39,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -659,7 +659,7 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.84,
+    "unit_price": 1.92,
     "tier": "SKIP",
     "date": "2026-11-24"
    },
@@ -1601,6 +1601,16 @@
    "fingerprint": "met-rx-big100|target|4.00|",
    "sent_at": "2026-11-24T06:01:01-08:00",
    "priority": 3
+  },
+  {
+   "fingerprint": "isopure-zc-32|vitamin-shoppe|3.77|",
+   "sent_at": "2026-11-24T12:38:26-08:00",
+   "priority": 5
+  },
+  {
+   "fingerprint": "core-power-elite-42|ralphs|5.49|",
+   "sent_at": "2026-11-24T12:38:26-08:00",
+   "priority": 5
   }
  ],
  "latest_run": {
@@ -1608,13 +1618,13 @@
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 39
+  "searches": 29
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 21,
-   "searches": 647
+   "runs": 22,
+   "searches": 676
   }
  },
  "budget_warning_month": null

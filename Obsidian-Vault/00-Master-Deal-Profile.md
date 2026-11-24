@@ -15,8 +15,8 @@ _Updated 2026-11-24 after the quick run._
 | [[celsius-essentials-16\|Celsius Essentials 16oz]] | $2.50 | $1.36 | Walmart | 2026-11-16 | $1.36 🔥 | Walmart | ↘️ |
 | [[celsius-original-12\|Celsius Original 12oz]] | $1.67 | $1.16 | Amazon | 2026-11-16 | $1.72 ❌ | Walmart | ↗️ |
 | [[bang-16\|Bang Energy 16oz]] | $4.58 | $4.17 | Walmart | 2026-11-18 | — |  | → |
-| [[phorm-energy-16\|1st Phorm Energy 16oz]] | $2.75 | $2.39 | The Vitamin Shoppe | 2026-11-16 | — |  | → |
-| [[alani-nu-12\|Alani Nu Energy 12oz]] | $2.25 | $1.05 | The Vitamin Shoppe | 2026-11-19 | $1.84 ❌ | Target | ↗️ |
+| [[phorm-energy-16\|1st Phorm Energy 16oz]] | $2.75 | $2.39 | The Vitamin Shoppe | 2026-11-16 | $2.39 ❌ | The Vitamin Shoppe | → |
+| [[alani-nu-12\|Alani Nu Energy 12oz]] | $2.25 | $1.05 | The Vitamin Shoppe | 2026-11-19 | $1.92 ❌ | The Vitamin Shoppe | ↗️ |
 | [[c4-energy-16\|C4 Energy 16oz]] | $2.33 | $1.81 | The Vitamin Shoppe | 2026-11-17 | $2.01 ❌ | Walmart | ↘️ |
 | [[c4-energy-12\|C4 Energy 12oz]] | $1.67 | $1.55 | Walmart | 2026-11-21 | $1.71 ❌ | Walmart | → |
 | [[reign-16\|Reign Total Body Fuel 16oz]] | $2.17 | $2.53 | Walmart | 2026-11-16 | — |  | → |
@@ -33,7 +33,7 @@ _Updated 2026-11-24 after the quick run._
 | [[accelerator-12\|Accelerator Active Energy 12oz]] | $2.08 | $2.24 | Target | 2026-11-16 | — |  | → |
 | [[riot-energy-16\|RIOT Energy 16oz]] | $2.99 | $4.47 | Target | 2026-11-17 | — |  | → |
 | [[lucky-energy-16\|Lucky Energy 16oz]] | $2.33 | $2.21 | Walmart | 2026-11-16 | — |  | → |
-| [[lifeaid-12\|LIFEAID FITAID / FOCUSAID 12oz]] | $2.49 | $1.71 | Amazon | 2026-11-23 | $1.71 ❌ | Amazon | ↘️ |
+| [[lifeaid-12\|LIFEAID FITAID / FOCUSAID 12oz]] | $2.49 | $1.71 | Amazon | 2026-11-23 | — |  | ↘️ |
 | [[nocco-12\|NOCCO BCAA Energy 12oz]] | $2.50 | $1.92 | The Vitamin Shoppe | 2026-11-18 | — |  | ↘️ |
 | [[kill-cliff-ignite-12\|Kill Cliff Ignite 12oz]] | $2.92 | $2.60 | Kill Cliff (DTC) | 2026-11-24 | $3.05 ❌ | Walmart | → |
 | [[grizzly-energy-16\|Grizzly Energy 16oz]] | $2.50 | $2.55 | The Vitamin Shoppe | 2026-11-16 | — |  | → |
@@ -57,7 +57,7 @@ _Updated 2026-11-24 after the quick run._
 | [[david-bar\|David Protein Bar (28g)]] | $3.25 | $2.60 | Walmart | 2026-11-24 | $2.60 🔥 | Walmart | ↘️ |
 | [[phorm-level1-bar\|1st Phorm Level-1 Bar]] | $3.00 | $2.55 | The Vitamin Shoppe | 2026-11-16 | — |  | → |
 | [[legendary-sweet-roll\|Legendary Protein Sweet Roll]] | $3.25 | $1.75 | The Vitamin Shoppe | 2026-11-20 | $2.47 🔥 | Walmart | ↘️ |
-| [[barebells-soft\|Barebells Soft Bar (16g)]] | $2.83 | $1.94 | GNC | 2026-11-20 | $1.94 🚨 | GNC | ↘️ |
+| [[barebells-soft\|Barebells Soft Bar (16g)]] | $2.83 | $1.94 | GNC | 2026-11-20 | $2.58 ❌ | GNC | ↘️ |
 | [[met-rx-big100\|MET-Rx Big 100 Bar (30g)]] | $4.20 | $4.00 | Target | 2026-11-24 | $4.00 ❌ | Target | → |
 | [[raw-protein-bar\|RAW Protein Bar]] | $2.92 | $2.48 | The Vitamin Shoppe | 2026-11-16 | — |  | ↗️ |
 
@@ -69,9 +69,9 @@ _Updated 2026-11-24 after the quick run._
 | [[gnc-wheybolic-40\|GNC AMP Wheybolic 40 Shake 14oz]] | $3.58 | $2.69 | GNC | 2026-11-19 | $2.69 🔥 | GNC | → |
 | [[gnc-total-lean-25\|GNC Total Lean Shake 25 14oz]] | $2.92 | $1.46 | GNC | 2026-11-19 | $1.46 🚨 | GNC | → |
 | [[isopure-zc-40\|Isopure Zero Carb RTD 20oz (40g)]] | $5.82 |  |  |  | — |  | → |
-| [[isopure-zc-32\|Isopure Zero Carb RTD 16.9oz (32g)]] | $5.21 | $4.63 | GNC | 2026-11-16 | $5.01 ❌ | The Vitamin Shoppe | → |
+| [[isopure-zc-32\|Isopure Zero Carb RTD 16.9oz (32g)]] | $5.21 | $3.77 | The Vitamin Shoppe | 2026-11-24 | $3.77 🔥 | The Vitamin Shoppe | ↘️ |
 | [[core-power-26\|Fairlife Core Power 26g]] | $3.49 | $3.17 | Target | 2026-11-16 | $3.49 ❌ | Walmart | → |
-| [[core-power-elite-42\|Fairlife Core Power Elite 42g]] | $6.66 | $5.74 | Walmart | 2026-11-21 | — |  | → |
+| [[core-power-elite-42\|Fairlife Core Power Elite 42g]] | $6.66 | $5.49 | Ralphs | 2026-11-24 | $5.49 ✅ | Ralphs | → |
 | [[premier-protein-30\|Premier Protein Shake 30g]] | $2.48 | $2.23 | Walmart | 2026-11-21 | $2.23 ✅ | Walmart | ↘️ |
 | [[muscle-milk-pro\|Muscle Milk Pro Series]] | $2.25 | $2.25 | Walmart | 2026-11-16 | $2.25 ❌ | Walmart | → |
 | [[quest-shake\|Quest Protein Shake]] | $3.68 | $2.22 | Target | 2026-11-16 | — |  | → |

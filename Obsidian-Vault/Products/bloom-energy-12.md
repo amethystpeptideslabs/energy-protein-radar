@@ -22,7 +22,6 @@ Unit: can · Size: 12 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Bloom Sparkling Energy 12oz | The Vitamin Shoppe | 2× 12 | $43.19 | $1.80 | $0.15 | 105% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/energy-drinks/shop-by-deal/buy-one-get-one-50-off) |
-| Bloom Sparkling Energy 12oz | The Vitamin Shoppe | 2× 12 | $43.19 | $1.80 | $0.15 | 105% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | Bloom Sparkling Energy 12oz | GNC | 1× 12 | $28.59 | $2.38 | $0.20 | 140% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
 
 ## Price ledger

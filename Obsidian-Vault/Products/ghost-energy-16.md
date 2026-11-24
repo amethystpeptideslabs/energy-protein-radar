@@ -23,15 +23,15 @@ Unit: can · Size: 16 oz
 |---|---|---|---|---|---|---|---|---|---|---|
 | Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $23.15 | $1.93 | $0.12 | 70% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | Ghost Energy 16oz | The Vitamin Shoppe | 1× 12 | $26.09 | $2.17 | $0.14 | 79% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks) |
+| Ghost Energy 16oz | Walmart | 1× 12 | $26.08 | $2.17 | $0.14 | 79% | ❌ SKIP |  |  | [Open deal](https://walmart.com/ip/seort/278156098) |
 | Ghost Energy 16oz | Walmart | 1× 12 | $26.12 | $2.18 | $0.14 | 80% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/15120563348) |
-| Ghost Energy 16oz | GNC | 1× 12 | $27.59 | $2.30 | $0.14 | 84% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/ghost-energy-drink.html) |
 | Ghost Energy 16oz | GNC | 1× 12 | $27.59 | $2.30 | $0.14 | 84% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/582029.html) |
 | Ghost Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 93% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
+| Ghost Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 93% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/ghost-energy-drink.html) |
 | Ghost Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 93% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/buy-one-get-one-half-off/269688.html) |
 | Ghost Energy 16oz | Walmart | 1× 12 | $30.59 | $2.55 | $0.16 | 93% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/1961012882) |
 | Ghost Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 93% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/582023.html) |
 | Ghost Energy 16oz | Walmart | 1× 1 | $2.73 | $2.73 | $0.17 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/17042262854) |
-| Ghost Energy 16oz | Amazon | 1× 12 | $25.60 | $2.13 | $0.13 | 78% | ❌ SKIP ⚠️ UNVERIFIED |  |  | [Open deal](https://9to5toys.com/2026/11/20/protein-powder-and-bar-deals/) |
 
 ## Price ledger
 

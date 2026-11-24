@@ -25,7 +25,7 @@ Unit: bar · Size: 2.12 oz · Protein: 21g
 | Quest Protein Bar | Target | 1× 12 | $26.49 | $2.21 | $1.05 | 91% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/quest-nutrition-protein-bars-chocolate-peanut-butter-12ct/-/A-53111624) |
 | Quest Protein Bar | Walmart | 1× 12 | $28.46 | $2.37 | $1.13 | 98% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/109252837) |
 | Quest Protein Bar | The Vitamin Shoppe | 2× 12 | $59.99 | $2.50 | $1.19 | 103% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/foods/bars/shop-by-deal/buy-one-get-one-50-off) |
-| Quest Protein Bar | The Vitamin Shoppe | 2× 12 | $59.99 | $2.50 | $1.19 | 103% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/protein-fitness/drinks-snacks/protein-bars/form/bar-s) |
+| Quest Protein Bar | Target | 1× 12 | $51.49 | $4.29 | $2.04 | 177% | ❌ SKIP |  |  | [Open deal](https://www.target.com/p/quest-double-chocolate-chunk-protein-bar-case-of-12-2-12-oz/-/A-91987524) |
 
 ## Price ledger
 

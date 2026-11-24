@@ -27,7 +27,6 @@ Unit: can · Size: 12 oz
 | Celsius Original 12oz | The Vitamin Shoppe | 1× 12 | $21.84 | $1.82 | $0.15 | 106% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks) |
 | Celsius Original 12oz | Walmart | 1× 12 | $22.07 | $1.84 | $0.15 | 107% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/c/kp/celsius-case) |
 | Celsius Original 12oz | Walmart | 1× 12 | $22.07 | $1.84 | $0.15 | 107% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/food/energy-drinks/976759_976782_9357528_1688487) |
-| Celsius Original 12oz | Ralphs | 1× 12 | $22.09 | $1.84 | $0.15 | 107% | ❌ SKIP |  |  | [Open deal](https://www.ralphs.com/b/celsius) |
 
 ## Price ledger
 

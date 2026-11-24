@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 12 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| LIFEAID FITAID / FOCUSAID 12oz | Amazon | 1× 24 | $41.09 | $1.71 | $0.14 | 67% | ❌ SKIP |  |  | [Open deal](https://www.dealnews.com/s313/Amazon/22412116.html) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |

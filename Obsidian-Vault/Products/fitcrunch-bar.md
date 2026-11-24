@@ -27,6 +27,7 @@ Unit: bar · Size: 1.62 oz · Protein: 16g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $1.25 | ✅ SOLID | Sam's Club |
 | 2026-11-23 | $1.25 | ✅ SOLID | Sam's Club |
 | 2026-11-22 | $1.25 | ✅ SOLID | Sam's Club |
 | 2026-11-21 | $1.25 | ✅ SOLID | Sam's Club |

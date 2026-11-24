@@ -21,16 +21,17 @@ Unit: bottle · Size: 12 oz · Protein: 30g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
+| RAW Protein Shake 12oz | GNC | 2× 12 | $74.99 | $3.12 | $1.04 | 75% | 🔥 HOT |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | RAW Protein Shake 12oz | GNC | 1× 12 | $49.99 | $4.17 | $1.39 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein-shakes/raw-nutrition-protein-shake-rtd.html) |
 | RAW Protein Shake 12oz | GNC | 1× 12 | $49.99 | $4.17 | $1.39 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein-shakes/604764.html) |
-| RAW Protein Shake 12oz | GNC | 1× 12 | $49.99 | $4.17 | $1.39 | 100% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
-| RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/protein-fitness/drinks-snacks/protein-drinks) |
 | RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/protein-drinks) |
+| RAW Protein Shake 12oz | The Vitamin Shoppe | 1× 12 | $50.99 | $4.25 | $1.42 | 102% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/food-drinks/drinks/protein-drinks/brand/raw) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $3.12 | 🔥 HOT | GNC |
 | 2026-11-23 | $3.12 | 🔥 HOT | GNC |
 | 2026-11-22 | $3.12 | 🔥 HOT | GNC |
 | 2026-11-21 | $3.12 | 🔥 HOT | GNC |

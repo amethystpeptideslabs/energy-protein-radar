@@ -22,15 +22,18 @@ Unit: can · Size: 16 oz
 | Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | C4 Energy 16oz | Walmart | 1× 12 | $24.09 | $2.01 | $0.13 | 84% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/food/c4-energy-drinks/976759_976782_9357528_6944733) |
+| C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $25.32 | $2.11 | $0.13 | 88% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
 | C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $25.32 | $2.11 | $0.13 | 88% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks/more-ways-to-shop/sale) |
 | C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $25.32 | $2.11 | $0.13 | 88% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/c/black-friday-deals/food-drinks/drinks/energy-drinks) |
-| C4 Energy 16oz | The Vitamin Shoppe | 1× 12 | $25.40 | $2.12 | $0.13 | 89% | ❌ SKIP |  |  | [Open deal](https://www.vitaminshoppe.com/sv/sale/food-drinks/drinks/energy-drinks) |
-| C4 Energy 16oz | GNC | 1× 12 | $30.59 | $2.55 | $0.16 | 107% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/buy/canned-energy-drinks) |
+| C4 Energy 16oz | Walmart | 1× 12 | $28.59 | $2.38 | $0.15 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/645992896) |
+| C4 Energy 16oz | Walmart | 1× 12 | $28.59 | $2.38 | $0.15 | 100% | ❌ SKIP |  |  | [Open deal](https://walmart.com/ip/seort/10775502542) |
+| C4 Energy 16oz | Walmart | 1× 12 | $28.59 | $2.38 | $0.15 | 100% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/317185976) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $2.01 | ❌ SKIP | Walmart |
 | 2026-11-23 | $2.01 | ❌ SKIP | Walmart |
 | 2026-11-22 | $2.01 | ❌ SKIP | Walmart |
 | 2026-11-21 | $2.01 | ❌ SKIP | Walmart |

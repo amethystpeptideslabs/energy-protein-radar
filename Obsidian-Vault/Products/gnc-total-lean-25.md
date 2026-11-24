@@ -22,14 +22,16 @@ Unit: bottle · Size: 14 oz · Protein: 25g
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
 | GNC Total Lean Shake 25 14oz | GNC | 2× 12 | $34.99 | $1.46 | $0.58 | 50% | 🚨 STEAL |  |  | [Open deal](https://www.gnc.com/food-drink/) |
-| GNC Total Lean Shake 25 14oz | GNC | 2× 12 | $34.99 | $1.46 | $0.58 | 50% | 🚨 STEAL |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | GNC Total Lean Shake 25 14oz | GNC | 2× 12 | $34.99 | $1.46 | $0.58 | 50% | 🚨 STEAL |  |  | [Open deal](https://www.gnc.com/buy-one-get-one-half-off/269688.html) |
 | GNC Total Lean Shake 25 14oz | GNC | 2× 4 | $12.99 | $1.62 | $0.65 | 56% | 🚨 STEAL |  |  | [Open deal](https://www.gnc.com/food-drink/) |
+| GNC Total Lean Shake 25 14oz | GNC | 2× 12 | $52.49 | $2.19 | $0.88 | 75% | 🔥 HOT |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| GNC Total Lean Shake 25 14oz | GNC | 2× 4 | $19.49 | $2.44 | $0.98 | 84% | ✅ SOLID |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $1.46 | 🚨 STEAL | GNC |
 | 2026-11-23 | $1.46 | 🚨 STEAL | GNC |
 | 2026-11-22 | $1.46 | 🚨 STEAL | GNC |
 | 2026-11-21 | $1.46 | 🚨 STEAL | GNC |

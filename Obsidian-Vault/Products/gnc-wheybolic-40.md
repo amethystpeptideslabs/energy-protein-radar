@@ -28,6 +28,7 @@ Unit: bottle · Size: 14 oz · Protein: 40g
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $2.69 | 🔥 HOT | GNC |
 | 2026-11-23 | $2.69 | 🔥 HOT | GNC |
 | 2026-11-22 | $2.69 | 🔥 HOT | GNC |
 | 2026-11-21 | $2.69 | 🔥 HOT | GNC |

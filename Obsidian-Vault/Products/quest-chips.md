@@ -21,14 +21,16 @@ Unit: bag · Size: 1.1 oz · Protein: 19g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
+| Quest Protein Chips | GNC | 2× 8 | $34.49 | $2.16 | $1.14 | 108% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | Quest Protein Chips | Walmart | 1× 12 | $26.98 | $2.25 | $1.18 | 112% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/Quest-Tortilla-Style-Protein-Chips-Chili-Lime-Flavored-Baked-1-1oz-Bags-12-Count/14453163366) |
 | Quest Protein Chips | Walmart | 1× 12 | $26.98 | $2.25 | $1.18 | 112% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/ip/seort/14406622055) |
-| Quest Protein Chips | GNC | 1× 8 | $22.99 | $2.87 | $1.51 | 143% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| Quest Protein Chips | GNC | 1× 8 | $22.99 | $2.87 | $1.51 | 143% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/snacks/) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $2.16 | ❌ SKIP | GNC |
 | 2026-11-23 | $2.16 | ❌ SKIP | GNC |
 | 2026-11-22 | $2.16 | ❌ SKIP | GNC |
 | 2026-11-21 | $1.70 | ✅ SOLID | Sam's Club |

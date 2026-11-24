@@ -18,7 +18,7 @@
    "last_best": {
     "unit_price": 1.93,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -38,7 +38,7 @@
    "last_best": {
     "unit_price": 1.89,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-17"
@@ -59,7 +59,7 @@
    "last_best": {
     "unit_price": 2.53,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -77,9 +77,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.05,
+    "unit_price": 1.99,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "up"
   },
@@ -99,7 +99,7 @@
    "last_best": {
     "unit_price": 1.36,
     "tier": "HOT",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -117,11 +117,11 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 1.21,
-    "tier": "SOLID",
-    "date": "2026-11-23"
+    "unit_price": 1.72,
+    "tier": "SKIP",
+    "date": "2026-11-24"
    },
-   "trend_30d": "flat"
+   "trend_30d": "up"
   },
   "bang-16": {
    "ref_unit_price": 4.58,
@@ -164,7 +164,7 @@
    "last_best": {
     "unit_price": 1.37,
     "tier": "STEAL",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -189,7 +189,7 @@
    "last_best": {
     "unit_price": 1.73,
     "tier": "STEAL",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -262,9 +262,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 3.33,
-    "tier": "SKIP",
-    "date": "2026-11-23"
+    "unit_price": 2.5,
+    "tier": "HOT",
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -287,9 +287,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.5,
+    "unit_price": 2.47,
     "tier": "HOT",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -314,7 +314,7 @@
    "last_best": {
     "unit_price": 1.87,
     "tier": "STEAL",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -362,11 +362,11 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.25,
+    "unit_price": 2.16,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
-   "trend_30d": "down"
+   "trend_30d": "flat"
   },
   "raw-protein-rtd": {
    "ref_unit_price": 4.17,
@@ -387,9 +387,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 4.17,
-    "tier": "SKIP",
-    "date": "2026-11-23"
+    "unit_price": 3.12,
+    "tier": "HOT",
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -425,7 +425,7 @@
    "last_best": {
     "unit_price": 5.01,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat"
   },
@@ -450,7 +450,7 @@
    "last_best": {
     "unit_price": 3.49,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat"
   },
@@ -501,7 +501,7 @@
    "last_best": {
     "unit_price": 2.23,
     "tier": "SOLID",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down"
   },
@@ -530,7 +530,7 @@
    "last_best": {
     "unit_price": 2.25,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat"
   },
@@ -584,7 +584,7 @@
    "last_best": {
     "unit_price": 1.83,
     "tier": "SOLID",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat"
   },
@@ -617,9 +617,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.58,
-    "tier": "SKIP",
-    "date": "2026-11-23"
+    "unit_price": 1.94,
+    "tier": "STEAL",
+    "date": "2026-11-24"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -661,9 +661,9 @@
    "last_best": {
     "unit_price": 1.84,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
-   "trend_30d": "flat",
+   "trend_30d": "up",
    "cal_attempted": "2026-11-16"
   },
   "c4-energy-16": {
@@ -682,7 +682,7 @@
    "last_best": {
     "unit_price": 2.01,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -703,9 +703,9 @@
    "last_best": {
     "unit_price": 1.71,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
-   "trend_30d": "down",
+   "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
   },
   "reign-16": {
@@ -745,7 +745,7 @@
    "last_best": {
     "unit_price": 2.17,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -766,7 +766,7 @@
    "last_best": {
     "unit_price": 2.53,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -785,9 +785,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.17,
+    "unit_price": 1.71,
     "tier": "SKIP",
-    "date": "2026-11-22"
+    "date": "2026-11-24"
    },
    "trend_30d": "up",
    "cal_attempted": "2026-11-16"
@@ -850,7 +850,7 @@
    "last_best": {
     "unit_price": 2.36,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -892,7 +892,7 @@
    "last_best": {
     "unit_price": 1.8,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "up",
    "cal_attempted": "2026-11-16"
@@ -987,7 +987,7 @@
    "last_best": {
     "unit_price": 1.71,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -1020,16 +1020,16 @@
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 2.63,
-    "retailer": "Walmart",
-    "date": "2026-11-18",
-    "url": "https://www.walmart.com/ip/117510958",
+    "unit_price": 2.6,
+    "retailer": "Kill Cliff (DTC)",
+    "date": "2026-11-24",
+    "url": "https://killcliff.com/ignite-energy-drink/ignite-cherry-limeade",
     "code": null
    },
    "last_best": {
-    "unit_price": 2.72,
+    "unit_price": 2.6,
     "tier": "SKIP",
-    "date": "2026-11-21"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1074,9 +1074,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.2,
+    "unit_price": 2.19,
     "tier": "SKIP",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1097,7 +1097,7 @@
    "last_best": {
     "unit_price": 2.92,
     "tier": "SOLID",
-    "date": "2026-11-20"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-17"
@@ -1123,7 +1123,7 @@
    "last_best": {
     "unit_price": 1.25,
     "tier": "SOLID",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1140,18 +1140,18 @@
    },
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 3.25,
+    "unit_price": 2.6,
     "retailer": "Walmart",
-    "date": "2026-11-16",
-    "url": "https://www.walmart.com/ip/15164761476",
+    "date": "2026-11-24",
+    "url": "https://www.walmart.com/ip/seort/15166807113",
     "code": null
    },
    "last_best": {
-    "unit_price": 3.25,
-    "tier": "SKIP",
-    "date": "2026-11-23"
+    "unit_price": 2.6,
+    "tier": "HOT",
+    "date": "2026-11-24"
    },
-   "trend_30d": "flat",
+   "trend_30d": "down",
    "cal_attempted": "2026-11-16"
   },
   "phorm-level1-bar": {
@@ -1199,9 +1199,9 @@
     "code": null
    },
    "last_best": {
-    "unit_price": 2.5,
+    "unit_price": 2.47,
     "tier": "HOT",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "down",
    "cal_attempted": "2026-11-16"
@@ -1213,16 +1213,16 @@
    "protein_verified": null,
    "size_verified": null,
    "all_time_low": {
-    "unit_price": 4.2,
-    "retailer": "Vitacost",
-    "date": "2026-11-16",
-    "url": "https://www.vitacost.com/products/met-rx-big-100-meal-replacement-bar-salted-caramel-brownie-crunch-9-bars-3-52-oz-100-g-each-136362",
+    "unit_price": 4.0,
+    "retailer": "Target",
+    "date": "2026-11-24",
+    "url": "https://www.target.com/p/-/A-83696754",
     "code": null
    },
    "last_best": {
-    "unit_price": 4.2,
+    "unit_price": 4.0,
     "tier": "SKIP",
-    "date": "2026-11-18"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-16"
@@ -1290,7 +1290,7 @@
    "last_best": {
     "unit_price": 2.69,
     "tier": "HOT",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-20"
@@ -1316,7 +1316,7 @@
    "last_best": {
     "unit_price": 1.46,
     "tier": "STEAL",
-    "date": "2026-11-23"
+    "date": "2026-11-24"
    },
    "trend_30d": "flat",
    "cal_attempted": "2026-11-20"
@@ -1586,20 +1586,35 @@
    "fingerprint": "gnc-total-lean-25|gnc|1.62|",
    "sent_at": "2026-11-23T13:33:55-08:00",
    "priority": 4
+  },
+  {
+   "fingerprint": "david-bar|walmart|2.60|",
+   "sent_at": "2026-11-24T06:01:01-08:00",
+   "priority": 5
+  },
+  {
+   "fingerprint": "kill-cliff-ignite-12|killcliff-dtc|2.60|",
+   "sent_at": "2026-11-24T06:01:01-08:00",
+   "priority": 5
+  },
+  {
+   "fingerprint": "met-rx-big100|target|4.00|",
+   "sent_at": "2026-11-24T06:01:01-08:00",
+   "priority": 3
   }
  ],
  "latest_run": {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "mode": "quick",
   "status": "ok",
   "cost_usd": 0.0,
-  "searches": 35
+  "searches": 39
  },
  "cost_ledger": {
   "2026-11": {
    "usd": 0.0,
-   "runs": 20,
-   "searches": 608
+   "runs": 21,
+   "searches": 647
   }
  },
  "budget_warning_month": null

@@ -21,16 +21,18 @@ Unit: pack (2 donuts) · Size: 2.4 oz · Protein: 20g
 
 | Product | Retailer | Pack | Final $ | $/unit | $/10g protein | vs ref | Tier | Code | Ends | Link |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Legendary Protein Donuts | Target | 1× 4 | $7.49 | $1.87 | $0.94 | 61% | 🚨 STEAL |  | 2026-11-23 | [Open deal](https://www.target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-donuts-cinnamon-crumble-20g-protein-8-9oz-4ct/-/A-94712220) |
+| Legendary Protein Donuts | Target | 1× 4 | $7.49 | $1.87 | $0.94 | 61% | 🚨 STEAL |  | 2026-11-24 | [Open deal](https://www.target.com/p/legendary-foods-gluten-free-and-keto-friendly-protein-donuts-cinnamon-crumble-20g-protein-8-9oz-4ct/-/A-94712220) |
+| Legendary Protein Donuts | GNC | 2× 12 | $58.49 | $2.44 | $1.22 | 80% | 🔥 HOT |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
 | Legendary Protein Donuts | Walmart | 1× 4 | $9.87 | $2.47 | $1.24 | 81% | ✅ SOLID |  |  | [Open deal](https://www.walmart.com/ip/seort/16364168514) |
 | Legendary Protein Donuts | Target | 1× 4 | $9.99 | $2.50 | $1.25 | 82% | ✅ SOLID |  |  | [Open deal](https://www.target.com/p/-/A-94712221) |
-| Legendary Protein Donuts | GNC | 1× 12 | $38.99 | $3.25 | $1.63 | 107% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/snacks/legendary-foods-protein-donuts.html) |
-| Legendary Protein Donuts | GNC | 1× 12 | $38.99 | $3.25 | $1.63 | 107% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/protein/drinks-snacks/) |
+| Legendary Protein Donuts | Target | 1× 4 | $9.99 | $2.50 | $1.25 | 82% | ✅ SOLID |  |  | [Open deal](https://www.target.com/p/-/A-94712222) |
+| Legendary Protein Donuts | GNC | 1× 12 | $38.99 | $3.25 | $1.63 | 107% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/snacks/) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $1.87 | 🚨 STEAL | Target |
 | 2026-11-23 | $1.87 | 🚨 STEAL | Target |
 | 2026-11-22 | $2.44 | 🔥 HOT | GNC |
 | 2026-11-21 | $2.44 | 🔥 HOT | GNC |

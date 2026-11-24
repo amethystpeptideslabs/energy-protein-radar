@@ -30,11 +30,13 @@ Unit: can · Size: 12 oz
 | Alani Nu Energy 12oz | Target | 1× 12 | $23.59 | $1.97 | $0.16 | 85% | ❌ SKIP |  |  | [Open deal](https://target.com/p/alani-nu-variety-pack-energy-drink-cherry-slush-hawaiian-shaved-ice-peach-12pk-12-fl-oz-cans/-/A-94052555) |
 | Alani Nu Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 111% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/food-drink/) |
 | Alani Nu Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 111% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/561619.html) |
+| Alani Nu Energy 12oz | GNC | 1× 12 | $30.59 | $2.55 | $0.21 | 111% | ❌ SKIP |  |  | [Open deal](https://www.gnc.com/energy-drinks/561573.html) |
 
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
 |---|---|---|---|
+| 2026-11-24 | $1.84 | ❌ SKIP | Target |
 | 2026-11-23 | $1.84 | ❌ SKIP | Target |
 | 2026-11-22 | $1.84 | ❌ SKIP | Target |
 | 2026-11-21 | $1.05 | 🔥 HOT | The Vitamin Shoppe |

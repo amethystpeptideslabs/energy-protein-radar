@@ -17,12 +17,6 @@ tags: [deal-radar, product]
 
 Unit: can · Size: 16 oz
 
-## Current offers
-
-| Product | Retailer | Pack | Final $ | $/unit | $/oz | vs ref | Tier | Code | Ends | Link |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Reign Inferno Thermogenic 16oz | Walmart | 1× 12 | $43.09 | $3.59 | $0.22 | 142% | ❌ SKIP |  |  | [Open deal](https://www.walmart.com/browse/food/reign-energy-drinks/976759_976782_9357528_1311055) |
-
 ## Price ledger
 
 | Date | Best $/unit | Tier | Retailer |
